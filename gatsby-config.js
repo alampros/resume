@@ -19,9 +19,9 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        trackingId: 'UA-133753267-1',
+        id: 'UA-133753267-1',
       },
     },
   ],
