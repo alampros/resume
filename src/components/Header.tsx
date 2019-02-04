@@ -13,6 +13,7 @@ export default class Header extends React.Component<Props> {
       address,
       phone,
       email,
+      objective,
     } = this.props
     return (
       <header className={styles.root}>
@@ -31,6 +32,8 @@ export default class Header extends React.Component<Props> {
             <a href={`mailto:${email}`}>{email}</a>
           </div>
         </address>
+        <h2>Objective</h2>
+        <div>{objective}</div>
       </header>
     )
   }
