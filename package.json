@@ -14,7 +14,8 @@
     "lint": "yarn lint-styles && yarn lint-scripts",
     "lint-styles": "stylelint src",
     "lint-scripts": "eslint --ext ts --ext tsx --ext js --ext jsx src",
-    "tidy": "yarn lint-styles --fix && eslint --ignore-pattern '!.eslintrc.js' --fix --ext ts --ext tsx --ext js --ext jsx .eslintrc.js src"
+    "tidy": "yarn lint-styles --fix && eslint --ignore-pattern '!.eslintrc.js' --fix --ext ts --ext tsx --ext js --ext jsx .eslintrc.js src",
+    "clean": "git clean -xfd .cache public src"
   },
   "dependencies": {
     "@types/classnames": "^2.2.7",
@@ -32,11 +33,13 @@
     "gatsby": "^2.0.111",
     "gatsby-plugin-gtag": "^1.0.7",
     "gatsby-plugin-netlify": "^2.0.8",
+    "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-resolve-src": "^2.0.0",
     "gatsby-plugin-typescript": "^2.0.6",
     "gatsby-source-filesystem": "^2.0.20",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-helmet": "^5.2.0",
     "react-icons": "^3.3.0",
     "stylelint": "^9.10.1",
     "stylelint-config-rational-order": "^0.0.4",
