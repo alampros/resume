@@ -18,5 +18,11 @@ module.exports = {
         jsxPragma: 'jsx',
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-133753267-1',
+      },
+    },
   ],
 }
