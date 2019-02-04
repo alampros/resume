@@ -28,6 +28,7 @@
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-standard": "^4.0.0",
     "gatsby": "^2.0.111",
+    "gatsby-plugin-netlify": "^2.0.8",
     "gatsby-plugin-resolve-src": "^2.0.0",
     "gatsby-plugin-typescript": "^2.0.6",
     "gatsby-source-filesystem": "^2.0.20",

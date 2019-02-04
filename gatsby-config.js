@@ -3,6 +3,7 @@ module.exports = {
     title: 'Aaron Lampros',
   },
   plugins: [
+    'gatsby-plugin-netlify',
     'gatsby-plugin-resolve-src',
     {
       resolve: 'gatsby-source-filesystem',
