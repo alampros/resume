@@ -4,8 +4,6 @@
     "module": "commonjs",
     "lib": [ "es6", "dom", "es2017" ],
     "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true,
-    "strict": true,
     "allowJs": true,
     "jsx": "react",
     "sourceMap": true,
@@ -13,7 +11,9 @@
     "paths": {
       "*": [
         "*",
-        "components/*"
+        "components/*",
+        "data/*",
+        "pages/*"
       ]
     },
     "esModuleInterop": true,

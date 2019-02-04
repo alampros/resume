@@ -1,0 +1,15 @@
+.root {
+  display: inline-block;
+}
+
+.root :global(.p-locality)::after {
+  content: ',';
+}
+
+.root :global(.p-region)::before {
+  content: ' ';
+}
+
+.root :global(.p-postal-code) {
+  display: none;
+}
