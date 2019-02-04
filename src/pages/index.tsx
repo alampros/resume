@@ -13,10 +13,10 @@ export default class IndexPage extends React.Component {
         <Helmet>
           <meta charSet="utf-8" />
           <title>{title}</title>
-          <link rel="canonical" href="http://alampros.com/index.html" />
+          <link rel="canonical" href="https://alampros.com/index.html" />
           <meta name="description" content={description} />
           {/* OpenGraph stuff */}
-          <meta property="og:image" content="http://alampros.com/aaron-sm.jpg" />
+          <meta property="og:image" content="https://alampros.com/aaron-sm.jpg" />
           <meta property="og:image:secure_url" content="https://alampros.com/aaron-sm.jpg" />
           <meta property="og:image:type" content="image/jpeg" />
           <meta property="og:image:width" content="500" />
@@ -25,7 +25,7 @@ export default class IndexPage extends React.Component {
           {/* Schema.org for google stuff */}
           <meta itemProp="name" content={title} />
           <meta itemProp="description" content={description} />
-          <meta itemProp="image" content="http://alampros.com/aaron-sm.jpg" />
+          <meta itemProp="image" content="https://alampros.com/aaron-sm.jpg" />
           {/* Twitter */}
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:creator" content="@alampros" />
