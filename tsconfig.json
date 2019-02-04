@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "lib": [ "es6", "dom", "es2017" ],
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
+    "strict": true,
+    "allowJs": true,
+    "jsx": "react",
+    "sourceMap": true,
+    "baseUrl": "./src",
+    "paths": {
+      "*": [
+        "*",
+        "components/*"
+      ]
+    },
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
