@@ -1,0 +1,18 @@
+.root address {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-left: 1rem;
+  font-style: normal;
+  line-height: 1.75rem;
+}
+
+.root address > div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-items: flex-start;
+  align-items: center;
+}
+
+.root address > div > *:first-child {
+  margin-right: 0.5rem;
+}

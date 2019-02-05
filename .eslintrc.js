@@ -35,6 +35,7 @@ module.exports = {
       named: 'never',
       asyncArrow: 'always',
     }],
+    'jsx-quotes': ['error', 'prefer-double'],
     'react/jsx-closing-tag-location': 2,
     'react/jsx-closing-bracket-location': 2,
     'react/jsx-indent': [2, 2, { checkAttributes: true }],
