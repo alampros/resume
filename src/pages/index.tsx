@@ -1,9 +1,9 @@
 import * as React from 'react'
-import ResumeMetadata from 'data/ResumeMetadata'
+// import ResumeMetadata from 'data/ResumeMetadata'
 import { Helmet } from 'react-helmet'
-import Header from 'components/Header'
-import Jobs from 'components/Jobs'
-import jobs from 'data/jobs'
+// import Header from 'components/Header'
+// import Jobs from 'components/Jobs'
+// import jobs from 'data/jobs'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -32,8 +32,7 @@ export default class IndexPage extends React.Component {
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:creator" content="@alampros" />
         </Helmet>
-        <Header {...ResumeMetadata} />
-        <Jobs jobs={jobs} />
+        <div>Check back soon</div>
       </main>
     )
   }
