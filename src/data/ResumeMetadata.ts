@@ -1,8 +1,4 @@
-export interface IAddress {
-  city: string
-  state: string
-  ZIP: string
-}
+import { IAddress } from 'data/Address'
 
 export interface IResumeMetadata {
   email: string

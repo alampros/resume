@@ -39,5 +39,14 @@ module.exports = {
     'react/jsx-closing-tag-location': 2,
     'react/jsx-closing-bracket-location': 2,
     'react/jsx-indent': [2, 2, { checkAttributes: true }],
+    'keyword-spacing': ['error', {
+      overrides: {
+        if: { after: false },
+        for: { after: false },
+        while: { after: false },
+        catch: { after: false },
+        switch: { after: false },
+      },
+    }],
   },
 }

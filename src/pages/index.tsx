@@ -1,12 +1,51 @@
+import * as path from 'path'
 import * as React from 'react'
 import ResumeMetadata from 'data/ResumeMetadata'
 import { Helmet } from 'react-helmet'
+import { graphql } from 'gatsby'
 import Header from 'components/Header'
 import Jobs from 'components/Jobs'
-import jobs from 'data/jobs'
+import { getJobsWithDescriptions } from 'data/jobs'
+import { IMarkdownNode } from 'data/GatsbyTypes'
 
-export default class IndexPage extends React.Component {
+interface Props {
+  data: {
+    allMarkdownRemark: {
+      edges: {
+        node: IMarkdownNode
+      }[]
+    },
+  }
+}
+
+export default class IndexPage extends React.Component<Props> {
   render() {
+    const {
+      data: {
+        allMarkdownRemark: {
+          edges,
+        },
+      },
+    } = this.props
+    const getJobDescription = (descId?: string): IMarkdownNode => {
+      const node = edges.map(edge => edge.node).find(({ fileAbsolutePath }) => {
+        const bname = path.basename(fileAbsolutePath, path.extname(fileAbsolutePath))
+        return descId === bname
+      })
+      if(!node) {
+        return
+      }
+      const {
+        fileAbsolutePath, //eslint-disable-line
+        ...rest
+      } = node
+      return {
+        ...rest,
+      }
+    }
+    const jobs = getJobsWithDescriptions(getJobDescription)
+    console.log('Jobs:', jobs)
+
     // If this were more than one page, these would be props
     const title = 'Aaron Lampros | Resume'
     const description = 'The resume of Aaron Lampros: User Experience Architect'
@@ -38,3 +77,17 @@ export default class IndexPage extends React.Component {
     )
   }
 }
+
+export const query = graphql`
+  query {
+    allMarkdownRemark{
+      edges{
+        node{
+          fileAbsolutePath
+          rawMarkdownBody
+          html
+        }
+      }
+    }
+  }
+`

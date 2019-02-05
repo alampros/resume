@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { IJobDescriptor } from 'data/jobs/Job'
+const styles = require('./Job.module.css')
 
 interface Props extends IJobDescriptor {
 }
@@ -11,9 +12,9 @@ export default class Job extends React.Component<Props> {
       company,
     } = this.props
     return (
-      <div style={{ marginTop: '2rem', marginBottom: '2rem' }}>
-        <div>{title}</div>
-        <div>{company}</div>
+      <div className={styles.root}>
+        <div><strong>{title}</strong></div>
+        <div>{company.name}</div>
       </div>
     )
   }
