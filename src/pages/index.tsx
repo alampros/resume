@@ -1,4 +1,3 @@
-import * as path from 'path'
 import * as React from 'react'
 import ResumeMetadata from 'data/ResumeMetadata'
 import { Helmet } from 'react-helmet'
@@ -29,7 +28,8 @@ export default class IndexPage extends React.Component<Props> {
     } = this.props
     const getJobDescription = (descId?: string): IMarkdownNode => {
       const node = edges.map(edge => edge.node).find(({ fileAbsolutePath }) => {
-        const bname = path.basename(fileAbsolutePath, path.extname(fileAbsolutePath))
+        const pathParts = fileAbsolutePath.split('/')
+        const bname = pathParts[pathParts.length - 1].split('.')[0]
         return descId === bname
       })
       if(!node) {
