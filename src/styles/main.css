@@ -1,8 +1,11 @@
 :root {
-  --color-text: #333;
-  --color-headings: #666;
+  --color-text: #696969;
+  --color-headings: #222;
   --color-border-gray: #c5cbea;
-  --color-muted: #525252;
+  --color-muted: #555;
+  --color-ghost: #b6b6b6;
+  --color-link: #3d7e9a;
+  --font-size-small: 0.75rem;
 }
 
 html {
@@ -24,17 +27,16 @@ h6 {
   margin-top: 1.75em;
   margin-bottom: 0.5em;
   color: var(--color-headings);
-}
-
-h1,
-h2,
-h3 {
   font-weight: 200;
 }
 
-a[href^="tel:"],
-a[href^="mailto:"] {
-  color: inherit;
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+a[href] {
+  color: var(--color-link);
   text-decoration: none;
 }
 

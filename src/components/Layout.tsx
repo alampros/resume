@@ -19,9 +19,10 @@ export default class Layout extends React.Component<Props> {
     return (
       <main className={styles.main}>
         <Helmet>
+          <html lang="en" />
           <meta charSet="utf-8" />
           <title>{title}</title>
-          <meta name="viewport" content="width=1024" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="canonical" href="https://alampros.com/index.html" />
           <meta name="description" content={description} />
           {/* OpenGraph stuff */}

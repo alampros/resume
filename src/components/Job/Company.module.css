@@ -1,2 +1,23 @@
 .root {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  font-size: var(--font-size-small);
+}
+
+.root::before {
+  padding-right: 0.25em;
+  color: var(--color-ghost);
+  content: '@';
+}
+
+.root address {
+  color: var(--color-muted, #333);
+}
+
+.root > *:not(:last-child)::after {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  color: var(--color-ghost);
+  content: '◦';
 }

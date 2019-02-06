@@ -9,6 +9,7 @@ interface Props extends ICompany {
 export default class Company extends React.Component<Props & React.HTMLProps<HTMLDivElement>> {
   render() {
     const {
+      id, // eslint-disable-line no-unused-vars, @typescript-eslint/no-unused-vars
       name,
       address,
       website,

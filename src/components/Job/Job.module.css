@@ -1,12 +1,22 @@
 .root {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
-.company {
+h3 {
+  margin: 0;
+  margin-bottom: 0.2em;
+  font-weight: 100;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.dateRange {
+  font-size: var(--font-size-small);
+  line-height: 1;
+}
+
+.desc {
   padding-left: 1rem;
-  color: var(--color-muted, #333);
-  font-size: 0.825em;
-  line-height: 1.25;
   border-left: 2px solid var(--color-border-gray, #999);
 }

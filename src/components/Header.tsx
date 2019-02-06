@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { IResumeMetadata } from 'data/ResumeMetadata'
-import Address from 'components/Address'
 import { MdPermPhoneMsg, MdMyLocation, MdEmail } from 'react-icons/md'
 import { GoMarkGithub } from 'react-icons/go'
 const styles = require('./Header.module.css')
@@ -11,7 +10,7 @@ interface Props extends IResumeMetadata {
 export default class Header extends React.Component<Props> {
   render() {
     const {
-      address,
+      location,
       phone,
       email,
     } = this.props
@@ -24,7 +23,7 @@ export default class Header extends React.Component<Props> {
         <address>
           <div>
             <MdMyLocation />
-            <Address address={address} />
+            <span>{location}</span>
           </div>
           <div>
             <MdPermPhoneMsg />
