@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  overflow-y: auto;
+
+  /* align-items: center; */
+}
+
+.container {
+  width: 840px;
+  padding-right: 48px;
+  padding-left: 48px;
+}

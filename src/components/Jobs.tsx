@@ -13,10 +13,10 @@ export default class Jobs extends React.Component<Props> {
       <Job key={`${job.company.name} - ${job.title}`} {...job} />
     ))
     return (
-      <div>
+      <section>
         <h2>Professional Experience</h2>
         {$jobs}
-      </div>
+      </section>
     )
   }
 }
