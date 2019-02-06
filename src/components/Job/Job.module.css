@@ -1,0 +1,12 @@
+.root {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.company {
+  padding-left: 1rem;
+  color: var(--color-muted, #333);
+  font-size: 0.825em;
+  line-height: 1.25;
+  border-left: 2px solid var(--color-border-gray, #999);
+}

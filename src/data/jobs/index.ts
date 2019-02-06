@@ -19,6 +19,24 @@ const jobs: IJobConstructorParam[] = [
       end: new Date('2018-05-11T22:00:00.000Z'),
     },
   },
+  {
+    title: 'Technology Architect – User Experience',
+    companyId: 'dealertire',
+    descriptionId: 'dealertire_02',
+    date: {
+      start: new Date('2012-02-01T12:00:00.000Z'),
+      end: new Date('2017-08-01T22:00:00.000Z'),
+    },
+  },
+  {
+    title: 'Web Designer, R&D Developer, Technology Evaluator',
+    companyId: 'dealertire',
+    descriptionId: 'dealertire_03',
+    date: {
+      start: new Date('2007-11-01T12:00:00.000Z'),
+      end: new Date('2012-02-01T22:00:00.000Z'),
+    },
+  },
 ]
 
 export function getJobsWithDescriptions(

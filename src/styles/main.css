@@ -1,6 +1,8 @@
 :root {
   --color-text: #333;
   --color-headings: #666;
+  --color-border-gray: #c5cbea;
+  --color-muted: #525252;
 }
 
 html {
@@ -34,4 +36,8 @@ a[href^="tel:"],
 a[href^="mailto:"] {
   color: inherit;
   text-decoration: none;
+}
+
+address {
+  font-style: inherit;
 }

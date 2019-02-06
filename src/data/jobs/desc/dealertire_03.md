@@ -1,0 +1,1 @@
+Explore, design, and develop prototypes for identifying opportunities to improve dealership operational effectiveness. Assist in construction of new iteration of the core business-to-business web platform.
