@@ -1,6 +1,6 @@
 import * as React from 'react'
 import cx from 'classnames'
-import { IAddress } from 'data/ResumeMetadata'
+import { IAddress } from 'data/Address'
 const styles = require('./Address.module.css')
 
 interface Props {
