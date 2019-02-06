@@ -1,4 +1,10 @@
 import * as React from 'react'
+
+export default () => (
+  <div>jobs</div>
+)
+
+/*
 import { StaticQuery, graphql } from 'gatsby'
 import { IMarkdownNode } from 'data/GatsbyTypes'
 import { getJobsWithDescriptions } from 'data/jobs'
@@ -72,3 +78,4 @@ export default (props: any) => (
     render={data => <JobsProvider data={data} {...props} />}
   />
 )
+*/
