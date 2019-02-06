@@ -33,6 +33,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "gatsby": "^2.0.111",
     "gatsby-plugin-gtag": "^1.0.7",
+    "gatsby-plugin-manifest": "^2.0.17",
     "gatsby-plugin-netlify": "^2.0.8",
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-resolve-src": "^2.0.0",
