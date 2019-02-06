@@ -22,7 +22,7 @@ const jobs: IJobConstructorParam[] = [
 ]
 
 export function getJobsWithDescriptions(
-  getJobDescription: (descriptionId?: string) => IMarkdownNode
+  getJobDescription: (descriptionId?: string) => IMarkdownNode | void
 ): Job[] {
   return jobs.map(j => {
     return new Job(j, getJobDescription)

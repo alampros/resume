@@ -23,11 +23,18 @@ class JobsProvider extends React.Component<Props> {
         },
       },
     } = this.props
-    const getJobDescription = (descId?: string): IMarkdownNode => {
+    const getJobDescription = (descId?: string): IMarkdownNode | void => {
       const node = edges.map(edge => edge.node).find(({ fileAbsolutePath }) => {
-        const pathParts = fileAbsolutePath.split('/')
-        const bname = pathParts[pathParts.length - 1].split('.')[0]
-        return descId === bname
+        try {
+          if(!fileAbsolutePath) {
+            return false
+          }
+          const pathParts = fileAbsolutePath.split('/')
+          const bname = pathParts[pathParts.length - 1].split('.')[0]
+          return descId === bname
+        } catch(err) {
+          return false
+        }
       })
       if(!node) {
         return
@@ -47,7 +54,7 @@ class JobsProvider extends React.Component<Props> {
   }
 }
 
-export default props => (
+export default (props: any) => (
   <StaticQuery
     query={graphql`
       query {

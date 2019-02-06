@@ -22,7 +22,7 @@ export interface IJobConstructorParam {
 }
 
 export default class Job implements IJobDescriptor {
-  constructor(jobDescriptor: IJobConstructorParam, getJobDescription?: (descriptionId: string) => IMarkdownNode) {
+  constructor(jobDescriptor: IJobConstructorParam, getJobDescription?: (descriptionId: string) => IMarkdownNode | void) {
     const {
       title,
       date,
@@ -31,16 +31,17 @@ export default class Job implements IJobDescriptor {
     } = jobDescriptor
     this.title = title
     this.date = date
-    this.company = companies.find(co => co.id === companyId)
     if(descriptionId && getJobDescription) {
       const desc = getJobDescription(descriptionId)
       if(desc) {
         this.description = desc
       }
     }
-    if(!this.company) {
+    const company = companies.find(co => co.id === companyId)
+    if(!company) {
       throw new Error(`No company found for id "${companyId}"`)
     }
+    this.company = company
   }
   title: string
   company: ICompany
