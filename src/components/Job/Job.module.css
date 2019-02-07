@@ -1,16 +1,20 @@
 .root {
   margin-top: 1rem;
   margin-bottom: 3rem;
-}
 
-.root h3 {
-  margin: 0;
-  margin-bottom: 0.2em;
-  line-height: 1;
-}
+  h3 {
+    margin: 0;
+    margin-bottom: 0.2em;
+    line-height: 1;
+  }
 
-.root header {
-  text-align: center;
+  header {
+    text-align: center;
+
+    @media all and (min-width: 480px) {
+      text-align: inherit;
+    }
+  }
 }
 
 .dateRange {
@@ -21,10 +25,4 @@
 .desc {
   padding-left: 1rem;
   border-left: 2px solid var(--color-border-gray, #999);
-}
-
-@media all and (min-width: 480px) {
-  .root header {
-    text-align: inherit;
-  }
 }
