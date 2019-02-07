@@ -3,12 +3,16 @@
   margin-bottom: 3rem;
 }
 
-h3 {
+.root h3 {
   margin: 0;
   margin-bottom: 0.2em;
   font-weight: 100;
   font-size: 3rem;
   line-height: 1;
+}
+
+.root header {
+  text-align: center;
 }
 
 .dateRange {
@@ -19,4 +23,10 @@ h3 {
 .desc {
   padding-left: 1rem;
   border-left: 2px solid var(--color-border-gray, #999);
+}
+
+@media screen and (min-width: 480px) {
+  .root header {
+    text-align: inherit;
+  }
 }

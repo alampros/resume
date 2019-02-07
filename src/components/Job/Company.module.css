@@ -1,13 +1,16 @@
 .root {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: -0.5em;
   font-size: var(--font-size-small);
+  line-height: 1.2;
 }
 
 .root::before {
-  padding-right: 0.25em;
+  padding-bottom: 0.25em;
   color: var(--color-gray-dim);
+  font-size: 1.25rem;
   content: '@';
 }
 
@@ -15,9 +18,35 @@
   color: var(--color-gray-muted, #333);
 }
 
-.root > *:not(:last-child)::after {
-  padding-right: 1rem;
-  padding-left: 1rem;
-  color: var(--color-gray-dim);
-  content: '◦';
+.name {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+@media screen and (min-width: 480px) {
+  .root {
+    flex-flow: row wrap;
+    margin-top: inherit;
+    line-height: inherit;
+  }
+
+  .name {
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .root::before {
+    padding-right: 0.25em;
+    padding-bottom: 0;
+    font-size: inherit;
+  }
+
+  .root > *:not(:last-child)::after {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: var(--color-gray-dim);
+    content: '◦';
+  }
 }
