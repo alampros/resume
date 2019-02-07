@@ -29,6 +29,16 @@ const jobs: IJobConstructorParam[] = [
       start: new Date('2017-11-01T12:00:00.000Z'),
       end: new Date('2018-05-11T22:00:00.000Z'),
     },
+    skills: [
+      { skill: skills.js, importance: 1 },
+      { skill: skills.ts, importance: 0.9 },
+      { skill: skills.sketch, importance: 0.6 },
+      { skill: skills.webpack, importance: 0.7 },
+      { skill: skills.accessibility, importance: 0.4 },
+      { skill: skills.node, importance: 0.3 },
+      { skill: skills.usability_testing, importance: 0.6 },
+      { skill: skills.gtm, importance: 0.3 },
+    ],
   },
   {
     title: 'Technology Architect – User Experience',
@@ -38,6 +48,13 @@ const jobs: IJobConstructorParam[] = [
       start: new Date('2012-02-01T12:00:00.000Z'),
       end: new Date('2017-08-01T22:00:00.000Z'),
     },
+    skills: [
+      { skill: skills.js, importance: 0.5 },
+      { skill: skills.node, importance: 0.3 },
+      { skill: skills.ps, importance: 0.25 },
+      { skill: skills.il, importance: 0.25 },
+      { skill: skills.obiee, importance: 0.25 },
+    ],
   },
   {
     title: 'Web Designer, R&D Developer, Technology Evaluator',
@@ -47,6 +64,12 @@ const jobs: IJobConstructorParam[] = [
       start: new Date('2007-11-01T12:00:00.000Z'),
       end: new Date('2012-02-01T22:00:00.000Z'),
     },
+    skills: [
+      { skill: skills.js, importance: 0.5 },
+      { skill: skills.ps, importance: 1 },
+      { skill: skills.il, importance: 0.75 },
+      { skill: skills.cf, importance: 0.1 },
+    ],
   },
 ]
 

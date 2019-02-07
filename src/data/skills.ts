@@ -70,6 +70,48 @@ const skills: { [id: string]: PartialSkill } = {
     strength: 0.2,
     link: new URL('https://golang.org/'),
   },
+  sketch: {
+    name: 'Sketch',
+    yearsOfExperience: new Date().getFullYear() - 2017,
+    strength: 0.5,
+    link: new URL('https://www.sketchapp.com/'),
+  },
+  usability_testing: {
+    name: 'Usability Testing',
+    yearsOfExperience: new Date().getFullYear() - 2015,
+    strength: 0.5,
+    link: new URL('https://en.wikipedia.org/wiki/Usability_testing'),
+  },
+  gtm: {
+    name: 'Google Tag Manager',
+    yearsOfExperience: new Date().getFullYear() - 2015,
+    strength: 0.25,
+    link: new URL('https://marketingplatform.google.com/about/tag-manager/'),
+  },
+  ps: {
+    name: 'Photoshop',
+    yearsOfExperience: new Date().getFullYear() - 2001,
+    strength: 0.7,
+    link: new URL('https://adobe.com/photoshop'),
+  },
+  il: {
+    name: 'Illustrator',
+    yearsOfExperience: new Date().getFullYear() - 2003,
+    strength: 0.6,
+    link: new URL('https://adobe.com/illustrator'),
+  },
+  obiee: {
+    name: 'OBIEE',
+    yearsOfExperience: 1.5,
+    strength: 0.6,
+    link: new URL('http://www.oracle.com/us/solutions/business-analytics/business-intelligence/enterprise-edition/overview/index.html'),
+  },
+  cf: {
+    name: 'ColdFusion',
+    yearsOfExperience: 1.5,
+    strength: 0.1,
+    link: new URL('https://en.wikipedia.org/wiki/Adobe_ColdFusion'),
+  },
 }
 
 const defaultedSkills: { [id: string]: ISkill } = {}
