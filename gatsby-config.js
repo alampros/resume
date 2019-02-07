@@ -21,6 +21,7 @@ module.exports = {
     'gatsby-plugin-netlify',
     'gatsby-plugin-resolve-src',
     'gatsby-transformer-remark',
+    'pretty-html',
     {
       resolve: 'gatsby-plugin-typescript',
       options: {
