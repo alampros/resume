@@ -3,6 +3,7 @@ export interface ISkill {
   name: string
   yearsOfExperience: number
   strength: number
+  link?: URL
 }
 
 export interface IJobSkill {

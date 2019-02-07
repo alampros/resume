@@ -29,7 +29,6 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
         <div>~<strong>{perc}%</strong> of my daily work at this job involved this skill.</div>
       </span>
     )
-    console.log(link)
     const $name = link ? (
       <a href={link.toString()}>{name}</a>
     ) : (
