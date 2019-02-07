@@ -1,5 +1,7 @@
 :root {
+  --color-bg-body: #fff;
   --color-text: #696969;
+  --color-text-dark: #1f1f1f;
   --color-headings: #222;
   --color-border-gray: #c5cbea;
   --color-gray-muted: #555;
@@ -18,6 +20,7 @@ html {
 body {
   color: var(--color-text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: var(--color-bg-body, #fff);
 }
 
 h1,
