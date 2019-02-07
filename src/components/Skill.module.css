@@ -1,0 +1,13 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0.25em 0.5em;
+  font-size: 0.85rem;
+  border: 1px solid var(--color-gray-ghost);
+  border-radius: 3px;
+}
+
+.root figcaption {
+  margin-right: 0.25em;
+}

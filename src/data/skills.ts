@@ -14,6 +14,11 @@ const skills: { [id: string]: PartialSkill } = {
     yearsOfExperience: new Date().getFullYear() - 2017,
     strength: 7 / 10,
   },
+  node: {
+    name: 'Node.js',
+    yearsOfExperience: new Date().getFullYear() - 2012,
+    strength: 1,
+  },
   webpack: {
     name: 'webpack',
     yearsOfExperience: new Date().getFullYear() - 2016.5,
@@ -42,6 +47,16 @@ const skills: { [id: string]: PartialSkill } = {
   aws_ecs: {
     name: 'AWS ECS',
     yearsOfExperience: new Date().getFullYear() - 2018,
+    strength: 0.2,
+  },
+  cs: {
+    name: 'C#',
+    yearsOfExperience: new Date().getFullYear() - 2018,
+    strength: 0.1,
+  },
+  go: {
+    name: 'Go (lang)',
+    yearsOfExperience: new Date().getFullYear() - 2018.5,
     strength: 0.2,
   },
 }

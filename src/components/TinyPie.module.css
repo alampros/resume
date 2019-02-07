@@ -1,0 +1,21 @@
+.root {
+  width: 1em;
+  height: 1em;
+  overflow: visible;
+  background-color: var(--color-gray-ghost);
+  border-radius: 50%;
+}
+
+.part {
+  animation: dash 2s linear forwards;
+  fill: none;
+  stroke: var(--color-chart-1, #3d7e9a);
+  stroke-width: 16;
+  stroke-dashoffset: 100;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

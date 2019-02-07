@@ -11,7 +11,14 @@ const jobs: IJobConstructorParam[] = [
       start: new Date('2018-05-14T12:00:00.000Z'),
     },
     skills: [
-      { skill: skills.js, importance: 0.9 },
+      { skill: skills.js, importance: 1 },
+      { skill: skills.ts, importance: 0.9 },
+      { skill: skills.webpack, importance: 0.7 },
+      { skill: skills.babel, importance: 0.3 },
+      { skill: skills.accessibility, importance: 0.2 },
+      { skill: skills.docker, importance: 0.5 },
+      { skill: skills.node, importance: 0.9 },
+      { skill: skills.aws_ecs, importance: 0.3 },
     ],
   },
   {
