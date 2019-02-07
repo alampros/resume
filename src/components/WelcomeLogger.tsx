@@ -24,12 +24,16 @@ Feel free to explore some data about me using \`window.Aaron\`.
 const consoleBit = '\tSkills: %O\n\tJobs: %O\n'
 
 export default class WelcomeLogger extends React.Component {
+  logged?: boolean
   render() {
     return (
       <JobsProvider
         render={(jobs: Job[]) => {
           if(typeof window !== 'undefined') {
-            console.log(msg(consoleBit), skills, jobs)
+            if(!this.logged) {
+              this.logged = true
+              console.log(msg(consoleBit), skills, jobs)
+            }
             window.Aaron = {
               skills,
               jobs,
