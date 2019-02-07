@@ -9,7 +9,19 @@
 }
 
 .container {
-  width: 840px;
-  padding-right: 48px;
-  padding-left: 48px;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+}
+
+@media screen and (min-width: 834px) {
+  .container {
+    width: 840px;
+  }
 }
