@@ -13,12 +13,12 @@ export default class TinyPie extends React.Component<Props & React.SVGAttributes
       className,
       ...passedProps
     } = this.props
-    const perc = value * 100
+    const perc = (value * 100)
     return (
       <svg viewBox="0 0 36 36" className={cx(styles.root, className)} {...passedProps}>
         <path
           className={styles.part}
-          strokeDasharray={`${perc / 2}, 100`}
+          strokeDasharray={`${perc / 1.8}, 100`}
           d={`M18 10
             a 9 9 0 0 1 0 18
             a 9 9 0 0 1 0 -18`
