@@ -58,3 +58,19 @@ address {
     font-size: 18px;
   }
 }
+
+@media (prefers-color-scheme: dark) { /* stylelint-disable-line */
+  :root {
+    --color-bg-body: #1f1f1f;
+    --color-text: #fff;
+    --color-text-dark: #fff;
+    --color-headings: #ccc;
+    --color-border-gray: #c5cbea;
+    --color-gray-muted: #a7a7a7;
+    --color-gray-dim: #6c6c6c;
+    --color-gray-ghost: #000;
+    --color-link: #69b6e1;
+    --font-size-small: 0.825rem;
+    --color-chart-1: #8cba80;
+  }
+}
