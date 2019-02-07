@@ -13,16 +13,15 @@ declare global {
   }
 }
 
-const msg = (middleBit?: string): string => `\n\n\n
+const msg = (middleBit: string = ''): string => `\n\n\n
 Hi there 👋
 
 Welcome to my resume! It looks like you know your way around the developer console. If that's more your style, here's some data about me:
 
 ${middleBit}
-
 Feel free to explore some data about me using \`window.Aaron\`.
 \n\n\n\n`
-const consoleBit = '\tSkills: %O\n\tJobs I\'ve had: %O'
+const consoleBit = '\tSkills: %O\n\tJobs: %O\n'
 
 export default class WelcomeLogger extends React.Component {
   render() {
