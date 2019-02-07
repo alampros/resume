@@ -6,9 +6,9 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop -p 3000",
+    "develop": "gatsby develop -p 3000 -H 0.0.0.0",
     "start": "yarn develop",
-    "serve": "gatsby serve -p 3001",
+    "serve": "gatsby serve -p 3001 -H 0.0.0.0",
     "test": "yarn lint && yarn typecheck",
     "typecheck": "tsc",
     "lint": "yarn lint-styles && yarn lint-scripts",

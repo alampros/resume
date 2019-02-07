@@ -3,6 +3,7 @@ import ResumeMetadata from 'data/ResumeMetadata'
 import { Helmet } from 'react-helmet'
 import Header from 'components/Header'
 import WelcomeLogger from 'components/WelcomeLogger'
+import BadExperienceDetect from 'components/BadExperienceDetect'
 
 const styles = require('./Layout.module.css')
 
@@ -44,6 +45,7 @@ export default class Layout extends React.Component<Props> {
             <meta name="twitter:creator" content="@alampros" />
           </Helmet>
           <div className={styles.container}>
+            <BadExperienceDetect />
             <Header {...ResumeMetadata} />
             {children}
           </div>

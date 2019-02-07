@@ -4,6 +4,10 @@ module.exports = {
     'standard',
     'standard-react',
   ],
+  env: {
+    browser: true,
+    node: true,
+  },
   plugins: [
     'react'
   ],
