@@ -18,7 +18,7 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
       skill: {
         name,
         yearsOfExperience,
-        link,
+        // link,
       },
       importance,
       className,
