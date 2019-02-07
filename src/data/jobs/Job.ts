@@ -1,5 +1,7 @@
+import { Omit } from 'utility-types'
 import companies from 'data/companies'
 import { ICompany } from 'data/companies/Company'
+import { IJobSkill } from 'data/Skill'
 import { IMarkdownNode } from 'data/GatsbyTypes'
 
 interface IDateRange {
@@ -12,13 +14,13 @@ export interface IJobDescriptor {
   date: IDateRange
   company: ICompany
   description?: IMarkdownNode
+  skills: IJobSkill[]
 }
 
-export interface IJobConstructorParam {
-  title: string
-  date: IDateRange
+export interface IJobConstructorParam extends Omit<IJobDescriptor, 'description' | 'company' | 'skills'> {
   descriptionId?: string
   companyId: string
+  skills?: IJobSkill[]
 }
 
 export default class Job implements IJobDescriptor {
@@ -28,6 +30,7 @@ export default class Job implements IJobDescriptor {
       date,
       companyId,
       descriptionId,
+      skills,
     } = jobDescriptor
     this.title = title
     this.date = date
@@ -42,9 +45,11 @@ export default class Job implements IJobDescriptor {
       throw new Error(`No company found for id "${companyId}"`)
     }
     this.company = company
+    this.skills = skills || []
   }
   title: string
   company: ICompany
   date: IDateRange
   description?: IMarkdownNode
+  skills: IJobSkill[]
 }

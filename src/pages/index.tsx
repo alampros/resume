@@ -1,6 +1,8 @@
 import * as React from 'react'
 import Layout from 'components/Layout'
-import Jobs from 'components/JobsProvider'
+import JobsProvider from 'components/JobsProvider'
+import Job from 'data/Jobs/Job'
+import Jobs from 'components/Jobs'
 import Objective from 'components/Objective'
 
 export default class IndexPage extends React.Component {
@@ -8,7 +10,9 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <Objective />
-        <Jobs />
+        <JobsProvider
+          render={(jobs: Job[]) => (<Jobs jobs={jobs} />)}
+        />
       </Layout>
     )
   }

@@ -1,5 +1,6 @@
 import Job, { IJobConstructorParam } from './Job'
 import { IMarkdownNode } from 'data/GatsbyTypes'
+import skills from 'data/skills'
 
 const jobs: IJobConstructorParam[] = [
   {
@@ -9,6 +10,9 @@ const jobs: IJobConstructorParam[] = [
     date: {
       start: new Date('2018-05-14T12:00:00.000Z'),
     },
+    skills: [
+      { skill: skills.js, importance: 0.9 },
+    ],
   },
   {
     title: 'Product Designer',

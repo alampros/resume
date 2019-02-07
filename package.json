@@ -48,7 +48,8 @@
     "stylelint": "^9.10.1",
     "stylelint-config-rational-order": "^0.0.4",
     "stylelint-config-standard": "^18.2.0",
-    "typescript": "~3.2.1"
+    "typescript": "~3.2.1",
+    "utility-types": "^3.4.1"
   },
   "repository": {
     "type": "git",
