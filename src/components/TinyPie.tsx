@@ -19,7 +19,7 @@ export default class TinyPie extends React.Component<Props & React.SVGAttributes
     }
     return (
       <svg viewBox="0 0 32 32" className={cx(styles.root, className)} {...passedProps}>
-        <circle r="25%" cx="50%" cy="50%" className={styles.part} style={s} transform="rotate(-90, 16, 16)" pathLength={100} />
+        <circle r="25%" cx="50%" cy="50%" className={styles.part} style={s} pathLength={100} />
       </svg>
     )
   }
