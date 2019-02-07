@@ -40,6 +40,11 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  font-weight: 100;
+  font-size: 3rem;
+}
+
 a[href] {
   color: var(--color-link);
   text-decoration: none;
@@ -59,7 +64,14 @@ address {
   }
 }
 
-@media (prefers-color-scheme: dark) { /* stylelint-disable-line */
+@media print {
+  h3 {
+    font-weight: 500;
+    font-size: 24px;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) { /* stylelint-disable-line */
   :root {
     --color-bg-body: #1f1f1f;
     --color-text: #fff;
