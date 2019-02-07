@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { IMarkdownNode } from 'data/GatsbyTypes'
 import { getJobsWithDescriptions } from 'data/jobs'
-import Jobs from 'components/Jobs'
+import Job from 'data/jobs/Job'
 
 interface Props {
   data: {
@@ -12,6 +12,7 @@ interface Props {
       }[]
     },
   }
+  render: (jobs: Job[]) => JSX.Element
 }
 
 class JobsProvider extends React.Component<Props> {
@@ -48,9 +49,7 @@ class JobsProvider extends React.Component<Props> {
       }
     }
     const jobs = getJobsWithDescriptions(getJobDescription)
-    return (
-      <Jobs jobs={jobs} />
-    )
+    return this.props.render(jobs)
   }
 }
 

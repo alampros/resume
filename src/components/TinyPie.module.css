@@ -1,0 +1,14 @@
+.root {
+  width: 1.2em;
+  height: 1.2em;
+  overflow: visible;
+  background-color: var(--color-gray-ghost);
+  border-radius: 50%;
+}
+
+.part {
+  fill: none;
+  stroke: var(--color-chart-1, #3d7e9a);
+  stroke-width: 16;
+  stroke-dashoffset: 25;
+}

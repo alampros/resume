@@ -1,11 +1,15 @@
 :root {
+  --color-bg-body: #fff;
   --color-text: #696969;
+  --color-text-dark: #1f1f1f;
   --color-headings: #222;
   --color-border-gray: #c5cbea;
-  --color-muted: #555;
-  --color-ghost: #b6b6b6;
+  --color-gray-muted: #555;
+  --color-gray-dim: #b6b6b6;
+  --color-gray-ghost: #e4e4e4;
   --color-link: #3d7e9a;
   --font-size-small: 0.75rem;
+  --color-chart-1: #8cba80;
 }
 
 html {
@@ -16,6 +20,7 @@ html {
 body {
   color: var(--color-text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: var(--color-bg-body, #fff);
 }
 
 h1,
