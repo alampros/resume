@@ -29,11 +29,6 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
         <div>~<strong>{perc}%</strong> of my daily work at this job involved this skill.</div>
       </span>
     )
-    const $name = link ? (
-      <a href={link.toString()}>{name}</a>
-    ) : (
-      <span>{name}</span>
-    )
     return (
       <Tippy
         content={$tipContent}
@@ -44,7 +39,7 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
       >
         <figure className={cx(styles.root, className)}>
           <div className={styles.inner}>
-            <figcaption>{$name}</figcaption>
+            <figcaption>{name}</figcaption>
             <TinyPie value={importance} />
           </div>
           <small><SkillExperience yearsOfExperience={yearsOfExperience} /></small>
