@@ -17,6 +17,7 @@ module.exports = {
         path: `${__dirname}/src/data/jobs`,
       },
     },
+    'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify',
     'gatsby-plugin-resolve-src',
