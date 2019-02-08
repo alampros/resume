@@ -14,7 +14,7 @@
     width: 100%;
     min-width: 1em;
     height: 0.5em;
-    color: red;
+    color: #8cba80;
     border: 1px solid var(--color-gray-ghost);
     border-radius: 3px;
     -webkit-appearance: none;
