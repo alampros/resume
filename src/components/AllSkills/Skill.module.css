@@ -1,0 +1,9 @@
+.root {
+  line-height: 1.2;
+}
+
+.rating {
+  > svg {
+    margin-right: 0.5em;
+  }
+}

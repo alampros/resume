@@ -32,7 +32,7 @@ export default class WelcomeLogger extends React.Component {
           if(typeof window !== 'undefined') {
             if(!this.logged) {
               this.logged = true
-              console.log(msg(consoleBit), skills, jobs)
+              console.log(msg(consoleBit), skills, jobs) // eslint-disable-line no-console
             }
             window.Aaron = {
               skills,

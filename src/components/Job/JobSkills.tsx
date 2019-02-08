@@ -1,13 +1,13 @@
 import React from 'react'
 import { IJobSkill } from 'data/Skill'
-import Skill from 'components/Skill'
-const styles = require('./Skills.module.css')
+import JobSkill from 'components/Job/JobSkill'
+const styles = require('./JobSkills.module.css')
 
 interface Props {
   skills: IJobSkill[]
 }
 
-export default class Skills extends React.Component<Props> {
+export default class JobSkills extends React.Component<Props> {
   render() {
     const {
       skills,
@@ -17,7 +17,7 @@ export default class Skills extends React.Component<Props> {
         return b.relevance - a.relevance
       })
       .map(skill => (
-        <Skill
+        <JobSkill
           key={skill.skill.id}
           className={styles.skill}
           {...skill}
