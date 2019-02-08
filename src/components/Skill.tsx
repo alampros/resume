@@ -20,10 +20,10 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
         yearsOfExperience,
         // link,
       },
-      importance,
+      relevance,
       className,
     } = this.props
-    const perc = (importance * 100).toFixed(0)
+    const perc = (relevance * 100).toFixed(0)
     const $tipContent = (
       <div className={styles.tip}>
         This skill was relevant to <em>~<strong>{perc}%</strong></em> of my core responsibilities at this job.
@@ -40,7 +40,7 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
             trigger="mouseenter focus click"
             arrow
           >
-            <TinyPie value={importance} />
+            <TinyPie value={relevance} />
           </Tippy>
         </div>
         <small><SkillExperience yearsOfExperience={yearsOfExperience} /></small>

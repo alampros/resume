@@ -8,5 +8,5 @@ export interface ISkill {
 
 export interface IJobSkill {
   skill: ISkill
-  importance: number
+  relevance: number
 }
