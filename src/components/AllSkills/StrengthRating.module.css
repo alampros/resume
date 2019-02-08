@@ -10,7 +10,10 @@
   }
 
   progress {
-    height: 0.5rem;
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 1em;
+    height: 0.5em;
     color: red;
     border: 1px solid var(--color-gray-ghost);
     border-radius: 3px;

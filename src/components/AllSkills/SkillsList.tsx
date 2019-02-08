@@ -28,6 +28,7 @@ export default class SkillsList extends React.Component<Props> {
         flexDirection="row"
         flexWrap="wrap"
         overflow="hidden"
+        alignContent="flex-end"
         marginRight="-0.5rem"
       >
         {$skills}

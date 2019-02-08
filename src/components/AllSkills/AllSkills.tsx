@@ -63,9 +63,6 @@ function AllSkills(props: Props) {
     <section className={styles.root}>
       <Pane
         is="header"
-        display="flex"
-        justifyContent="space-between"
-        alignItems="flex-start"
         marginBottom="0.5rem"
       >
         <h2>All Skills</h2>
@@ -74,6 +71,7 @@ function AllSkills(props: Props) {
             aria-label="Filter Skills"
             marginBottom="0.5rem"
             value={filterStr}
+            width="100%"
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               return setFilterStr(e.currentTarget.value)
             }}
