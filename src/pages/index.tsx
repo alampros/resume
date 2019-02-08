@@ -4,12 +4,17 @@ import JobsProvider from 'components/JobsProvider'
 import Job from 'data/Jobs/Job'
 import Jobs from 'components/Jobs'
 import Objective from 'components/Objective'
+import AllSkills from 'components/AllSkills'
+import skillsById from 'data/skills'
 
+const skills = Object.values(skillsById)
 export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
         <Objective />
+        <hr />
+        <AllSkills skills={skills} />
         <hr />
         <JobsProvider
           render={(jobs: Job[]) => (<Jobs jobs={jobs} />)}

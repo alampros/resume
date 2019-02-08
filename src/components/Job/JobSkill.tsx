@@ -7,12 +7,12 @@ import SkillExperience from 'components/SkillExperience'
 import 'tippy.js/dist/tippy.css'
 import 'tippy.js/dist/themes/light-border.css'
 
-const styles = require('./Skill.module.css')
+const styles = require('./JobSkill.module.css')
 
 interface Props extends IJobSkill {
 }
 
-export default class Skill extends React.Component<Props & React.HTMLProps<HTMLElement>> {
+export default class JobSkill extends React.Component<Props & React.HTMLProps<HTMLElement>> {
   render() {
     const {
       skill: {
