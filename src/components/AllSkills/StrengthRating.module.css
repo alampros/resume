@@ -1,0 +1,32 @@
+.root {
+  --bar-color: var(--color-gray-dim, gray);
+
+  &.strong {
+    --bar-color: var(--color-chart-1, green);
+  }
+
+  &.meh {
+    --bar-color: #f2a65a;
+  }
+
+  progress {
+    height: 0.5rem;
+    color: red;
+    border: 1px solid var(--color-gray-ghost);
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &::-webkit-progress-bar {
+      background-color: var(--color-gray-ghost);
+      border-radius: 3px;
+    }
+
+    &::-webkit-progress-value,
+    &::-moz-progress-bar {
+      background-color: var(--bar-color);
+      border-radius: 2px;
+    }
+  }
+}

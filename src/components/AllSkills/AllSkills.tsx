@@ -11,11 +11,8 @@ import SkillsList from './SkillsList'
 
 const styles = require('./AllSkills.module.css')
 
-interface Props {
-  skills: ISkill[]
-}
-
 type ISortKey = 'yearsOfExperience' | 'strength'
+
 interface ISortMenuOptions {
   label: string
   value: ISortKey
@@ -30,6 +27,10 @@ const sortOptions: ISortMenuOptions[] = [
     value: 'strength',
   },
 ]
+
+interface Props {
+  skills: ISkill[]
+}
 
 function AllSkills(props: Props) {
   const [filterStr, setFilterStr] = useState('')

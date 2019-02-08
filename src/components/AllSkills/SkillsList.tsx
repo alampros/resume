@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Pane } from 'evergreen-ui'
 import { ISkill } from 'data/Skill'
 import Empty from './Empty'
 import Skill from './Skill'
@@ -22,9 +23,15 @@ export default class SkillsList extends React.Component<Props> {
       <Skill key={skill.id} skill={skill} />
     ))
     return (
-      <div>
+      <Pane
+        display="flex"
+        flexDirection="row"
+        flexWrap="wrap"
+        overflow="hidden"
+        marginRight="-0.5rem"
+      >
         {$skills}
-      </div>
+      </Pane>
     )
   }
 }

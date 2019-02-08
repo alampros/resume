@@ -1,6 +1,12 @@
 import React from 'react'
 import cx from 'classnames'
+import {
+  Pane,
+  Card,
+} from 'evergreen-ui'
 import { ISkill } from 'data/Skill'
+import StrengthRating from './StrengthRating'
+import ExperienceRating from './ExperienceRating'
 
 const styles = require('./Skill.module.css')
 
@@ -19,13 +25,27 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
       },
       className,
     } = this.props
+
+    const $name = link ? (
+      <a href={link.toString()}>
+        {name}
+      </a>
+    ) : name
     return (
-      <div className={cx(styles.root, className)}>
-        <div>{name}</div>
-        {link && (<div>{link.toString()}</div>)}
-        <div>{yearsOfExperience}</div>
-        <div>{strength}</div>
-      </div>
+      <Card
+        className={cx(styles.root, className)}
+        border="default"
+        marginRight="0.5rem"
+        marginBottom="0.5rem"
+        elevation={1}
+        flex={1}
+        paddingY="0.333em"
+        paddingX="0.5em"
+      >
+        <Pane marginBottom="0.25em">{$name}</Pane>
+        <ExperienceRating yearsOfExperience={yearsOfExperience} className={styles.rating} />
+        <StrengthRating strength={strength} className={styles.rating} />
+      </Card>
     )
   }
 }
