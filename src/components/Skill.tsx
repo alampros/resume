@@ -26,7 +26,7 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
     const perc = (relevance * 100).toFixed(0)
     const $tipContent = (
       <div className={styles.tip}>
-        This skill was relevant to <em>~<strong>{perc}%</strong></em> of my core responsibilities at this job.
+        {name} was relevant to <em>~<strong>{perc}%</strong></em> of my core responsibilities at this job.
       </div>
     )
     return (
