@@ -39,13 +39,22 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
         marginBottom="0.5rem"
         elevation={1}
         flex={1}
+        display="flex"
+        flexDirection="column"
         paddingY="0.333em"
         paddingX="0.5em"
         flexBasis="8em"
       >
         <Pane marginBottom="0.25em">{$name}</Pane>
-        <ExperienceRating yearsOfExperience={yearsOfExperience} className={styles.rating} />
-        <StrengthRating strength={strength} className={styles.rating} />
+        <ExperienceRating
+          yearsOfExperience={yearsOfExperience}
+          className={styles.rating}
+          marginTop="auto"
+        />
+        <StrengthRating
+          strength={strength}
+          className={styles.rating}
+        />
       </Card>
     )
   }
