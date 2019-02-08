@@ -40,6 +40,16 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: var(--font-size-small);
+}
+
 a[href] {
   color: var(--color-link);
   text-decoration: none;
@@ -47,6 +57,30 @@ a[href] {
 
 address {
   font-style: inherit;
+}
+
+hr {
+  height: 6px;
+  margin: 3rem 0;
+  background:
+    repeating-linear-gradient(
+      -40deg,
+      var(--color-gray-ghost),
+      var(--color-gray-ghost) 2px,
+      var(--color-bg-body) 2px,
+      var(--color-bg-body) 6px
+    );
+  border: none;
+
+  & + section h2 {
+    margin-top: 0;
+  }
+
+  @media print {
+    height: 0;
+    background: none;
+    border-bottom: 1px dashed var(--color-gray-dim);
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -59,7 +93,14 @@ address {
   }
 }
 
-@media (prefers-color-scheme: dark) { /* stylelint-disable-line */
+@media print {
+  h3 {
+    font-weight: 500;
+    font-size: 24px;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) { /* stylelint-disable-line */
   :root {
     --color-bg-body: #1f1f1f;
     --color-text: #fff;

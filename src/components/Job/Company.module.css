@@ -24,7 +24,7 @@
   line-height: 1.2;
 }
 
-@media screen and (min-width: 480px) {
+@media all and (min-width: 480px) {
   .root {
     flex-flow: row wrap;
     margin-top: inherit;

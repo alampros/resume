@@ -20,8 +20,10 @@ export default class Job extends React.Component<Props> {
     return (
       <section className={styles.root}>
         <header>
-          <DateRange {...date} className={styles.dateRange} />
-          <h3>{title}</h3>
+          <span className={styles.printInline}>
+            <DateRange {...date} className={styles.dateRange} />
+            <h3>{title}</h3>
+          </span>
           <Company {...company} className={styles.company} />
         </header>
         {description && description.html && (

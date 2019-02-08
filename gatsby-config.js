@@ -17,7 +17,12 @@ module.exports = {
         path: `${__dirname}/src/data/jobs`,
       },
     },
-    'gatsby-plugin-emotion',
+    {
+      resolve: 'gatsby-plugin-postcss',
+      options: {
+        postCssPlugins: [require('postcss-nested')()],
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify',
     'gatsby-plugin-resolve-src',
