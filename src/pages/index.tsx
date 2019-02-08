@@ -10,6 +10,7 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <Objective />
+        <hr />
         <JobsProvider
           render={(jobs: Job[]) => (<Jobs jobs={jobs} />)}
         />

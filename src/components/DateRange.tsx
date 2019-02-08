@@ -15,13 +15,19 @@ const Time: React.SFC<ITimeProps> = ({ date }: ITimeProps) => (
 interface Props {
   start: Date
   end?: Date
+  as?: string
 }
 
 export default class DateRange extends React.Component<React.HTMLAttributes<HTMLSpanElement> & Props> {
+  static defaultProps = {
+    as: 'span',
+  }
+
   render() {
     const {
       start,
       end,
+      as,
       ...passedProps
     } = this.props
     const $start = (
@@ -32,10 +38,11 @@ export default class DateRange extends React.Component<React.HTMLAttributes<HTML
     ) : (
       <time>Present</time>
     )
+    const Component = as || 'span'
     return (
-      <span {...passedProps}>
+      <Component {...passedProps}>
         {$start} - {$end}
-      </span>
+      </Component>
     )
   }
 }

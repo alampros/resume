@@ -45,6 +45,11 @@ h3 {
   font-size: 3rem;
 }
 
+h4 {
+  font-weight: 700;
+  font-size: var(--font-size-small);
+}
+
 a[href] {
   color: var(--color-link);
   text-decoration: none;
@@ -52,6 +57,30 @@ a[href] {
 
 address {
   font-style: inherit;
+}
+
+hr {
+  height: 6px;
+  margin: 3rem 0;
+  background:
+    repeating-linear-gradient(
+      -40deg,
+      var(--color-gray-ghost),
+      var(--color-gray-ghost) 2px,
+      var(--color-bg-body) 2px,
+      var(--color-bg-body) 6px
+    );
+  border: none;
+
+  & + section h2 {
+    margin-top: 0;
+  }
+
+  @media print {
+    height: 0;
+    background: none;
+    border-bottom: 1px dashed var(--color-gray-dim);
+  }
 }
 
 @media screen and (min-width: 480px) {

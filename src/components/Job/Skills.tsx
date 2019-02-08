@@ -26,7 +26,7 @@ export default class Skills extends React.Component<Props> {
     if(skills.length) {
       return (
         <section className={styles.root}>
-          <h4>Skills Leveraged</h4>
+          <h4>Skills Leveraged:</h4>
           {$skills}
         </section>
       )
