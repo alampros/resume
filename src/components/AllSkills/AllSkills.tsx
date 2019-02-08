@@ -40,10 +40,10 @@ function AllSkills(props: Props) {
   } = props
   const fuse = new Fuse(skills, {
     shouldSort: true,
-    threshold: 0.2,
+    threshold: 0.6,
     location: 0,
-    distance: 10,
-    maxPatternLength: 32,
+    distance: 16,
+    maxPatternLength: 25,
     minMatchCharLength: 1,
     keys: [
       'name',
