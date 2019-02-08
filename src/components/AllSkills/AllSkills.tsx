@@ -45,7 +45,7 @@ function AllSkills(props: Props) {
     maxPatternLength: 32,
     minMatchCharLength: 1,
     keys: [
-      "name",
+      'name',
     ],
   })
   if(!skills || !skills.length) {
