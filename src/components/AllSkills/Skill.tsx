@@ -48,10 +48,12 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
         <Pane marginBottom="0.25em">{$name}</Pane>
         <ExperienceRating
           yearsOfExperience={yearsOfExperience}
+          name={name}
           className={styles.rating}
           marginTop="auto"
         />
         <StrengthRating
+          name={name}
           strength={strength}
           className={styles.rating}
         />

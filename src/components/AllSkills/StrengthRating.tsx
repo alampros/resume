@@ -2,15 +2,15 @@ import React from 'react'
 import cx from 'classnames'
 import { IoIosSchool } from 'react-icons/io'
 import { Pane } from 'evergreen-ui'
+import { ISkill } from 'data/Skill'
 
 const styles = require('./StrengthRating.module.css')
 
-interface Props {
-  strength: number
+type Props = Pick<ISkill, 'strength' | 'name'> & {
   className?: string
 }
 
-function StrengthRating({ strength, className, ...passedProps }: Props) {
+function StrengthRating({ strength, name, className, ...passedProps }: Props) {
   const cls = (() => {
     if(strength > 0.8) {
       return 'strong'
@@ -28,7 +28,11 @@ function StrengthRating({ strength, className, ...passedProps }: Props) {
       {...passedProps}
     >
       <IoIosSchool />
-      <progress max={1} value={strength}>
+      <progress
+        max={1}
+        value={strength}
+        title={`I arbitrarily rank my strength with ${name} at ${(strength * 10)}/10 `}
+      >
         {strength}
       </progress>
     </Pane>
