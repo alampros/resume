@@ -12,8 +12,7 @@
     "test": "yarn lint && yarn typecheck",
     "typecheck": "tsc",
     "lint": "yarn lint-styles && yarn lint-scripts",
-    "lint-styles": "stylelint \"src/**/*.?(s)css\"; yarn lint-component-styles",
-    "lint-component-styles": "stylelint --config ./stylelint.config.components.js \"src/**/*.tsx\"",
+    "lint-styles": "stylelint \"src/**/*.?(s)css\"",
     "lint-scripts": "eslint --ext ts --ext tsx --ext js --ext jsx src",
     "tidy": "yarn lint-styles --fix && eslint --ignore-pattern '!.eslintrc.js' --fix --ext ts --ext tsx --ext js --ext jsx .eslintrc.js src",
     "clean": "git clean -xfd .cache public src"
@@ -52,8 +51,6 @@
     "stylelint": "^9.10.1",
     "stylelint-config-rational-order": "^0.0.4",
     "stylelint-config-standard": "^18.2.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.5.2",
     "typescript": "~3.3.1",
     "utility-types": "^3.4.1"
   },
