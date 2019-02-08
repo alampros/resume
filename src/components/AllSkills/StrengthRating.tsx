@@ -10,7 +10,7 @@ type Props = Pick<ISkill, 'strength' | 'name'> & {
   className?: string
 }
 
-function StrengthRating({ strength, name, className, ...passedProps }: Props) {
+export default function StrengthRating({ strength, name, className, ...passedProps }: Props) {
   const cls = (() => {
     if(strength > 0.8) {
       return 'strong'
@@ -20,6 +20,7 @@ function StrengthRating({ strength, name, className, ...passedProps }: Props) {
     }
     return 'stale'
   })()
+  const title = `I arbitrarily rank my strength with ${name} at ${(strength * 10)}/10 `
   return (
     <Pane
       display="flex"
@@ -31,12 +32,12 @@ function StrengthRating({ strength, name, className, ...passedProps }: Props) {
       <progress
         max={1}
         value={strength}
-        title={`I arbitrarily rank my strength with ${name} at ${(strength * 10)}/10 `}
+        title={title}
+        aria-role="figure"
+        aria-label={title}
       >
         {strength}
       </progress>
     </Pane>
   )
 }
-
-export default StrengthRating
