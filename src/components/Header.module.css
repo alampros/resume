@@ -1,7 +1,25 @@
+.root {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.root h1 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  line-height: 1;
+  white-space: pre;
+  text-transform: uppercase;
+}
+
 .root address {
   display: flex;
   flex-flow: column nowrap;
+  margin-top: 1rem;
   margin-left: 1rem;
+  color: var(--color-headings);
+  font-size: 0.75rem;
   font-style: normal;
   line-height: 1.75rem;
 }

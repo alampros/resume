@@ -1,0 +1,31 @@
+.root {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  page-break-inside: avoid;
+
+  h3 {
+    margin: 0;
+    margin-bottom: 0.2em;
+    line-height: 1;
+  }
+
+  header {
+    text-align: center;
+
+    @media all and (min-width: 480px) {
+      text-align: inherit;
+    }
+  }
+}
+
+.dateRange {
+  color: var(--color-gray-muted);
+  font-weight: 700;
+  font-size: var(--font-size-small);
+  line-height: 1;
+}
+
+.desc {
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-border-gray, #999);
+}

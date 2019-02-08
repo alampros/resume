@@ -1,0 +1,24 @@
+.skill {
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+@media print {
+  .root {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-top: 1rem;
+
+    h4 {
+      margin: 0;
+      margin-right: 1em;
+    }
+  }
+
+  .skill {
+    margin-right: 1em;
+    margin-bottom: 0;
+    font-size: var(--font-size-small);
+  }
+}

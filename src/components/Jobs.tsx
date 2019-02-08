@@ -10,13 +10,13 @@ export default class Jobs extends React.Component<Props> {
   render() {
     const { jobs } = this.props
     const $jobs = jobs.map(job => (
-      <Job key={job.title} {...job} />
+      <Job key={`${job.company.name} - ${job.title}`} {...job} />
     ))
     return (
-      <div>
+      <section>
         <h2>Professional Experience</h2>
         {$jobs}
-      </div>
+      </section>
     )
   }
 }

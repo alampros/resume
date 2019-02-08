@@ -1,0 +1,61 @@
+.root {
+  display: inline-flex;
+  margin: 0;
+}
+
+.tip {
+  & > em {
+    font-size: 1.2em;
+    font-style: inherit;
+    letter-spacing: -0.05em;
+
+    strong {
+      font-weight: 900;
+    }
+  }
+}
+
+@media screen {
+  .root {
+    display: inline-flex;
+    flex-flow: column wrap;
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    border: 1px solid var(--color-gray-ghost);
+    border-radius: 3px;
+  }
+
+  .inner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25em 0.5em;
+  }
+
+  .inner svg {
+    margin-top: 0.1em;
+  }
+
+  .root figcaption {
+    margin-right: 0.25em;
+  }
+
+  .root > small {
+    flex-basis: 100%;
+    padding: 1px 0.5em;
+    color: var(--color-text-dark, #000);
+    font-size: 0.625rem;
+    background-color: var(--color-gray-ghost, #333);
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+}
+
+@media print {
+  .root > small,
+  .inner svg {
+    display: none;
+  }
+}
