@@ -13,6 +13,7 @@ export interface IJobDescriptor {
   title: string
   date: IDateRange
   company: ICompany
+  department?: string
   description?: IMarkdownNode
   skills: IJobSkill[]
 }
@@ -31,6 +32,7 @@ export default class Job implements IJobDescriptor {
       companyId,
       descriptionId,
       skills,
+      department,
     } = jobDescriptor
     this.title = title
     this.date = date
@@ -45,10 +47,12 @@ export default class Job implements IJobDescriptor {
       throw new Error(`No company found for id "${companyId}"`)
     }
     this.company = company
+    this.department = department
     this.skills = skills || []
   }
   title: string
   company: ICompany
+  department?: string
   date: IDateRange
   description?: IMarkdownNode
   skills: IJobSkill[]

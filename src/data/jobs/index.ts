@@ -6,6 +6,7 @@ const jobs: IJobConstructorParam[] = [
   {
     title: 'User Experience Architect',
     companyId: 'roundtable',
+    department: 'Engineering',
     descriptionId: 'roundtable_01',
     date: {
       start: new Date('2018-05-14T12:00:00.000Z'),
@@ -24,6 +25,7 @@ const jobs: IJobConstructorParam[] = [
   {
     title: 'Product Designer',
     companyId: 'dealertire',
+    department: 'Product Management',
     descriptionId: 'dealertire_01',
     date: {
       start: new Date('2017-11-01T12:00:00.000Z'),
@@ -43,6 +45,7 @@ const jobs: IJobConstructorParam[] = [
   {
     title: 'Technology Architect – User Experience',
     companyId: 'dealertire',
+    department: 'Enterprise Architecture',
     descriptionId: 'dealertire_02',
     date: {
       start: new Date('2012-02-01T12:00:00.000Z'),
@@ -59,6 +62,7 @@ const jobs: IJobConstructorParam[] = [
   {
     title: 'Web Designer, R&D Developer, Technology Evaluator',
     companyId: 'dealertire',
+    department: 'Information Systems',
     descriptionId: 'dealertire_03',
     date: {
       start: new Date('2007-11-01T12:00:00.000Z'),

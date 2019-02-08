@@ -13,6 +13,7 @@ export default class Job extends React.Component<Props> {
     const {
       title,
       company,
+      department,
       description,
       date,
       skills,
@@ -22,9 +23,9 @@ export default class Job extends React.Component<Props> {
         <header>
           <span className={styles.printInline}>
             <DateRange {...date} className={styles.dateRange} />
-            <h3>{title}</h3>
+            <h3 aria-label="Job title">{title}</h3>
           </span>
-          <Company {...company} className={styles.company} />
+          <Company {...company} department={department} className={styles.company} />
         </header>
         {description && description.html && (
           <div className={styles.desc} dangerouslySetInnerHTML={{ __html: description.html }} />
