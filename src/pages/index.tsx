@@ -14,11 +14,11 @@ export default class IndexPage extends React.Component {
       <Layout>
         <Objective />
         <hr />
-        <AllSkills skills={skills} />
-        <hr />
         <JobsProvider
           render={(jobs: Job[]) => (<Jobs jobs={jobs} />)}
         />
+        <hr />
+        <AllSkills skills={skills} />
       </Layout>
     )
   }
