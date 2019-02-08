@@ -3,6 +3,18 @@
   margin: 0;
 }
 
+.tip {
+  & > em {
+    font-size: 1.2em;
+    font-style: inherit;
+    letter-spacing: -0.05em;
+
+    strong {
+      font-weight: 900;
+    }
+  }
+}
+
 @media screen {
   .root {
     display: inline-flex;

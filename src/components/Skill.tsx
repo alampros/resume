@@ -25,26 +25,26 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
     } = this.props
     const perc = (importance * 100).toFixed(0)
     const $tipContent = (
-      <span>
-        <div>~<strong>{perc}%</strong> of my daily work at this job involved this skill.</div>
-      </span>
+      <div className={styles.tip}>
+        This skill was relevant to <em>~<strong>{perc}%</strong></em> of my core responsibilities at this job.
+      </div>
     )
     return (
-      <Tippy
-        content={$tipContent}
-        delay={[500, 0]}
-        theme="light-border"
-        trigger="mouseenter focus click"
-        arrow
-      >
-        <figure className={cx(styles.root, className)}>
-          <div className={styles.inner}>
-            <figcaption>{name}</figcaption>
+      <figure className={cx(styles.root, className)}>
+        <div className={styles.inner}>
+          <figcaption>{name}</figcaption>
+          <Tippy
+            content={$tipContent}
+            delay={[500, 0]}
+            theme="light-border"
+            trigger="mouseenter focus click"
+            arrow
+          >
             <TinyPie value={importance} />
-          </div>
-          <small><SkillExperience yearsOfExperience={yearsOfExperience} /></small>
-        </figure>
-      </Tippy>
+          </Tippy>
+        </div>
+        <small><SkillExperience yearsOfExperience={yearsOfExperience} /></small>
+      </figure>
     )
   }
 }
