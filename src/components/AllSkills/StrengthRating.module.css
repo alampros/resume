@@ -23,7 +23,12 @@
       border-radius: 3px;
     }
 
-    &::-webkit-progress-value,
+    /* cannot comine these two due to bug in postcss */
+    &::-webkit-progress-value {
+      background-color: var(--bar-color);
+      border-radius: 2px;
+    }
+
     &::-moz-progress-bar {
       background-color: var(--bar-color);
       border-radius: 2px;
