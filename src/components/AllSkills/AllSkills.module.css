@@ -1,0 +1,21 @@
+.root {
+  header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    @media screen and (min-width: 480px) {
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    label {
+      font-size: var(--font-size-small);
+    }
+  }
+}

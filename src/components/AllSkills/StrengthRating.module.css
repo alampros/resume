@@ -1,0 +1,40 @@
+.root {
+  --bar-color: var(--color-gray-dim, gray);
+
+  &.strong {
+    --bar-color: var(--color-chart-1, green);
+  }
+
+  &.meh {
+    --bar-color: #f2a65a;
+  }
+
+  progress {
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 1em;
+    height: 0.5em;
+    color: red;
+    border: 1px solid var(--color-gray-ghost);
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &::-webkit-progress-bar {
+      background-color: var(--color-gray-ghost);
+      border-radius: 3px;
+    }
+
+    /* cannot comine these two due to bug in postcss */
+    &::-webkit-progress-value {
+      background-color: var(--bar-color);
+      border-radius: 2px;
+    }
+
+    &::-moz-progress-bar {
+      background-color: var(--bar-color);
+      border-radius: 2px;
+    }
+  }
+}
