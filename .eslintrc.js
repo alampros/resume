@@ -28,7 +28,7 @@ module.exports = {
     },
   ],
   rules: {
-    'react-hooks/rules-of-hooks': 'error',
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
     'quote-props': ['error', 'as-needed'],
     'comma-dangle': ['warn', {
       arrays: 'only-multiline',
@@ -42,6 +42,7 @@ module.exports = {
       asyncArrow: 'always',
     }],
     'jsx-quotes': ['error', 'prefer-double'],
+    'react-hooks/rules-of-hooks': 'error',
     'react/jsx-closing-tag-location': 2,
     'react/jsx-closing-bracket-location': 2,
     'react/jsx-indent': [2, 2, { checkAttributes: true }],
