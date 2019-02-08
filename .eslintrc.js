@@ -9,7 +9,8 @@ module.exports = {
     node: true,
   },
   plugins: [
-    'react'
+    'react',
+    'react-hooks',
   ],
   overrides: [
     {
@@ -27,6 +28,7 @@ module.exports = {
     },
   ],
   rules: {
+    'react-hooks/rules-of-hooks': 'error',
     'quote-props': ['error', 'as-needed'],
     'comma-dangle': ['warn', {
       arrays: 'only-multiline',
@@ -43,6 +45,7 @@ module.exports = {
     'react/jsx-closing-tag-location': 2,
     'react/jsx-closing-bracket-location': 2,
     'react/jsx-indent': [2, 2, { checkAttributes: true }],
+    'react/jsx-max-props-per-line': ['error', { maximum: 1, when: 'multiline' }],
     'keyword-spacing': ['error', {
       overrides: {
         if: { after: false },
