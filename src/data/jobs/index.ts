@@ -83,22 +83,6 @@ export function getJobsWithDescriptions(
   return jobs.map(jobDescriptor => {
     return new Job(jobDescriptor, getJobDescription)
   })
-  /**
-   * @todo: normalize skill importance
-   *
-    .map(job => {
-      const totalImportance = job.skills.reduce((acc, jobSkill) => {
-        acc += jobSkill.importance
-        return acc
-      }, 0)
-      job.skills.forEach(skill => {
-        const normalizedImportance = skill.importance / totalImportance
-        console.log(`${skill.importance} => ${normalizedImportance}`)
-        skill.importance = normalizedImportance
-      })
-      return job
-    })
-   */
 }
 
 export default jobs

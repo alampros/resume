@@ -4,9 +4,9 @@
     "target": "esnext",
     "jsx": "preserve",
     "lib": ["dom", "es2015", "es2017"],
+    "allowJs": true,
     "strict": true,
     "noEmit": true,
-    "isolatedModules": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
@@ -23,6 +23,7 @@
     }
   },
   "include": [
-    "./src/**/*"
+    "./src/**/*",
+    "./scripts/**/*"
   ]
 }
