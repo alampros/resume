@@ -33,11 +33,15 @@ export default function StrengthRating({ strength, name, className, ...passedPro
         max={1}
         value={strength}
         title={title}
-        aria-role="figure"
+        role="figure"
         aria-label={title}
+        className="no-print"
       >
         {strength}
       </progress>
+      <span className="no-screen" style={{ fontSize: 'small' }}>
+        <strong>{strength * 100}</strong>%
+      </span>
     </Pane>
   )
 }

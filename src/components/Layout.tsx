@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import Header from 'components/Header'
 import WelcomeLogger from 'components/WelcomeLogger'
 import BadExperienceDetect from 'components/BadExperienceDetect'
+import Footer from 'components/Footer'
 
 const styles = require('./Layout.module.css')
 
@@ -48,6 +49,7 @@ export default class Layout extends React.Component<Props> {
             <BadExperienceDetect />
             <Header {...ResumeMetadata} />
             {children}
+            <Footer />
           </div>
         </main>
       </>

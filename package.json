@@ -59,6 +59,7 @@
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.3.0",
+    "react-qr-svg": "^2.2.1",
     "remark": "^10.0.1",
     "strip-markdown": "^3.0.3",
     "stylelint": "^9.10.1",
