@@ -5,7 +5,8 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "yarn build-pdf && yarn build-www",
+    "build-www": "gatsby build",
     "build-pdf": "ts-node -P tsconfig.json scripts/make-pdf",
     "develop": "gatsby develop -p 3000 -H 0.0.0.0",
     "develop-pdf": "nodemon -e ts,tsx,js,jsx,json --exec yarn build-pdf",
