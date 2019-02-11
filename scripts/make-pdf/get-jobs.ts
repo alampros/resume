@@ -1,6 +1,6 @@
-import fs from 'fs'
-import path from 'path'
-import glob from 'globby'
+import * as fs from 'fs'
+import * as path from 'path'
+import * as glob from 'globby'
 import { IMarkdownNode } from 'data/GatsbyTypes'
 import { getJobsWithDescriptions } from 'data/jobs/index'
 
