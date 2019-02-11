@@ -103,9 +103,23 @@ hr {
 }
 
 @media print {
+  .no-print {
+    display: none !important;
+  }
+
   h3 {
     font-weight: 500;
     font-size: 24px;
+  }
+
+  a[href] {
+    color: var(--color-text);
+  }
+}
+
+@media screen {
+  .no-screen {
+    display: none !important;
   }
 }
 

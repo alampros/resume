@@ -2,11 +2,12 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "esnext",
-    "jsx": "preserve",
+    "jsx": "react",
     "lib": ["dom", "es2015", "es2017"],
+    "types": ["node"],
+    "allowJs": true,
     "strict": true,
     "noEmit": true,
-    "isolatedModules": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
@@ -23,6 +24,7 @@
     }
   },
   "include": [
-    "./src/**/*"
+    "./src/**/*",
+    "./scripts/**/*"
   ]
 }

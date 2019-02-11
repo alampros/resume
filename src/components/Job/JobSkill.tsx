@@ -3,7 +3,6 @@ import cx from 'classnames'
 import Tippy from '@tippy.js/react'
 import { IJobSkill } from 'data/Skill'
 import TinyPie from 'components/TinyPie'
-import SkillExperience from 'components/SkillExperience'
 import 'tippy.js/dist/tippy.css'
 import 'tippy.js/dist/themes/light-border.css'
 
@@ -17,8 +16,6 @@ export default class JobSkill extends React.Component<Props & React.HTMLProps<HT
     const {
       skill: {
         name,
-        yearsOfExperience,
-        // link,
       },
       relevance,
       className,
@@ -43,7 +40,6 @@ export default class JobSkill extends React.Component<Props & React.HTMLProps<HT
             <TinyPie value={relevance} />
           </Tippy>
         </div>
-        <small><SkillExperience yearsOfExperience={yearsOfExperience} /></small>
       </figure>
     )
   }

@@ -31,7 +31,7 @@ class JobsProvider extends React.Component<Props> {
             return false
           }
           const pathParts = fileAbsolutePath.split('/')
-          const bname = pathParts[pathParts.length - 1].split('.')[0]
+          const bname = pathParts[pathParts.length - 1]
           return descId === bname
         } catch(err) {
           return false

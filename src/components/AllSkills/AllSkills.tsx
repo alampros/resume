@@ -66,7 +66,14 @@ function AllSkills(props: Props) {
         marginBottom="0.5rem"
       >
         <h2>All Skills</h2>
-        <Pane is="nav" display="flex" flexDirection="column" justifyContent="flex-end" alignItems="flex-end">
+        <Pane
+          is="nav"
+          display="flex"
+          flexDirection="column"
+          justifyContent="flex-end"
+          alignItems="flex-end"
+          className="no-print"
+        >
           <SearchInput
             aria-label="Filter Skills"
             marginBottom="0.5rem"

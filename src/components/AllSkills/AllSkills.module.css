@@ -1,4 +1,7 @@
 .root {
+  margin-bottom: 2rem;
+  page-break-inside: avoid;
+
   header {
     display: flex;
     flex-flow: column nowrap;

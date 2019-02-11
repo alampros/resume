@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { IResumeMetadata } from 'data/ResumeMetadata'
-import { MdPermPhoneMsg, MdMyLocation, MdEmail } from 'react-icons/md'
+import { MdPermPhoneMsg, MdMyLocation, MdEmail, MdPictureAsPdf } from 'react-icons/md'
 import { GoMarkGithub } from 'react-icons/go'
 const styles = require('./Header.module.css')
 
@@ -36,6 +36,10 @@ export default class Header extends React.Component<Props> {
           <div>
             <MdEmail />
             <a href={`mailto:${email}`}>{email}</a>
+          </div>
+          <div className="no-print">
+            <MdPictureAsPdf />
+            <a href="/resume-alampros.pdf">resume.pdf</a>
           </div>
         </address>
       </header>

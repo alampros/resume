@@ -41,20 +41,9 @@
   .root figcaption {
     margin-right: 0.25em;
   }
-
-  .root > small {
-    flex-basis: 100%;
-    padding: 1px 0.5em;
-    color: var(--color-text-dark, #000);
-    font-size: 0.625rem;
-    background-color: var(--color-gray-ghost, #333);
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-  }
 }
 
 @media print {
-  .root > small,
   .inner svg {
     display: none;
   }

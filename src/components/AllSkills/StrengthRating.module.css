@@ -1,13 +1,5 @@
 .root {
-  --bar-color: var(--color-gray-dim, gray);
-
-  &.strong {
-    --bar-color: var(--color-chart-1, green);
-  }
-
-  &.meh {
-    --bar-color: #f2a65a;
-  }
+  --bar-color: var(--color-chart-1, green);
 
   progress {
     flex: 1 1 100%;

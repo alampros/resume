@@ -3,9 +3,9 @@ import { IoIosTime } from 'react-icons/io'
 import { Pane } from 'evergreen-ui'
 import { ISkill } from 'data/Skill'
 
-type Props = any & Pick<ISkill, 'yearsOfExperience'>
+type Props = any & Pick<ISkill, 'yearsOfExperience' | 'name'>
 
-function ExperienceRating({ yearsOfExperience, ...passedProps }: Props) {
+export default function ExperienceRating({ yearsOfExperience, name, ...passedProps }: Props) {
   const plural = yearsOfExperience > 1 ? 'years' : 'year'
   const change = yearsOfExperience % 1
   const bits = (() => {
@@ -23,11 +23,9 @@ function ExperienceRating({ yearsOfExperience, ...passedProps }: Props) {
       {...passedProps}
     >
       <IoIosTime />
-      <small>
+      <small title={`I have ${years} experience with ${name}`}>
         <strong>{years}</strong> {plural}
       </small>
     </Pane>
   )
 }
-
-export default ExperienceRating
