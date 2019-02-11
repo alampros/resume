@@ -44,6 +44,7 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
         paddingY="0.333em"
         paddingX="0.5em"
         flexBasis="8em"
+        borderRadius={3}
       >
         <Pane marginBottom="0.25em">{$name}</Pane>
         <ExperienceRating

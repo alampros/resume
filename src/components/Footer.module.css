@@ -1,0 +1,46 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+  color: var(--color-gray-dim, #ccc);
+  font-size: 10px;
+
+  small {
+    font-size: inherit;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.resumeLink {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: var(--font-size-small);
+
+  svg {
+    margin-right: 0.5em;
+  }
+}
+
+:global {
+  .qr-cell-empty {
+    fill: transparent;
+  }
+
+  .qr-cell-filled {
+    fill: var(--color-gray-dim, #ccc);
+  }
+}
+
+@media print {
+  .root {
+    min-height: 3rem;
+  }
+}
