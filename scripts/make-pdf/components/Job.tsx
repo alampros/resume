@@ -10,7 +10,7 @@ import sharedStyles from '../sharedStyles'
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 10,
+    marginVertical: 14,
   },
   company: {
     flexDirection: 'row',
@@ -23,28 +23,37 @@ const styles = StyleSheet.create({
     color: '#222',
   },
   title: {
-    fontSize: 20,
+    fontSize: 22,
     fontFamily: 'RalewayExtraLight',
     paddingRight: 12,
     flex: 1,
+    color: '#000',
+    lineHeight: 1,
+    marginVertical: 2,
   },
   dates: {
     fontSize: 10,
     lineHeight: 1.3,
+    fontFamily: 'RobotoSlab',
+    ...sharedStyles.dim,
   },
   description: {
     marginTop: 6,
+    lineHeight: 1.4,
+    paddingRight: 18,
   },
   skills: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
     fontSize: 10,
     marginTop: 6,
-    justifyContent: 'flex-end',
-    marginLeft: '25%',
+    fontFamily: 'RobotoSlab',
+  },
+  skillsLabel: {
+    marginRight: 4,
   },
   skillsList: {
-    flex: 1,
+    flexShrink: 1,
+    fontFamily: 'RobotoSlabLight',
     ...sharedStyles.dim,
   },
 })
@@ -93,8 +102,8 @@ export default (props: Props & ReactPDF.ViewProps) => {
       <Text style={styles.title}>{title}</Text>
       {description && <Text style={styles.description}>{description.html}</Text>}
       <View style={styles.skills}>
-        <Text style={{ marginRight: 4 }}>Relevant Skills:</Text>
-        <Text style={styles.skillsList}>{skills.map(skill => skill.name).join(', ')}</Text>
+        <Text style={styles.skillsLabel}>Relevant Skills:</Text>
+        <Text style={styles.skillsList} break={false}>{skills.map(skill => skill.name).join(', ')}</Text>
       </View>
     </View>
   )

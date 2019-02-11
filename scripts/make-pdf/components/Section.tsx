@@ -8,8 +8,7 @@ import sharedStyles from '../sharedStyles'
 
 const styles = StyleSheet.create({
   indent: {
-    paddingHorizontal: 18,
-    maxWidth: '95%',
+    paddingLeft: 18,
   },
 })
 
@@ -19,7 +18,7 @@ interface Props {
 }
 export default ({ title, children, ...passedProps }: Props & ReactPDF.ViewProps) => {
   return (
-    <View {...passedProps} wrap={false}>
+    <View wrap={false} {...passedProps}>
       <Text style={sharedStyles.headings.section}>{title}</Text>
       <View style={styles.indent}>
         {children}

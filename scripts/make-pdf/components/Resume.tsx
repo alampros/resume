@@ -13,18 +13,19 @@ Font.register(path.resolve(__dirname, '../fonts/Raleway/Raleway-Light.ttf'), { f
 Font.register(path.resolve(__dirname, '../fonts/Raleway/Raleway-ExtraLight.ttf'), { family: 'RalewayExtraLight' })
 Font.register(path.resolve(__dirname, '../fonts/Raleway/Raleway-Bold.ttf'), { family: 'RalewayBold' })
 Font.register(path.resolve(__dirname, '../fonts/Roboto_Slab/RobotoSlab-Regular.ttf'), { family: 'RobotoSlab' })
+Font.register(path.resolve(__dirname, '../fonts/Roboto_Slab/RobotoSlab-Light.ttf'), { family: 'RobotoSlabLight' })
 Font.register(path.resolve(__dirname, '../fonts/Staatliches/Staatliches-Regular.ttf'), { family: 'Staatliches' })
+
+// @ts-ignore
+Font.registerHyphenationCallback(word => {
+  return [word]
+})
 
 const styles = StyleSheet.create({
   page: {
     padding: 14,
     fontSize: 12,
     fontFamily: 'Raleway',
-  },
-
-  indent: {
-    paddingHorizontal: 18,
-    maxWidth: '95%',
   },
 })
 

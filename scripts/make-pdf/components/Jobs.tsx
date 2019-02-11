@@ -11,7 +11,7 @@ export default ({ jobs }: Props) => {
     <Job key={`${job.title}-${job.company.id}`} job={job} />
   ))
   return (
-    <Section title="Professional Experience">
+    <Section title="Professional Experience" wrap>
       {$jobs}
     </Section>
   )
