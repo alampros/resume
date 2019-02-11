@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 24,
-    fontFamily: 'RalewayLight',
+    fontFamily: 'RalewayExtraLight',
   },
   contact: {
     flexDirection: 'row',

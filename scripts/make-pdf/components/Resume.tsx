@@ -4,11 +4,13 @@ import { Font, Page, Document, StyleSheet } from '@react-pdf/renderer'
 import { IJobDescriptor } from 'data/jobs/Job'
 import { ISkill } from 'data/Skill'
 import Jobs from './Jobs'
+import Skills from './Skills'
 import Header from './Header'
 import Objective from './Objective'
 
 Font.register(path.resolve(__dirname, '../fonts/Raleway/Raleway-Regular.ttf'), { family: 'Raleway' })
 Font.register(path.resolve(__dirname, '../fonts/Raleway/Raleway-Light.ttf'), { family: 'RalewayLight' })
+Font.register(path.resolve(__dirname, '../fonts/Raleway/Raleway-ExtraLight.ttf'), { family: 'RalewayExtraLight' })
 Font.register(path.resolve(__dirname, '../fonts/Raleway/Raleway-Bold.ttf'), { family: 'RalewayBold' })
 Font.register(path.resolve(__dirname, '../fonts/Roboto_Slab/RobotoSlab-Regular.ttf'), { family: 'RobotoSlab' })
 Font.register(path.resolve(__dirname, '../fonts/Staatliches/Staatliches-Regular.ttf'), { family: 'Staatliches' })
@@ -41,10 +43,11 @@ export default ({ jobs, skills }: Props) => {
       keywords={keywords}
       creator="Aaron Lampros"
     >
-      <Page size="A4" style={styles.page}>
+      <Page size="A4" style={styles.page} wrap>
         <Header />
         <Objective />
         <Jobs jobs={jobs} />
+        <Skills skills={skills} />
       </Page>
     </Document>
   )

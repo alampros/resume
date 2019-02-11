@@ -19,7 +19,7 @@ interface Props {
 }
 export default ({ title, children, ...passedProps }: Props & ReactPDF.ViewProps) => {
   return (
-    <View {...passedProps}>
+    <View {...passedProps} wrap={false}>
       <Text style={sharedStyles.headings.section}>{title}</Text>
       <View style={styles.indent}>
         {children}
