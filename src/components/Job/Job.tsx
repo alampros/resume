@@ -21,10 +21,8 @@ export default class Job extends React.Component<Props> {
     return (
       <section className={styles.root}>
         <header>
-          <span className={styles.printInline}>
-            <DateRange {...date} className={styles.dateRange} />
-            <h3 aria-label="Job title">{title}</h3>
-          </span>
+          <h3 aria-label={title}>{title}</h3>
+          <DateRange {...date} className={styles.dateRange} />
           <Company {...company} department={department} className={styles.company} />
         </header>
         {description && description.html && (

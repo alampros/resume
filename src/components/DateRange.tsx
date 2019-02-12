@@ -18,7 +18,7 @@ interface Props {
   as?: string
 }
 
-export default class DateRange extends React.Component<React.HTMLAttributes<HTMLSpanElement> & Props> {
+export default class DateRange extends React.Component<any & Props> {
   static defaultProps = {
     as: 'span',
   }
@@ -38,9 +38,14 @@ export default class DateRange extends React.Component<React.HTMLAttributes<HTML
     ) : (
       <time>Present</time>
     )
+    const labelStart = dateFormatter.format(start)
+    const labelEnd = end ? dateFormatter.format(end) : 'present'
     const Component = as || 'span'
     return (
-      <Component {...passedProps}>
+      <Component
+        aria-label={`${labelStart} through ${labelEnd}`}
+        {...passedProps}
+      >
         {$start} - {$end}
       </Component>
     )

@@ -10,7 +10,17 @@
   }
 
   header {
+    display: flex;
+    flex-flow: column wrap;
     text-align: center;
+
+    h3 {
+      order: 2;
+    }
+
+    .company {
+      order: 3;
+    }
 
     @media all and (min-width: 480px) {
       text-align: inherit;
@@ -19,6 +29,7 @@
 }
 
 .dateRange {
+  order: 1;
   color: var(--color-gray-muted);
   font-weight: 700;
   font-size: var(--font-size-small);
