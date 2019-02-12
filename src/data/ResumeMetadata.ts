@@ -1,4 +1,8 @@
 export interface IResumeMetadata {
+  firstName: string
+  middleName: string
+  lastName: string
+  title: string
   email: string
   phone: string
   location: string
@@ -8,6 +12,10 @@ export interface IResumeMetadata {
 }
 
 const ResumeMetadata: IResumeMetadata = {
+  firstName: 'Aaron',
+  middleName: 'J.',
+  lastName: 'Lampros',
+  title: 'User Experience Architect',
   location: 'Cleveland, OH',
   phone: '+1-216-246-3832',
   email: 'alampros@gmail.com',

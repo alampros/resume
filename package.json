@@ -5,11 +5,13 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "yarn build-pdf && yarn build-www",
+    "build": "yarn build-pdf && yarn build-vcard && yarn build-www",
     "build-www": "gatsby build",
     "build-pdf": "ts-node -P tsconfig.json scripts/make-pdf",
+    "build-vcard": "ts-node -P tsconfig.json scripts/make-vcard",
     "develop": "gatsby develop -p 3000 -H 0.0.0.0",
     "develop-pdf": "nodemon -e ts,tsx,js,jsx,json --exec yarn build-pdf",
+    "develop-vcard": "nodemon -e ts,tsx,js,jsx,json --exec yarn build-vcard",
     "start": "yarn develop",
     "serve": "gatsby serve -p 3001 -H 0.0.0.0",
     "preserve": "yarn build",
@@ -67,7 +69,8 @@
     "stylelint-config-standard": "^18.2.0",
     "ts-node": "^8.0.2",
     "typescript": "~3.3.1",
-    "utility-types": "^3.4.1"
+    "utility-types": "^3.4.1",
+    "vcards-js": "^2.10.0"
   },
   "repository": {
     "type": "git",
