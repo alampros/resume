@@ -27,8 +27,11 @@ export default class JobSkill extends React.Component<Props & React.HTMLProps<HT
       </div>
     )
     return (
-      <figure className={cx(styles.root, className)}>
-        <div className={styles.inner}>
+      <figure
+        className={cx(styles.root, className)}
+        aria-label={`${name} was approximately ${perc}% relevant to this job`}
+      >
+        <div className={styles.inner} aria-hidden>
           <figcaption>{name}</figcaption>
           <Tippy
             content={$tipContent}

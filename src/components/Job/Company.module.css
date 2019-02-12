@@ -4,18 +4,21 @@
   align-items: center;
   margin-top: -0.5em;
   font-size: var(--font-size-small);
-  line-height: 1.2;
+  line-height: 1.25;
+
+  address {
+    color: var(--color-gray-muted, #333);
+  }
 }
 
-.root::before {
+.at {
   padding-bottom: 0.25em;
   color: var(--color-gray-dim);
   font-size: 1.25rem;
-  content: '@';
 }
 
-.root address {
-  color: var(--color-gray-muted, #333);
+.separator {
+  display: none;
 }
 
 .name {
@@ -31,22 +34,22 @@
     line-height: inherit;
   }
 
+  .at {
+    padding-right: 0.25em;
+    padding-bottom: 0;
+    font-size: inherit;
+  }
+
   .name {
     font-weight: inherit;
     font-size: inherit;
     line-height: inherit;
   }
 
-  .root::before {
-    padding-right: 0.25em;
-    padding-bottom: 0;
-    font-size: inherit;
-  }
-
-  .root > *:not(:last-child)::after {
+  .separator {
+    display: inline;
     padding-right: 1rem;
     padding-left: 1rem;
     color: var(--color-gray-dim);
-    content: '◦';
   }
 }

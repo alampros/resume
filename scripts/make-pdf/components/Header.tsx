@@ -37,19 +37,32 @@ const styles = StyleSheet.create({
   },
 })
 
+const {
+  firstName,
+  middleName,
+  lastName,
+  title,
+  website,
+  location,
+  phone,
+  email,
+  github,
+} = ResumeMetadata
+const middle = middleName && middleName.length === 1 ? middleName + '.' : middleName
+
 export default () => (
   <View style={styles.container} fixed>
     <View style={styles.name}>
-      <Text>Aaron J. Lampros</Text>
-      <Text style={{ fontSize: 12, fontFamily: 'Raleway' }}>User Experience Architect</Text>
+      <Text>{`${firstName} ${middle} ${lastName}`}</Text>
+      <Text style={{ fontSize: 12, fontFamily: 'Raleway' }}>{title}</Text>
     </View>
     <View style={styles.contact}>
       <View style={styles.contactInner}>
-        <Text>{ResumeMetadata.website.hostname}</Text>
-        <Text>{ResumeMetadata.location}</Text>
-        <Text>{ResumeMetadata.phone}</Text>
-        <Text>{ResumeMetadata.email}</Text>
-        <Text>github.com/{ResumeMetadata.github}</Text>
+        <Text>{website.hostname}</Text>
+        <Text>{location.city}, {location.state}</Text>
+        <Text>{phone}</Text>
+        <Text>{email}</Text>
+        <Text>github.com/{github}</Text>
       </View>
       <Image src={b64Png('qr-link.png')} style={{ width: '1in', height: '1in', marginTop: 4 }} />
     </View>

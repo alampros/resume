@@ -1,6 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import { ICompany } from 'data/companies/Company'
+import Address from 'components/Address'
 import { IJobDescriptor } from 'data/jobs/Job'
 const styles = require('./Company.module.css')
 
@@ -8,6 +9,8 @@ type JobParts = Pick<IJobDescriptor, 'department'>
 
 interface Props extends ICompany {
 }
+
+const Sep = () => <span className={styles.separator} role="none" aria-hidden>◦</span>
 
 export default class Company extends React.Component<Props & JobParts & React.HTMLProps<HTMLDivElement>> {
   render() {
@@ -22,15 +25,28 @@ export default class Company extends React.Component<Props & JobParts & React.HT
     } = this.props
     return (
       <div className={cx(className, styles.root)} {...passedProps}>
-        <div className={styles.name} aria-label="Company name">{name}</div>
-        {department && <div title={`${department} Department`} className={styles.department} aria-label="Department">{department}</div>}
-        <address aria-label="Address">
-          {address.city}, {address.state}
+        <span className={styles.at}>@</span>
+        <div className={styles.name} aria-label="Company">{name}</div>
+        <Sep />
+        {department && (
+          <>
+            <span
+              className={styles.department}
+              aria-label="Department"
+            >
+              {department}
+            </span>
+            <Sep />
+          </>
+        )}
+        <address aria-label="Location">
+          <Address address={address} />
         </address>
         {website && (
-          <div>
-            <a href={website.toString()}>{website.hostname.replace(/^www\./, '')}</a>
-          </div>
+          <>
+            <Sep />
+            <a href={website.toString()} aria-label="Company website">{website.hostname.replace(/^www\./, '')}</a>
+          </>
         )}
       </div>
     )

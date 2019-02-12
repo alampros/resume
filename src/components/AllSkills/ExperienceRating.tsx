@@ -20,10 +20,12 @@ export default function ExperienceRating({ yearsOfExperience, name, ...passedPro
     <Pane
       display="flex"
       alignItems="center"
+      role="presentation"
+      aria-label={`I have ${years} ${plural} experience with ${name}`}
       {...passedProps}
     >
-      <IoIosTime />
-      <small title={`I have ${years} experience with ${name}`}>
+      <IoIosTime aria-hidden />
+      <small title={`I have ${years} ${plural} experience with ${name}`} aria-hidden>
         <strong>{years}</strong> {plural}
       </small>
     </Pane>

@@ -12,7 +12,7 @@ export default class Footer extends React.Component {
           <MdPictureAsPdf />
           Download my resume (<abbr title="Portable Document Format">PDF</abbr>)
         </a>
-        <small>&copy;2019 Aaron Lampros</small>
+        <small>&copy; Aaron Lampros</small>
         <small><a href="https://alampros.com">alampros.com</a></small>
         <QRCode
           bgColor="transparent"

@@ -64,6 +64,10 @@ a[href] {
   text-decoration: none;
 }
 
+abbr {
+  text-decoration: none;
+}
+
 address {
   font-style: inherit;
 }
@@ -137,4 +141,15 @@ hr {
     --font-size-small: 0.825rem;
     --color-chart-1: #8cba80;
   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
