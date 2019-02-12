@@ -31,10 +31,12 @@ export default class Header extends React.Component<Props> {
     }
     return (
       <header className={styles.root}>
-        <div>
-          <h1 className={styles.name}><span>{firstName}</span><span>{middle}</span><span>{lastName}</span></h1>
+        <span>
+          <h1 className={styles.name} aria-label={`${firstName} ${middle} ${lastName}`}>
+            <span aria-hidden>{firstName}</span><span aria-hidden>{middle}</span><span aria-hidden>{lastName}</span>
+          </h1>
           <small>User Experience Architect</small>
-        </div>
+        </span>
         <Pane
           className={styles.contact}
           display="flex"
