@@ -17,7 +17,7 @@ export default class Header extends React.Component<Props> {
     return (
       <header className={styles.root}>
         <div>
-          <h1>{'Aaron J. \nLampros'}</h1>
+          <h1 className={styles.name}><span>Aaron</span><span>J.</span><span>Lampros</span></h1>
           <small>User Experience Architect</small>
         </div>
         <address>
