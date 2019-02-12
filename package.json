@@ -21,7 +21,7 @@
     "lint-styles": "stylelint \"src/**/*.?(s)css\"",
     "lint-scripts": "eslint --ext ts --ext tsx --ext js --ext jsx src",
     "tidy": "eslint --ignore-pattern '!.eslintrc.js' --fix --ext ts --ext tsx --ext js --ext jsx .eslintrc.js src",
-    "clean": "git clean -xfd .cache public src"
+    "clean": "git clean -xfd -i -e node_modules ."
   },
   "dependencies": {
     "@react-pdf/renderer": "^1.3.0",
