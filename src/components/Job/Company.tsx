@@ -9,6 +9,8 @@ type JobParts = Pick<IJobDescriptor, 'department'>
 interface Props extends ICompany {
 }
 
+const Sep = () => <span className={styles.separator} aria-hidden>◦</span>
+
 export default class Company extends React.Component<Props & JobParts & React.HTMLProps<HTMLDivElement>> {
   render() {
     const {
@@ -22,15 +24,28 @@ export default class Company extends React.Component<Props & JobParts & React.HT
     } = this.props
     return (
       <div className={cx(className, styles.root)} {...passedProps}>
-        <div className={styles.name} aria-label="Company name">{name}</div>
-        {department && <div title={`${department} Department`} className={styles.department} aria-label="Department">{department}</div>}
-        <address aria-label="Address">
+        <span className={styles.at}>@</span>
+        <div className={styles.name} aria-label="Company">{name}</div>
+        <Sep />
+        {department && (
+          <>
+            <span
+              className={styles.department}
+              aria-label="Department"
+            >
+              {department}
+            </span>
+            <Sep />
+          </>
+        )}
+        <address aria-label="Location">
           {address.city}, {address.state}
         </address>
         {website && (
-          <div>
-            <a href={website.toString()}>{website.hostname.replace(/^www\./, '')}</a>
-          </div>
+          <>
+            <Sep />
+            <a href={website.toString()} aria-label="Company website">{website.hostname.replace(/^www\./, '')}</a>
+          </>
         )}
       </div>
     )
