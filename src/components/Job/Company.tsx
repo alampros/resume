@@ -1,6 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import { ICompany } from 'data/companies/Company'
+import Address from 'components/Address'
 import { IJobDescriptor } from 'data/jobs/Job'
 const styles = require('./Company.module.css')
 
@@ -9,7 +10,7 @@ type JobParts = Pick<IJobDescriptor, 'department'>
 interface Props extends ICompany {
 }
 
-const Sep = () => <span className={styles.separator} aria-hidden>◦</span>
+const Sep = () => <span className={styles.separator} role="none" aria-hidden>◦</span>
 
 export default class Company extends React.Component<Props & JobParts & React.HTMLProps<HTMLDivElement>> {
   render() {
@@ -39,7 +40,7 @@ export default class Company extends React.Component<Props & JobParts & React.HT
           </>
         )}
         <address aria-label="Location">
-          {address.city}, {address.state}
+          <Address address={address} />
         </address>
         {website && (
           <>

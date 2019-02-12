@@ -64,6 +64,10 @@ a[href] {
   text-decoration: none;
 }
 
+abbr {
+  text-decoration: none;
+}
+
 address {
   font-style: inherit;
 }

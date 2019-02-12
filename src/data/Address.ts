@@ -1,6 +1,6 @@
 export interface IAddress {
   street?: string
-  city: string
+  city?: string
   state: string
-  ZIP: string
+  ZIP?: string
 }
