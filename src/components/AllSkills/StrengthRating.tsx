@@ -20,26 +20,27 @@ export default function StrengthRating({ strength, name, className, ...passedPro
     }
     return 'stale'
   })()
-  const title = `I arbitrarily rank my strength with ${name} at ${(strength * 10)}/10 `
+  const title = `I arbitrarily rank my strength with ${name} at ${(strength * 10)} out of 10`
   return (
     <Pane
       display="flex"
       alignItems="center"
       className={cx(className, styles.root, styles[cls])}
+      role="presentation"
+      aria-label={title}
       {...passedProps}
     >
-      <IoIosSchool />
+      <IoIosSchool aria-hidden />
       <progress
         max={1}
         value={strength}
         title={title}
-        role="figure"
-        aria-label={title}
+        aria-hidden
         className="no-print"
       >
         {strength}
       </progress>
-      <span className="no-screen" style={{ fontSize: 'small' }}>
+      <span className="no-screen" style={{ fontSize: 'small' }} aria-hidden>
         <strong>{strength * 100}</strong>%
       </span>
     </Pane>
