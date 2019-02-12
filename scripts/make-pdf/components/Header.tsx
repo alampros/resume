@@ -59,7 +59,7 @@ export default () => (
     <View style={styles.contact}>
       <View style={styles.contactInner}>
         <Text>{website.hostname}</Text>
-        <Text>{location}</Text>
+        <Text>{location.city}, {location.state}</Text>
         <Text>{phone}</Text>
         <Text>{email}</Text>
         <Text>github.com/{github}</Text>
