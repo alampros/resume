@@ -88,11 +88,11 @@
     > a {
       position: relative;
       height: 3em;
+      margin-top: 1rem;
       padding-right: 2em;
       background-color: var(--color-ribbon);
       border-radius: 0;
       transition: all 0.2s ease;
-      margin-top: 1rem;
 
       &::before,
       &::after {

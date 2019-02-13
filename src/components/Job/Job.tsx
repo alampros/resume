@@ -2,6 +2,7 @@ import React from 'react'
 import Company from './Company'
 import { IJobDescriptor } from 'data/jobs/Job'
 import DateRange from 'components/DateRange'
+import Project from './Project'
 import JobSkills from './JobSkills'
 const styles = require('./Job.module.css')
 
@@ -15,9 +16,24 @@ export default class Job extends React.Component<Props> {
       company,
       department,
       description,
+      projects,
       date,
       skills,
     } = this.props
+    const $projects = projects.map(project => (
+      <Project key={project.description} project={project} />
+    ))
+
+    const $description = (() => {
+      if(!description) return null
+      if(typeof description === 'string') {
+        return <div className={styles.desc}>{description}</div>
+      }
+      if(description.html) {
+        return <div className={styles.desc} dangerouslySetInnerHTML={{ __html: description.html }} />
+      }
+      return null
+    })()
     return (
       <section className={styles.root}>
         <header>
@@ -25,8 +41,14 @@ export default class Job extends React.Component<Props> {
           <DateRange {...date} className={styles.dateRange} />
           <Company {...company} department={department} className={styles.company} />
         </header>
-        {description && description.html && (
-          <div className={styles.desc} dangerouslySetInnerHTML={{ __html: description.html }} />
+        {$description}
+        {$projects.length > 0 && (
+          <>
+            <h4>Notable Projects:</h4>
+            <ul className={styles.projects}>
+              {$projects}
+            </ul>
+          </>
         )}
         <JobSkills skills={skills} />
       </section>

@@ -1,6 +1,7 @@
 import { Omit } from 'utility-types'
 import companies from 'data/companies'
 import { ICompany } from 'data/companies/Company'
+import { IProject } from 'data/Project'
 import { IJobSkill } from 'data/Skill'
 import { IMarkdownNode } from 'data/GatsbyTypes'
 
@@ -14,14 +15,17 @@ export interface IJobDescriptor {
   date: IDateRange
   company: ICompany
   department?: string
-  description?: IMarkdownNode
+  description?: string | IMarkdownNode
+  projects: IProject[]
   skills: IJobSkill[]
 }
 
-export interface IJobConstructorParam extends Omit<IJobDescriptor, 'description' | 'company' | 'skills'> {
+export interface IJobConstructorParam extends Omit<IJobDescriptor, 'description' | 'company' | 'skills' | 'projects'> {
+  description?: string | IMarkdownNode
   descriptionId?: string
   companyId: string
   skills?: IJobSkill[]
+  projects?: IProject[]
 }
 
 export default class Job implements IJobDescriptor {
@@ -31,8 +35,10 @@ export default class Job implements IJobDescriptor {
       date,
       companyId,
       descriptionId,
+      description,
       skills,
       department,
+      projects,
     } = jobDescriptor
     this.title = title
     this.date = date
@@ -41,6 +47,8 @@ export default class Job implements IJobDescriptor {
       if(desc) {
         this.description = desc
       }
+    } else {
+      this.description = description
     }
     const company = companies.find(co => co.id === companyId)
     if(!company) {
@@ -49,11 +57,13 @@ export default class Job implements IJobDescriptor {
     this.company = company
     this.department = department
     this.skills = skills || []
+    this.projects = projects || []
   }
   title: string
   company: ICompany
   department?: string
   date: IDateRange
-  description?: IMarkdownNode
+  description?: string | IMarkdownNode
+  projects: IProject[]
   skills: IJobSkill[]
 }

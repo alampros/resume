@@ -17,17 +17,21 @@ export default class JobSkills extends React.Component<Props> {
         return b.relevance - a.relevance
       })
       .map(skill => (
-        <JobSkill
-          key={skill.skill.id}
-          className={styles.skill}
-          {...skill}
-        />
+        <li key={skill.skill.id}>
+          <JobSkill
+            className={styles.skill}
+            {...skill}
+          />
+
+        </li>
       ))
     if(skills.length) {
       return (
         <section className={styles.root}>
           <h4>Skills Leveraged:</h4>
-          {$skills}
+          <ul>
+            {$skills}
+          </ul>
         </section>
       )
     }

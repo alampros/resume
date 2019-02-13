@@ -1,1 +1,0 @@
-Guide the design and development teams in unifying the user experience across entire product suite (six independent web platforms). Evaluation of new and emerging technologies and business opportunities. Rapid prototyping of UI concepts for experiment-driven user testing.

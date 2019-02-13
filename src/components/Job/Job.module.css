@@ -1,13 +1,7 @@
 .root {
   margin-top: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   page-break-inside: avoid;
-
-  h3 {
-    margin: 0;
-    margin-bottom: 0.2em;
-    line-height: 1;
-  }
 
   header {
     display: flex;
@@ -16,6 +10,9 @@
 
     h3 {
       order: 2;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+      line-height: 1;
     }
 
     .company {
@@ -37,6 +34,27 @@
 }
 
 .desc {
-  padding-left: 1rem;
-  border-left: 2px solid var(--color-border-gray, #999);
+  margin: 0.75em 0;
+}
+
+.projects {
+  li {
+    margin-bottom: 0.75em;
+    
+    small {
+      color: var(--color-gray-muted, #999);
+    }
+  }
+}
+
+@media all and (max-width: 450px) {
+  .root {
+    ul {
+      padding-left: 1em;
+    }
+  }
+
+  .projects li {
+    padding-left: 0;
+  }
 }

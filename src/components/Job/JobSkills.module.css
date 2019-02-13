@@ -3,6 +3,17 @@
   margin-bottom: 0.5em;
 }
 
+.root {
+  ul {
+    margin: 0;
+    list-style: none;
+
+    li {
+      display: inline;
+    }
+  }
+}
+
 @media print {
   .root {
     display: flex;
@@ -14,11 +25,19 @@
       margin: 0;
       margin-right: 1em;
     }
+
+    ul {
+      padding: 0;
+    }
   }
 
   .skill {
-    margin-right: 1em;
+    margin-right: 0.5em;
     margin-bottom: 0;
     font-size: var(--font-size-small);
+  }
+
+  li:not(:last-child) .skill::after {
+    content: ',';
   }
 }
