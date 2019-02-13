@@ -1,6 +1,6 @@
 import React from 'react'
 import Company from './Company'
-import { IJobDescriptor } from 'data/jobs/Job'
+import { IJobDescriptor } from 'data/Job'
 import DateRange from 'components/DateRange'
 import Project from './Project'
 import JobSkills from './JobSkills'

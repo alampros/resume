@@ -1,7 +1,7 @@
 import * as path from 'path'
 import * as React from 'react'
 import { Font, Page, Document, StyleSheet } from '@react-pdf/renderer'
-import { IJobDescriptor } from 'data/jobs/Job'
+import { IJobDescriptor } from 'data/Job'
 import { ISkill } from 'data/Skill'
 import Jobs from './Jobs'
 import Skills from './Skills'

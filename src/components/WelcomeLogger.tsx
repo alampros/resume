@@ -1,6 +1,6 @@
 import * as React from 'react'
 import jobs from 'data/jobs'
-import Job from 'data/Jobs/Job'
+import Job from 'data/Job'
 import skills from 'data/skills'
 import { ISkill } from 'data/Skill'
 

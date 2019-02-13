@@ -6,7 +6,7 @@ import ReactPDF, {
 } from '@react-pdf/renderer'
 import DateRange from './DateRange'
 import Project from './Project'
-import { IJobDescriptor } from 'data/jobs/Job'
+import { IJobDescriptor } from 'data/Job'
 import sharedStyles from '../sharedStyles'
 
 const styles = StyleSheet.create({

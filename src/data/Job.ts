@@ -1,6 +1,6 @@
 import { Omit } from 'utility-types'
 import companies from 'data/companies'
-import { ICompany } from 'data/companies/Company'
+import { ICompany } from 'data/Company'
 import { IProject } from 'data/Project'
 import { IJobSkill } from 'data/Skill'
 
