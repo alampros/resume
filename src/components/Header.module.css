@@ -55,10 +55,10 @@
 @media screen and (min-width: 480px) {
   .actions {
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: flex-end;
     margin-top: 0.5rem;
-    margin-left: -1em;
+    margin-right: -1em;
 
     .shadow {
       &::before,
@@ -70,32 +70,29 @@
       }
 
       &::before {
-        right: 0;
+        right: 1em;
         bottom: -0.25em;
-        left: 1em;
+        left: 0;
         border-width: 0 0 0.25em 0;
         border-color: var(--color-ribbon-shadow);
       }
 
       &::after {
         top: 0.25em;
-        right: -1.25em;
-        border-width: 1.25em 1em 1.25em 0.5em;
-        border-color: var(--color-ribbon-shadow) transparent var(--color-ribbon-shadow) var(--color-ribbon-shadow);
+        left: -1.25em;
+        border-width: 1.5em 0.5em 1.5em 1em;
+        border-color: var(--color-ribbon-shadow) var(--color-ribbon-shadow) var(--color-ribbon-shadow) transparent;
       }
     }
 
     > a {
       position: relative;
-      height: 2.5em;
-      padding-left: 2em;
+      height: 3em;
+      padding-right: 2em;
       background-color: var(--color-ribbon);
       border-radius: 0;
       transition: all 0.2s ease;
-
-      & + a {
-        margin-top: 1.5rem;
-      }
+      margin-top: 1rem;
 
       &::before,
       &::after {
@@ -107,16 +104,16 @@
       &::before {
         position: absolute;
         top: 100%;
-        left: 0;
-        border-width: 0 1em 0.6em 0;
-        border-color: transparent #8e9cae transparent transparent;
+        right: 0;
+        border-width: 0 0 0.6em 1em;
+        border-color: transparent transparent transparent #8e9cae;
       }
 
       &::after {
         top: 0;
-        right: -1em;
-        border-width: 1.25em 1em 1.25em 0.5em;
-        border-color: var(--color-ribbon) transparent var(--color-ribbon) var(--color-ribbon);
+        left: -1em;
+        border-width: 1.5em 0.5em 1.5em 1em;
+        border-color: var(--color-ribbon) var(--color-ribbon) var(--color-ribbon) transparent;
       }
 
       &:focus {
@@ -127,21 +124,21 @@
       &:hover,
       &:focus {
         background-color: var(--color-ribbon-hover) !important;
-        transform: translate3d(-0.25em, -0.25em, 0);
+        transform: translate3d(0.25em, -0.25em, 0);
 
         &::after {
-          border-color: var(--color-ribbon-hover) transparent var(--color-ribbon-hover) var(--color-ribbon-hover);
+          border-color: var(--color-ribbon-hover) var(--color-ribbon-hover) var(--color-ribbon-hover) transparent;
         }
 
         &::before {
-          border-right-width: 1.25em;
           border-bottom-width: 0.85em;
+          border-left-width: 1.25em;
         }
 
         .shadow {
           &::after,
           &::before {
-            transform: translate3d(0.25em, 0.25em, 0);
+            transform: translate3d(-0.25em, 0.25em, 0);
           }
 
           &::before {
