@@ -11,13 +11,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'jobs',
-        path: `${__dirname}/src/data/jobs`,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-postcss',
       options: {
         postCssPlugins: [require('postcss-nested')()],
@@ -26,7 +19,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify',
     'gatsby-plugin-resolve-src',
-    'gatsby-transformer-remark',
     'pretty-html',
     {
       resolve: 'gatsby-plugin-typescript',
