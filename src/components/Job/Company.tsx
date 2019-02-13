@@ -1,8 +1,8 @@
 import React from 'react'
 import cx from 'classnames'
-import { ICompany } from 'data/companies/Company'
+import { ICompany } from 'data/Company'
 import Address from 'components/Address'
-import { IJobDescriptor } from 'data/jobs/Job'
+import { IJobDescriptor } from 'data/Job'
 const styles = require('./Company.module.css')
 
 type JobParts = Pick<IJobDescriptor, 'department'>

@@ -1,64 +1,106 @@
 .root {
   --color-ribbon: #eff9fe;
   --color-ribbon-shadow: #eee;
-  --color-ribbon-hover: #fff;
+  --color-ribbon-hover: #cdecfc;
+  --color-ribbon-hover-text: #195974;
+
+  display: flex;
+  flex-direction: column;
 
   h1 {
     margin-top: 1rem;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     line-height: 1;
     white-space: pre;
     text-transform: uppercase;
-  }
 
-  address {
-    display: flex;
-    flex-flow: column nowrap;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    color: var(--color-headings);
-    font-size: 0.75rem;
-    font-style: normal;
-    line-height: 1.75rem;
+    > span + span {
+      padding-left: 0.5em;
 
-    > div {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-items: flex-start;
-      align-items: center;
-
-      > *:first-child {
-        margin-right: 0.5rem;
+      &:last-child {
+        display: block;
+        padding-left: 0;
       }
     }
   }
 }
 
-.name {
-  > span + span {
-    padding-left: 0.5em;
+.contact {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: var(--color-headings);
+  font-size: 0.75rem;
+  font-style: normal;
 
-    &:last-child {
-      display: block;
-      padding-left: 0;
+  > div {
+    + div {
+      margin-top: 0.5rem;
+    }
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: flex-start;
+    align-items: center;
+
+    > svg:first-child {
+      margin-right: 0.5rem;
     }
   }
 }
 
+.rowOne {
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.rowTwo {
+  flex-direction: column;
+  align-items: center;
+}
+
+.objective {
+  flex: 1;
+  font-size: var(--font-size-small, 0.75rem);
+}
+
 .actions {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 480px) {
+  .root {
+    flex-direction: row;
+  }
+
+  .contact {
+    align-items: flex-start;
+  }
+
+  .rowOne {
+    flex: 3;
+  }
+
+  .rowTwo {
+    flex: 2;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
   .actions {
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: 0.5rem;
-    margin-left: -1em;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 1rem;
+    margin-right: -0.7em;
+    margin-bottom: 2rem;
+    padding-left: 1em;
+    white-space: nowrap;
 
     .shadow {
       &::before,
@@ -70,53 +112,54 @@
       }
 
       &::before {
-        right: 0;
+        right: 1em;
         bottom: -0.25em;
-        left: 1em;
+        left: 0;
         border-width: 0 0 0.25em 0;
         border-color: var(--color-ribbon-shadow);
       }
 
       &::after {
         top: 0.25em;
-        right: -1.25em;
-        border-width: 1.25em 1em 1.25em 0.5em;
-        border-color: var(--color-ribbon-shadow) transparent var(--color-ribbon-shadow) var(--color-ribbon-shadow);
+        left: -1.25em;
+        border-width: 1.5em 0.5em 1.5em 1em;
+        border-color: var(--color-ribbon-shadow) var(--color-ribbon-shadow) var(--color-ribbon-shadow) transparent;
       }
     }
 
     > a {
       position: relative;
-      height: 2.5em;
-      padding-left: 2em;
+      height: 3em;
+      padding-right: 2em;
       background-color: var(--color-ribbon);
       border-radius: 0;
       transition: all 0.2s ease;
 
-      & + a {
-        margin-top: 1.5rem;
+      + a {
+        margin-top: 1rem;
       }
 
       &::before,
       &::after {
         position: absolute;
         border-style: solid;
+        transition: all 0.2s ease;
         content: '';
       }
 
       &::before {
         position: absolute;
         top: 100%;
-        left: 0;
-        border-width: 0 1em 0.6em 0;
-        border-color: transparent #8e9cae transparent transparent;
+        right: 0;
+        border-width: 0 0 0.6em 1em;
+        border-color: transparent transparent transparent #8e9cae;
       }
 
       &::after {
         top: 0;
-        right: -1em;
-        border-width: 1.25em 1em 1.25em 0.5em;
-        border-color: var(--color-ribbon) transparent var(--color-ribbon) var(--color-ribbon);
+        left: -1em;
+        border-width: 1.5em 0.5em 1.5em 1em;
+        border-color: var(--color-ribbon) var(--color-ribbon) var(--color-ribbon) transparent;
       }
 
       &:focus {
@@ -126,22 +169,23 @@
 
       &:hover,
       &:focus {
+        color: var(--color-ribbon-hover-text);
         background-color: var(--color-ribbon-hover) !important;
-        transform: translate3d(-0.25em, -0.25em, 0);
+        transform: translate3d(0.25em, -0.25em, 0);
 
         &::after {
-          border-color: var(--color-ribbon-hover) transparent var(--color-ribbon-hover) var(--color-ribbon-hover);
+          border-color: var(--color-ribbon-hover) var(--color-ribbon-hover) var(--color-ribbon-hover) transparent;
         }
 
         &::before {
-          border-right-width: 1.25em;
           border-bottom-width: 0.85em;
+          border-left-width: 1.25em;
         }
 
         .shadow {
           &::after,
           &::before {
-            transform: translate3d(0.25em, 0.25em, 0);
+            transform: translate3d(-0.25em, 0.25em, 0);
           }
 
           &::before {

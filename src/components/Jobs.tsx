@@ -1,5 +1,5 @@
 import * as React from 'react'
-import JobType from 'data/jobs/Job'
+import JobType from 'data/Job'
 import Job from 'components/Job'
 
 interface Props {

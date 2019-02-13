@@ -1,6 +1,6 @@
 import * as React from 'react'
-import JobsProvider from 'components/JobsProvider'
-import Job from 'data/Jobs/Job'
+import jobs from 'data/jobs'
+import Job from 'data/Job'
 import skills from 'data/skills'
 import { ISkill } from 'data/Skill'
 
@@ -26,22 +26,16 @@ const consoleBit = '\tSkills: %O\n\tJobs: %O\n'
 export default class WelcomeLogger extends React.Component {
   logged?: boolean
   render() {
-    return (
-      <JobsProvider
-        render={(jobs: Job[]) => {
-          if(typeof window !== 'undefined') {
-            if(!this.logged) {
-              this.logged = true
-              console.log(msg(consoleBit), skills, jobs) // eslint-disable-line no-console
-            }
-            window.Aaron = {
-              skills,
-              jobs,
-            }
-          }
-          return <ins dangerouslySetInnerHTML={{ __html: `<!-- ${msg()} -->` }} />
-        }}
-      />
-    )
+    if(typeof window !== 'undefined') {
+      if(!this.logged) {
+        this.logged = true
+        console.log(msg(consoleBit), skills, jobs) // eslint-disable-line no-console
+      }
+      window.Aaron = {
+        skills,
+        jobs,
+      }
+    }
+    return null
   }
 }

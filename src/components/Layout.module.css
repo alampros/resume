@@ -15,7 +15,7 @@
     padding-left: 48px;
   }
 
-  @media screen and (min-width: 44em) {
-    width: 44em;
+  @media screen and (min-width: 48em) {
+    width: 48em;
   }
 }
