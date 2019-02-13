@@ -13,7 +13,7 @@ const jobs: IJobConstructorParam[] = [
       },
       {
         // description: 'Increased engineering team efficiency by creating a custom CLI tool to speed development',
-        description: 'Created a custom CLI tool that increased the efficiency of the entire engineering team',
+        description: 'Created a custom CLI tool that increased the efficiency of the entire engineering team.',
         skills: [skills.ts, skills.node, skills.hapi],
       },
       {
@@ -43,18 +43,18 @@ const jobs: IJobConstructorParam[] = [
     title: 'Product Designer',
     companyId: 'dealertire',
     department: 'Product Management',
-    description: 'Promoted to new position in Marketing Department',
+    description: 'Promoted to new position in Marketing Department.',
     projects: [
       {
-        description: 'Created unified design system across six independent product web platforms',
+        description: 'Created unified design system across six independent product web platforms.',
         skills: [skills.gatsby, skills.sketch, skills.node],
       },
       {
-        description: 'Centralized internal iconography tools to generate icon packages in six formats for consumption by developers and designers from the same source of truth',
+        description: 'Centralized internal iconography tools to generate icon packages in six formats for consumption by developers and designers from the same source of truth.',
         skills: [skills.node, skills.sketch],
       },
       {
-        description: 'Spearheaded multivariate testing initiative',
+        description: 'Spearheaded multivariate testing initiative.',
         skills: [skills.gtm, skills.usability_testing],
       },
     ],
