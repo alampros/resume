@@ -106,6 +106,12 @@ hr {
   }
 }
 
+@media screen and (max-width: 480px) {
+  h2 {
+    text-align: center;
+  }
+}
+
 @media print {
   .no-print {
     display: none !important;

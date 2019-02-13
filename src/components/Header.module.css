@@ -1,64 +1,106 @@
 .root {
   --color-ribbon: #eff9fe;
   --color-ribbon-shadow: #eee;
-  --color-ribbon-hover: #fff;
+  --color-ribbon-hover: #cdecfc;
+  --color-ribbon-hover-text: #195974;
+
+  display: flex;
+  flex-direction: column;
 
   h1 {
     margin-top: 1rem;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     line-height: 1;
     white-space: pre;
     text-transform: uppercase;
-  }
 
-  address {
-    display: flex;
-    flex-flow: column nowrap;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    color: var(--color-headings);
-    font-size: 0.75rem;
-    font-style: normal;
-    line-height: 1.75rem;
+    > span + span {
+      padding-left: 0.5em;
 
-    > div {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-items: flex-start;
-      align-items: center;
-
-      > *:first-child {
-        margin-right: 0.5rem;
+      &:last-child {
+        display: block;
+        padding-left: 0;
       }
     }
   }
 }
 
-.name {
-  > span + span {
-    padding-left: 0.5em;
+.contact {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: var(--color-headings);
+  font-size: 0.75rem;
+  font-style: normal;
 
-    &:last-child {
-      display: block;
-      padding-left: 0;
+  > div {
+    + div {
+      margin-top: 0.5rem;
+    }
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: flex-start;
+    align-items: center;
+
+    > svg:first-child {
+      margin-right: 0.5rem;
     }
   }
 }
 
+.rowOne {
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.rowTwo {
+  flex-direction: column;
+  align-items: center;
+}
+
+.objective {
+  flex: 1;
+  font-size: var(--font-size-small, 0.75rem);
+}
+
 .actions {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 480px) {
+  .root {
+    flex-direction: row;
+  }
+
+  .contact {
+    align-items: flex-start;
+  }
+
+  .rowOne {
+    flex: 3;
+  }
+
+  .rowTwo {
+    flex: 2;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
   .actions {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-top: 0.5rem;
-    margin-right: -1em;
+    margin-top: 1rem;
+    margin-right: -0.7em;
+    margin-bottom: 2rem;
+    padding-left: 1em;
+    white-space: nowrap;
 
     .shadow {
       &::before,
@@ -88,16 +130,20 @@
     > a {
       position: relative;
       height: 3em;
-      margin-top: 1rem;
       padding-right: 2em;
       background-color: var(--color-ribbon);
       border-radius: 0;
       transition: all 0.2s ease;
 
+      + a {
+        margin-top: 1rem;
+      }
+
       &::before,
       &::after {
         position: absolute;
         border-style: solid;
+        transition: all 0.2s ease;
         content: '';
       }
 
@@ -123,6 +169,7 @@
 
       &:hover,
       &:focus {
+        color: var(--color-ribbon-hover-text);
         background-color: var(--color-ribbon-hover) !important;
         transform: translate3d(0.25em, -0.25em, 0);
 
