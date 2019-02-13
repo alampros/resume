@@ -101,7 +101,7 @@ const jobs: IJobConstructorParam[] = [
     title: 'Web Designer, R&D Developer',
     companyId: 'dealertire',
     department: 'Information Systems',
-    description: 'Explore, design, and develop prototypes for identifying opportunities to improve dealership operational effectiveness. Assist in construction of new iteration of the core business-to-business web platform.',
+    description: 'Designed, developed, and tested prototypes for identifying opportunities to improve dealership operational effectiveness. Worked with development team to construct new iteration of the core business-to-business web platform.',
     date: {
       start: new Date('2007-11-01T12:00:00.000Z'),
       end: new Date('2012-02-01T22:00:00.000Z'),
