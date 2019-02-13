@@ -52,8 +52,6 @@ const Contact = (props: Props) => {
   return (
     <Pane
       className={styles.contact}
-      display="flex"
-      flexDirection="row"
       is="address"
     >
       <div>
