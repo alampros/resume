@@ -20,20 +20,11 @@ export default class Job extends React.Component<Props> {
       date,
       skills,
     } = this.props
+
     const $projects = projects.map(project => (
       <Project key={project.description} project={project} />
     ))
 
-    const $description = (() => {
-      if(!description) return null
-      if(typeof description === 'string') {
-        return <div className={styles.desc}>{description}</div>
-      }
-      if(description.html) {
-        return <div className={styles.desc} dangerouslySetInnerHTML={{ __html: description.html }} />
-      }
-      return null
-    })()
     return (
       <section className={styles.root}>
         <header>
@@ -41,7 +32,7 @@ export default class Job extends React.Component<Props> {
           <DateRange {...date} className={styles.dateRange} />
           <Company {...company} department={department} className={styles.company} />
         </header>
-        {$description}
+        {description && <div className={styles.desc}>{description}</div>}
         {$projects.length > 0 && (
           <>
             <h4>Notable Projects:</h4>

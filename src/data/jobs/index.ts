@@ -1,5 +1,4 @@
 import Job, { IJobConstructorParam } from './Job'
-import { IMarkdownNode } from 'data/GatsbyTypes'
 import skills from 'data/skills'
 
 const jobs: IJobConstructorParam[] = [
@@ -18,7 +17,7 @@ const jobs: IJobConstructorParam[] = [
         skills: [skills.ts, skills.node, skills.hapi],
       },
       {
-        description: 'Lead the transition from local monolithic subversion SCM to multi-repository git while maintaining historical logs dating back to 2002. Created tooling to automate parts of the transition. Trained both engineering and support teams on git.',
+        description: 'Transitioned entire team from local monolithic subversion SCM to multi-repository git while preserving project history dating back to 2002. Created tooling to automate parts of the transition. Trained both engineering and support teams on git.',
         skills: [skills.git, skills.svn],
       },
       {
@@ -78,7 +77,7 @@ const jobs: IJobConstructorParam[] = [
     title: 'Enterprise Architect – User Experience',
     companyId: 'dealertire',
     department: 'Enterprise Architecture',
-    descriptionId: 'dealertire_02.md',
+    description: 'Promoted to new position in IT for overseeing all B2B web platforms and user interfaces.',
     date: {
       start: new Date('2012-02-01T12:00:00.000Z'),
       end: new Date('2017-08-01T22:00:00.000Z'),
@@ -102,7 +101,7 @@ const jobs: IJobConstructorParam[] = [
     title: 'Web Designer, R&D Developer',
     companyId: 'dealertire',
     department: 'Information Systems',
-    descriptionId: 'dealertire_03.md',
+    description: 'Explore, design, and develop prototypes for identifying opportunities to improve dealership operational effectiveness. Assist in construction of new iteration of the core business-to-business web platform.',
     date: {
       start: new Date('2007-11-01T12:00:00.000Z'),
       end: new Date('2012-02-01T22:00:00.000Z'),
@@ -116,12 +115,4 @@ const jobs: IJobConstructorParam[] = [
   },
 ]
 
-export function getJobsWithDescriptions(
-  getJobDescription: (descriptionId?: string) => IMarkdownNode | void
-): Job[] {
-  return jobs.map(jobDescriptor => {
-    return new Job(jobDescriptor, getJobDescription)
-  })
-}
-
-export default jobs
+export default jobs.map(jobDescriptor => new Job(jobDescriptor))

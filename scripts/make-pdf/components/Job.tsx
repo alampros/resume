@@ -5,12 +5,14 @@ import ReactPDF, {
   StyleSheet,
 } from '@react-pdf/renderer'
 import DateRange from './DateRange'
+import Project from './Project'
 import { IJobDescriptor } from 'data/jobs/Job'
 import sharedStyles from '../sharedStyles'
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 14,
+    marginVertical: 16,
+    flexWrap: 'nowrap',
   },
   company: {
     flexDirection: 'row',
@@ -25,10 +27,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 22,
     fontFamily: 'RalewayExtraLight',
-    paddingRight: 12,
-    flex: 1,
     color: '#000',
-    lineHeight: 1,
     marginVertical: 2,
   },
   dates: {
@@ -56,6 +55,14 @@ const styles = StyleSheet.create({
     fontFamily: 'RobotoSlabLight',
     ...sharedStyles.dim,
   },
+  projects: {
+    paddingRight: 24,
+    lineHeight: 1.4,
+  },
+  project: {
+    marginLeft: 8,
+    marginTop: 6,
+  },
 })
 
 const CompanySeparator = () => (
@@ -80,6 +87,7 @@ export default (props: Props & ReactPDF.ViewProps) => {
     department,
     date,
     skills: jobSkills,
+    projects = [],
   } = job
   const skills = jobSkills
     .sort((a, b) => {
@@ -87,6 +95,9 @@ export default (props: Props & ReactPDF.ViewProps) => {
       return b.relevance - a.relevance
     })
     .map(jobSkill => jobSkill.skill)
+  const $projects = projects.map(project => (
+    <Project key={project.description} project={project} style={styles.project} />
+  ))
   return (
     <View style={{ ...style, ...styles.container }} {...passedProps} wrap={false}>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'nowrap', alignItems: 'center' }}>
@@ -100,7 +111,12 @@ export default (props: Props & ReactPDF.ViewProps) => {
         <DateRange {...date} style={styles.dates} />
       </View>
       <Text style={styles.title}>{title}</Text>
-      {description && <Text style={styles.description}>{description.html}</Text>}
+      {description && <Text style={styles.description}>{description}</Text>}
+      {$projects.length > 0 && (
+        <View style={styles.projects}>
+          {$projects}
+        </View>
+      )}
       <View style={styles.skills}>
         <Text style={styles.skillsLabel}>Relevant Skills:</Text>
         <Text style={styles.skillsList} break={false}>{skills.map(skill => skill.name).join(', ')}</Text>

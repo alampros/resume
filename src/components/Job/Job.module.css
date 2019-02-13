@@ -40,7 +40,7 @@
 .projects {
   li {
     margin-bottom: 0.75em;
-    
+
     small {
       color: var(--color-gray-muted, #999);
     }
