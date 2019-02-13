@@ -28,7 +28,6 @@
 .dateRange {
   order: 1;
   color: var(--color-gray-muted);
-  font-weight: 700;
   font-size: var(--font-size-small);
   line-height: 1;
 }
