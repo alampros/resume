@@ -32,7 +32,7 @@ export default class SkillsList extends React.Component<Props> {
         )),
       },
       {
-        title: 'What I can do for enough money:',
+        title: 'What I could be persuaded to do:',
         skills: skills.filter(({ interest }) => (
           interest >= 0.1 && interest < 0.3
         )),

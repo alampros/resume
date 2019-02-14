@@ -66,7 +66,7 @@ function AllSkills(props: Props) {
         marginBottom="0.5rem"
       >
         <h2>Skills</h2>
-        <hr />
+        <hr aria-hidden />
         <Pane
           is="nav"
           display="flex"
