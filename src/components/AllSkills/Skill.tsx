@@ -12,9 +12,13 @@ const styles = require('./Skill.module.css')
 
 interface Props {
   skill: ISkill
+  timeBeforeStale: number
 }
 
 export default class Skill extends React.Component<Props & React.HTMLProps<HTMLElement>> {
+  static defaultProps = {
+    timeBeforeStale: 1000 * 60 * 60 * 24 * 90, // 180 days,
+  }
   render() {
     const {
       skill: {
@@ -22,15 +26,30 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
         yearsOfExperience,
         link,
         strength,
+        lastUsed,
       },
+      timeBeforeStale,
       className,
     } = this.props
 
-    const $name = link ? (
-      <a href={link.toString()}>
-        {name}
-      </a>
-    ) : name
+    let $stale
+    if(lastUsed) {
+      const now = new Date()
+      const timeSinceLastUsed = new Date(now.getFullYear(), now.getMonth()).getTime() - lastUsed.getTime()
+
+      if(timeSinceLastUsed > timeBeforeStale) {
+        const staleFormatter = new Intl.DateTimeFormat('en-US', {
+          year: 'numeric',
+          month: 'long',
+        })
+        $stale = (
+          <Pane is="small">
+            Last used {staleFormatter.format(lastUsed)}
+          </Pane>
+        )
+      }
+    }
+
     return (
       <Card
         className={cx(styles.root, className)}
@@ -46,7 +65,15 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
         flexBasis="8em"
         borderRadius={3}
       >
-        <Pane marginBottom="0.25em">{$name}</Pane>
+        <Pane>{name}</Pane>
+        {link && (
+          <Pane is="small">
+            <a href={link.toString()}>
+              {link.host}
+            </a>
+          </Pane>
+        )}
+        {$stale}
         <ExperienceRating
           yearsOfExperience={yearsOfExperience}
           name={name}

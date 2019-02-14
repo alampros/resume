@@ -9,7 +9,7 @@ const jobs: IJobConstructorParam[] = [
     projects: [
       {
         description: 'Built a containerized JSON REST API for transcoding video into LMS-compatible SCORM training modules with 96% test coverage. Included well-documented, standalone client React component and CLI tool for batching jobs.',
-        skills: [skills.ts, skills.node, skills.hapi, skills.react, skills.unit_testing],
+        skills: [skills.ts, skills.node, skills.hapi, skills.react, skills.unit_testing, skills.aws_ecs, skills.aws_et],
       },
       {
         // description: 'Increased engineering team efficiency by creating a custom CLI tool to speed development',
@@ -36,7 +36,9 @@ const jobs: IJobConstructorParam[] = [
       { skill: skills.accessibility, relevance: 0.2 },
       { skill: skills.docker, relevance: 0.5 },
       { skill: skills.node, relevance: 0.9 },
-      { skill: skills.aws_ecs, relevance: 0.3 },
+      { skill: skills.aws_ecs, relevance: 0.25 },
+      { skill: skills.aws_et, relevance: 0.25 },
+      { skill: skills.hapi, relevance: 0.25 },
     ],
   },
   {

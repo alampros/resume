@@ -1,4 +1,5 @@
 .root {
+  min-height: 75vh;
   margin-bottom: 2rem;
   page-break-inside: avoid;
 

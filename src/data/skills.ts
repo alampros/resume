@@ -74,11 +74,20 @@ const skills: { [id: string]: PartialSkill } = {
     interest: 3 / 10,
     link: new URL('https://aws.amazon.com/ecs/'),
   },
+  aws_et: {
+    name: 'AWS ElasticTranscoder',
+    yearsOfExperience: new Date().getFullYear() - 2018,
+    strength: 0.5,
+    interest: 3 / 10,
+    lastUsed: new Date(2019, 1), // Probably not going to use this again in the near future
+    link: new URL('https://aws.amazon.com/elastictranscoder/'),
+  },
   cs: {
     name: 'C#',
     yearsOfExperience: new Date().getFullYear() - 2018,
     strength: 0.1,
     interest: 2 / 10,
+    lastUsed: new Date(2018, 11), // Probably not going to use this again in the near future
     link: new URL('https://en.wikipedia.org/wiki/C_Sharp_(programming_language)'),
   },
   go: {
@@ -86,6 +95,7 @@ const skills: { [id: string]: PartialSkill } = {
     yearsOfExperience: new Date().getFullYear() - 2018.5,
     strength: 0.2,
     interest: 6 / 10,
+    lastUsed: new Date(2018, 6),
     link: new URL('https://golang.org/'),
   },
   sketch: {
@@ -93,6 +103,7 @@ const skills: { [id: string]: PartialSkill } = {
     yearsOfExperience: new Date().getFullYear() - 2017,
     strength: 0.5,
     interest: 4 / 10,
+    lastUsed: new Date(2018, 9),
     link: new URL('https://www.sketchapp.com/'),
   },
   usability_testing: {
@@ -135,6 +146,7 @@ const skills: { [id: string]: PartialSkill } = {
     yearsOfExperience: 1.5,
     strength: 0.6,
     interest: 1 / 10,
+    lastUsed: new Date(2016, 2),
     link: new URL('http://www.oracle.com/us/solutions/business-analytics/business-intelligence/enterprise-edition/overview/index.html'),
   },
   cf: {
@@ -142,6 +154,7 @@ const skills: { [id: string]: PartialSkill } = {
     yearsOfExperience: 1.5,
     strength: 0.1,
     interest: 0,
+    lastUsed: new Date(2013, 8),
     link: new URL('https://en.wikipedia.org/wiki/Adobe_ColdFusion'),
   },
   gatsby: {
@@ -163,6 +176,7 @@ const skills: { [id: string]: PartialSkill } = {
     yearsOfExperience: 4,
     strength: 0.3,
     interest: 0.1,
+    lastUsed: new Date(2018, 9),
     link: new URL('https://subversion.apache.org/'),
   },
   i18n: {
@@ -171,6 +185,22 @@ const skills: { [id: string]: PartialSkill } = {
     strength: 0.6,
     interest: 0.8,
     link: new URL('https://en.wikipedia.org/wiki/Internationalization_and_localization'),
+  },
+  flex: {
+    name: 'Adobe Flex',
+    yearsOfExperience: 2007.5 - 2004.5,
+    strength: 0.5,
+    interest: 0,
+    lastUsed: new Date(2007, 5),
+    link: new URL('https://en.wikipedia.org/wiki/Apache_Flex'),
+  },
+  flash: {
+    name: 'Adobe Flash',
+    yearsOfExperience: 2005 - 2000,
+    strength: 0.1,
+    interest: 0,
+    lastUsed: new Date(2005, 0),
+    link: new URL('https://en.wikipedia.org/wiki/Adobe_Flash'),
   },
 }
 
