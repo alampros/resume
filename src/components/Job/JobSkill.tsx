@@ -3,8 +3,7 @@ import cx from 'classnames'
 import Tippy from '@tippy.js/react'
 import { IJobSkill } from 'data/Skill'
 import TinyPie from 'components/TinyPie'
-import 'tippy.js/dist/tippy.css'
-import 'tippy.js/dist/themes/light-border.css'
+import 'tippy.js/themes/light-border.css'
 
 const styles = require('./JobSkill.module.css')
 
@@ -35,9 +34,7 @@ export default class JobSkill extends React.Component<Props & React.HTMLProps<HT
           <figcaption>{name}</figcaption>
           <Tippy
             content={$tipContent}
-            delay={[500, 0]}
             theme="light-border"
-            trigger="mouseenter focus click"
             arrow
           >
             <TinyPie value={relevance} />

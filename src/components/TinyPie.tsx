@@ -1,21 +1,28 @@
-import React from 'react'
+import React, { Component, SVGAttributes, forwardRef, Ref } from 'react'
 import cx from 'classnames'
 const styles = require('./TinyPie.module.css')
 
-interface Props {
+export type Props = {
   value: number
-}
+  innerRef?: Ref<SVGSVGElement>
+} & Partial<SVGAttributes<SVGSVGElement>>
 
-export default class TinyPie extends React.Component<Props & React.SVGAttributes<SVGElement>> {
+class TinyPie extends Component<Props> {
   render() {
     const {
       value,
       className,
+      innerRef,
       ...passedProps
     } = this.props
     const perc = (value * 100)
     return (
-      <svg viewBox="0 0 36 36" className={cx(styles.root, className)} {...passedProps}>
+      <svg
+        viewBox="0 0 36 36"
+        className={cx(styles.root, className)}
+        {...passedProps}
+        ref={innerRef}
+      >
         <path
           className={styles.part}
           strokeDasharray={`${perc / 1.8}, 100`}
@@ -28,3 +35,5 @@ export default class TinyPie extends React.Component<Props & React.SVGAttributes
     )
   }
 }
+
+export default forwardRef<SVGSVGElement, Props>((props, ref) => <TinyPie innerRef={ref} {...props} />)
