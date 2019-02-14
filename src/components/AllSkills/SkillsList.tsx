@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { ReactNode } from 'react'
 import { Pane } from 'evergreen-ui'
 import { ISkill } from 'data/Skill'
 import Empty from './Empty'
@@ -20,25 +20,25 @@ export default class SkillsList extends React.Component<Props> {
       return <Empty />
     }
 
-    const groupedSkills = [
+    const groupedSkills: { title: ReactNode, skills: ISkill[] }[] = [
       {
-        title: 'What I really like doing now',
+        title: <>What I <em>really</em> like doing now:</>,
         skills: skills.filter(({ interest }) => interest >= 0.7),
       },
       {
-        title: 'What I can do',
+        title: 'What I can do:',
         skills: skills.filter(({ interest }) => (
           interest < 0.7 && interest >= 0.3
         )),
       },
       {
-        title: 'What I can do for enough money',
+        title: 'What I can do for enough money:',
         skills: skills.filter(({ interest }) => (
           interest >= 0.1 && interest < 0.3
         )),
       },
       {
-        title: 'What I won\'t do again',
+        title: 'What I won\'t do again:',
         skills: skills.filter(({ interest }) => (
           !interest || interest < 0.1
         )),
@@ -57,6 +57,7 @@ export default class SkillsList extends React.Component<Props> {
             overflow="hidden"
             alignContent="flex-end"
             marginRight="-0.5rem"
+            marginBottom="2rem"
           >
             {skills.map(skill => <Skill skill={skill} key={skill.id} />)}
           </Pane>

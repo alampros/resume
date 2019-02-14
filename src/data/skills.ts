@@ -3,7 +3,7 @@ import { ISkill } from './Skill'
 
 type PartialSkill = Omit<ISkill, 'id'>
 
-const skills: { [id: string]: PartialSkill } = {
+const partialSkills: { [id: string]: PartialSkill } = {
   js: {
     name: 'JavaScript',
     yearsOfExperience: new Date().getFullYear() - 2002,
@@ -197,18 +197,18 @@ const skills: { [id: string]: PartialSkill } = {
   flash: {
     name: 'Adobe Flash',
     yearsOfExperience: 2005 - 2000,
-    strength: 0.1,
+    strength: 0.5,
     interest: 0,
     lastUsed: new Date(2005, 0),
     link: new URL('https://en.wikipedia.org/wiki/Adobe_Flash'),
   },
 }
 
-const defaultedSkills: { [id: string]: ISkill } = {}
-for(var id in skills) {
-  defaultedSkills[id] = {
+const skills: { [id: string]: ISkill } = {}
+for(var id in partialSkills) {
+  skills[id] = {
     id,
-    ...skills[id],
+    ...partialSkills[id],
   }
 }
-export default defaultedSkills
+export default skills
