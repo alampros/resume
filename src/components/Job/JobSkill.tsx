@@ -30,16 +30,17 @@ export default class JobSkill extends React.Component<Props & React.HTMLProps<HT
         className={cx(styles.root, className)}
         aria-label={`${name} was approximately ${perc}% relevant to this job`}
       >
-        <div className={styles.inner} aria-hidden>
-          <figcaption>{name}</figcaption>
-          <Tippy
-            content={$tipContent}
-            theme="light-border"
-            arrow
-          >
+        <Tippy
+          content={$tipContent}
+          theme="light-border"
+          trigger="mouseenter focus click"
+          arrow
+        >
+          <div className={styles.inner} aria-hidden>
+            <figcaption>{name}</figcaption>
             <TinyPie value={relevance} />
-          </Tippy>
-        </div>
+          </div>
+        </Tippy>
       </figure>
     )
   }
