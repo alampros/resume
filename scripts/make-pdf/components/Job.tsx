@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     color: '#222',
   },
   title: {
-    fontSize: 22,
+    fontSize: 20,
     fontFamily: 'RalewayExtraLight',
     color: '#000',
     marginVertical: 2,
@@ -40,6 +40,16 @@ const styles = StyleSheet.create({
     marginTop: 6,
     lineHeight: 1.4,
     paddingRight: 18,
+    fontSize: 10,
+  },
+  projects: {
+    paddingRight: 24,
+    lineHeight: 1.4,
+    fontSize: 10,
+  },
+  project: {
+    marginLeft: 8,
+    marginTop: 6,
   },
   skills: {
     flexDirection: 'row',
@@ -51,17 +61,9 @@ const styles = StyleSheet.create({
     marginRight: 4,
   },
   skillsList: {
-    flexShrink: 1,
+    flex: 1,
     fontFamily: 'RobotoSlabLight',
     ...sharedStyles.dim,
-  },
-  projects: {
-    paddingRight: 24,
-    lineHeight: 1.4,
-  },
-  project: {
-    marginLeft: 8,
-    marginTop: 6,
   },
 })
 
@@ -119,7 +121,7 @@ export default (props: Props & ReactPDF.ViewProps) => {
       )}
       <View style={styles.skills}>
         <Text style={styles.skillsLabel}>Relevant Skills:</Text>
-        <Text style={styles.skillsList} break={false}>{skills.map(skill => skill.name).join(', ')}</Text>
+        <Text style={styles.skillsList}>{skills.map(skill => skill.name).join(', ')}</Text>
       </View>
     </View>
   )

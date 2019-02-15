@@ -17,7 +17,7 @@ const jobs: IJobConstructorParam[] = [
         skills: [skills.ts, skills.node, skills.hapi],
       },
       {
-        description: 'Transitioned entire team from local monolithic subversion SCM to multi-repository git while preserving project history dating back to 2002. Created tooling to automate parts of the transition. Trained both engineering and support teams on git.',
+        description: 'Transitioned company from monolithic subversion SCM to multi-repository git. Created tooling to automate parts of the transition. Trained both engineering and support teams.',
         skills: [skills.git, skills.svn],
       },
       {
