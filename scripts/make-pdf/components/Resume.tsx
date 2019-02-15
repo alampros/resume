@@ -6,7 +6,6 @@ import { ISkill } from 'data/Skill'
 import Jobs from './Jobs'
 import Skills from './Skills'
 import Header from './Header'
-import Objective from './Objective'
 
 Font.register(path.resolve(__dirname, '../fonts/Raleway/Raleway-Regular.ttf'), { family: 'Raleway' })
 Font.register(path.resolve(__dirname, '../fonts/Raleway/Raleway-Light.ttf'), { family: 'RalewayLight' })
@@ -46,7 +45,6 @@ export default ({ jobs, skills }: Props) => {
     >
       <Page size="A4" style={styles.page} wrap>
         <Header />
-        <Objective />
         <Jobs jobs={jobs} />
         <Skills skills={skills} />
       </Page>

@@ -13,13 +13,13 @@ const styles = StyleSheet.create({
 })
 
 interface Props {
-  title: string
+  title?: string
   children: React.ReactNode
 }
 export default ({ title, children, ...passedProps }: Props & ReactPDF.ViewProps) => {
   return (
     <View wrap={false} {...passedProps}>
-      <Text style={sharedStyles.headings.section}>{title}</Text>
+      {title && <Text style={sharedStyles.headings.section}>{title}</Text>}
       <View style={styles.indent}>
         {children}
       </View>

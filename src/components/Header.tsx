@@ -91,25 +91,22 @@ const Name = (props: Props) => {
 export default class Header extends React.Component<Props> {
   render() {
     return (
-      <>
-        <header className={styles.root}>
-          <Pane
-            display="flex"
-            className={styles.rowOne}
-          >
-            <Name {...this.props} />
-            <Objective className={styles.objective} />
-          </Pane>
-          <Pane
-            display="flex"
-            className={styles.rowTwo}
-          >
-            <Actions />
-            <Contact {...this.props} />
-          </Pane>
-        </header>
-        <hr />
-      </>
+      <header className={styles.root}>
+        <Pane
+          display="flex"
+          className={styles.rowOne}
+        >
+          <Name {...this.props} />
+          <Objective className={styles.objective} />
+        </Pane>
+        <Pane
+          display="flex"
+          className={styles.rowTwo}
+        >
+          <Actions />
+          <Contact {...this.props} />
+        </Pane>
+      </header>
     )
   }
 }

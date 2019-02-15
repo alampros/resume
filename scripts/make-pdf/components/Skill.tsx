@@ -10,13 +10,12 @@ import { ISkill } from 'data/Skill'
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 14,
-    marginRight: 14,
-    flexBasis: '40%',
   },
   name: {
-    fontSize: 16,
-    fontFamily: 'RalewayLight',
+    fontSize: 14,
+    lineHeight: 1.1,
+    marginBottom: 4,
+    fontFamily: 'RobotoSlab',
     color: 'inherit',
     textDecoration: 'none',
   },
@@ -46,14 +45,16 @@ export default (props: Props & ReactPDF.ViewProps) => {
       ) : (
         <Text style={styles.name}>{name}</Text>
       )}
-      <Text style={{ fontSize: 9 }}>Strength: <Text style={{ fontFamily: 'RalewayBold' }}>{strength * 100}%</Text></Text>
-      <View style={{ flexDirection: 'row', fontSize: 9 }}>
-        <Text style={{ paddingRight: 3 }}>Experience: </Text>
-        <ExperienceRating
-          style={{ fontFamily: 'RalewayBold' }}
-          labelProps={{ style: { fontFamily: 'Raleway' } }}
-          yearsOfExperience={yearsOfExperience}
-        />
+      <View style={{ fontSize: 8 }}>
+        <Text>Strength: <Text style={{ fontFamily: 'RalewayBold' }}>{strength * 100}%</Text></Text>
+        <View style={{ flexDirection: 'row' }}>
+          <Text style={{ paddingRight: 3 }}>Experience: </Text>
+          <ExperienceRating
+            style={{ fontFamily: 'RalewayBold' }}
+            labelProps={{ style: { fontFamily: 'Raleway' } }}
+            yearsOfExperience={yearsOfExperience}
+          />
+        </View>
       </View>
     </View>
   )

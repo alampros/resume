@@ -15,6 +15,7 @@ export default class Jobs extends React.Component<Props> {
     return (
       <section>
         <h2>Professional Experience</h2>
+        <hr aria-hidden />
         {$jobs}
       </section>
     )
