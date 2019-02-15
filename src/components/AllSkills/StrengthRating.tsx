@@ -6,9 +6,7 @@ import { ISkill } from 'data/Skill'
 
 const styles = require('./StrengthRating.module.css')
 
-type Props = Pick<ISkill, 'strength' | 'name'> & {
-  className?: string
-}
+type Props = Pick<ISkill, 'strength' | 'name'> & React.HTMLProps<HTMLElement> & any
 
 export default function StrengthRating({ strength, name, className, ...passedProps }: Props) {
   const cls = (() => {

@@ -25,7 +25,11 @@ export default function ExperienceRating({ yearsOfExperience, name, ...passedPro
       {...passedProps}
     >
       <IoIosTime aria-hidden />
-      <small title={`I have ${years} ${plural} experience with ${name}`} aria-hidden>
+      <small
+        title={`I have ${years} ${plural} experience with ${name}`}
+        aria-hidden
+        style={{ whiteSpace: 'nowrap' }}
+      >
         <strong>{years}</strong> {plural}
       </small>
     </Pane>

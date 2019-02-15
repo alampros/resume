@@ -1,5 +1,5 @@
 import { Omit } from 'utility-types'
-import { ISkill } from './Skill'
+import Skill, { ISkill } from './Skill'
 
 type PartialSkill = Omit<ISkill, 'id'>
 
@@ -206,9 +206,9 @@ const partialSkills: { [id: string]: PartialSkill } = {
 
 const skills: { [id: string]: ISkill } = {}
 for(var id in partialSkills) {
-  skills[id] = {
+  skills[id] = new Skill({
     id,
     ...partialSkills[id],
-  }
+  })
 }
 export default skills

@@ -56,7 +56,7 @@ export default class SkillsList extends React.Component<Props> {
             flexWrap="wrap"
             overflow="hidden"
             alignContent="flex-end"
-            marginRight="-0.5rem"
+            marginRight="-1rem"
             marginBottom="2rem"
           >
             {skills.map(skill => <Skill skill={skill} key={skill.id} />)}
