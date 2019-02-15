@@ -1,38 +1,46 @@
-import * as React from 'react'
+import React from 'react'
 import { Pane } from 'evergreen-ui'
 import { ISkill } from 'data/Skill'
 import Empty from './Empty'
 import Skill from './Skill'
+import SkillGroups from 'data/SkillGroups'
 
 interface Props {
   skills: ISkill[]
 }
 
-export default class SkillsList extends React.Component<Props> {
-  static defaultProps = {
-    skills: [],
+export default React.memo((props: Props) => {
+  const {
+    skills,
+  } = props
+  if(!skills || !skills.length) {
+    return <Empty />
   }
-  render() {
-    const {
-      skills,
-    } = this.props
-    if(!skills || !skills.length) {
-      return <Empty />
-    }
-    const $skills = skills.map(skill => (
-      <Skill key={skill.id} skill={skill} />
-    ))
+
+  const groupedSkills = new SkillGroups(skills).groups
+
+  const $skillGroups = groupedSkills.map(({ title, skills }) => {
+    if(skills.length === 0) return null
     return (
-      <Pane
-        display="flex"
-        flexDirection="row"
-        flexWrap="wrap"
-        overflow="hidden"
-        alignContent="flex-end"
-        marginRight="-0.5rem"
-      >
-        {$skills}
+      <Pane key={title}>
+        <h3>{title}</h3>
+        <Pane
+          display="flex"
+          flexDirection="row"
+          flexWrap="wrap"
+          overflow="hidden"
+          alignContent="flex-end"
+          marginRight="-1rem"
+          marginBottom="2rem"
+        >
+          {skills.map(skill => <Skill skill={skill} key={skill.id} />)}
+        </Pane>
       </Pane>
     )
-  }
-}
+  })
+  return (
+    <Pane>
+      {$skillGroups}
+    </Pane>
+  )
+})
