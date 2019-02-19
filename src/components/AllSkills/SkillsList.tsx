@@ -9,7 +9,7 @@ interface Props {
   skills: ISkill[]
 }
 
-export default React.memo((props: Props) => {
+export default (props: Props) => {
   const {
     skills,
   } = props
@@ -43,4 +43,4 @@ export default React.memo((props: Props) => {
       {$skillGroups}
     </Pane>
   )
-})
+}
