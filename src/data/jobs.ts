@@ -82,7 +82,7 @@ const jobs: IJobConstructorParam[] = [
     description: 'Promoted to new position in IT for overseeing all B2B web platforms and user interfaces.',
     date: {
       start: new Date('2012-02-01T12:00:00.000Z'),
-      end: new Date('2017-08-01T22:00:00.000Z'),
+      end: new Date('2017-11-01T22:00:00.000Z'),
     },
     projects: [
       {
