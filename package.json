@@ -64,6 +64,7 @@
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.3.0",
+    "react-pose": "^4.0.7",
     "react-qr-svg": "^2.2.1",
     "ts-node": "^8.0.2",
     "typescript": "~3.3.1",

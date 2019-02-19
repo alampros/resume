@@ -18,7 +18,7 @@ interface Props {
   timeBeforeStale: number
 }
 
-export default class Skill extends React.Component<Props & React.HTMLProps<HTMLElement>> {
+export default class Skill extends React.Component<Props & any> {
   static defaultProps = {
     timeBeforeStale: 1000 * 60 * 60 * 24 * 365, // 1 yr,
   }
@@ -34,6 +34,7 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
       },
       timeBeforeStale,
       className,
+      ...passedProps
     } = this.props
 
     let $stale
@@ -74,6 +75,7 @@ export default class Skill extends React.Component<Props & React.HTMLProps<HTMLE
         paddingX="0.5em"
         flexBasis="14em"
         borderRadius={3}
+        {...passedProps}
       >
         <Pane
           display="flex"

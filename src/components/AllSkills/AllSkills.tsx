@@ -40,6 +40,10 @@ function AllSkills(props: Props) {
   }
   const sortedSkills = skills
     .sort((a, b) => {
+      if(a.name === b.name) return 0
+      return a.name.localeCompare(b.name)
+    })
+    .sort((a, b) => {
       const va = a[sortBy as ISortKey]
       const vb = b[sortBy as ISortKey]
       if(va === vb) return 0
