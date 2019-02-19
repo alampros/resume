@@ -855,23 +855,23 @@
   resolved "https://registry.yarnpkg.com/@react-pdf/png-js/-/png-js-1.0.0.tgz#00fcb969dca4ce82a0a7673413ade039e47b361e"
   integrity sha1-APy5adykzoKgp2c0E63gOeR7Nh4=
 
-"@react-pdf/renderer@^1.3.0":
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.3.3.tgz#4b5b5ab6f56ffcdb37398b56d3ef8711fd644b7e"
-  integrity sha512-zzfKIAE1SkUJ40JS07uJFrjiCItd8w+ksVS8RdlRAm4l4aclM15KJcRADhpvv3or4ZoIiUtviLumBL6593sxTg==
+"@react-pdf/renderer@1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.3.1.tgz#9aec61ff3ef7769b646756136426dccd450b3419"
+  integrity sha512-nY7FGwEQC5NWvX8OYorMa/obbwIM0uHrAY+oxBQovZJpvk4c8EChrHlD7J1Uplq7vf3tPaPcQPWbNy3B6S5g8g==
   dependencies:
     "@react-pdf/fontkit" "^1.13.0"
     "@react-pdf/pdfkit" "^1.2.0"
     "@react-pdf/png-js" "^1.0.0"
     "@react-pdf/script-itemizer" "^0.2.1"
-    "@react-pdf/textkit-core" "0.2.3"
+    "@react-pdf/textkit-core" "^0.2.1"
     "@textkit/justification-engine" "^0.1.9"
-    "@textkit/pdf-renderer" "^0.1.12"
+    "@textkit/pdf-renderer" "^0.1.11"
     "@textkit/text-decoration-engine" "^0.1.10"
     babel-runtime "^6.26.0"
     blob-stream "^0.1.3"
     cross-fetch "^3.0.1"
-    emoji-regex "^7.0.3"
+    emoji-regex "^6.5.1"
     hyphenation.en-us "^0.2.1"
     hypher "^0.2.5"
     is-url "^1.2.2"
@@ -893,7 +893,7 @@
   dependencies:
     "@react-pdf/unicode-properties" "^2.2.0"
 
-"@react-pdf/textkit-core@0.2.3":
+"@react-pdf/textkit-core@^0.2.1":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@react-pdf/textkit-core/-/textkit-core-0.2.3.tgz#a2012cae16031f7763a5f591e530b7c2c81a354a"
   integrity sha512-6DTvTn2lCdYvXc8G2K0ZedAkzQZAO5Mh9nVXEKg4RmvIn3N2QkD8gcqGOmPfvDfM70ZA5N4eodWowbOvKtxN3g==
@@ -916,7 +916,7 @@
     lodash.clone "^4.5.0"
     lodash.merge "^4.6.1"
 
-"@textkit/pdf-renderer@^0.1.12":
+"@textkit/pdf-renderer@^0.1.11":
   version "0.1.12"
   resolved "https://registry.yarnpkg.com/@textkit/pdf-renderer/-/pdf-renderer-0.1.12.tgz#ee444ecd0b3bb17ae8a5a9912218e9b2c0a648b0"
   integrity sha512-q/YD03lZ4zNaq9w5h76mhAA5HbgyWyJ0RjWvAeQR16M/d21PehDzMKe3rQDyYXMjv6sJG5K7tiwvN70ALFgoBA==
@@ -3566,7 +3566,12 @@ elliptic@^6.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
-emoji-regex@^7.0.1, emoji-regex@^7.0.2, emoji-regex@^7.0.3:
+emoji-regex@^6.5.1:
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-6.5.1.tgz#9baea929b155565c11ea41c6626eaa65cef992c2"
+  integrity sha512-PAHp6TxrCy7MGMFidro8uikr+zlJJKJ/Q6mm2ExZ7HwkyR9lSVFfE3kt36qcwa24BQL7y0G9axycGjK1A/0uNQ==
+
+emoji-regex@^7.0.1, emoji-regex@^7.0.2:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"
   integrity sha512-CwBLREIQ7LvYFB0WyRvwhq5N5qPhc6PMjD6bYggFlI5YyDgl+0vxq5VHbMOFqLg7hfWzmu8T5Z1QofhmTIhItA==
