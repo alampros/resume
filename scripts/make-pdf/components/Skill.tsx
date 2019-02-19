@@ -12,7 +12,6 @@ const styles = StyleSheet.create({
   container: {
   },
   name: {
-    fontSize: 14,
     lineHeight: 1.1,
     marginBottom: 4,
     fontFamily: 'RobotoSlab',
@@ -46,12 +45,12 @@ export default (props: Props & ReactPDF.ViewProps) => {
         <Text style={styles.name}>{name}</Text>
       )}
       <View style={{ fontSize: 8 }}>
-        <Text>Strength: <Text style={{ fontFamily: 'RalewayBold' }}>{strength * 100}%</Text></Text>
+        <Text>Strength: <Text style={{ fontFamily: 'OpenSansSemiBold' }}>{strength * 100}%</Text></Text>
         <View style={{ flexDirection: 'row' }}>
           <Text style={{ paddingRight: 3 }}>Experience: </Text>
           <ExperienceRating
-            style={{ fontFamily: 'RalewayBold' }}
-            labelProps={{ style: { fontFamily: 'Raleway' } }}
+            style={{ fontFamily: 'OpenSansSemiBold' }}
+            labelProps={{ style: { fontFamily: 'OpenSans' } }}
             yearsOfExperience={yearsOfExperience}
           />
         </View>

@@ -21,19 +21,18 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 24,
-    fontFamily: 'RalewayExtraLight',
+    fontFamily: 'OpenSansLight',
   },
   contact: {
     flexDirection: 'row',
+    flexWrap: 'nowrap',
+    marginTop: 4,
+    fontSize: 8,
   },
   contactInner: {
-    paddingTop: 5,
-    textAlign: 'right',
+    display: 'flex',
     alignItems: 'flex-end',
-    fontSize: 9,
-    lineHeight: 1.3,
-    letterSpacing: 0.75,
-    marginRight: 8,
+    marginRight: 12,
   },
 })
 
@@ -54,7 +53,7 @@ export default () => (
   <View style={styles.container} fixed>
     <View style={styles.name}>
       <Text>{`${firstName} ${middle} ${lastName}`}</Text>
-      <Text style={{ fontSize: 12, fontFamily: 'Raleway' }}>{title}</Text>
+      <Text style={{ fontSize: 12 }}>{title}</Text>
     </View>
     <View style={styles.contact}>
       <View style={styles.contactInner}>
@@ -64,7 +63,7 @@ export default () => (
         <Text>{email}</Text>
         <Text>github.com/{github}</Text>
       </View>
-      <Image src={b64Png('qr-link.png')} style={{ width: '1in', height: '1in', marginTop: 4 }} />
+      <Image src={b64Png('qr-link.png')} style={{ width: '0.75in', height: '0.75in' }} />
     </View>
   </View>
 )

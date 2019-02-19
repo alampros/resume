@@ -4,7 +4,7 @@ const sharedStyles = {
   },
   headings: {
     section: {
-      fontFamily: 'Staatliches',
+      fontFamily: 'OpenSansLight',
       fontSize: 18,
       color: '#555',
     },

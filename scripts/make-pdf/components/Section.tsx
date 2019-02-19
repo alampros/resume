@@ -8,7 +8,6 @@ import sharedStyles from '../sharedStyles'
 
 const styles = StyleSheet.create({
   indent: {
-    paddingLeft: 18,
   },
 })
 
