@@ -12,12 +12,15 @@ const styles = {
   skillGroup: {
     flexDirection: 'row',
     flexWrap: true,
+    paddingLeft: 18,
   },
   groupTitle: {
     fontSize: 22,
-    fontFamily: 'RalewayExtraLight',
+    fontFamily: 'OpenSansLight',
     color: '#000',
+    letterSpacing: -0.25,
     marginVertical: 12,
+    borderBottom: '1pt solid #ccc',
   },
   skill: {
     marginRight: 18,
@@ -31,7 +34,11 @@ interface Props {
   skills: ISkill[]
 }
 export default ({ skills }: Props) => {
-  const groupedSkills = new SkillGroups(skills).groups
+  const sortedSkills = skills.sort((a, b) => {
+    if(a.strength === b.strength) return 0
+    return b.strength - a.strength
+  })
+  const groupedSkills = new SkillGroups(sortedSkills).groups
 
   const $skillGroups = groupedSkills.map(({ title, skills }) => {
     if(skills.length === 0) return null

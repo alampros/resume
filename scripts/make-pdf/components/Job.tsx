@@ -13,11 +13,12 @@ const styles = StyleSheet.create({
   container: {
     marginVertical: 16,
     flexWrap: 'nowrap',
+    borderTop: '1pt solid #ccc',
+    paddingTop: 6,
   },
   company: {
     flexDirection: 'row',
     fontFamily: 'RobotoSlab',
-    marginBottom: 1,
     fontSize: 10,
     ...sharedStyles.dim,
   },
@@ -26,9 +27,9 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontFamily: 'RalewayExtraLight',
+    fontFamily: 'OpenSansLight',
     color: '#000',
-    marginVertical: 2,
+    marginVertical: 0,
   },
   dates: {
     fontSize: 10,
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     ...sharedStyles.dim,
   },
   description: {
-    marginTop: 6,
+    marginBottom: 4,
     lineHeight: 1.4,
     paddingRight: 18,
     fontSize: 10,
@@ -49,12 +50,11 @@ const styles = StyleSheet.create({
   },
   project: {
     marginLeft: 8,
-    marginTop: 6,
+    marginBottom: 6,
   },
   skills: {
     flexDirection: 'row',
     fontSize: 10,
-    marginTop: 6,
     fontFamily: 'RobotoSlab',
   },
   skillsLabel: {

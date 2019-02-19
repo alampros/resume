@@ -7,13 +7,12 @@ import Jobs from './Jobs'
 import Skills from './Skills'
 import Header from './Header'
 
-Font.register(path.resolve(__dirname, '../fonts/Raleway/Raleway-Regular.ttf'), { family: 'Raleway' })
-Font.register(path.resolve(__dirname, '../fonts/Raleway/Raleway-Light.ttf'), { family: 'RalewayLight' })
-Font.register(path.resolve(__dirname, '../fonts/Raleway/Raleway-ExtraLight.ttf'), { family: 'RalewayExtraLight' })
-Font.register(path.resolve(__dirname, '../fonts/Raleway/Raleway-Bold.ttf'), { family: 'RalewayBold' })
 Font.register(path.resolve(__dirname, '../fonts/Roboto_Slab/RobotoSlab-Regular.ttf'), { family: 'RobotoSlab' })
 Font.register(path.resolve(__dirname, '../fonts/Roboto_Slab/RobotoSlab-Light.ttf'), { family: 'RobotoSlabLight' })
-Font.register(path.resolve(__dirname, '../fonts/Staatliches/Staatliches-Regular.ttf'), { family: 'Staatliches' })
+Font.register(path.resolve(__dirname, '../fonts/Open_Sans/OpenSans-Light.ttf'), { family: 'OpenSansLight' })
+Font.register(path.resolve(__dirname, '../fonts/Open_Sans/OpenSans-Regular.ttf'), { family: 'OpenSans' })
+Font.register(path.resolve(__dirname, '../fonts/Open_Sans/OpenSans-SemiBold.ttf'), { family: 'OpenSansSemiBold' })
+Font.register(path.resolve(__dirname, '../fonts/Open_Sans/OpenSans-Bold.ttf'), { family: 'OpenSansBold' })
 
 // @ts-ignore
 Font.registerHyphenationCallback(word => {
@@ -24,7 +23,7 @@ const styles = StyleSheet.create({
   page: {
     padding: 14,
     fontSize: 12,
-    fontFamily: 'Raleway',
+    fontFamily: 'OpenSansLight',
   },
 })
 
