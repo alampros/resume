@@ -2,6 +2,12 @@
   line-height: 1.2;
 }
 
+.rating {
+  > svg {
+    margin-right: 0.25em;
+  }
+}
+
 :global(.dark-mode) {
   .root {
     border: 1px solid var(--color-gray-ghost, #333);
@@ -18,12 +24,6 @@
     > * {
       color: inherit;
     }
-  }
-}
-
-.rating {
-  > svg {
-    margin-right: 0.25em;
   }
 }
 
