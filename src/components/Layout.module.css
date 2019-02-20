@@ -19,3 +19,9 @@
     width: 48em;
   }
 }
+
+.darkToggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
