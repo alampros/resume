@@ -76,6 +76,7 @@ function AllSkills(props: Props) {
               onChange={setSortBy}
               role="group"
               aria-label="Sort By"
+              className={styles.sortBy}
             />
           </Pane>
         </Pane>

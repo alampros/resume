@@ -53,6 +53,7 @@ export default class Skill extends React.Component<Props & any> {
             display="flex"
             alignItems="center"
             marginBottom="0.5em"
+            className={styles.stale}
           >
             <Icon icon="warning-sign" color="warning" marginRight="0.75em" />
             <Text color="warning">Last used {staleFormatter.format(lastUsed)}</Text>
@@ -64,7 +65,6 @@ export default class Skill extends React.Component<Props & any> {
     return (
       <Card
         className={cx(styles.root, className)}
-        border="default"
         marginRight="1rem"
         marginBottom="1rem"
         elevation={1}
@@ -93,6 +93,7 @@ export default class Skill extends React.Component<Props & any> {
             <Pane
               is="small"
               flex={1}
+              className="no-print"
             >
               <Pane
                 is="a"

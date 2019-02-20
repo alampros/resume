@@ -1,19 +1,26 @@
 import React from 'react'
-import {
-  Switch,
-} from 'evergreen-ui'
+import Toggle, { ToggleProps } from 'react-toggle'
 import useDarkMode from 'hooks/useDarkMode'
+import { IoIosMoon, IoIosSunny } from 'react-icons/io'
+import './ToggleDarkMode.css'
 
-interface Props {
-}
-
-export default (passedProps: Props | any) => {
+export default (passedProps: ToggleProps) => {
   const [darkMode, setDarkMode] = useDarkMode()
+  const iconStyles = {
+    marginTop: '-4px',
+    marginLeft: '-2px',
+  }
   return (
-    <Switch
+    <Toggle
+      className="no-print"
       checked={darkMode}
       onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
         setDarkMode(e.target.checked)
+      }}
+      aria-hidden
+      icons={{
+        checked: <IoIosSunny style={{ ...iconStyles }} />,
+        unchecked: <IoIosMoon style={{ ...iconStyles }} />,
       }}
       {...passedProps}
     />

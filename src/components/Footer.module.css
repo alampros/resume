@@ -6,7 +6,7 @@
   min-height: 2rem;
   margin-top: 6rem;
   margin-bottom: 4rem;
-  color: var(--color-gray-dim, #ccc);
+  color: var(--color-gray-muted, #ccc);
   font-size: 10px;
 
   small {
@@ -36,11 +36,5 @@
 
   .qr-cell-filled {
     fill: var(--color-gray-dim, #ccc);
-  }
-}
-
-@media print {
-  .root {
-    min-height: 3rem;
   }
 }

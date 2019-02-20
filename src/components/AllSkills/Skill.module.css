@@ -2,6 +2,25 @@
   line-height: 1.2;
 }
 
+:global(.dark-mode) {
+  .root {
+    border: 1px solid var(--color-gray-ghost, #333);
+    box-shadow: none;
+  }
+
+  .stale {
+    color: #f90;
+
+    svg {
+      fill: currentColor !important;
+    }
+
+    > * {
+      color: inherit;
+    }
+  }
+}
+
 .rating {
   > svg {
     margin-right: 0.25em;

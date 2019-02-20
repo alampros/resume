@@ -23,3 +23,11 @@
     }
   }
 }
+
+:global(.dark-mode) {
+  .sortBy {
+    > :not([disabled="true"]):not([data-disabled="true"])[data-active="true"] {
+      background-color: var(--color-text-dark, #f1f1f1);
+    }
+  }
+}

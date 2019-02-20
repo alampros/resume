@@ -4,43 +4,68 @@ import {
   Button,
   Pane,
 } from 'evergreen-ui'
+import { useInView } from 'react-intersection-observer'
 import Address from 'components/Address'
 import { IResumeMetadata } from 'data/ResumeMetadata'
 import { MdPermPhoneMsg, MdMyLocation, MdEmail } from 'react-icons/md'
 import { GoMarkGithub } from 'react-icons/go'
 import Objective from 'components/Objective'
+import ToggleDarkMode from 'components/ToggleDarkMode'
+
 const styles = require('./Header.module.css')
+
+declare global {
+  interface Window {
+    IntersectionObserver: typeof IntersectionObserver
+  }
+}
+
+async function loadPolyfills() {
+  if(typeof window !== 'undefined' && typeof window.IntersectionObserver === 'undefined') {
+    // @ts-ignore
+    await import('intersection-observer')
+  }
+}
+
+loadPolyfills()
 
 interface Props extends IResumeMetadata {
 }
 
-const Actions = () => (
-  <div
-    className={cx('no-print', styles.actions)}
-    role="menubar"
-  >
-    <Button
-      is="a"
-      href="/Aaron Lampros.vcf"
-      appearance="minimal"
-      iconBefore="user"
+const Actions = () => {
+  const [ref, inView] = useInView()
+  return (
+    <div
+      ref={ref}
+      className={cx('no-print', { 'off-screen': !inView }, styles.actions)}
+      role="menubar"
     >
-      <span className={styles.shadow}>
-    Add me to your contacts
-      </span>
-    </Button>
-    <Button
-      is="a"
-      href="/resume-alampros.pdf"
-      appearance="minimal"
-      iconBefore="download"
-    >
-      <span className={styles.shadow}>
-      Download PDF
-      </span>
-    </Button>
-  </div>
-)
+      <div className={styles.darkToggle}>
+        <ToggleDarkMode />
+      </div>
+      <Button
+        is="a"
+        href="/Aaron Lampros.vcf"
+        appearance="minimal"
+        iconBefore="user"
+      >
+        <span className={styles.shadow}>
+      Add me to your contacts
+        </span>
+      </Button>
+      <Button
+        is="a"
+        href="/resume-alampros.pdf"
+        appearance="minimal"
+        iconBefore="download"
+      >
+        <span className={styles.shadow}>
+        Download PDF
+        </span>
+      </Button>
+    </div>
+  )
+}
 
 const Contact = (props: Props) => {
   const {
@@ -53,6 +78,7 @@ const Contact = (props: Props) => {
     <Pane
       className={styles.contact}
       is="address"
+      role="complementary"
     >
       <div>
         <MdMyLocation />

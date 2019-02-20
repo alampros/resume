@@ -47,6 +47,7 @@ module.exports = {
     'react/jsx-closing-bracket-location': 2,
     'react/jsx-indent': [2, 2, { checkAttributes: true }],
     'react/jsx-max-props-per-line': ['error', { maximum: 1, when: 'multiline' }],
+    'react/prop-types': ['error', { ignore: ['children', 'className', 'style'] }],
     'keyword-spacing': ['error', {
       overrides: {
         if: { after: false },

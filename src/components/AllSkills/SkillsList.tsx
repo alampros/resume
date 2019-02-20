@@ -43,7 +43,10 @@ export default (props: Props) => {
   const $skillGroups = groupedSkills.map(({ title, skills }) => {
     if(skills.length === 0) return null
     return (
-      <Pane key={title}>
+      <Pane
+        key={title}
+        is="article"
+      >
         <h3>{title}</h3>
         <Pane
           display="flex"
@@ -52,6 +55,9 @@ export default (props: Props) => {
           alignContent="flex-end"
           marginRight="-1rem"
           marginBottom="2rem"
+          style={{
+            pageBreakInside: 'avoid',
+          }}
         >
           <PoseGroup animateOnMount>
             {skills.map(skill => <PosedSkill skill={skill} key={skill.id} />)}

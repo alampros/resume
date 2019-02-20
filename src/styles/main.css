@@ -27,7 +27,7 @@ body {
 body.dark-mode {
   --color-bg-body: #1f1f1f;
   --color-text: #fff;
-  --color-text-dark: #fff;
+  --color-text-dark: #d5d5d5;
   --color-headings: #ccc;
   --color-border-gray: #c5cbea;
   --color-gray-muted: #a7a7a7;
@@ -81,6 +81,10 @@ h6 {
     margin-left: auto;
     background: none;
     border-bottom: 1px solid var(--color-gray-ghost);
+
+    @media print {
+      width: 100%;
+    }
 
     @media screen and (min-width: 480px) {
       visibility: hidden;
@@ -143,6 +147,14 @@ address {
 }
 
 @media print {
+  html {
+    font-size: 12px;
+  }
+
+  article {
+    page-break-inside: avoid;
+  }
+
   .no-print {
     display: none !important;
   }

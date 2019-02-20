@@ -26,7 +26,7 @@ export default class Job extends React.Component<Props> {
     ))
 
     return (
-      <section className={styles.root}>
+      <article className={styles.root}>
         <header>
           <h3 aria-label={title}>{title}</h3>
           <DateRange {...date} className={styles.dateRange} />
@@ -42,7 +42,7 @@ export default class Job extends React.Component<Props> {
           </>
         )}
         <JobSkills skills={skills} />
-      </section>
+      </article>
     )
   }
 }
