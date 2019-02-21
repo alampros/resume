@@ -10,17 +10,24 @@ const styles = require('./Layout.module.css')
 
 type Props = {
   children: React.ReactNode
+  title?: string
+  description?: string
+  helmetKids?: React.ReactNode
 }
 
-export default ({ children }: Props) => {
-  // If this were more than one page, these would be props
-  const title = 'Aaron Lampros | Resume'
-  const description = 'The resume of Aaron Lampros: User Experience Architect'
-
+export default ({
+  children,
+  title = 'Resume',
+  description = 'The resume of Aaron Lampros: User Experience Architect',
+  helmetKids,
+}: Props) => {
   return (
     <>
       <WelcomeLogger />
-      <Helmet>
+      <Helmet
+        titleTemplate="Aaron Lampros | %s"
+        defaultTitle="Resume"
+      >
         <html lang="en" />
         <meta charSet="utf-8" />
         <title>{title}</title>
@@ -41,6 +48,7 @@ export default ({ children }: Props) => {
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:creator" content="@alampros" />
+        {helmetKids}
       </Helmet>
       <main className={styles.main}>
         <div className={styles.container}>
