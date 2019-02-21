@@ -1,6 +1,9 @@
 .root {
   --bar-color: var(--color-chart-1, green);
 
+  display: flex;
+  align-items: center;
+
   progress {
     flex: 1 1 100%;
     width: 100%;
@@ -29,4 +32,8 @@
       border-radius: 2px;
     }
   }
+}
+
+.rating {
+  font-size: small;
 }

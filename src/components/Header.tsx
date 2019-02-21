@@ -1,14 +1,10 @@
 import * as React from 'react'
 import cx from 'classnames'
-import {
-  Button,
-  Pane,
-} from 'evergreen-ui'
 import { useInView } from 'react-intersection-observer'
 import Address from 'components/Address'
 import { IResumeMetadata } from 'data/ResumeMetadata'
 import { MdPermPhoneMsg, MdMyLocation, MdEmail } from 'react-icons/md'
-import { GoMarkGithub } from 'react-icons/go'
+import { GoMarkGithub, GoPerson, GoFilePdf } from 'react-icons/go'
 import Objective from 'components/Objective'
 import ToggleDarkMode from 'components/ToggleDarkMode'
 
@@ -43,26 +39,18 @@ const Actions = () => {
       <div className={styles.darkToggle}>
         <ToggleDarkMode />
       </div>
-      <Button
-        is="a"
-        href="/Aaron Lampros.vcf"
-        appearance="minimal"
-        iconBefore="user"
-      >
+      <a href="/Aaron Lampros.vcf">
         <span className={styles.shadow}>
-      Add me to your contacts
+          <GoPerson />
+          Add me to your contacts
         </span>
-      </Button>
-      <Button
-        is="a"
-        href="/resume-alampros.pdf"
-        appearance="minimal"
-        iconBefore="download"
-      >
+      </a>
+      <a href="/resume-alampros.pdf">
         <span className={styles.shadow}>
-        Download PDF
+          <GoFilePdf />
+          Download PDF
         </span>
-      </Button>
+      </a>
     </div>
   )
 }
@@ -75,9 +63,8 @@ const Contact = (props: Props) => {
     github,
   } = props
   return (
-    <Pane
+    <address
       className={styles.contact}
-      is="address"
       role="complementary"
     >
       <div>
@@ -96,7 +83,7 @@ const Contact = (props: Props) => {
         <MdEmail />
         <a href={`mailto:${email}`}>{email}</a>
       </div>
-    </Pane>
+    </address>
   )
 }
 
@@ -118,20 +105,14 @@ export default class Header extends React.Component<Props> {
   render() {
     return (
       <header className={styles.root}>
-        <Pane
-          display="flex"
-          className={styles.rowOne}
-        >
+        <div className={styles.rowOne}>
           <Name {...this.props} />
           <Objective className={styles.objective} />
-        </Pane>
-        <Pane
-          display="flex"
-          className={styles.rowTwo}
-        >
+        </div>
+        <div className={styles.rowTwo}>
           <Actions />
           <Contact {...this.props} />
-        </Pane>
+        </div>
       </header>
     )
   }

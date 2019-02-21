@@ -1,12 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
-import {
-  Pane,
-  Card,
-  Text,
-  Icon,
-} from 'evergreen-ui'
 import { GoLinkExternal } from 'react-icons/go'
+import { IoIosWarning } from 'react-icons/io'
 import { ISkill } from 'data/Skill'
 import StrengthRating from './StrengthRating'
 import ExperienceRating from './ExperienceRating'
@@ -48,91 +43,43 @@ export default class Skill extends React.Component<Props & any> {
           month: 'long',
         })
         $stale = (
-          <Pane
-            is="small"
-            display="flex"
-            alignItems="center"
-            marginBottom="0.5em"
-            className={styles.stale}
-          >
-            <Icon icon="warning-sign" color="warning" marginRight="0.75em" />
-            <Text color="warning">Last used {staleFormatter.format(lastUsed)}</Text>
-          </Pane>
+          <small className={styles.stale}>
+            <IoIosWarning />
+            <span>Last used {staleFormatter.format(lastUsed)}</span>
+          </small>
         )
       }
     }
 
     return (
-      <Card
-        className={cx(styles.root, className)}
-        marginRight="1rem"
-        marginBottom="1rem"
-        elevation={1}
-        flex={1}
-        display="flex"
-        flexDirection="column"
-        paddingY="0.333em"
-        paddingX="0.5em"
-        flexBasis="14em"
-        borderRadius={3}
-        {...passedProps}
-      >
-        <Pane
-          display="flex"
-          alignItems="baseline"
-          flexWrap="nowrap"
-          marginBottom="0.5em"
-        >
-          <Pane
-            marginRight="1em"
-            flex={1}
-          >
+      <div className={cx(styles.root, className)} {...passedProps}>
+        <div className={styles.nameLink}>
+          <span>
             {name}
-          </Pane>
+          </span>
           {link && (
-            <Pane
-              is="small"
-              flex={1}
-              className="no-print"
-            >
-              <Pane
-                is="a"
-                href={link.toString()}
-                flex={1}
-                display="flex"
-                alignItems="center"
-                justifyContent="flex-end"
-                flexWrap="nowrap"
-                whiteSpace="nowrap"
-              >
+            <small className="no-print">
+              <a href={link.toString()}>
                 {link2LD || link.host}
-                <GoLinkExternal style={{ marginLeft: '0.5em' }} />
-              </Pane>
-            </Pane>
+                <GoLinkExternal />
+              </a>
+            </small>
           )}
-        </Pane>
+        </div>
         {$stale}
-        <Pane
-          display="flex"
-          justifyContent="space-between"
-          marginTop="auto"
-        >
+        <div className={styles.flexBetween}>
           <ExperienceRating
             yearsOfExperience={yearsOfExperience}
             name={name}
-            className={styles.rating}
-            flexWrap="nowrap"
-            flex={1}
-            marginRight="0.5em"
+            className={cx(styles.rating, styles.experienceRating)}
           />
           <StrengthRating
             name={name}
             strength={strength}
-            className={styles.rating}
-            flex={3}
+            className={cx(styles.rating, styles.strengthRating)}
           />
-        </Pane>
-      </Card>
+        </div>
+      </div>
     )
   }
 }
