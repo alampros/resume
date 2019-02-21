@@ -5,6 +5,7 @@ module.exports = {
   ],
   rules: {
     'no-descending-specificity': null,
+    'no-eol-whitespace': [true, { ignore: ['empty-lines'] }],
     'selector-pseudo-class-no-unknown': [
       true,
       {
