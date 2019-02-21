@@ -9,6 +9,11 @@
   color: var(--color-gray-muted, #ccc);
   font-size: 10px;
 
+  @media print {
+    border-top: 1px solid #ccc;
+    margin-bottom: 0;
+  }
+
   small {
     font-size: inherit;
   }
