@@ -55,10 +55,6 @@ function AllSkills(props: Props) {
               unchecked: <IoIosSchool style={{ ...iconStyles }} />,
             }}
           />
-          <small>
-            <span className={sortBy === 'strength' ? styles.active : ''}>Strength</span>
-            <span className={sortBy === 'yearsOfExperience' ? styles.active : ''}>Experience</span>
-          </small>
         </nav>
       </header>
       <SkillsList skills={sortedSkills} />

@@ -21,23 +21,11 @@
       justify-content: center;
       align-items: center;
 
-      > div {
-        margin: 0 0.5rem;
-      }
-
-      small > span {
-        display: none;
-
-        &.active {
-          display: inline;
-        }
-      }
-
       @media screen and (min-width: 480px) {
         flex-direction: row;
-
-        small {
-          width: 5em;
+ 
+        > label {
+          margin-right: 0.5rem;
         }
       }
     }
@@ -48,14 +36,6 @@
 
     label {
       font-size: var(--font-size-small);
-    }
-  }
-}
-
-:global(.dark-mode) {
-  .sortBy {
-    > :not([disabled="true"]):not([data-disabled="true"])[data-active="true"] {
-      background-color: var(--color-text-dark, #f1f1f1);
     }
   }
 }
