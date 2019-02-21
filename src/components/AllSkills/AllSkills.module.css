@@ -7,11 +7,27 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     @media screen and (min-width: 480px) {
       flex-flow: row wrap;
       justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @media screen and (min-width: 480px) {
+        flex-direction: row;
+ 
+        > label {
+          margin-right: 0.5rem;
+        }
+      }
     }
 
     h2 {

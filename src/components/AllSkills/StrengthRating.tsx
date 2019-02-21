@@ -1,7 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
 import { IoIosSchool } from 'react-icons/io'
-import { Pane } from 'evergreen-ui'
 import { ISkill } from 'data/Skill'
 
 const styles = require('./StrengthRating.module.css')
@@ -20,9 +19,8 @@ export default function StrengthRating({ strength, name, className, ...passedPro
   })()
   const title = `I arbitrarily rank my strength with ${name} at ${(strength * 10)} out of 10`
   return (
-    <Pane
-      display="flex"
-      alignItems="center"
+    <div
+
       className={cx(className, styles.root, styles[cls])}
       role="presentation"
       aria-label={title}
@@ -38,9 +36,9 @@ export default function StrengthRating({ strength, name, className, ...passedPro
       >
         {strength}
       </progress>
-      <span className="no-screen" style={{ fontSize: 'small' }} aria-hidden>
+      <span className={cx(styles.rating, 'no-screen')} aria-hidden>
         <strong>{strength * 100}</strong>%
       </span>
-    </Pane>
+    </div>
   )
 }

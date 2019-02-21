@@ -1,30 +1,11 @@
 import React from 'react'
-import { Pane } from 'evergreen-ui'
-import posed, { PoseGroup } from 'react-pose'
+import { Flipper, Flipped } from 'react-flip-toolkit'
 import { ISkill } from 'data/Skill'
 import Empty from './Empty'
 import Skill from './Skill'
 import SkillGroups from 'data/SkillGroups'
 
-const RefPassedSkill = React.forwardRef((props, ref) => (
-  <Skill innerRef={ref} {...props} />
-))
-
-const PosedSkill = posed(RefPassedSkill)({
-  exit: {
-    staggerChildren: 200,
-    delayChildren: 500,
-  },
-  flip: {
-    staggerChildren: 500,
-    transition: {
-      type: 'spring',
-      stiffness: 170,
-      damping: 15,
-      mass: 1,
-    },
-  },
-})
+const styles = require('./SkillsList.module.css')
 
 interface Props {
   skills: ISkill[]
@@ -43,26 +24,28 @@ export default (props: Props) => {
   const $skillGroups = groupedSkills.map(({ title, skills }) => {
     if(skills.length === 0) return null
     return (
-      <Pane key={title}>
+      <article key={title}>
         <h3>{title}</h3>
-        <Pane
-          display="flex"
-          flexDirection="row"
-          flexWrap="wrap"
-          alignContent="flex-end"
-          marginRight="-1rem"
-          marginBottom="2rem"
+        <Flipper
+          flipKey={skills.map(skill => skill.id).join('')}
+          spring="gentle"
+          staggerConfig={{
+            default: {
+              speed: 0.2,
+              reverse: true,
+            },
+          }}
         >
-          <PoseGroup animateOnMount>
-            {skills.map(skill => <PosedSkill skill={skill} key={skill.id} />)}
-          </PoseGroup>
-        </Pane>
-      </Pane>
+          <div className={styles.skillsContainer}>
+            {skills.map(skill => (
+              <Flipped flipId={skill.id} key={skill.id} stagger>
+                <Skill skill={skill} />
+              </Flipped>
+            ))}
+          </div>
+        </Flipper>
+      </article>
     )
   })
-  return (
-    <Pane>
-      {$skillGroups}
-    </Pane>
-  )
+  return <>{$skillGroups}</>
 }

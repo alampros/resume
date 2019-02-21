@@ -7,7 +7,12 @@ const skills = Object.values(skillsById)
 export default class IndexPage extends React.Component {
   render() {
     return (
-      <Layout>
+      <Layout
+        title="Skills"
+        helmetKids={
+          <link rel="canonical" href="https://alampros.com/skills/index.html" />
+        }
+      >
         <AllSkills skills={skills} />
       </Layout>
     )

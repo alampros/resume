@@ -1,11 +1,13 @@
 import React from 'react'
+import cx from 'classnames'
 import { IoIosTime } from 'react-icons/io'
-import { Pane } from 'evergreen-ui'
 import { ISkill } from 'data/Skill'
+
+const styles = require('./ExperienceRating.module.css')
 
 type Props = any & Pick<ISkill, 'yearsOfExperience' | 'name'>
 
-export default function ExperienceRating({ yearsOfExperience, name, ...passedProps }: Props) {
+export default function ExperienceRating({ yearsOfExperience, name, className, ...passedProps }: Props) {
   const plural = yearsOfExperience > 1 ? 'years' : 'year'
   const change = yearsOfExperience % 1
   const bits = (() => {
@@ -17,9 +19,8 @@ export default function ExperienceRating({ yearsOfExperience, name, ...passedPro
   })()
   const years = yearsOfExperience < 1 ? bits : Math.floor(yearsOfExperience) + bits
   return (
-    <Pane
-      display="flex"
-      alignItems="center"
+    <div
+      className={cx(className, styles.root)}
       role="presentation"
       aria-label={`I have ${years} ${plural} experience with ${name}`}
       {...passedProps}
@@ -28,10 +29,9 @@ export default function ExperienceRating({ yearsOfExperience, name, ...passedPro
       <small
         title={`I have ${years} ${plural} experience with ${name}`}
         aria-hidden
-        style={{ whiteSpace: 'nowrap' }}
       >
         <strong>{years}</strong> {plural}
       </small>
-    </Pane>
+    </div>
   )
 }

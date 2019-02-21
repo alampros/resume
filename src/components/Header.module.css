@@ -3,6 +3,13 @@
   --color-ribbon-shadow: #eee;
   --color-ribbon-hover: #cdecfc;
   --color-ribbon-hover-text: #195974;
+  --color-ribbon-text: var(--color-link, #69b6e1);
+
+  :global(.dark-mode) & {
+    --color-ribbon-shadow: #666;
+    --color-ribbon: var(--color-link, #69b6e1);
+    --color-ribbon-text: #fff;
+  }
 
   display: flex;
   flex-direction: column;
@@ -31,7 +38,7 @@
   flex-flow: column nowrap;
   align-items: center;
   color: var(--color-headings);
-  font-size: 0.75rem;
+  font-size: var(--font-size-small, 12px);
   font-style: normal;
 
   > div {
@@ -41,8 +48,8 @@
 
     display: flex;
     flex-flow: row nowrap;
-    justify-items: flex-start;
     align-items: center;
+    justify-items: flex-start;
 
     > svg:first-child {
       margin-right: 0.5rem;
@@ -51,11 +58,13 @@
 }
 
 .rowOne {
+  display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
 
 .rowTwo {
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -72,6 +81,40 @@
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-gray-ghost, #ccc);
+
+  > a {
+    display: flex;
+    align-items: center;
+    padding: 0.75em 1em;
+    font-size: var(---font-size-small, 12px);
+    line-height: 1.2;
+
+    svg {
+      align-self: baseline;
+      margin-right: 0.5em;
+    }
+  }
+
+  .shadow {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.darkToggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  @media screen and (min-width: 640px) {
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    order: 1;
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -80,7 +123,7 @@
   }
 
   .contact {
-    align-items: flex-start;
+    align-items: flex-end;
   }
 
   .rowOne {
@@ -99,9 +142,9 @@
     align-items: flex-end;
     margin-top: 1rem;
     margin-right: -0.7em;
-    margin-bottom: 2rem;
     padding-left: 1em;
     white-space: nowrap;
+    border-bottom: none;
 
     .shadow {
       &::before,
@@ -132,6 +175,7 @@
       position: relative;
       height: 3em;
       padding-right: 2em;
+      color: var(--color-ribbon-text, #69b6e1);
       background-color: var(--color-ribbon);
       border-radius: 0;
       transition: all 0.2s ease;
