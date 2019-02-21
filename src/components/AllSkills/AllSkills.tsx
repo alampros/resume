@@ -41,7 +41,9 @@ function AllSkills(props: Props) {
         <h2>Skills</h2>
         <hr aria-hidden />
         <nav>
+          <label htmlFor="sort-toggle">Sort by</label>
           <Toggle
+            id="sort-toggle"
             className="no-print"
             checked={sortBy === 'strength'}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
@@ -53,6 +55,10 @@ function AllSkills(props: Props) {
               unchecked: <IoIosSchool style={{ ...iconStyles }} />,
             }}
           />
+          <small>
+            <span className={sortBy === 'strength' ? styles.active : ''}>Strength</span>
+            <span className={sortBy === 'yearsOfExperience' ? styles.active : ''}>Experience</span>
+          </small>
         </nav>
       </header>
       <SkillsList skills={sortedSkills} />

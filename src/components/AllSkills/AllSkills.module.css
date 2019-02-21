@@ -12,13 +12,34 @@
     @media screen and (min-width: 480px) {
       flex-flow: row wrap;
       justify-content: space-between;
+      align-items: center;
     }
 
     nav {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      align-items: flex-end;
+      justify-content: center;
+      align-items: center;
+
+      > div {
+        margin: 0 0.5rem;
+      }
+
+      small > span {
+        display: none;
+
+        &.active {
+          display: inline;
+        }
+      }
+
+      @media screen and (min-width: 480px) {
+        flex-direction: row;
+
+        small {
+          width: 5em;
+        }
+      }
     }
 
     h2 {
