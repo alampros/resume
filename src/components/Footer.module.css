@@ -7,7 +7,7 @@
   margin-top: 6rem;
   margin-bottom: 4rem;
   color: var(--color-gray-muted, #ccc);
-  font-size: 10px;
+  font-size: 12px;
 
   @media print {
     margin-bottom: 0;
@@ -19,15 +19,24 @@
   }
 
   a {
-    color: inherit;
+    margin-bottom: 1rem;
+    color: var(--color-link);
+  }
+}
+
+.ghLink {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  svg {
+    font-size: 2rem;
   }
 }
 
 .resumeLink {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
-  font-size: var(--font-size-small);
 
   svg {
     margin-right: 0.5em;
