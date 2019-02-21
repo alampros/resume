@@ -87,7 +87,7 @@ h6 {
     }
 
     @media screen and (min-width: 480px) {
-      visibility: hidden;
+      display: none;
     }
   }
 }
@@ -95,6 +95,10 @@ h6 {
 h2 {
   font-size: 24px;
   text-transform: uppercase;
+
+  @media screen and (min-width: 480px) {
+    margin-bottom: 2rem;
+  }
 }
 
 h3 {

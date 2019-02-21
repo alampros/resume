@@ -81,15 +81,18 @@
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-gray-ghost, #ccc);
 
   > a {
     display: flex;
     align-items: center;
-    padding: 0 1em;
+    padding: 0.75em 1em;
     font-size: var(---font-size-small, 12px);
     line-height: 1.2;
 
     svg {
+      align-self: baseline;
       margin-right: 0.5em;
     }
   }
@@ -104,19 +107,8 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  transition: top 0.3s ease-out;
 
-  @media screen and (min-width: 480px) {
-    position: relative;
-    top: 0;
-    right: unset;
-    order: 3;
-    margin-top: 1rem;
-  }
-}
-
-@media screen and (min-width: 640px) {
-  .root :global(.off-screen) .darkToggle {
+  @media screen and (min-width: 640px) {
     position: fixed;
     top: 0.5rem;
     right: 0.5rem;
@@ -131,7 +123,7 @@
   }
 
   .contact {
-    align-items: flex-start;
+    align-items: flex-end;
   }
 
   .rowOne {
@@ -150,9 +142,9 @@
     align-items: flex-end;
     margin-top: 1rem;
     margin-right: -0.7em;
-    margin-bottom: 2rem;
     padding-left: 1em;
     white-space: nowrap;
+    border-bottom: none;
 
     .shadow {
       &::before,

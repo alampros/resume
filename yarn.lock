@@ -5617,12 +5617,7 @@ internal-ip@^4.0.0:
     default-gateway "^3.1.0"
     ipaddr.js "^1.9.0"
 
-intersection-observer@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.5.1.tgz#e340fc56ce74290fe2b2394d1ce88c4353ac6dfa"
-  integrity sha512-Zd7Plneq82kiXFixs7bX62YnuZ0BMRci9br7io88LwDyF3V43cQMI+G5IiTlTNTt+LsDUppl19J/M2Fp9UkH6g==
-
-invariant@^2.0.0, invariant@^2.2.0, invariant@^2.2.2, invariant@^2.2.3, invariant@^2.2.4:
+invariant@^2.2.0, invariant@^2.2.2, invariant@^2.2.3, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
@@ -8685,14 +8680,6 @@ react-icons@^3.3.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.4.0.tgz#3be5139a81bad5fa8ffbc0a87137275dc7a75737"
   integrity sha512-5cyYrl34KGovU/MH3YO+wN1k787vv3EKLeGDyaGOY92jSTQ/xRjkQ7iim5Ml9rgMLU1i0vszev80kWV4uRZ3Bw==
-
-react-intersection-observer@^8.0.5:
-  version "8.0.5"
-  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.0.5.tgz#e6d73c890c6e201178c7216d9af5bccd9e5c68f5"
-  integrity sha512-s6U4p/AUOsit6JabQ3nAjCiv6+0bRc/IkS2DNjcUk14GvZH8eVyBj5zUv5PRiQ+mu/HqmKLCNJ1WBdXmCEi3fA==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    invariant "^2.0.0"
 
 react-is@^16.8.1:
   version "16.8.2"

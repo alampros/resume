@@ -7,7 +7,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     @media screen and (min-width: 480px) {
       flex-flow: row wrap;

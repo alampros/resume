@@ -1,6 +1,5 @@
 import * as React from 'react'
 import cx from 'classnames'
-import { useInView } from 'react-intersection-observer'
 import Address from 'components/Address'
 import { IResumeMetadata } from 'data/ResumeMetadata'
 import { MdPermPhoneMsg, MdMyLocation, MdEmail } from 'react-icons/md'
@@ -16,24 +15,13 @@ declare global {
   }
 }
 
-async function loadPolyfills() {
-  if(typeof window !== 'undefined' && typeof window.IntersectionObserver === 'undefined') {
-    // @ts-ignore
-    await import('intersection-observer')
-  }
-}
-
-loadPolyfills()
-
 interface Props extends IResumeMetadata {
 }
 
 const Actions = () => {
-  const [ref, inView] = useInView()
   return (
     <div
-      ref={ref}
-      className={cx('no-print', { 'off-screen': !inView }, styles.actions)}
+      className={cx('no-print', styles.actions)}
       role="menubar"
     >
       <div className={styles.darkToggle}>
