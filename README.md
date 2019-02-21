@@ -19,21 +19,21 @@ The HTML, PDF, and VCF files are all generated from the same data (jobs, skills,
 ## Technologies
 This site is built with:
 
-**[Gatsby](https://www.gatsbyjs.org) ❤️**
+**[Gatsby](https://www.gatsbyjs.org) ❤️**  
 Uses React, Webpack & Babel to compile modern, blazingly-fast, static websites.
 
-**[TypeScript](https://www.typescriptlang.org/)**
+**[TypeScript](https://www.typescriptlang.org/)**  
 Tooling, type safety, and a scapegoat for configuration rage.
 
-**[Netlify](https://netlify.com/)**
+**[Netlify](https://netlify.com/)**  
 Static hosting with integrated CI/CD, DNS, CDN, and many more impressive acronyms.
 
-**[React-PDF](https://react-pdf.org/)**
+**[React-PDF](https://react-pdf.org/)**  
 Provides React components and primitives to render PDFs using [pdfkit](https://github.com/foliojs/pdfkit) and the [yoga flexbox layout system](https://yogalayout.com/). Used to render the PDF version of my resume.
 
-**[Eslint](https://eslint.org)**
+**[Eslint](https://eslint.org)**  
 I can't live without eslint + [ale](https://github.com/w0rp/ale).
 
-**[CSS Modules](https://github.com/css-modules/css-modules)**
+**[CSS Modules](https://github.com/css-modules/css-modules)**  
 Styling in React is an incredibly polarizing topic. I've used *many* of the solutions out there, but I keep coming back to CSS modules for the simple reason that it's only once-removed from native CSS, while still providing the means to co-locate and isolate your component styles.
 
