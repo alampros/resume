@@ -45,7 +45,7 @@ export default class Skill extends React.Component<Props & any> {
         $stale = (
           <small className={styles.stale}>
             <IoIosWarning />
-            <span>Last used {staleFormatter.format(lastUsed)}</span>
+            <span>{'Last used ' + staleFormatter.format(lastUsed)}</span>
           </small>
         )
       }

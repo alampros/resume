@@ -64,10 +64,11 @@
   display: flex;
   align-items: center;
   margin-bottom: 0.5em;
-  color: rgb(187, 113, 1);
+  color: rgb(167, 86, 0);
 
   > svg {
-    margin-right: 0.5em;
+    margin-right: 0.333em;
+    font-size: 1.333em;
   }
 }
 
