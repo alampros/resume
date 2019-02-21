@@ -1,0 +1,9 @@
+.skillsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  margin-right: -1rem;
+  margin-bottom: 2rem;
+  page-break-inside: avoid;
+}

@@ -1,10 +1,11 @@
 import React from 'react'
-import { Pane } from 'evergreen-ui'
 import { Flipper, Flipped } from 'react-flip-toolkit'
 import { ISkill } from 'data/Skill'
 import Empty from './Empty'
 import Skill from './Skill'
 import SkillGroups from 'data/SkillGroups'
+
+const styles = require('./SkillsList.module.css')
 
 interface Props {
   skills: ISkill[]
@@ -23,10 +24,7 @@ export default (props: Props) => {
   const $skillGroups = groupedSkills.map(({ title, skills }) => {
     if(skills.length === 0) return null
     return (
-      <Pane
-        key={title}
-        is="article"
-      >
+      <article key={title}>
         <h3>{title}</h3>
         <Flipper
           flipKey={skills.map(skill => skill.id).join('')}
@@ -38,30 +36,16 @@ export default (props: Props) => {
             },
           }}
         >
-          <Pane
-            display="flex"
-            flexDirection="row"
-            flexWrap="wrap"
-            alignContent="flex-end"
-            marginRight="-1rem"
-            marginBottom="2rem"
-            style={{
-              pageBreakInside: 'avoid',
-            }}
-          >
+          <div className={styles.skillsContainer}>
             {skills.map(skill => (
               <Flipped flipId={skill.id} key={skill.id} stagger>
                 <Skill skill={skill} />
               </Flipped>
             ))}
-          </Pane>
+          </div>
         </Flipper>
-      </Pane>
+      </article>
     )
   })
-  return (
-    <Pane>
-      {$skillGroups}
-    </Pane>
-  )
+  return <>{$skillGroups}</>
 }

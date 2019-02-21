@@ -38,7 +38,7 @@
   flex-flow: column nowrap;
   align-items: center;
   color: var(--color-headings);
-  font-size: 0.75rem;
+  font-size: var(--font-size-small, 12px);
   font-style: normal;
 
   > div {
@@ -48,8 +48,8 @@
 
     display: flex;
     flex-flow: row nowrap;
-    justify-items: flex-start;
     align-items: center;
+    justify-items: flex-start;
 
     > svg:first-child {
       margin-right: 0.5rem;
@@ -58,11 +58,13 @@
 }
 
 .rowOne {
+  display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
 
 .rowTwo {
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -79,6 +81,23 @@
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
+
+  > a {
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    font-size: var(---font-size-small, 12px);
+    line-height: 1.2;
+
+    svg {
+      margin-right: 0.5em;
+    }
+  }
+
+  .shadow {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .darkToggle {

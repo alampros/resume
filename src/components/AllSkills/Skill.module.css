@@ -1,10 +1,73 @@
 .root {
+  display: flex;
+  flex: 1;
+  flex-basis: 14em;
+  flex-direction: column;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.333em 0.5em;
   line-height: 1.2;
+  border: 1px solid var(--color-gray-ghost, #ccc);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px var(--color-gray-ghost, #ccc);
 }
 
 .rating {
+  flex: 1;
+  flex-wrap: nowrap;
+
+  &:first-child {
+    margin-right: 0.5em;
+  }
+
   > svg {
     margin-right: 0.25em;
+  }
+}
+
+.nameLink {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  margin-bottom: 0.5em;
+
+  > span {
+    flex: 1;
+    margin-right: 1em;
+  }
+
+  > small {
+    flex: 1;
+
+    a {
+      display: flex;
+      flex: 1;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      white-space: nowrap;
+
+      svg {
+        margin-left: 0.5em;
+      }
+    }
+  }
+}
+
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.stale {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+  color: rgb(187, 113, 1);
+
+  > svg {
+    margin-right: 0.5em;
   }
 }
 
