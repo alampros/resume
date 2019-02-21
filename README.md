@@ -10,7 +10,7 @@ The major goals of this site are:
 - Accessibility
 - Maintainability
 
-# Architectural Choices
+# Architecture
 
 ## Multiple Media, Same Data
 
@@ -36,4 +36,9 @@ I can't live without eslint + [ale](https://github.com/w0rp/ale).
 
 **[CSS Modules](https://github.com/css-modules/css-modules)**  
 Styling in React is an incredibly polarizing topic. I've used *many* of the solutions out there, but I keep coming back to CSS modules for the simple reason that it's only once-removed from native CSS, while still providing the means to co-locate and isolate your component styles.
+
+
+# Questions?
+
+Wondering why I made a particular design choice? Why not Angular/Vue/jQuery? Why ____? Feel free to [open an issue on this repo](https://github.com/alampros/resume-site/issues/new) or just email me.
 
