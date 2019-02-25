@@ -26,6 +26,10 @@ function AllSkills(props: Props) {
       return a.name.localeCompare(b.name)
     })
     .sort((a, b) => {
+      if(a.interest === b.interest) return 0
+      return b.interest - a.interest
+    })
+    .sort((a, b) => {
       const va = a[sortBy as ISortKey]
       const vb = b[sortBy as ISortKey]
       if(va === vb) return 0
