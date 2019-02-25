@@ -49,7 +49,7 @@ const jobs: IJobConstructorParam[] = [
     projects: [
       {
         description: 'Created unified design system across six independent product web platforms.',
-        skills: [skills.gatsby, skills.sketch, skills.node],
+        skills: [skills.gatsby, skills.sketch, skills.node, skills.design_systems, skills.css],
       },
       {
         description: 'Centralized internal iconography tools to generate icon packages in six formats for consumption by developers and designers from the same source of truth.',
@@ -66,9 +66,12 @@ const jobs: IJobConstructorParam[] = [
     },
     skills: [
       { skill: skills.js, relevance: 1 },
+      { skill: skills.design_systems, relevance: 0.75 },
+      { skill: skills.css, relevance: 0.75 },
+      { skill: skills.html, relevance: 0.75 },
       { skill: skills.ts, relevance: 0.9 },
       { skill: skills.sketch, relevance: 0.6 },
-      { skill: skills.webpack, relevance: 0.7 },
+      { skill: skills.webpack, relevance: 0.5 },
       { skill: skills.accessibility, relevance: 0.4 },
       { skill: skills.node, relevance: 0.3 },
       { skill: skills.usability_testing, relevance: 0.6 },

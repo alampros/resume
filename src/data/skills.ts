@@ -4,6 +4,27 @@ import Skill, { ISkill } from './Skill'
 type PartialSkill = Omit<ISkill, 'id'>
 
 const partialSkills: { [id: string]: PartialSkill } = {
+  css: {
+    name: 'CSS',
+    yearsOfExperience: new Date().getFullYear() - 2001,
+    strength: 1,
+    interest: 0.9,
+    link: new URL('https://en.wikipedia.org/wiki/Cascading_Style_Sheets'),
+  },
+  html: {
+    name: 'Semantic HTML',
+    yearsOfExperience: new Date().getFullYear() - 2001,
+    strength: 1,
+    interest: 1,
+    link: new URL('https://en.wikipedia.org/wiki/Semantic_HTML'),
+  },
+  design_systems: {
+    name: 'Design Systems',
+    yearsOfExperience: new Date().getFullYear() - 2017,
+    strength: 1,
+    interest: 1,
+    link: new URL('https://www.smashingmagazine.com/design-systems-book/'),
+  },
   js: {
     name: 'JavaScript',
     yearsOfExperience: new Date().getFullYear() - 2002,
