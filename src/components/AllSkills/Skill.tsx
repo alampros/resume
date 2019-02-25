@@ -60,14 +60,14 @@ export default class Skill extends React.Component<Props & any> {
           {link && (
             <small className="no-print">
               <a href={link.toString()}>
-                {link2LD || link.host}
+                <span>{link2LD || link.host}</span>
                 <GoLinkExternal />
               </a>
             </small>
           )}
         </div>
         {$stale}
-        <div className={styles.flexBetween}>
+        <div className={styles.ratings}>
           <ExperienceRating
             yearsOfExperience={yearsOfExperience}
             name={name}
