@@ -7,12 +7,12 @@ import Jobs from './Jobs'
 import Skills from './Skills'
 import Header from './Header'
 
-Font.register(path.resolve(__dirname, '../fonts/Roboto_Slab/RobotoSlab-Regular.ttf'), { family: 'RobotoSlab' })
-Font.register(path.resolve(__dirname, '../fonts/Roboto_Slab/RobotoSlab-Light.ttf'), { family: 'RobotoSlabLight' })
-Font.register(path.resolve(__dirname, '../fonts/Open_Sans/OpenSans-Light.ttf'), { family: 'OpenSansLight' })
-Font.register(path.resolve(__dirname, '../fonts/Open_Sans/OpenSans-Regular.ttf'), { family: 'OpenSans' })
-Font.register(path.resolve(__dirname, '../fonts/Open_Sans/OpenSans-SemiBold.ttf'), { family: 'OpenSansSemiBold' })
-Font.register(path.resolve(__dirname, '../fonts/Open_Sans/OpenSans-Bold.ttf'), { family: 'OpenSansBold' })
+Font.register({ src: path.resolve(__dirname, '../fonts/Roboto_Slab/RobotoSlab-Regular.ttf'), family: 'RobotoSlab', fontStyle: 'normal', fontWeight: 'normal' })
+Font.register({ src: path.resolve(__dirname, '../fonts/Roboto_Slab/RobotoSlab-Light.ttf'), family: 'RobotoSlabLight', fontStyle: 'normal', fontWeight: 'light' })
+Font.register({ src: path.resolve(__dirname, '../fonts/Open_Sans/OpenSans-Light.ttf'), family: 'OpenSansLight', fontStyle: 'normal', fontWeight: 'light' })
+Font.register({ src: path.resolve(__dirname, '../fonts/Open_Sans/OpenSans-Regular.ttf'), family: 'OpenSans', fontStyle: 'normal', fontWeight: 'normal' })
+Font.register({ src: path.resolve(__dirname, '../fonts/Open_Sans/OpenSans-SemiBold.ttf'), family: 'OpenSansSemiBold', fontStyle: 'normal', fontWeight: 'semibold' })
+Font.register({ src: path.resolve(__dirname, '../fonts/Open_Sans/OpenSans-Bold.ttf'), family: 'OpenSansBold', fontStyle: 'normal', fontWeight: 'bold' })
 
 // @ts-ignore
 Font.registerHyphenationCallback(word => {

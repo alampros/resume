@@ -11,15 +11,15 @@
 
     @media screen and (min-width: 480px) {
       flex-flow: row wrap;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
 
     nav {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
 
       @media screen and (min-width: 480px) {
         flex-direction: row;
