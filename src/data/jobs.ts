@@ -10,19 +10,46 @@ const jobs: IJobConstructorParam[] = [
       {
         description: 'Built a containerized JSON REST API for transcoding video into LMS-compatible SCORM training modules with 96% test coverage. Included well-documented, standalone client React component and CLI tool for batching jobs.',
         skills: [skills.ts, skills.node, skills.hapi, skills.react, skills.unit_testing, skills.aws_ecs, skills.aws_et],
+        skillsetRatings: {
+          design: 0.2,
+          development: 1,
+          communication: 0.6,
+          leadership: 0.5,
+          organization: 0.7,
+        },
       },
       {
-        // description: 'Increased engineering team efficiency by creating a custom CLI tool to speed development',
         description: 'Created a custom CLI tool that increased the efficiency of the entire engineering team.',
         skills: [skills.ts, skills.node, skills.hapi],
+        skillsetRatings: {
+          design: 0.3,
+          development: 0.9,
+          communication: 0.7,
+          leadership: 0.4,
+          organization: 0.8,
+        },
       },
       {
         description: 'Transitioned company from monolithic subversion SCM to multi-repository git. Created tooling to automate parts of the transition. Trained both engineering and support teams.',
         skills: [skills.git, skills.svn],
+        skillsetRatings: {
+          design: 0.1,
+          development: 0.5,
+          communication: 1,
+          leadership: 0.9,
+          organization: 0.8,
+        },
       },
       {
         description: 'Implemented continuous integration for core product line and laid groundwork for fully-automated continuous deployment system.',
         skills: [skills.git, skills.unit_testing],
+        skillsetRatings: {
+          design: 0,
+          development: 0.3,
+          communication: 0.9,
+          leadership: 1,
+          organization: 0.8,
+        },
       },
     ],
     date: {
