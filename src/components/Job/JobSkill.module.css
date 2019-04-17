@@ -29,8 +29,8 @@
   .inner {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 0.25em 0.5em;
   }
 

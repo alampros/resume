@@ -1,8 +1,8 @@
 .root {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   min-height: 2rem;
   margin-top: 6rem;
   margin-bottom: 4rem;
