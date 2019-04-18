@@ -19,6 +19,17 @@ export default class JobSkill extends React.Component<Props & React.HTMLProps<HT
       relevance,
       className,
     } = this.props
+    if(typeof relevance === 'undefined') {
+      return (
+        <span
+          className={cx(styles.root, styles.fig, className)}
+          aria-label={name}
+        >
+          {name}
+        </span>
+      )
+    }
+
     const perc = (relevance * 100).toFixed(0)
     const $tipContent = (
       <div className={styles.tip}>
@@ -26,7 +37,7 @@ export default class JobSkill extends React.Component<Props & React.HTMLProps<HT
       </div>
     )
     return (
-      <figure
+      <span
         className={cx(styles.root, className)}
         aria-label={`${name} was approximately ${perc}% relevant to this job`}
       >
@@ -36,12 +47,12 @@ export default class JobSkill extends React.Component<Props & React.HTMLProps<HT
           trigger="mouseenter focus click"
           arrow
         >
-          <div className={styles.inner} aria-hidden>
+          <figure className={styles.fig} aria-hidden>
             <figcaption>{name}</figcaption>
             <TinyPie value={relevance} />
-          </div>
+          </figure>
         </Tippy>
-      </figure>
+      </span>
     )
   }
 }

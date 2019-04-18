@@ -14,7 +14,16 @@ export default class JobSkills extends React.Component<Props> {
     } = this.props
     const $skills = skills
       .sort((a, b) => {
-        return b.relevance - a.relevance
+        if(b.relevance && a.relevance) {
+          return b.relevance - a.relevance
+        }
+        if(a.relevance && !b.relevance) {
+          return 1
+        }
+        if(!a.relevance && b.relevance) {
+          return -1
+        }
+        return 0
       })
       .map(skill => (
         <li key={skill.skill.id}>

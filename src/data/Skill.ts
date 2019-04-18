@@ -11,7 +11,7 @@ export interface ISkill {
 
 export interface IJobSkill {
   skill: ISkill
-  relevance: number
+  relevance?: number
 }
 
 export default class Skill implements ISkill {

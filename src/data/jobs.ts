@@ -8,6 +8,7 @@ const jobs: IJobConstructorParam[] = [
     department: 'Engineering',
     projects: [
       {
+        title: 'Video Transcoder API',
         description: 'Built a containerized JSON REST API for transcoding video into LMS-compatible SCORM training modules with 96% test coverage. Included well-documented, standalone client React component and CLI tool for batching jobs.',
         skills: [skills.ts, skills.node, skills.hapi, skills.react, skills.unit_testing, skills.aws_ecs, skills.aws_et],
         size: 0,
@@ -20,6 +21,7 @@ const jobs: IJobConstructorParam[] = [
         },
       },
       {
+        title: 'rtolms-cli',
         description: 'Created a custom CLI tool that increased the efficiency of the entire engineering team.',
         skills: [skills.ts, skills.node, skills.hapi],
         skillsetRatings: {
@@ -31,6 +33,7 @@ const jobs: IJobConstructorParam[] = [
         },
       },
       {
+        title: 'svn => git',
         description: 'Transitioned company from monolithic subversion SCM to multi-repository git. Created tooling to automate parts of the transition. Trained both engineering and support teams.',
         skills: [skills.git, skills.svn],
         skillsetRatings: {
@@ -42,6 +45,7 @@ const jobs: IJobConstructorParam[] = [
         },
       },
       {
+        title: 'Continuous Integration Pipeline',
         description: 'Implemented continuous integration for core product line and laid groundwork for fully-automated continuous deployment system.',
         skills: [skills.git, skills.unit_testing],
         skillsetRatings: {

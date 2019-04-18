@@ -1,11 +1,13 @@
 .skill {
   margin-right: 0.5em;
   margin-bottom: 0.5em;
+  font-size: 0.85rem;
 }
 
 .root {
   ul {
     margin: 0;
+    padding-left: 1.25rem;
     list-style: none;
 
     li {
