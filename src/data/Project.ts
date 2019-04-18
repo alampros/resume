@@ -1,5 +1,7 @@
 import { ISkill } from 'data/Skill'
-import { IDateRange } from 'data/DateRange'
+import DateRange, { IDateRange } from 'data/DateRange'
+import SkillsetRatings, { ISkillsetRatings } from './SkillsetRatings'
+import { clampFloat } from './utils'
 
 export interface IProject {
   title?: string
@@ -8,20 +10,27 @@ export interface IProject {
   skills?: ISkill[]
   // When I worked on the project
   date?: IDateRange
-  skillsetRatings?: {
-    // Float (0-1) representing how related the project was to my design skillset
-    design?: number
-    // Float (0-1) representing how related the project was to my development skillset
-    development?: number
-    // Float (0-1) representing how related the project was to my organizational skillset
-    organization?: number
-    // Float (0-1) representing how related the project was to my leadership skillset
-    leadership?: number
-    // Float (0-1) representing how related the project was to my communication skillset
-    communication?: number
-  }
+  skillsetRatings?: ISkillsetRatings
   // Float (0-1) representing the scale of the project
   size?: number
   // Whether to show the project in the printed versions of the resume
+  print?: boolean
+}
+
+export default class Project implements IProject {
+  constructor(param: IProject) {
+    Object.assign(this, param)
+    this.size = clampFloat(typeof param.size === 'number' ? param.size : 0.5)
+    this.skillsetRatings = new SkillsetRatings(param.skillsetRatings)
+    if(param.date) {
+      this.date = new DateRange(param.date)
+    }
+  }
+  title?: string
+  description?: string
+  skills?: ISkill[]
+  skillsetRatings?: ISkillsetRatings
+  date?: IDateRange
+  size?: number
   print?: boolean
 }
