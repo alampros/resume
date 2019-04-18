@@ -93,8 +93,16 @@ export default (props: Props & ReactPDF.ViewProps) => {
   } = job
   const skills = jobSkills
     .sort((a, b) => {
-      if(a.relevance === b.relevance) return 0
-      return b.relevance - a.relevance
+      const hasA = typeof a.relevance !== 'undefined'
+      const hasB = typeof b.relevance !== 'undefined'
+      if(hasA && !hasB) return -1
+      if(!hasA && hasB) return 1
+      // TS doesn't want to recognize the guard if I use `hasA`/`hasB` here for some reason...
+      if(typeof a.relevance !== 'undefined' && typeof b.relevance !== 'undefined') {
+        if(a.relevance === b.relevance) return 0
+        return b.relevance - a.relevance
+      }
+      return 0
     })
     .map(jobSkill => jobSkill.skill)
   const $projects = projects.map(project => (
