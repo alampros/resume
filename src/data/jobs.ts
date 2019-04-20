@@ -6,6 +6,7 @@ const jobs: IJobConstructorParam[] = [
     title: 'User Experience Architect',
     companyId: 'roundtable',
     department: 'Engineering',
+    description: 'Design and implement a ground-up rebuild of the core twelve-year-old .NET application from database, through application services to the front-end. Create and evangelize a design system and component library as a first-class product and source for other products to consume.',
     projects: [
       {
         title: 'Video Transcoder API',
