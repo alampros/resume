@@ -48,12 +48,16 @@
   list-style: none;
 
   li.project {
-    margin-bottom: 0.75em;
+    margin-bottom: 2em;
 
     .flexWrapper {
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-between;
+
+      > div {
+        margin-bottom: 2rem;
+      }
     }
 
     small {
@@ -61,32 +65,33 @@
     }
   }
 
-  .figures {
-    flex-basis: 12rem;
-    margin-left: 2rem;
-
-    > figure {
-      min-width: 250px;
-    }
-  }
-
-  figure {
+  .figure {
     margin: 0;
+
+    ul {
+      margin: 0;
+    }
 
     figcaption {
       font-size: var(--font-size-small, 0.75rem);
     }
+
+    .skillSetsVis {
+      min-width: 200px;
+      margin-bottom: 0.5rem;
+    }
   }
 
   ul.skills {
-    display: flex;
+    display: none;
     flex-flow: row wrap;
+    justify-content: center;
     padding-left: 0;
     list-style: none;
 
     li {
-      margin-right: 0.333rem;
-      margin-bottom: 0.333rem;
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem;
       margin-left: 0;
       font-size: var(--font-size-small, 0.75rem);
     }
@@ -106,6 +111,16 @@
   .projects {
     li.project .flexWrapper {
       flex-flow: row nowrap;
+    }
+
+    ul.skills {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .figure {
+      flex-basis: 12rem;
+      margin-left: 2rem;
     }
   }
 }

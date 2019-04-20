@@ -70,9 +70,12 @@ export default class ProjectSkillsetsVis extends React.PureComponent<Props & Rad
       return null
     }
     return (
-      <ResponsiveContainer height={125} width="100%">
+      <ResponsiveContainer
+        height={125}
+        width="100%"
+        className={cx(className, styles.root)}
+      >
         <RadarChart
-          className={cx(className, styles.root)}
           cx="50%"
           cy="55%"
           outerRadius={50}

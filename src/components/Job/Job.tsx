@@ -32,7 +32,13 @@ export default class Job extends React.Component<Props> {
           <DateRange {...date} className={styles.dateRange} />
           <Company {...company} department={department} className={styles.company} />
         </header>
-        {description && <div className={styles.desc}>{description}</div>}
+        {description && (
+          <>
+            <h4>Primary Responsibilities:</h4>
+            <div className={styles.desc}>{description}</div>
+          </>
+        )}
+        <JobSkills skills={skills} />
         {$projects.length > 0 && (
           <>
             <h4>Notable Projects:</h4>
@@ -41,7 +47,6 @@ export default class Job extends React.Component<Props> {
             </ul>
           </>
         )}
-        <JobSkills skills={skills} />
       </article>
     )
   }

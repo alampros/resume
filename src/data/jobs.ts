@@ -23,6 +23,7 @@ const jobs: IJobConstructorParam[] = [
       {
         title: 'rtolms-cli',
         description: 'Created a custom CLI tool that increased the efficiency of the entire engineering team.',
+        descriptionDetail: 'Created a custom CLI tool to aid development of the flagship software product. The tool increased efficiency of the entire engineering team by speeding repetitive tasks and reducing the risk of human errors. It included tools for switching configuration contexts, executing SQL incrementals, bulk git operations, and various other workflow enhancements.',
         skills: [skills.ts, skills.node, skills.hapi],
         skillsetRatings: {
           design: 0.3,

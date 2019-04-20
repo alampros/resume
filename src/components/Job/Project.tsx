@@ -16,31 +16,38 @@ export default class Project extends React.Component<Props> {
     const {
       title,
       description,
+      descriptionDetail,
       skills = [],
     } = project
-    const $title = title && <strong>{title}</strong>
+    const $title = title && <h5 className="bordered-header">{title}</h5>
     const $skills = skills.length > 0 ? (
-      <figure>
-        <figcaption>Leveraged Skills</figcaption>
-        <ul className={styles.skills}>
-          {skills.map(skill => <li key={skill.id}><JobSkill skill={skill} /></li>)}
-        </ul>
-      </figure>
+      <ul className={styles.skills}>
+        {skills.map(skill => <li key={skill.id}><JobSkill skill={skill} /></li>)}
+      </ul>
     ) : null
+    const $skillSets = project.skillsetRatings && Object.keys(project.skillsetRatings).length > 0 && (
+      <ProjectSkillsetsVis project={project} className={styles.skillSetsVis} />
+    )
+    const desc = descriptionDetail || description
+    const $description = desc && (
+      <div className={styles.description}>{desc}</div>
+    )
     return (
       <li className={styles.project}>
-        {$title}
         <div className={styles.flexWrapper}>
-          {description && <div className={styles.description}>{description}</div>}
-          <div className={styles.figures}>
-            {project.skillsetRatings && Object.keys(project.skillsetRatings).length > 0 && (
-              <figure>
-                <figcaption>Leveraged Skill Sets</figcaption>
-                <ProjectSkillsetsVis project={project} />
-              </figure>
-            )}
-            {$skills}
-          </div>
+          {($title || $description) ? (
+            <div>
+              {$title}
+              {$description}
+            </div>
+          ) : null}
+          {($skills && $skillSets) ? (
+            <figure className={styles.figure}>
+              <figcaption className="sr-only bordered-header">Leveraged Skills</figcaption>
+              {$skillSets}
+              {$skills}
+            </figure>
+          ) : null}
         </div>
       </li>
     )

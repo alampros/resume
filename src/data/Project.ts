@@ -6,6 +6,8 @@ import { clampFloat } from './utils'
 export interface IProject {
   title?: string
   description?: string
+  // Detailed description (not used in print). Falls back to `description`.
+  descriptionDetail?: string
   // Skills involved with the project
   skills?: ISkill[]
   // When I worked on the project
@@ -28,6 +30,7 @@ export default class Project implements IProject {
   }
   title?: string
   description?: string
+  descriptionDetail?: string
   skills?: ISkill[]
   skillsetRatings?: ISkillsetRatings
   date?: IDateRange
