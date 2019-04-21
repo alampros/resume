@@ -120,6 +120,7 @@
 
     .figure {
       flex-basis: 12rem;
+      min-width: 12rem;
       margin-left: 2rem;
     }
   }

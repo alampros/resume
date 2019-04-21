@@ -5,6 +5,7 @@ import Header from 'components/Header'
 import WelcomeLogger from 'components/WelcomeLogger'
 import BadExperienceDetect from 'components/BadExperienceDetect'
 import Footer from 'components/Footer'
+import { IInformationDensityContext, InformationDensityContext } from 'contexts/InformationDensity'
 
 const styles = require('./Layout.module.css')
 
@@ -13,6 +14,7 @@ type Props = {
   title?: string
   description?: string
   helmetKids?: React.ReactNode
+  densityProps?: IInformationDensityContext
 }
 
 export default ({
@@ -20,15 +22,16 @@ export default ({
   title = 'Resume',
   description = 'The resume of Aaron Lampros: User Experience Architect',
   helmetKids,
+  densityProps = { density: 'normal' },
 }: Props) => {
   return (
-    <>
+    <InformationDensityContext.Provider value={densityProps}>
       <WelcomeLogger />
       <Helmet
         titleTemplate="Aaron Lampros | %s"
         defaultTitle="Resume"
       >
-        <html lang="en" />
+        <html lang="en" className={'density-' + densityProps.density} />
         <meta charSet="utf-8" />
         <title>{title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -58,6 +61,6 @@ export default ({
           <Footer />
         </div>
       </main>
-    </>
+    </InformationDensityContext.Provider>
   )
 }
