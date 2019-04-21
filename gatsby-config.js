@@ -6,7 +6,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-postcss',
       options: {
-        postCssPlugins: [require('postcss-nested')()],
+        postCssPlugins: [
+          require('autoprefixer')(),
+          require('postcss-nested')()
+        ],
       },
     },
     'gatsby-plugin-react-helmet',
