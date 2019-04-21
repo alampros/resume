@@ -83,16 +83,42 @@ const jobs: IJobConstructorParam[] = [
     description: 'Promoted to new position in Marketing Department.',
     projects: [
       {
+        title: 'Multi-tenant Design System',
         description: 'Created unified design system across six independent product web platforms.',
+        descriptionDetail: 'Created a unified design system across six independent product web platforms. The system was composed of four major parts, all through the lens of one of 22 strong Fortune 500 brand identities: design tokens, a component library, a brand-dynamic glossary of terms, and copy writing guides.',
         skills: [skills.gatsby, skills.sketch, skills.node, skills.design_systems, skills.css],
+        skillsetRatings: {
+          design: 1,
+          development: 1,
+          communication: 0.9,
+          leadership: 0.8,
+          organization: 0.9,
+        },
       },
       {
+        title: 'Unified Enterprise Iconography',
         description: 'Centralized internal iconography tools to generate icon packages in six formats for consumption by developers and designers from the same source of truth.',
-        skills: [skills.node, skills.sketch],
+        descriptionDetail: 'Created a centralized, enterprise-wide iconography tool chain to generate and distribute icon packages in six formats from the same source of truth. The packages were utilized by both the design teams (Sketch.app library, optimized SVGs), and the development teams (SVG sprites, React components, icon web fonts). Included a web tool for browsing, searching, and managing the icons from a single source of truth.',
+        skills: [skills.node, skills.sketch, skills.il, skills.gatsby],
+        skillsetRatings: {
+          design: 0.2,
+          development: 1,
+          communication: 0.7,
+          leadership: 0.8,
+          organization: 1,
+        },
       },
       {
         description: 'Spearheaded multivariate testing initiative.',
+        descriptionDetail: 'Spearheaded the multivariate testing initiative, including documenting and communicating the procedures and analysis methodology, the requirements for test candidates, and the user pool segmentation strategy.',
         skills: [skills.gtm, skills.usability_testing],
+        skillsetRatings: {
+          design: 1,
+          development: 0.4,
+          communication: 0.9,
+          leadership: 1,
+          organization: 0.7,
+        },
       },
     ],
     date: {
