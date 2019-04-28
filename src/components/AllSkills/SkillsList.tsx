@@ -25,7 +25,7 @@ export default (props: Props) => {
     if(skills.length === 0) return null
     return (
       <article key={title}>
-        <h3>{title}</h3>
+        <h3 className={styles.heading}>{title}</h3>
         <Flipper
           flipKey={skills.map(skill => skill.id).join('')}
           spring="gentle"

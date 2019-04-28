@@ -8,3 +8,14 @@
   margin-bottom: 2rem;
   page-break-inside: avoid;
 }
+
+.heading {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: var(--color-bg-body);
+  border-bottom: 1px solid var(--color-gray-ghost);
+  transition: all 0.3s linear;
+}
