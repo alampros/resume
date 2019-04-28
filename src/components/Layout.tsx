@@ -6,6 +6,7 @@ import WelcomeLogger from 'components/WelcomeLogger'
 import BadExperienceDetect from 'components/BadExperienceDetect'
 import Footer from 'components/Footer'
 import { IInformationDensityContext, InformationDensityContext } from 'contexts/InformationDensity'
+import Toolbar from './Toolbar'
 
 const styles = require('./Layout.module.css')
 
@@ -57,6 +58,7 @@ export default ({
         <div className={styles.container}>
           <BadExperienceDetect />
           <Header {...ResumeMetadata} />
+          <Toolbar />
           {children}
           <Footer />
         </div>

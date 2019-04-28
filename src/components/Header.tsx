@@ -5,7 +5,6 @@ import { IResumeMetadata } from 'data/ResumeMetadata'
 import { MdPermPhoneMsg, MdMyLocation, MdEmail } from 'react-icons/md'
 import { GoMarkGithub, GoPerson, GoFilePdf } from 'react-icons/go'
 import Objective from 'components/Objective'
-import ToggleDarkMode from 'components/ToggleDarkMode'
 
 const styles = require('./Header.module.css')
 
@@ -24,9 +23,6 @@ const Actions = () => {
       className={cx('no-print', styles.actions)}
       role="menubar"
     >
-      <div className={styles.darkToggle}>
-        <ToggleDarkMode />
-      </div>
       <a href="/Aaron Lampros.vcf">
         <span className={styles.shadow}>
           <GoPerson />
