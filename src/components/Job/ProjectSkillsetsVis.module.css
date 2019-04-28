@@ -11,4 +11,17 @@
     fill: var(--color-chart-1);
     stroke: var(--color-chart-1);
   }
+
+  :global(.recharts-default-tooltip) {
+    color: var(--color-text);
+    background-color: var(--color-bg-body) !important;
+  }
+
+  :global(.recharts-tooltip-label) {
+    font-weight: 800;
+  }
+
+  :global(.recharts-tooltip-item) {
+    color: inherit !important;
+  }
 }
