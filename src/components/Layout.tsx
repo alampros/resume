@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ResumeMetadata from 'data/ResumeMetadata'
 import { Helmet } from 'react-helmet'
 import Header from 'components/Header'
@@ -7,6 +7,7 @@ import BadExperienceDetect from 'components/BadExperienceDetect'
 import Footer from 'components/Footer'
 import { IInformationDensityContext, InformationDensityContext } from 'contexts/InformationDensity'
 import Toolbar from './Toolbar'
+import useLocalStorage from 'hooks/useLocalStorage'
 
 const styles = require('./Layout.module.css')
 
@@ -25,7 +26,7 @@ export default ({
   helmetKids,
   densityProps = { density: 'normal' },
 }: Props) => {
-  const [density, setDensity] = useState(densityProps.density)
+  const [density, setDensity] = useLocalStorage('information density', densityProps.density)
   return (
     <InformationDensityContext.Provider value={{ density }}>
       <WelcomeLogger />
