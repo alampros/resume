@@ -150,8 +150,27 @@ const jobs: IJobConstructorParam[] = [
     },
     projects: [
       {
+        title: 'B2B v6',
         description: 'Designed, built, and user-tested fully-functional prototype of new core B2B web platform. User-tested 3 major versions and 28 feature variations in 3 locales and 9 U.S. cities.',
         skills: [skills.react, skills.usability_testing, skills.i18n],
+        skillsetRatings: {
+          design: 1,
+          development: 0.2,
+          communication: 0.9,
+          leadership: 1,
+          organization: 0.5,
+        },
+      },
+      {
+        title: 'Application Server Replacement Selection',
+        description: 'Led cross-functional team to evaluate and select a replacement for the ColdFusion application layer server. Hosted guest experts to present overviews on 6 candidate languages: nodejs, C#, Go, JavaEE, python, and Scala. Collected and presented research and recommendations to executive team. Assisted in implementation planning and training.',
+        skillsetRatings: {
+          design: 0,
+          development: 0.3,
+          communication: 0.9,
+          leadership: 1,
+          organization: 0.6,
+        },
       },
     ],
     skills: [
