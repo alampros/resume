@@ -18,7 +18,7 @@ export default function Toolbar({ className, density, onDensityChange, ...rest }
         <DensitySelect density={density} onDensityChange={onDensityChange} />
       </span>
       <span className={styles.labeledGroup}>
-        <label htmlFor="toggle-dark-mode">Dark Mode:</label>
+        <label htmlFor="toggle-dark-mode">Theme:</label>
         <ToggleDarkMode id="toggle-dark-mode" />
       </span>
     </div>
