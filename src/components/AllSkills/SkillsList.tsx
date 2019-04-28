@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Flipper, Flipped } from 'react-flip-toolkit'
 import { ISkill } from 'data/Skill'
 import Empty from './Empty'
 import Skill from './Skill'
 import SkillGroups from 'data/SkillGroups'
+import { InformationDensityContext } from 'contexts/InformationDensity'
 
 const styles = require('./SkillsList.module.css')
 
@@ -12,11 +13,35 @@ interface Props {
 }
 
 export default (props: Props) => {
+  const { density } = useContext(InformationDensityContext)
   const {
     skills,
   } = props
   if(!skills || !skills.length) {
     return <Empty />
+  }
+
+  if(density === 'sparse') {
+    return (
+      <Flipper
+        flipKey={skills.map(skill => skill.id).join('')}
+        spring="stiff"
+        staggerConfig={{
+          default: {
+            speed: 0.2,
+          },
+        }}
+      >
+        <article className={styles.skillsContainer}>
+
+          {skills.map(skill => (
+            <Flipped flipId={skill.id} key={skill.id} stagger>
+              <Skill skill={skill} />
+            </Flipped>
+          ))}
+        </article>
+      </Flipper>
+    )
   }
 
   const groupedSkills = new SkillGroups(skills).groups

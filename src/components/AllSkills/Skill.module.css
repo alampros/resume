@@ -36,7 +36,6 @@
   align-items: baseline;
   justify-content: space-between;
   max-width: 100%;
-  margin-bottom: 0.5em;
 
   > span {
     flex: 1;
@@ -70,6 +69,7 @@
   flex-flow: row wrap;
   justify-content: space-between;
   margin-top: auto;
+  padding-top: 0.5em;
 
   > * {
     flex-basis: 5em;
@@ -89,7 +89,7 @@
 .stale {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5em;
+  margin-top: 0.5em;
   color: rgb(167, 86, 0);
 
   > svg {
