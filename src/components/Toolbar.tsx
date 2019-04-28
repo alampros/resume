@@ -12,7 +12,7 @@ type Props = {
 
 export default function Toolbar({ className, density, onDensityChange, ...rest }: Props): JSX.Element {
   return (
-    <div className={classNames(className, styles.root)} {...rest}>
+    <div className={classNames(className, 'no-print', styles.root)} {...rest}>
       <span className={styles.labeledGroup}>
         <label htmlFor="info-density">Density:</label>
         <DensitySelect density={density} onDensityChange={onDensityChange} />

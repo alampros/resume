@@ -50,7 +50,7 @@ export const JobSkill: FunctionComponent<Props & React.HTMLProps<HTMLElement>> =
       >
         <figure className={styles.fig} aria-hidden>
           <figcaption>{name}</figcaption>
-          <TinyPie value={relevance} />
+          <TinyPie value={relevance} className="no-print" />
         </figure>
       </Tippy>
     </span>
