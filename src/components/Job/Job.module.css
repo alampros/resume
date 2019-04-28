@@ -3,9 +3,17 @@
   margin-bottom: 5rem;
 
   header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
     display: flex;
     flex-flow: column wrap;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     text-align: center;
+    background-color: var(--color-bg-body);
+    border-bottom: 1px solid var(--color-gray-ghost);
+    transition: all 0.3s linear;
 
     h3 {
       order: 2;
@@ -36,11 +44,56 @@
 }
 
 .projects {
-  li {
-    margin-bottom: 0.75em;
+  padding-left: 1rem;
+  list-style: none;
+
+  li.project {
+    margin-bottom: 2em;
+
+    .flexWrapper {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+
+      > div {
+        margin-bottom: 2rem;
+      }
+    }
 
     small {
       color: var(--color-gray-muted, #999);
+    }
+  }
+
+  .figure {
+    margin: 0;
+
+    ul {
+      margin: 0;
+    }
+
+    figcaption {
+      font-size: var(--font-size-small, 0.75rem);
+    }
+
+    .skillSetsVis {
+      min-width: 200px;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  ul.skills {
+    display: none;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem;
+      margin-left: 0;
+      font-size: var(--font-size-small, 0.75rem);
     }
   }
 }
@@ -48,11 +101,27 @@
 @media all and (max-width: 450px) {
   .root {
     ul {
-      padding-left: 1em;
+      padding-left: 0;
+      list-style: none;
     }
   }
+}
 
-  .projects li {
-    padding-left: 0;
+@media all and (min-width: 450px) {
+  .projects {
+    li.project .flexWrapper {
+      flex-flow: row nowrap;
+    }
+
+    ul.skills {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .figure {
+      flex-basis: 12rem;
+      min-width: 12rem;
+      margin-left: 2rem;
+    }
   }
 }

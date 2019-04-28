@@ -103,20 +103,6 @@
   }
 }
 
-.darkToggle {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-
-  @media screen and (min-width: 640px) {
-    position: fixed;
-    top: 0.5rem;
-    right: 0.5rem;
-    order: 1;
-    margin-top: 0;
-  }
-}
-
 @media screen and (min-width: 480px) {
   .root {
     flex-direction: row;

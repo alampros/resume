@@ -41,6 +41,16 @@ body.dark-mode {
   box-sizing: border-box;
 }
 
+.font-mono {
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    Courier,
+    monospace;
+}
+
 hr {
   height: 6px;
   margin: 3rem 0;
@@ -93,7 +103,7 @@ h6 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   text-transform: uppercase;
 
   @media screen and (min-width: 480px) {
@@ -107,7 +117,32 @@ h3 {
 }
 
 h4 {
+  font-weight: 200;
+  font-size: 1.3rem;
+}
+
+h5 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  color: var(--color-gray-muted);
   font-weight: 700;
+  font-size: var(--font-size-small);
+}
+
+.bordered-header {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  padding: 0.2em 0;
+  color: var(--color-gray-muted);
+  font-weight: 500;
+  font-size: var(--font-size-small);
+  line-height: 1.4;
+  border-bottom: 1px solid var(--color-gray-ghost, #eee);
+}
+
+figure figcaption {
+  margin: 0;
+  color: var(--color-gray-muted);
   font-size: var(--font-size-small);
 }
 
@@ -147,6 +182,10 @@ address {
   h2,
   h3 {
     text-align: center;
+  }
+
+  h3 {
+    font-size: 1.75rem;
   }
 }
 

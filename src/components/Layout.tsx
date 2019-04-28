@@ -1,10 +1,13 @@
-import * as React from 'react'
+import React from 'react'
 import ResumeMetadata from 'data/ResumeMetadata'
 import { Helmet } from 'react-helmet'
 import Header from 'components/Header'
 import WelcomeLogger from 'components/WelcomeLogger'
 import BadExperienceDetect from 'components/BadExperienceDetect'
 import Footer from 'components/Footer'
+import { IInformationDensityContext, InformationDensityContext } from 'contexts/InformationDensity'
+import Toolbar from './Toolbar'
+import useLocalStorage from 'hooks/useLocalStorage'
 
 const styles = require('./Layout.module.css')
 
@@ -13,6 +16,7 @@ type Props = {
   title?: string
   description?: string
   helmetKids?: React.ReactNode
+  densityProps?: IInformationDensityContext
 }
 
 export default ({
@@ -20,15 +24,17 @@ export default ({
   title = 'Resume',
   description = 'The resume of Aaron Lampros: User Experience Architect',
   helmetKids,
+  densityProps = { density: 'normal' },
 }: Props) => {
+  const [density, setDensity] = useLocalStorage('information density', densityProps.density)
   return (
-    <>
+    <InformationDensityContext.Provider value={{ density }}>
       <WelcomeLogger />
       <Helmet
         titleTemplate="Aaron Lampros | %s"
         defaultTitle="Resume"
       >
-        <html lang="en" />
+        <html lang="en" className={'density-' + densityProps.density} />
         <meta charSet="utf-8" />
         <title>{title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -54,10 +60,11 @@ export default ({
         <div className={styles.container}>
           <BadExperienceDetect />
           <Header {...ResumeMetadata} />
+          <Toolbar density={density} onDensityChange={setDensity} />
           {children}
           <Footer />
         </div>
       </main>
-    </>
+    </InformationDensityContext.Provider>
   )
 }
