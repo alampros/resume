@@ -1,6 +1,10 @@
 .root {
   display: inline-flex;
   margin: 0;
+
+  figure {
+    margin: 0;
+  }
 }
 
 .tip {
@@ -20,21 +24,21 @@
     display: inline-flex;
     flex-flow: column wrap;
     margin: 0;
-    font-size: 0.85rem;
     line-height: 1.2;
     border: 1px solid var(--color-gray-ghost);
     border-radius: 3px;
   }
 
-  .inner {
+  .fig {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
     padding: 0.25em 0.5em;
+    line-height: 1;
   }
 
-  .inner svg {
+  .fig svg {
     margin-top: 0.1em;
   }
 

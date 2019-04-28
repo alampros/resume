@@ -1,13 +1,9 @@
 import { Omit } from 'utility-types'
 import companies from 'data/companies'
+import DateRange, { IDateRange } from 'data/DateRange'
 import { ICompany } from 'data/Company'
-import { IProject } from 'data/Project'
+import Project, { IProject } from 'data/Project'
 import { IJobSkill } from 'data/Skill'
-
-interface IDateRange {
-  start: Date
-  end?: Date
-}
 
 export interface IJobDescriptor {
   title: string
@@ -38,7 +34,7 @@ export default class Job implements IJobDescriptor {
       projects,
     } = jobDescriptor
     this.title = title
-    this.date = date
+    this.date = new DateRange(date)
     this.description = description
     const company = companies.find(co => co.id === companyId)
     if(!company) {
@@ -47,7 +43,15 @@ export default class Job implements IJobDescriptor {
     this.company = company
     this.department = department
     this.skills = skills || []
-    this.projects = projects || []
+    this.projects = (() => {
+      if(!projects) return []
+      return projects.map(project => {
+        if(!project.date) {
+          project.date = this.date
+        }
+        return new Project(project)
+      })
+    })()
   }
   title: string
   company: ICompany
