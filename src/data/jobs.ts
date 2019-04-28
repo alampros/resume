@@ -80,7 +80,7 @@ const jobs: IJobConstructorParam[] = [
     title: 'Product Designer',
     companyId: 'dealertire',
     department: 'Product Management',
-    description: 'Promoted to new position in Marketing Department.',
+    description: 'Orchestrated move to new position in Marketing Department to collocate all User Experience design roles. Lead product design initiatives for B2B properties and create efficiencies by sharing assets between all web properties (B2B, B2C, internal).',
     projects: [
       {
         title: 'Multi-tenant Design System',
@@ -109,6 +109,7 @@ const jobs: IJobConstructorParam[] = [
         },
       },
       {
+        title: 'Multivariate Testing',
         description: 'Spearheaded multivariate testing initiative.',
         descriptionDetail: 'Spearheaded the multivariate testing initiative, including documenting and communicating the procedures and analysis methodology, the requirements for test candidates, and the user pool segmentation strategy.',
         skills: [skills.gtm, skills.usability_testing],
