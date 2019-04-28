@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import ResumeMetadata from 'data/ResumeMetadata'
 import { Helmet } from 'react-helmet'
 import Header from 'components/Header'
@@ -25,8 +25,9 @@ export default ({
   helmetKids,
   densityProps = { density: 'normal' },
 }: Props) => {
+  const [density, setDensity] = useState(densityProps.density)
   return (
-    <InformationDensityContext.Provider value={densityProps}>
+    <InformationDensityContext.Provider value={{ density }}>
       <WelcomeLogger />
       <Helmet
         titleTemplate="Aaron Lampros | %s"
@@ -58,7 +59,7 @@ export default ({
         <div className={styles.container}>
           <BadExperienceDetect />
           <Header {...ResumeMetadata} />
-          <Toolbar />
+          <Toolbar density={density} onDensityChange={setDensity} />
           {children}
           <Footer />
         </div>
