@@ -3,6 +3,15 @@ import skills from 'data/skills'
 
 const jobs: IJobConstructorParam[] = [
   {
+    title: 'Senior Developer',
+    companyId: 'testoil',
+    department: 'Engineering',
+    description: 'Design, plan, and build the next major version of the Laboratory Information Management System. Develop internal mobile lab sample tracking app. Improve and develop new features for the customer data access portal. Mentorship of development team.',
+    date: {
+      start: new Date('2018-04-29T12:00:00.000Z'),
+    },
+  },
+  {
     title: 'User Experience Architect',
     companyId: 'roundtable',
     department: 'Engineering',

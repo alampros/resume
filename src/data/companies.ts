@@ -2,6 +2,17 @@ import { ICompany } from './Company'
 
 export const companies: ICompany[] = [
   {
+    id: 'testoil',
+    name: 'TestOil',
+    website: new URL('https://testoil.com'),
+    address: {
+      street: '20338 Progress Dr.',
+      city: 'Strongsville',
+      state: 'OH',
+      ZIP: '44149',
+    },
+  },
+  {
     id: 'dealertire',
     name: 'Dealer Tire',
     website: new URL('https://dealertire.com'),
