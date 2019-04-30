@@ -10,6 +10,15 @@ const jobs: IJobConstructorParam[] = [
     date: {
       start: new Date('2018-04-29T12:00:00.000Z'),
     },
+    skills: [
+      { skill: skills.js, relevance: 1 },
+      { skill: skills.ts, relevance: 0.9 },
+      { skill: skills.webpack, relevance: 0.7 },
+      { skill: skills.babel, relevance: 0.3 },
+      { skill: skills.accessibility, relevance: 0.2 },
+      { skill: skills.node, relevance: 0.4 },
+      { skill: skills.cs, relevance: 0.9 },
+    ],
   },
   {
     title: 'User Experience Architect',
