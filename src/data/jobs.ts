@@ -18,6 +18,21 @@ const jobs: IJobConstructorParam[] = [
       { skill: skills.accessibility, relevance: 0.2 },
       { skill: skills.node, relevance: 0.4 },
       { skill: skills.cs, relevance: 0.9 },
+      { skill: skills.sql, relevance: 0.3 },
+    ],
+    projects: [
+      {
+        title: 'Untitled PWA',
+        description: 'Redesign and refactor a progressive web app using more modern javascript and user testing practices.',
+        skills: [skills.ts, skills.react, skills.sketch, skills.unit_testing, skills.usability_testing],
+        skillsetRatings: {
+          design: 1,
+          development: 1,
+          communication: 0.2,
+          leadership: 0.5,
+          organization: 0.3,
+        },
+      },
     ],
   },
   {
@@ -30,7 +45,6 @@ const jobs: IJobConstructorParam[] = [
         title: 'Video Transcoder API',
         description: 'Built a containerized JSON REST API for transcoding video into LMS-compatible SCORM training modules with 96% test coverage. Included well-documented, standalone client React component and CLI tool for batching jobs.',
         skills: [skills.ts, skills.node, skills.hapi, skills.react, skills.unit_testing, skills.aws_ecs, skills.aws_et],
-        size: 0,
         skillsetRatings: {
           design: 0.2,
           development: 1,
