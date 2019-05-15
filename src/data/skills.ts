@@ -107,7 +107,7 @@ const partialSkills: { [id: string]: PartialSkill } = {
     name: 'C#',
     yearsOfExperience: new Date().getFullYear() - 2018,
     strength: 0.1,
-    interest: 2 / 10,
+    interest: 3 / 10,
     lastUsed: new Date(2018, 11), // Probably not going to use this again in the near future
     link: new URL('https://en.wikipedia.org/wiki/C_Sharp_(programming_language)'),
   },
@@ -145,7 +145,7 @@ const partialSkills: { [id: string]: PartialSkill } = {
     name: 'Google Tag Manager',
     yearsOfExperience: new Date().getFullYear() - 2015,
     strength: 0.25,
-    interest: 3 / 10,
+    interest: 2 / 10,
     link: new URL('https://marketingplatform.google.com/about/tag-manager/'),
   },
   ps: {
@@ -199,6 +199,13 @@ const partialSkills: { [id: string]: PartialSkill } = {
     interest: 0.1,
     lastUsed: new Date(2018, 9),
     link: new URL('https://subversion.apache.org/'),
+  },
+  sql: {
+    name: 'SQL',
+    yearsOfExperience: 2,
+    strength: 0.2,
+    interest: 0.4,
+    link: new URL('https://www.microsoft.com/en-us/sql-server/'),
   },
   i18n: {
     name: 'I18n',
