@@ -29,6 +29,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-fullstory',
+      options: {
+        fs_org: 'MFBHQ',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Aaron Lampros | Resume',

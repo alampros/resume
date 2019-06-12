@@ -51,6 +51,7 @@
     "classnames": "^2.2.6",
     "evergreen-ui": "^4.15.0",
     "gatsby": "^2.4.6",
+    "gatsby-plugin-fullstory": "^2.0.5",
     "gatsby-plugin-gtag": "^1.0.10",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-netlify": "^2.0.17",
