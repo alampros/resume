@@ -12,6 +12,7 @@ export default class DateRange implements IDateRange {
     this.start = start
     if(end) this.end = end
   }
+
   start: Date
   end?: Date
 }

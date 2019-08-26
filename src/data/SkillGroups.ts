@@ -9,6 +9,7 @@ export default class SkillGroups {
   constructor(skills: ISkill[]) {
     this.skills = skills
   }
+
   get groups(): ISkillGroup[] {
     return [
       {
@@ -35,5 +36,6 @@ export default class SkillGroups {
       },
     ]
   }
+
   skills: ISkill[]
 }

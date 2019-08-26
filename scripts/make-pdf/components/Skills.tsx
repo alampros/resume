@@ -2,16 +2,17 @@ import * as React from 'react'
 import {
   View,
   Text,
+  StyleSheet,
 } from '@react-pdf/renderer'
 import Section from './Section'
 import Skill from './Skill'
 import { ISkill } from 'data/Skill'
 import SkillGroups from 'data/SkillGroups'
 
-const styles = {
+const styles = StyleSheet.create({
   skillGroup: {
     flexDirection: 'row',
-    flexWrap: true,
+    flexWrap: 'wrap',
     paddingLeft: 18,
   },
   groupTitle: {
@@ -25,10 +26,11 @@ const styles = {
   skill: {
     marginRight: 18,
     marginBottom: 10,
-    flex: 1,
-    flexBasis: '20%',
+    flexGrow: 0,
+    flexShrink: 1,
+    flexBasis: 100,
   },
-}
+})
 
 interface Props {
   skills: ISkill[]

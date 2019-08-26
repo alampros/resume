@@ -27,6 +27,11 @@ module.exports = {
       },
     },
   ],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   rules: {
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     'quote-props': ['error', 'as-needed'],

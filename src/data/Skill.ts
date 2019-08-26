@@ -25,10 +25,12 @@ export default class Skill implements ISkill {
     this.interest = c.interest
     this.link = c.link
   }
+
   get link2LD(): string | undefined {
     if(!this.link) return
     return this.link.host.split('.').slice(-2).join('.')
   }
+
   id: string
   name: string
   yearsOfExperience: number

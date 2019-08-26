@@ -28,6 +28,7 @@ export default class Project implements IProject {
       this.date = new DateRange(param.date)
     }
   }
+
   title?: string
   description?: string
   descriptionDetail?: string

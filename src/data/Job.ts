@@ -53,6 +53,7 @@ export default class Job implements IJobDescriptor {
       })
     })()
   }
+
   title: string
   company: ICompany
   department?: string

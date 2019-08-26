@@ -19,6 +19,7 @@ export default class Skill extends React.Component<Props & any> {
   static defaultProps = {
     timeBeforeStale: 1000 * 60 * 60 * 24 * 365, // 1 yr,
   }
+
   render() {
     const {
       skill: {

@@ -2,10 +2,11 @@ import * as React from 'react'
 import ReactPDF, {
   Text,
   View,
+  StyleSheet,
 } from '@react-pdf/renderer'
 import { IProject } from 'data/Project'
 
-const styles = {
+const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     display: 'flex',
@@ -13,12 +14,13 @@ const styles = {
   bullet: {
     marginRight: 4,
   },
-}
+})
+
 interface Props {
   project: IProject
 }
 
-export default ({ project, style, ...passedProps }: Props & ReactPDF.ViewProps) => {
+export default ({ project, style = {}, ...passedProps }: Props & ReactPDF.ViewProps) => {
   const {
     description,
   } = project
