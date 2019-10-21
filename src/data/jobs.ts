@@ -19,12 +19,13 @@ const jobs: IJobConstructorParam[] = [
       { skill: skills.node, relevance: 0.4 },
       { skill: skills.cs, relevance: 0.9 },
       { skill: skills.sql, relevance: 0.3 },
+      { skill: skills.dotnet, relevance: 0.6 },
     ],
     projects: [
       {
-        title: 'Untitled PWA',
+        title: 'AssetLink PWA',
         description: 'Redesign and refactor a progressive web app using more modern javascript and user testing practices.',
-        skills: [skills.ts, skills.react, skills.sketch, skills.unit_testing, skills.usability_testing],
+        skills: [skills.ts, skills.react, skills.dotnet, skills.sketch, skills.unit_testing, skills.usability_testing],
         skillsetRatings: {
           design: 1,
           development: 1,
