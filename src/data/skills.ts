@@ -15,7 +15,7 @@ const partialSkills: { [id: string]: PartialSkill } = {
     name: 'Semantic HTML',
     yearsOfExperience: new Date().getFullYear() - 2001,
     strength: 1,
-    interest: 1,
+    interest: 0.9,
     link: new URL('https://en.wikipedia.org/wiki/Semantic_HTML'),
   },
   design_systems: {
@@ -35,7 +35,7 @@ const partialSkills: { [id: string]: PartialSkill } = {
   ts: {
     name: 'TypeScript',
     yearsOfExperience: new Date().getFullYear() - 2017,
-    strength: 7 / 10,
+    strength: 8 / 10,
     interest: 1,
     link: new URL('https://www.typescriptlang.org'),
   },
@@ -84,20 +84,20 @@ const partialSkills: { [id: string]: PartialSkill } = {
   docker: {
     name: 'Docker',
     yearsOfExperience: new Date().getFullYear() - 2018.5,
-    strength: 0.3,
-    interest: 6 / 10,
+    strength: 0.5,
+    interest: 7 / 10,
     link: new URL('https://www.docker.com/'),
   },
   aws_ecs: {
     name: 'AWS ECS',
-    yearsOfExperience: new Date().getFullYear() - 2018,
+    yearsOfExperience: 1.5,
     strength: 0.2,
     interest: 3 / 10,
     link: new URL('https://aws.amazon.com/ecs/'),
   },
   aws_et: {
     name: 'AWS ElasticTranscoder',
-    yearsOfExperience: new Date().getFullYear() - 2018,
+    yearsOfExperience: 1,
     strength: 0.5,
     interest: 3 / 10,
     lastUsed: new Date(2019, 1), // Probably not going to use this again in the near future
@@ -106,10 +106,16 @@ const partialSkills: { [id: string]: PartialSkill } = {
   cs: {
     name: 'C#',
     yearsOfExperience: new Date().getFullYear() - 2018,
-    strength: 0.1,
-    interest: 3 / 10,
-    lastUsed: new Date(2018, 11), // Probably not going to use this again in the near future
+    strength: 0.5,
+    interest: 6 / 10,
     link: new URL('https://en.wikipedia.org/wiki/C_Sharp_(programming_language)'),
+  },
+  dotnet: {
+    name: 'dotnet (core)',
+    yearsOfExperience: new Date().getFullYear() - 2018.5,
+    strength: 0.5,
+    interest: 6 / 10,
+    link: new URL('https://dotnet.microsoft.com/download'),
   },
   go: {
     name: 'Go (lang)',
