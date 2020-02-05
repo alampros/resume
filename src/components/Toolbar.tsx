@@ -1,8 +1,10 @@
 import React, { HTMLAttributes } from 'react'
 import classNames from 'classnames'
-import ToggleDarkMode from './ToggleDarkMode'
-import DensitySelect from './DensitySelect'
 import { InformationDensity } from 'contexts/InformationDensity'
+
+import DensitySelect from './DensitySelect'
+import ToggleDarkMode from './ToggleDarkMode'
+
 const styles = require('./Toolbar.module.css')
 
 type Props = {

@@ -1,5 +1,6 @@
-import Job, { IJobConstructorParam } from './Job'
 import skills from 'data/skills'
+
+import Job, { IJobConstructorParam } from './Job'
 
 const jobs: IJobConstructorParam[] = [
   {

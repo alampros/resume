@@ -1,6 +1,7 @@
 import * as React from 'react'
-import Layout from 'components/Layout'
+
 import AllSkills from 'components/AllSkills'
+import Layout from 'components/Layout'
 import skillsById from 'data/skills'
 
 const skills = Object.values(skillsById)

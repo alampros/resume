@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { IoIosSchool, IoIosTime } from 'react-icons/io'
 import Toggle from 'react-toggle'
+
 import { ISkill } from 'data/Skill'
-import { IoIosTime, IoIosSchool } from 'react-icons/io'
+
 import SkillsList from './SkillsList'
 
 const styles = require('./AllSkills.module.css')

@@ -1,8 +1,9 @@
 import * as React from 'react'
-import jobs from 'data/jobs'
+
 import Job from 'data/Job'
-import skills from 'data/skills'
+import jobs from 'data/jobs'
 import { ISkill } from 'data/Skill'
+import skills from 'data/skills'
 
 declare global {
   interface Window {

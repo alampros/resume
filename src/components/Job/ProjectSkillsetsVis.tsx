@@ -1,16 +1,18 @@
 import React from 'react'
 import cx from 'classnames'
-import { IProject } from 'data/Project'
 import {
+  LabelFormatter,
+  PolarAngleAxis,
+  PolarGrid,
   Radar,
   RadarChart,
   RadarChartProps,
-  PolarGrid,
-  PolarAngleAxis,
-  Tooltip,
-  LabelFormatter,
   ResponsiveContainer,
+  Tooltip,
 } from 'recharts'
+
+import { IProject } from 'data/Project'
+
 const styles = require('./ProjectSkillsetsVis.module.css')
 
 interface Props {

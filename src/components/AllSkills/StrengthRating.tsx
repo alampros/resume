@@ -1,6 +1,7 @@
 import React from 'react'
-import cx from 'classnames'
 import { IoIosSchool } from 'react-icons/io'
+import cx from 'classnames'
+
 import { ISkill } from 'data/Skill'
 
 const styles = require('./StrengthRating.module.css')

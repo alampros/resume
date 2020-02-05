@@ -5,7 +5,7 @@
  * MIT licensed: https://github.com/gragland/usehooks/blob/master/LICENSE
  */
 
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default <T>(queries: string[], values: T[], defaultValue: T): T => {
   // Array containing a media query list for each query

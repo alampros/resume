@@ -1,11 +1,13 @@
 import React from 'react'
-import cx from 'classnames'
 import { GoLinkExternal } from 'react-icons/go'
 import { IoIosWarning } from 'react-icons/io'
-import { ISkill } from 'data/Skill'
-import StrengthRating from './StrengthRating'
-import ExperienceRating from './ExperienceRating'
+import cx from 'classnames'
 import { InformationDensityContext } from 'contexts/InformationDensity'
+
+import { ISkill } from 'data/Skill'
+
+import ExperienceRating from './ExperienceRating'
+import StrengthRating from './StrengthRating'
 
 const styles = require('./Skill.module.css')
 

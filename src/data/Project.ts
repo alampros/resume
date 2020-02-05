@@ -1,5 +1,6 @@
-import { ISkill } from 'data/Skill'
 import DateRange, { IDateRange } from 'data/DateRange'
+import { ISkill } from 'data/Skill'
+
 import SkillsetRatings, { ISkillsetRatings } from './SkillsetRatings'
 import { clampFloat } from './utils'
 

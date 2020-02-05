@@ -1,8 +1,11 @@
 import React from 'react'
-import { IProject } from 'data/Project'
-import ProjectSkillsetsVis from './ProjectSkillsetsVis'
-import JobSkill from './JobSkill'
 import { InformationDensityContext } from 'contexts/InformationDensity'
+
+import { IProject } from 'data/Project'
+
+import JobSkill from './JobSkill'
+import ProjectSkillsetsVis from './ProjectSkillsetsVis'
+
 const styles = require('./Job.module.css')
 
 interface Props {

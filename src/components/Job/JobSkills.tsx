@@ -1,6 +1,8 @@
 import React, { FunctionComponent } from 'react'
-import { IJobSkill } from 'data/Skill'
+
 import JobSkill from 'components/Job/JobSkill'
+import { IJobSkill } from 'data/Skill'
+
 const styles = require('./JobSkills.module.css')
 
 interface Props {

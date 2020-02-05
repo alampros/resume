@@ -1,6 +1,7 @@
 import * as React from 'react'
-import JobType from 'data/Job'
+
 import Job from 'components/Job'
+import JobType from 'data/Job'
 
 interface Props {
   jobs: JobType[]

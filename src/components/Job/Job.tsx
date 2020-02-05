@@ -1,10 +1,13 @@
 import React from 'react'
-import Company from './Company'
-import { IJobDescriptor } from 'data/Job'
-import DateRange from 'components/DateRange'
-import Project from './Project'
-import JobSkills from './JobSkills'
 import { InformationDensityContext } from 'contexts/InformationDensity'
+
+import DateRange from 'components/DateRange'
+import { IJobDescriptor } from 'data/Job'
+
+import Company from './Company'
+import JobSkills from './JobSkills'
+import Project from './Project'
+
 const styles = require('./Job.module.css')
 
 interface Props extends IJobDescriptor {

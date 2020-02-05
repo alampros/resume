@@ -5,6 +5,7 @@
  * MIT licensed: https://github.com/gragland/usehooks/blob/master/LICENSE
  */
 import { useEffect } from 'react'
+
 import useLocalStorage from './useLocalStorage'
 import useMedia from './useMedia'
 

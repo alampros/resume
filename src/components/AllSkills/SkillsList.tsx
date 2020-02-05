@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
-import { Flipper, Flipped } from 'react-flip-toolkit'
+import { Flipped, Flipper } from 'react-flip-toolkit'
+import { InformationDensityContext } from 'contexts/InformationDensity'
+
 import { ISkill } from 'data/Skill'
+import SkillGroups from 'data/SkillGroups'
+
 import Empty from './Empty'
 import Skill from './Skill'
-import SkillGroups from 'data/SkillGroups'
-import { InformationDensityContext } from 'contexts/InformationDensity'
 
 const styles = require('./SkillsList.module.css')
 
