@@ -1,6 +1,6 @@
 import React from 'react'
-import { SegmentedControl } from 'evergreen-ui'
 import { InformationDensity } from 'contexts/InformationDensity'
+import { SegmentedControl } from 'evergreen-ui'
 
 const initialState = {
   options: [

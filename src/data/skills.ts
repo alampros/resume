@@ -1,4 +1,5 @@
 import { Omit } from 'utility-types'
+
 import Skill, { ISkill } from './Skill'
 
 type PartialSkill = Omit<ISkill, 'id'>

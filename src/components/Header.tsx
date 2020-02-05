@@ -1,10 +1,11 @@
 import * as React from 'react'
+import { GoFilePdf, GoMarkGithub, GoPerson } from 'react-icons/go'
+import { MdEmail, MdMyLocation, MdPermPhoneMsg } from 'react-icons/md'
 import cx from 'classnames'
+
 import Address from 'components/Address'
-import { IResumeMetadata } from 'data/ResumeMetadata'
-import { MdPermPhoneMsg, MdMyLocation, MdEmail } from 'react-icons/md'
-import { GoMarkGithub, GoPerson, GoFilePdf } from 'react-icons/go'
 import Objective from 'components/Objective'
+import { IResumeMetadata } from 'data/ResumeMetadata'
 
 const styles = require('./Header.module.css')
 

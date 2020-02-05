@@ -1,7 +1,9 @@
 import React from 'react'
-import Toggle, { ToggleProps } from 'react-toggle'
-import useDarkMode from 'hooks/useDarkMode'
 import { IoIosMoon, IoIosSunny } from 'react-icons/io'
+import Toggle, { ToggleProps } from 'react-toggle'
+
+import useDarkMode from 'hooks/useDarkMode'
+
 import './ToggleDarkMode.css'
 
 export default (passedProps: ToggleProps) => {

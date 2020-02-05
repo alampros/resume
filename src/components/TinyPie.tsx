@@ -1,5 +1,6 @@
-import React, { Component, SVGAttributes, forwardRef, Ref } from 'react'
+import React, { Component, forwardRef, Ref, SVGAttributes } from 'react'
 import cx from 'classnames'
+
 const styles = require('./TinyPie.module.css')
 
 export type Props = {

@@ -1,7 +1,8 @@
 import { Omit } from 'utility-types'
+
 import companies from 'data/companies'
-import DateRange, { IDateRange } from 'data/DateRange'
 import { ICompany } from 'data/Company'
+import DateRange, { IDateRange } from 'data/DateRange'
 import Project, { IProject } from 'data/Project'
 import { IJobSkill } from 'data/Skill'
 

@@ -1,6 +1,7 @@
 import React from 'react'
-import cx from 'classnames'
 import { IoIosTime } from 'react-icons/io'
+import cx from 'classnames'
+
 import { ISkill } from 'data/Skill'
 
 const styles = require('./ExperienceRating.module.css')

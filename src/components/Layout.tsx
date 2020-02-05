@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-import ResumeMetadata from 'data/ResumeMetadata'
 import { Helmet } from 'react-helmet'
-import Header from 'components/Header'
-import WelcomeLogger from 'components/WelcomeLogger'
+import { IInformationDensityContext, InformationDensityContext } from 'contexts/InformationDensity'
+
 import BadExperienceDetect from 'components/BadExperienceDetect'
 import Footer from 'components/Footer'
-import { IInformationDensityContext, InformationDensityContext } from 'contexts/InformationDensity'
+import Header from 'components/Header'
+import WelcomeLogger from 'components/WelcomeLogger'
+import ResumeMetadata from 'data/ResumeMetadata'
+
 import Toolbar from './Toolbar'
 
 const styles = require('./Layout.module.css')
