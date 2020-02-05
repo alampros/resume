@@ -6,6 +6,7 @@ import { InformationDensityContext } from 'contexts/InformationDensity'
 import TinyPie from 'components/TinyPie'
 import { IJobSkill } from 'data/Skill'
 
+import 'tippy.js/dist/tippy.css'
 import 'tippy.js/themes/light-border.css'
 
 const styles = require('./JobSkill.module.css')
