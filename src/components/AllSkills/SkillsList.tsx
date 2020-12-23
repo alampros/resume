@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
 import { Flipped, Flipper } from 'react-flip-toolkit'
-import { InformationDensityContext } from 'contexts/InformationDensity'
 
+import { InformationDensityContext } from 'contexts/InformationDensity'
 import { ISkill } from 'data/Skill'
 import SkillGroups from 'data/SkillGroups'
 
 import Empty from './Empty'
 import Skill from './Skill'
 
-const styles = require('./SkillsList.module.css')
+import styles from './SkillsList.module.css'
 
 interface Props {
   skills: ISkill[]

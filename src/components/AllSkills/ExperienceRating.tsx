@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import { ISkill } from 'data/Skill'
 
-const styles = require('./ExperienceRating.module.css')
+import styles from './ExperienceRating.module.css'
 
 type Props = any & Pick<ISkill, 'yearsOfExperience' | 'name'>
 

@@ -8,7 +8,7 @@ const dateFormatter = new Intl.DateTimeFormat('en-US', {
 interface ITimeProps {
   date: Date
 }
-const Time: React.SFC<ITimeProps> = ({ date }: ITimeProps) => (
+const Time: React.FC<ITimeProps> = ({ date }: ITimeProps) => (
   <time dateTime={date.toJSON()}>{dateFormatter.format(date)}</time>
 )
 
@@ -33,11 +33,13 @@ export default class DateRange extends React.Component<any & Props> {
     const $start = (
       <Time date={start} />
     )
-    const $end = end ? (
-      <Time date={end} />
-    ) : (
-      <time>Present</time>
-    )
+    const $end = end
+      ? (
+        <Time date={end} />
+        )
+      : (
+        <time>Present</time>
+        )
     const labelStart = dateFormatter.format(start)
     const labelEnd = end ? dateFormatter.format(end) : 'present'
     const Component = as || 'span'

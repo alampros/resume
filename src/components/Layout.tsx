@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet'
-import { IInformationDensityContext, InformationDensityContext } from 'contexts/InformationDensity'
 
 import BadExperienceDetect from 'components/BadExperienceDetect'
 import Footer from 'components/Footer'
 import Header from 'components/Header'
 import WelcomeLogger from 'components/WelcomeLogger'
+import { IInformationDensityContext, InformationDensityContext } from 'contexts/InformationDensity'
 import ResumeMetadata from 'data/ResumeMetadata'
 
 import Toolbar from './Toolbar'
 
-const styles = require('./Layout.module.css')
+import styles from './Layout.module.css'
 
 type Props = {
   children: React.ReactNode

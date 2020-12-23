@@ -6,7 +6,7 @@ import { ISkill } from 'data/Skill'
 
 import SkillsList from './SkillsList'
 
-const styles = require('./AllSkills.module.css')
+import styles from './AllSkills.module.css'
 
 type ISortKey = 'yearsOfExperience' | 'strength'
 

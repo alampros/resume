@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { IAddress } from 'data/Address'
 
-const stateAbbrs: { [stateName: string] : string } = {
+const stateAbbrs: { [stateName: string]: string } = {
   OH: 'Ohio',
 }
 

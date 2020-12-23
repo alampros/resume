@@ -5,7 +5,7 @@ import Address from 'components/Address'
 import { ICompany } from 'data/Company'
 import { IJobDescriptor } from 'data/Job'
 
-const styles = require('./Company.module.css')
+import styles from './Company.module.css'
 
 type JobParts = Pick<IJobDescriptor, 'department'>
 

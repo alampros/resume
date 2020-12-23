@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import { ISkill } from 'data/Skill'
 
-const styles = require('./StrengthRating.module.css')
+import styles from './StrengthRating.module.css'
 
 type Props = Pick<ISkill, 'strength' | 'name'> & React.HTMLProps<HTMLElement> & any
 

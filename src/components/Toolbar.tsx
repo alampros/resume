@@ -1,18 +1,19 @@
 import React, { HTMLAttributes } from 'react'
 import classNames from 'classnames'
+
 import { InformationDensity } from 'contexts/InformationDensity'
 
 import DensitySelect from './DensitySelect'
 import ToggleDarkMode from './ToggleDarkMode'
 
-const styles = require('./Toolbar.module.css')
+import styles from './Toolbar.module.css'
 
 type Props = {
   density: InformationDensity
-  onDensityChange(density: InformationDensity): void
+  onDensityChange(_density: InformationDensity): void
 } & HTMLAttributes<HTMLDivElement>
 
-export default function Toolbar({ className, density, onDensityChange, ...rest }: Props): JSX.Element {
+export default function Toolbar({ className, density, onDensityChange, ...rest }: Props): React.ReactElement {
   return (
     <div className={classNames(className, 'no-print', styles.root)} {...rest}>
       <span className={styles.labeledGroup}>

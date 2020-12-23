@@ -1,4 +1,4 @@
-import skills from 'data/skills'
+import { skills } from 'data/skills'
 
 import Job, { IJobConstructorParam } from './Job'
 
@@ -24,9 +24,33 @@ const jobs: IJobConstructorParam[] = [
     ],
     projects: [
       {
+        title: 'Continuous Integration',
+        description: 'Instituted methodologies and foundation for CI/CD across 14 projects. Migrated organization from BitBucket Pipelines to GitHub Actions to utilize private package repositories and consolidate costs.',
+        skills: [skills.docker, skills.git, skills.unit_testing],
+        skillsetRatings: {
+          design: 3 / 4,
+          development: 1 / 2,
+          communication: 3 / 4,
+          leadership: 1,
+          organization: 1 / 4,
+        },
+      },
+      {
+        title: 'Identity and Authorizations Management',
+        description: 'Architected and implemented a full-featured, self-service identity management solution using OAuth/OpenID to unify three separate antiquated user stores. Combined open-source and bespoke components with a full CI/CD pipeline, realtime routing, and network isolation.',
+        skills: [skills.node, skills.docker, skills.react, skills.gatsby, skills.ts, skills.git],
+        skillsetRatings: {
+          design: 1,
+          development: 1,
+          communication: 1 / 4,
+          leadership: 1 / 2,
+          organization: 3 / 4,
+        },
+      },
+      {
         title: 'AssetLink PWA',
         description: 'Redesign and refactor a progressive web app using more modern javascript and user testing practices.',
-        skills: [skills.ts, skills.react, skills.dotnet, skills.sketch, skills.unit_testing, skills.usability_testing],
+        skills: [skills.cs, skills.ts, skills.react, skills.dotnet, skills.sketch, skills.unit_testing, skills.usability_testing],
         skillsetRatings: {
           design: 1,
           development: 1,

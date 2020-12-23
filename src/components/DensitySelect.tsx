@@ -1,6 +1,7 @@
 import React from 'react'
-import { InformationDensity } from 'contexts/InformationDensity'
 import { SegmentedControl } from 'evergreen-ui'
+
+import { InformationDensity } from 'contexts/InformationDensity'
 
 const initialState = {
   options: [
@@ -12,10 +13,10 @@ const initialState = {
 
 interface Props {
   density: InformationDensity
-  onDensityChange(density: InformationDensity): void
+  onDensityChange(_density: InformationDensity): void
 }
 
-export default function DensitySelect({ density, onDensityChange }: Props): JSX.Element {
+export default function DensitySelect({ density, onDensityChange }: Props): React.ReactElement {
   return (
     <SegmentedControl
       name="density"

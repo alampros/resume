@@ -1,10 +1,6 @@
-import { Omit } from 'utility-types'
-
 import Skill, { ISkill } from './Skill'
 
-type PartialSkill = Omit<ISkill, 'id'>
-
-const partialSkills: { [id: string]: PartialSkill } = {
+const partialSkills = {
   css: {
     name: 'CSS',
     yearsOfExperience: new Date().getFullYear() - 2001,
@@ -239,11 +235,12 @@ const partialSkills: { [id: string]: PartialSkill } = {
   },
 }
 
-const skills: { [id: string]: ISkill } = {}
-for(var id in partialSkills) {
-  skills[id] = new Skill({
-    id,
-    ...partialSkills[id],
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+type ISkills = { [id in keyof typeof partialSkills]: ISkill }
+export const skills = Object.entries(partialSkills).reduce((acc, [k, v]) => {
+  acc[k as keyof typeof partialSkills] = new Skill({
+    id: k,
+    ...v,
   })
-}
-export default skills
+  return acc
+}, {} as ISkills)

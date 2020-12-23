@@ -3,7 +3,7 @@ import * as React from 'react'
 import Job from 'data/Job'
 import jobs from 'data/jobs'
 import { ISkill } from 'data/Skill'
-import skills from 'data/skills'
+import { skills } from 'data/skills'
 
 declare global {
   interface Window {

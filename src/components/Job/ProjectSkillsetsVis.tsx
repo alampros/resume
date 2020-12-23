@@ -13,7 +13,7 @@ import {
 
 import { IProject } from 'data/Project'
 
-const styles = require('./ProjectSkillsetsVis.module.css')
+import styles from './ProjectSkillsetsVis.module.css'
 
 interface Props {
   project: IProject
