@@ -2,6 +2,7 @@ import * as React from 'react'
 import ReactPDF, {
   Text,
 } from '@react-pdf/renderer'
+
 import { ISkill } from 'data/Skill'
 
 type Props = { labelProps?: ReactPDF.TextProps } & Pick<ISkill, 'yearsOfExperience'> & ReactPDF.TextProps

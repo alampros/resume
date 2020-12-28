@@ -1,12 +1,14 @@
 import * as React from 'react'
 import ReactPDF, {
-  Text,
-  View,
   Link,
   StyleSheet,
+  Text,
+  View,
 } from '@react-pdf/renderer'
-import ExperienceRating from './ExperienceRating'
+
 import { ISkill } from 'data/Skill'
+
+import ExperienceRating from './ExperienceRating'
 
 const styles = StyleSheet.create({
   container: {
@@ -39,11 +41,9 @@ export default (props: Props & ReactPDF.ViewProps) => {
   } = skill
   return (
     <View style={{ ...style, ...styles.container }} {...passedProps}>
-      {link ? (
-        <Link style={styles.name} src={link.toString()}>{name}</Link>
-      ) : (
-        <Text style={styles.name}>{name}</Text>
-      )}
+      {link
+        ? <Link style={styles.name} src={link.toString()}>{name}</Link>
+        : <Text style={styles.name}>{name}</Text>}
       <View style={{ fontSize: 8 }}>
         <Text>Strength: <Text style={{ fontFamily: 'OpenSansSemiBold' }}>{strength * 100}%</Text></Text>
         <View style={{ flexDirection: 'row' }}>

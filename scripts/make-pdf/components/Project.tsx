@@ -1,9 +1,10 @@
 import * as React from 'react'
 import ReactPDF, {
+  StyleSheet,
   Text,
   View,
-  StyleSheet,
 } from '@react-pdf/renderer'
+
 import { IProject } from 'data/Project'
 
 const styles = StyleSheet.create({

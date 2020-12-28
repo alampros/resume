@@ -19,7 +19,7 @@
     "typecheck": "tsc",
     "lint": "yarn lint-styles && yarn lint-scripts",
     "lint-styles": "stylelint \"src/**/*.?(s)css\"",
-    "lint-scripts": "eslint --ext ts --ext tsx --ext js --ext jsx src",
+    "lint-scripts": "eslint --ext tsx,ts,js,jsx src scripts",
     "tidy": "eslint --ignore-pattern '!.eslintrc.js' --fix --ext ts --ext tsx --ext js --ext jsx .eslintrc.js src",
     "clean": "git clean -xfd -i -e node_modules ."
   },

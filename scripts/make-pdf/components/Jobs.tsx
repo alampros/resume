@@ -1,7 +1,9 @@
 import * as React from 'react'
-import Section from './Section'
-import Job from './Job'
+
 import { IJobDescriptor } from 'data/Job'
+
+import Job from './Job'
+import Section from './Section'
 
 interface Props {
   jobs: IJobDescriptor[]

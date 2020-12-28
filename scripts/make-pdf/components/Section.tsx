@@ -1,9 +1,10 @@
 import * as React from 'react'
 import ReactPDF, {
+  StyleSheet,
   Text,
   View,
-  StyleSheet,
 } from '@react-pdf/renderer'
+
 import sharedStyles from '../sharedStyles'
 
 const styles = StyleSheet.create({

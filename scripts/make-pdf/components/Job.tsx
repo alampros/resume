@@ -1,13 +1,16 @@
 import * as React from 'react'
 import ReactPDF, {
+  StyleSheet,
   Text,
   View,
-  StyleSheet,
 } from '@react-pdf/renderer'
+
+import { IJobDescriptor } from 'data/Job'
+
+import sharedStyles from '../sharedStyles'
+
 import DateRange from './DateRange'
 import Project from './Project'
-import { IJobDescriptor } from 'data/Job'
-import sharedStyles from '../sharedStyles'
 
 const styles = StyleSheet.create({
   container: {
