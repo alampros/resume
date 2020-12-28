@@ -1,10 +1,19 @@
 const autoprefixer = require('autoprefixer')
 const postcssNested = require('postcss-nested')
 const postcssPresetEnv = require('postcss-preset-env')
+const git = require('git-rev-sync')
+const pkg = require('./package.json')
+
+const branch = process.env.BRANCH || git.branch()
 
 module.exports = {
   siteMetadata: {
     title: 'Aaron Lampros',
+    shortHash: git.short(),
+    hash: git.long(),
+    branch,
+    package: pkg,
+    lastUpdated: git.date(),
   },
   plugins: [
     'gatsby-plugin-typescript',
