@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@react-pdf/renderer": "^1.6.12",
-    "@tippy.js/react": "^3.1.1",
+    "@tippyjs/react": "^4.2.0",
     "@types/classnames": "^2.2.11",
     "@types/react": "^17.0.0",
     "@types/react-helmet": "^6.1.0",

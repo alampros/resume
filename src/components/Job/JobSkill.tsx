@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useContext } from 'react'
-import Tippy from '@tippy.js/react'
+import Tippy from '@tippyjs/react'
 import cx from 'classnames'
 
 import TinyPie from 'components/TinyPie'
