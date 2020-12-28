@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import AllSkills from 'components/AllSkills'
 import Layout from 'components/Layout'
-import skillsById from 'data/skills'
+import { skills as skillsById } from 'data/skills'
 
 const skills = Object.values(skillsById)
 export default class IndexPage extends React.Component {

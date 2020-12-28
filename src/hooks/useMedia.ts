@@ -5,19 +5,19 @@
  * MIT licensed: https://github.com/gragland/usehooks/blob/master/LICENSE
  */
 
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 export default <T>(queries: string[], values: T[], defaultValue: T): T => {
   // Array containing a media query list for each query
   const mediaQueryLists = typeof window !== 'undefined' ? queries.map(q => window.matchMedia(q)) : []
 
   // Function that gets value based on matching media query
-  const getValue = () => {
+  const getValue = useCallback(() => {
     // Get index of first media query that matches
     const index = mediaQueryLists.findIndex(mql => mql.matches)
     // Return related value or defaultValue if none
     return typeof values[index] !== 'undefined' ? values[index] : defaultValue
-  }
+  }, [defaultValue, mediaQueryLists, values])
 
   // State and setter for matched value
   const [value, setValue] = useState(getValue)
@@ -35,7 +35,7 @@ export default <T>(queries: string[], values: T[], defaultValue: T): T => {
       // Remove listeners on cleanup
       return () => mediaQueryLists.forEach(mql => mql.removeListener(handler))
     },
-    [] // Empty array ensures effect is only run on mount and unmount
+    [getValue, mediaQueryLists] // Empty array ensures effect is only run on mount and unmount
   )
 
   return value

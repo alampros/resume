@@ -1,7 +1,9 @@
-import * as path from 'path'
 import * as fs from 'fs'
+import * as path from 'path'
+
 import * as React from 'react'
-import { Text, Image, View, StyleSheet } from '@react-pdf/renderer'
+import { Image, StyleSheet, Text, View } from '@react-pdf/renderer'
+
 import ResumeMetadata from 'data/ResumeMetadata'
 
 function b64(file: string) {

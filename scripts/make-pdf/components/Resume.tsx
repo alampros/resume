@@ -1,11 +1,14 @@
 import * as path from 'path'
+
 import * as React from 'react'
-import { Font, Page, Document, StyleSheet } from '@react-pdf/renderer'
+import { Document, Font, Page, StyleSheet } from '@react-pdf/renderer'
+
 import { IJobDescriptor } from 'data/Job'
 import { ISkill } from 'data/Skill'
+
+import Header from './Header'
 import Jobs from './Jobs'
 import Skills from './Skills'
-import Header from './Header'
 
 Font.register({ src: path.resolve(__dirname, '../fonts/Roboto_Slab/RobotoSlab-Regular.ttf'), family: 'RobotoSlab', fontStyle: 'normal', fontWeight: 'normal' })
 Font.register({ src: path.resolve(__dirname, '../fonts/Roboto_Slab/RobotoSlab-Light.ttf'), family: 'RobotoSlabLight', fontStyle: 'normal', fontWeight: 'light' })

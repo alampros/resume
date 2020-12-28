@@ -1,7 +1,7 @@
 import React, { Component, forwardRef, Ref, SVGAttributes } from 'react'
 import cx from 'classnames'
 
-const styles = require('./TinyPie.module.css')
+import styles from './TinyPie.module.css'
 
 export type Props = {
   value: number

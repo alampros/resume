@@ -1,5 +1,7 @@
 import * as path from 'path'
+
 import vCardJS from 'vcards-js'
+
 import ResumeMetadata from 'data/ResumeMetadata'
 
 const staticDir = path.resolve(__dirname, '../../static')
@@ -26,7 +28,7 @@ export default (filePath: string = defaultPath) => {
   card.cellPhone = phone
   card.email = email
 
-  card.socialUrls['linkedIn'] = 'https://www.linkedin.com/in/aaron-lampros/'
+  card.socialUrls.linkedIn = 'https://www.linkedin.com/in/aaron-lampros/'
 
   card.version = '3.0'
   card.source = `https://alampros.com/${fileName}`

@@ -32,11 +32,9 @@ export default (props: Props & ReactPDF.ViewProps) => {
   const $start = (
     <Time date={start} />
   )
-  const $end = end ? (
-    <Time date={end} />
-  ) : (
-    <Text>Present</Text>
-  )
+  const $end = end
+    ? <Time date={end} />
+    : <Text>Present</Text>
   return (
     <View style={{ flexDirection: 'row', ...style }} {...passedProps}>
       {$start}<Text style={{ paddingHorizontal: 4 }}>—</Text>{$end}

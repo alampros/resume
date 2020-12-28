@@ -1,13 +1,15 @@
 import * as React from 'react'
 import {
-  View,
-  Text,
   StyleSheet,
+  Text,
+  View,
 } from '@react-pdf/renderer'
-import Section from './Section'
-import Skill from './Skill'
+
 import { ISkill } from 'data/Skill'
 import SkillGroups from 'data/SkillGroups'
+
+import Section from './Section'
+import Skill from './Skill'
 
 const styles = StyleSheet.create({
   skillGroup: {

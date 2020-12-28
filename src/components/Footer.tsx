@@ -4,7 +4,7 @@ import { MdPictureAsPdf } from 'react-icons/md'
 import { QRCode } from 'react-qr-svg'
 import cx from 'classnames'
 
-const styles = require('./Footer.module.css')
+import styles from './Footer.module.css'
 
 export default class Footer extends React.Component {
   render() {

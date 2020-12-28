@@ -2,14 +2,14 @@ import React from 'react'
 import { GoLinkExternal } from 'react-icons/go'
 import { IoIosWarning } from 'react-icons/io'
 import cx from 'classnames'
-import { InformationDensityContext } from 'contexts/InformationDensity'
 
+import { InformationDensityContext } from 'contexts/InformationDensity'
 import { ISkill } from 'data/Skill'
 
 import ExperienceRating from './ExperienceRating'
 import StrengthRating from './StrengthRating'
 
-const styles = require('./Skill.module.css')
+import styles from './Skill.module.css'
 
 interface Props {
   skill: ISkill
@@ -89,12 +89,14 @@ export default class Skill extends React.Component<Props & any> {
           )}
         </div>
         {$stale}
-        {($experienceRating || $strengthRating) ? (
-          <div className={styles.ratings}>
-            {$experienceRating}
-            {$strengthRating}
-          </div>
-        ) : null}
+        {($experienceRating || $strengthRating)
+          ? (
+            <div className={styles.ratings}>
+              {$experienceRating}
+              {$strengthRating}
+            </div>
+            )
+          : null}
       </div>
     )
   }

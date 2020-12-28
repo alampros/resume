@@ -24,7 +24,9 @@ const ResumeMetadata: IResumeMetadata = {
   },
   phone: '+1-216-246-3832',
   email: 'alampros@gmail.com',
-  objective: 'User Experience Architect and front-end web developer with 18 years professional experience, seeking a position with a focused, technology-oriented company committed to maintaining a modern, accessible, and performant web property.',
+  objective: `Systems Architect and senior web developer with 19 years professional experience, seeking a position with a focused, technology-oriented company committed to maintaining a modern, accessible, and performant web property.
+  More specifically, I'm looking for a small enough company where I can contribute to application development at all levels: systems architecture, database, services, and user experience.
+  I want to build systems to help people.`,
   website: new URL('https://alampros.com'),
   github: 'alampros',
 }

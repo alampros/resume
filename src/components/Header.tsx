@@ -7,7 +7,7 @@ import Address from 'components/Address'
 import Objective from 'components/Objective'
 import { IResumeMetadata } from 'data/ResumeMetadata'
 
-const styles = require('./Header.module.css')
+import styles from './Header.module.css'
 
 declare global {
   interface Window {

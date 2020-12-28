@@ -1,2 +1,2 @@
-export = index;
 declare function index(): any;
+export = index;

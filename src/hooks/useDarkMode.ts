@@ -9,7 +9,11 @@ import { useEffect } from 'react'
 import useLocalStorage from './useLocalStorage'
 import useMedia from './useMedia'
 
-export default function useDarkMode(): [boolean, (enabled: boolean) => void] {
+function usePrefersDarkMode() {
+  return useMedia(['(prefers-color-scheme: dark)'], [true], false)
+}
+
+export default function useDarkMode(): [boolean, (_enabled: boolean) => void] {
   const [enabledState, setEnabledState] = useLocalStorage('dark-mode-enabled')
   const prefersDarkMode = usePrefersDarkMode()
   const enabled = typeof enabledState !== 'undefined' ? enabledState : prefersDarkMode
@@ -27,8 +31,4 @@ export default function useDarkMode(): [boolean, (enabled: boolean) => void] {
     [enabled]
   )
   return [enabled, setEnabledState]
-}
-
-function usePrefersDarkMode() {
-  return useMedia(['(prefers-color-scheme: dark)'], [true], false)
 }

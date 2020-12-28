@@ -1,12 +1,12 @@
 import React from 'react'
-import { InformationDensityContext } from 'contexts/InformationDensity'
 
+import { InformationDensityContext } from 'contexts/InformationDensity'
 import { IProject } from 'data/Project'
 
 import JobSkill from './JobSkill'
 import ProjectSkillsetsVis from './ProjectSkillsetsVis'
 
-const styles = require('./Job.module.css')
+import styles from './Job.module.css'
 
 interface Props {
   project: IProject
@@ -28,11 +28,13 @@ export default class Project extends React.Component<Props> {
       skills = [],
     } = project
     const $title = density !== 'sparse' && title && <h5 className="bordered-header">{title}</h5>
-    const $skills = (density === 'dense' && skills.length > 0) ? (
-      <ul className={styles.skills}>
-        {skills.map(skill => <li key={skill.id}><JobSkill skill={skill} /></li>)}
-      </ul>
-    ) : null
+    const $skills = (density === 'dense' && skills.length > 0)
+      ? (
+        <ul className={styles.skills}>
+          {skills.map(skill => <li key={skill.id}><JobSkill skill={skill} /></li>)}
+        </ul>
+        )
+      : null
     const $skillSets = density === 'dense' && project.skillsetRatings && Object.keys(project.skillsetRatings).length > 0 && (
       <ProjectSkillsetsVis project={project} className={styles.skillSetsVis} />
     )
@@ -40,37 +42,43 @@ export default class Project extends React.Component<Props> {
     const $description = desc && (
       <div className={styles.description}>{desc}</div>
     )
-    const $skillsFigure = ($skills || $skillSets) ? (
-      <figure className={styles.figure}>
-        <figcaption className="sr-only bordered-header">Leveraged Skills</figcaption>
-        {$skillSets}
-        {$skills}
-      </figure>
-    ) : null
-    const $wrappedTitleDescription = ($title && $description) ? (
-      <div>
-        {$title}
-        {$description}
-      </div>
-    ) : (
-      <>
-        {$title}
-        {$description}
-      </>
-    )
+    const $skillsFigure = ($skills || $skillSets)
+      ? (
+        <figure className={styles.figure}>
+          <figcaption className="sr-only bordered-header">Leveraged Skills</figcaption>
+          {$skillSets}
+          {$skills}
+        </figure>
+        )
+      : null
+    const $wrappedTitleDescription = ($title && $description)
+      ? (
+        <div>
+          {$title}
+          {$description}
+        </div>
+        )
+      : (
+        <>
+          {$title}
+          {$description}
+        </>
+        )
     return (
       <li className={styles.project}>
-        {($wrappedTitleDescription && $skillsFigure) ? (
-          <div className={styles.flexWrapper}>
-            {$wrappedTitleDescription}
-            {$skillsFigure}
-          </div>
-        ) : (
-          <>
-            {$wrappedTitleDescription}
-            {$skillsFigure}
-          </>
-        )}
+        {($wrappedTitleDescription && $skillsFigure)
+          ? (
+            <div className={styles.flexWrapper}>
+              {$wrappedTitleDescription}
+              {$skillsFigure}
+            </div>
+            )
+          : (
+            <>
+              {$wrappedTitleDescription}
+              {$skillsFigure}
+            </>
+            )}
       </li>
     )
   }

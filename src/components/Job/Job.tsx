@@ -1,14 +1,14 @@
 import React from 'react'
-import { InformationDensityContext } from 'contexts/InformationDensity'
 
 import DateRange from 'components/DateRange'
+import { InformationDensityContext } from 'contexts/InformationDensity'
 import { IJobDescriptor } from 'data/Job'
 
 import Company from './Company'
 import JobSkills from './JobSkills'
 import Project from './Project'
 
-const styles = require('./Job.module.css')
+import styles from './Job.module.css'
 
 interface Props extends IJobDescriptor {
 }
@@ -29,9 +29,11 @@ export default class Job extends React.Component<Props> {
       density,
     } = this.context
 
-    const $projects = density === 'sparse' ? null : projects.map(project => (
-      <Project key={project.description} project={project} />
-    ))
+    const $projects = density === 'sparse'
+      ? null
+      : projects.map(project => (
+        <Project key={project.description} project={project} />
+      ))
 
     return (
       <article className={styles.root}>

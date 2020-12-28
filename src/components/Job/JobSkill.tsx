@@ -1,15 +1,14 @@
 import React, { FunctionComponent, useContext } from 'react'
-import Tippy from '@tippy.js/react'
+import Tippy from '@tippyjs/react'
 import cx from 'classnames'
-import { InformationDensityContext } from 'contexts/InformationDensity'
 
 import TinyPie from 'components/TinyPie'
+import { InformationDensityContext } from 'contexts/InformationDensity'
 import { IJobSkill } from 'data/Skill'
 
 import 'tippy.js/dist/tippy.css'
 import 'tippy.js/themes/light-border.css'
-
-const styles = require('./JobSkill.module.css')
+import styles from './JobSkill.module.css'
 
 interface Props extends IJobSkill {
 }
