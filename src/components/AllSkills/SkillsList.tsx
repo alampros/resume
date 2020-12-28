@@ -10,11 +10,11 @@ import Skill from './Skill'
 
 import styles from './SkillsList.module.css'
 
-interface Props {
+interface TProps {
   skills: ISkill[]
 }
 
-export default (props: Props) => {
+export const SkillsList: React.FC<TProps> = (props: TProps) => {
   const { density } = useContext(InformationDensityContext)
   const {
     skills,
@@ -76,3 +76,5 @@ export default (props: Props) => {
   })
   return <>{$skillGroups}</>
 }
+
+export default SkillsList

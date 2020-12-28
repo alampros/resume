@@ -10,10 +10,9 @@ import 'tippy.js/dist/tippy.css'
 import 'tippy.js/themes/light-border.css'
 import styles from './JobSkill.module.css'
 
-interface Props extends IJobSkill {
-}
+type TProps = IJobSkill & React.HTMLProps<HTMLElement>
 
-export const JobSkill: FunctionComponent<Props & React.HTMLProps<HTMLElement>> = (props: Props & React.HTMLProps<HTMLElement>) => {
+export const JobSkill: FunctionComponent<TProps> = (props: TProps) => {
   const {
     skill: {
       name,

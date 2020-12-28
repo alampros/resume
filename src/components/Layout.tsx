@@ -12,7 +12,7 @@ import Toolbar from './Toolbar'
 
 import styles from './Layout.module.css'
 
-type Props = {
+type TProps = {
   children: React.ReactNode
   title?: string
   description?: string
@@ -20,13 +20,13 @@ type Props = {
   densityProps?: IInformationDensityContext
 }
 
-export default ({
+export const Layout: React.FC<TProps> = ({
   children,
   title = 'Resume',
   description = 'The resume of Aaron Lampros: User Experience Architect',
   helmetKids,
   densityProps = { density: 'normal' },
-}: Props) => {
+}: TProps) => {
   const [density, setDensity] = useState(densityProps.density)
   return (
     <InformationDensityContext.Provider value={{ density }}>
@@ -69,3 +69,5 @@ export default ({
     </InformationDensityContext.Provider>
   )
 }
+
+export default Layout

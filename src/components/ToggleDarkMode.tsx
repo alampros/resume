@@ -6,7 +6,7 @@ import useDarkMode from 'hooks/useDarkMode'
 
 import './ToggleDarkMode.css'
 
-export default (passedProps: ToggleProps) => {
+export const ToggleDarkMode: React.FC<ToggleProps> = (passedProps: ToggleProps) => {
   const [darkMode, setDarkMode] = useDarkMode()
   const iconStyles = {
     marginTop: '-4px',
@@ -28,3 +28,5 @@ export default (passedProps: ToggleProps) => {
     />
   )
 }
+
+export default ToggleDarkMode

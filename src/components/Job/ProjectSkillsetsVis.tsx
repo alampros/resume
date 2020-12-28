@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import cx from 'classnames'
 import {
   LabelFormatter,
@@ -15,9 +15,9 @@ import { IProject } from 'data/Project'
 
 import styles from './ProjectSkillsetsVis.module.css'
 
-interface Props {
+type TProps = {
   project: IProject
-}
+} & RadarChartProps
 
 interface IStringMap { [key: string]: string }
 
@@ -47,52 +47,54 @@ function labelFormatter(label: string): React.ReactNode {
   return l
 }
 
-export default class ProjectSkillsetsVis extends React.PureComponent<Props & RadarChartProps> {
-  render() {
-    const {
-      project,
-      className,
-      ...passedProps
-    } = this.props
-    const {
-      skillsetRatings,
-    } = project
-    if(!skillsetRatings) {
-      return null
-    }
+export const ProjectSkillsetsVis: React.FC<TProps> = (props: TProps) => {
+  const {
+    project,
+    className,
+    ...passedProps
+  } = props
+  const {
+    skillsetRatings,
+  } = project
 
-    const data = Object.entries(skillsetRatings).map(([skillset, rating]) => {
+  const data = useMemo(() => {
+    if(!skillsetRatings) {
+      return
+    }
+    return Object.entries(skillsetRatings).map(([skillset, rating]) => {
       return {
         skillset,
         label: labelMap[skillset] || skillset,
         rating,
       }
     })
-    if(!data.length) {
-      return null
-    }
-    return (
-      <ResponsiveContainer
+  }, [skillsetRatings])
+
+  if(!data?.length) {
+    return null
+  }
+  return (
+    <ResponsiveContainer
         height={125}
         width="100%"
         className={cx(className, styles.root)}
-      >
-        <RadarChart
+    >
+      <RadarChart
           cx="50%"
           cy="55%"
           outerRadius={50}
           data={data}
           {...passedProps}
-        >
-          <PolarGrid />
-          <PolarAngleAxis dataKey="label" />
-          <Tooltip
+      >
+        <PolarGrid />
+        <PolarAngleAxis dataKey="label" />
+        <Tooltip
             formatter={ratingFormatter}
             labelFormatter={labelFormatter as LabelFormatter}
-          />
-          <Radar dataKey="rating" className="project-polygon" fillOpacity={0.6} />
-        </RadarChart>
-      </ResponsiveContainer>
-    )
-  }
+        />
+        <Radar dataKey="rating" className="project-polygon" fillOpacity={0.6} />
+      </RadarChart>
+    </ResponsiveContainer>
+  )
 }
+export default ProjectSkillsetsVis

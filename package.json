@@ -46,6 +46,7 @@
     "gatsby-plugin-react-helmet": "^3.7.0",
     "gatsby-plugin-resolve-src": "^2.1.0",
     "gatsby-plugin-typescript": "^2.9.0",
+    "git-rev-sync": "^3.0.1",
     "globby": "^11.0.1",
     "js-beautify": "^1.13.0",
     "module-alias": "^2.2.1",

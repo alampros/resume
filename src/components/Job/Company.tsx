@@ -9,48 +9,47 @@ import styles from './Company.module.css'
 
 type JobParts = Pick<IJobDescriptor, 'department'>
 
-interface Props extends ICompany {
-}
+type TProps = ICompany & JobParts & React.HTMLProps<HTMLDivElement>
 
 const Sep = () => <span className={styles.separator} role="none" aria-hidden>◦</span>
 
-export default class Company extends React.Component<Props & JobParts & React.HTMLProps<HTMLDivElement>> {
-  render() {
-    const {
-      id, // eslint-disable-line no-unused-vars, @typescript-eslint/no-unused-vars
-      name,
-      address,
-      website,
-      className,
-      department,
-      ...passedProps
-    } = this.props
-    return (
-      <div className={cx(className, styles.root)} {...passedProps}>
-        <span className={styles.at}>@</span>
-        <div className={styles.name} aria-label="Company">{name}</div>
-        <Sep />
-        {department && (
-          <>
-            <span
+export const Company: React.FC<TProps> = (props: TProps) => {
+  const {
+    id, // eslint-disable-line no-unused-vars, @typescript-eslint/no-unused-vars
+    name,
+    address,
+    website,
+    className,
+    department,
+    ...passedProps
+  } = props
+  return (
+    <div className={cx(className, styles.root)} {...passedProps}>
+      <span className={styles.at}>@</span>
+      <div className={styles.name} aria-label="Company">{name}</div>
+      <Sep />
+      {department && (
+        <>
+          <span
               className={styles.department}
               aria-label="Department"
-            >
-              {department}
-            </span>
-            <Sep />
-          </>
-        )}
-        <address aria-label="Location">
-          <Address address={address} />
-        </address>
-        {website && (
-          <>
-            <Sep />
-            <a href={website.toString()} aria-label="Company website">{website.hostname.replace(/^www\./, '')}</a>
-          </>
-        )}
-      </div>
-    )
-  }
+          >
+            {department}
+          </span>
+          <Sep />
+        </>
+      )}
+      <address aria-label="Location">
+        <Address address={address} />
+      </address>
+      {website && (
+        <>
+          <Sep />
+          <a href={website.toString()} aria-label="Company website">{website.hostname.replace(/^www\./, '')}</a>
+        </>
+      )}
+    </div>
+  )
 }
+
+export default Company

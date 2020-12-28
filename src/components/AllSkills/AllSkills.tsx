@@ -10,14 +10,14 @@ import styles from './AllSkills.module.css'
 
 type ISortKey = 'yearsOfExperience' | 'strength'
 
-interface Props {
+type TProps = {
   skills: ISkill[]
 }
 
-function AllSkills(props: Props) {
+const AllSkills: React.FC<TProps> = (props: TProps) => {
   const [sortBy, setSortBy] = useState('strength')
   const {
-    skills,
+    skills = [],
   } = props
   if(!skills || !skills.length) {
     return null
@@ -66,10 +66,6 @@ function AllSkills(props: Props) {
       <SkillsList skills={sortedSkills} />
     </section>
   )
-}
-
-AllSkills.defaultProps = {
-  skills: [],
 }
 
 export default AllSkills

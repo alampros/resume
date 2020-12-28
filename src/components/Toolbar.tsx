@@ -8,12 +8,13 @@ import ToggleDarkMode from './ToggleDarkMode'
 
 import styles from './Toolbar.module.css'
 
-type Props = {
+type TProps = {
   density: InformationDensity
   onDensityChange(_density: InformationDensity): void
 } & HTMLAttributes<HTMLDivElement>
 
-export default function Toolbar({ className, density, onDensityChange, ...rest }: Props): React.ReactElement {
+export const Toolbar: React.FC<TProps> = (props: TProps) => {
+  const { className, density, onDensityChange, ...rest } = props
   return (
     <div className={classNames(className, 'no-print', styles.root)} {...rest}>
       <span className={styles.labeledGroup}>
@@ -27,3 +28,5 @@ export default function Toolbar({ className, density, onDensityChange, ...rest }
     </div>
   )
 }
+
+export default Toolbar

@@ -6,9 +6,9 @@ import { ISkill } from 'data/Skill'
 
 import styles from './StrengthRating.module.css'
 
-type Props = Pick<ISkill, 'strength' | 'name'> & React.HTMLProps<HTMLElement> & any
+type TProps = Pick<ISkill, 'strength' | 'name'> & React.HTMLProps<HTMLDivElement>
 
-export default function StrengthRating({ strength, name, className, ...passedProps }: Props) {
+export const StrengthRating: React.FC<TProps> = ({ strength, name, className, ...passedProps }: TProps) => {
   const cls = (() => {
     if(strength > 0.8) {
       return 'strong'
@@ -21,7 +21,6 @@ export default function StrengthRating({ strength, name, className, ...passedPro
   const title = `I arbitrarily rank my strength with ${name} at ${(strength * 10)} out of 10`
   return (
     <div
-
       className={cx(className, styles.root, styles[cls])}
       role="presentation"
       aria-label={title}
@@ -43,3 +42,5 @@ export default function StrengthRating({ strength, name, className, ...passedPro
     </div>
   )
 }
+
+export default StrengthRating

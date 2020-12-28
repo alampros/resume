@@ -16,6 +16,10 @@
 
   small {
     font-size: inherit;
+
+    &.dim {
+      color: var(--color-gray-dim, #b6b6b6);
+    }
   }
 
   a {
