@@ -6,9 +6,9 @@ import { ISkill } from 'data/Skill'
 
 import styles from './ExperienceRating.module.css'
 
-type Props = any & Pick<ISkill, 'yearsOfExperience' | 'name'>
+type TProps = any & Pick<ISkill, 'yearsOfExperience' | 'name'>
 
-export default function ExperienceRating({ yearsOfExperience, name, className, ...passedProps }: Props) {
+export const ExperienceRating: React.FC<TProps> = ({ yearsOfExperience, name, className, ...passedProps }: TProps) => {
   const plural = yearsOfExperience > 1 ? 'years' : 'year'
   const change = yearsOfExperience % 1
   const bits = (() => {
@@ -36,3 +36,5 @@ export default function ExperienceRating({ yearsOfExperience, name, className, .
     </div>
   )
 }
+
+export default ExperienceRating

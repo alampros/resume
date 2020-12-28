@@ -1,15 +1,15 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 
 import JobSkill from 'components/Job/JobSkill'
 import { IJobSkill } from 'data/Skill'
 
 import styles from './JobSkills.module.css'
 
-interface Props {
+type TProps = {
   skills: IJobSkill[]
 }
 
-export const JobSkills: FunctionComponent<Props> = (props: Props) => {
+export const JobSkills: React.FC<TProps> = (props: TProps) => {
   const {
     skills,
   } = props

@@ -1,9 +1,7 @@
-import * as React from 'react'
+import React from 'react'
 
-export default () => {
-  return (
-    <div>
-      Sorry, none of my skills match your search.
-    </div>
-  )
-}
+export default () => (
+  <div>
+    Sorry, none of my skills match your search.
+  </div>
+)

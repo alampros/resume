@@ -11,12 +11,13 @@ const initialState = {
   ],
 }
 
-interface Props {
+type TProps = {
   density: InformationDensity
   onDensityChange(_density: InformationDensity): void
 }
 
-export default function DensitySelect({ density, onDensityChange }: Props): React.ReactElement {
+export const DensitySelect: React.FC<TProps> = (props: TProps) => {
+  const { density, onDensityChange } = props
   return (
     <SegmentedControl
       name="density"
@@ -27,3 +28,4 @@ export default function DensitySelect({ density, onDensityChange }: Props): Reac
     />
   )
 }
+export default DensitySelect

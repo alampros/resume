@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Job from 'data/Job'
 import jobs from 'data/jobs'
@@ -24,19 +24,21 @@ Feel free to explore some data about me using \`window.Aaron\`.
 \n\n\n\n`
 const consoleBit = '\tSkills: %O\n\tJobs: %O\n'
 
-export default class WelcomeLogger extends React.Component {
-  logged?: boolean
-  render() {
+export const WelcomeLogger: React.FC = () => {
+  const [logged, setLogged] = useState(false)
+  useEffect(() => {
     if(typeof window !== 'undefined') {
-      if(!this.logged) {
-        this.logged = true
+      if(!logged) {
         console.log(msg(consoleBit), skills, jobs) // eslint-disable-line no-console
+        setLogged(true)
       }
       window.Aaron = {
         skills,
         jobs,
       }
     }
-    return null
-  }
+  }, [logged])
+  return null
 }
+
+export default WelcomeLogger

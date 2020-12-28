@@ -1,9 +1,9 @@
-import * as React from 'react'
+import React from 'react'
 
 import ResumeMetadata from 'data/ResumeMetadata'
 
 type TProps = React.HTMLAttributes<HTMLDivElement>
-export default (props: TProps) => {
+export const Objective: React.FC<TProps> = (props: TProps) => {
   const {
     objective,
   } = ResumeMetadata
@@ -12,3 +12,5 @@ export default (props: TProps) => {
     <span {...props}>{ps}</span>
   )
 }
+
+export default Objective

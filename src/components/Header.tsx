@@ -15,9 +15,7 @@ declare global {
   }
 }
 
-interface Props extends IResumeMetadata {
-}
-
+type TProps = IResumeMetadata
 const Actions = () => {
   return (
     <div
@@ -40,7 +38,7 @@ const Actions = () => {
   )
 }
 
-const Contact = (props: Props) => {
+const Contact = (props: TProps) => {
   const {
     location,
     phone,
@@ -72,7 +70,7 @@ const Contact = (props: Props) => {
   )
 }
 
-const Name = (props: Props) => {
+const Name = (props: TProps) => {
   const {
     firstName,
     middleName,
@@ -86,19 +84,19 @@ const Name = (props: Props) => {
   )
 }
 
-export default class Header extends React.Component<Props> {
-  render() {
-    return (
-      <header className={styles.root}>
-        <div className={styles.rowOne}>
-          <Name {...this.props} />
-          <Objective className={styles.objective} />
-        </div>
-        <div className={styles.rowTwo}>
-          <Actions />
-          <Contact {...this.props} />
-        </div>
-      </header>
-    )
-  }
+export const Header: React.FC<TProps> = (props: TProps) => {
+  return (
+    <header className={styles.root}>
+      <div className={styles.rowOne}>
+        <Name {...props} />
+        <Objective className={styles.objective} />
+      </div>
+      <div className={styles.rowTwo}>
+        <Actions />
+        <Contact {...props} />
+      </div>
+    </header>
+  )
 }
+
+export default Header
