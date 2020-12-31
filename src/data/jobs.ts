@@ -25,6 +25,18 @@ const jobs: IJobConstructorParam[] = [
     ],
     projects: [
       {
+        title: 'Slack Reporting Bot',
+        description: 'Built a Slack app as UI for internal users to generate PDF reports (rendered in React) and search customer datadase.',
+        skills: [skills.docker, skills.node, skills.ts, skills.linux],
+        skillsetRatings: {
+          design: 0.9,
+          development: 1,
+          communication: 8 / 10,
+          leadership: 2 / 3,
+          organization: 6 / 10,
+        },
+      },
+      {
         title: 'EDI Export System',
         description: 'Built an in-house data export system using modular plugin architecture to extract, transform, and deliver data to customers via SFTP, email, or S3.',
         skills: [skills.docker, skills.node, skills.ts, skills.linux],
