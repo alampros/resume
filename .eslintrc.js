@@ -4,6 +4,7 @@ module.exports = {
     'vectron',
   ],
   rules: {
+    '@typescript-eslint/no-use-before-define': 0,
     'simple-import-sort/imports': ['error', {
       groups: [
         // Node.js builtins. You could also generate this regex if you use a `.js` config.
