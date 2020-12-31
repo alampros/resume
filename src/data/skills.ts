@@ -2,17 +2,30 @@ import Skill, { ISkill, TRelevance } from './Skill'
 
 // const partialSkills = <{[k: string]: TPartialSkill}>{
 const partialSkills = {
-  css: {
-    name: 'CSS',
-    yearsOfExperience: new Date().getFullYear() - 2001,
+  react: {
+    name: 'React',
+    yearsOfExperience: new Date().getFullYear() - 2015,
     strength: 1,
-    interest: 0.9,
-    link: new URL('https://en.wikipedia.org/wiki/Cascading_Style_Sheets'),
+    interest: 1,
+    link: new URL('https://reactjs.org'),
     relevance: {
-      code: 5 / 10,
+      code: 9 / 10,
       ux: 1,
       systems: 0,
     },
+  },
+  ts: {
+    name: 'TypeScript',
+    yearsOfExperience: new Date().getFullYear() - 2017,
+    strength: 1,
+    interest: 1,
+    link: new URL('https://www.typescriptlang.org'),
+    relevance: {
+      code: 9 / 10,
+      ux: 7 / 10,
+      systems: 4 / 10,
+    },
+    comment: 'I will gladly donate my personal time to convert an old JS project to TypeScript 9 times out of 10. The benefits are that compelling.',
   },
   html: {
     name: 'Semantic HTML',
@@ -44,7 +57,7 @@ const partialSkills = {
     name: 'JavaScript',
     yearsOfExperience: new Date().getFullYear() - 2002,
     strength: 1,
-    interest: 0.8,
+    interest: 0.6,
     link: new URL('https://en.wikipedia.org/wiki/JavaScript'),
     relevance: {
       code: 6 / 10,
@@ -52,19 +65,6 @@ const partialSkills = {
       systems: 3 / 10,
     },
     comment: 'While still a core strength of mine, I rarely write pure JS anymore (#TeamTypeScript)',
-  },
-  ts: {
-    name: 'TypeScript',
-    yearsOfExperience: new Date().getFullYear() - 2017,
-    strength: 1,
-    interest: 1,
-    link: new URL('https://www.typescriptlang.org'),
-    relevance: {
-      code: 9 / 10,
-      ux: 7 / 10,
-      systems: 4 / 10,
-    },
-    comment: 'I will gladly donate my personal time to convert an old JS project to TypeScript 9 times out of 10. The benefits are that compelling.',
   },
   node: {
     name: 'Node.js',
@@ -79,11 +79,23 @@ const partialSkills = {
     },
     comment: 'Mostly used for CLI tools or the occasional API.',
   },
+  css: {
+    name: 'CSS/LESS/SASS',
+    yearsOfExperience: new Date().getFullYear() - 2001,
+    strength: 1,
+    interest: 0.9,
+    link: new URL('https://en.wikipedia.org/wiki/Cascading_Style_Sheets'),
+    relevance: {
+      code: 5 / 10,
+      ux: 1,
+      systems: 0,
+    },
+  },
   hapi: {
     name: 'Hapi.js',
     yearsOfExperience: new Date().getFullYear() - 2015,
-    strength: 9 / 10,
-    interest: 9 / 10,
+    strength: 7 / 10,
+    interest: 7 / 10,
     link: new URL('https://hapijs.com/'),
     relevance: {
       code: 2 / 10,
@@ -117,18 +129,6 @@ const partialSkills = {
       systems: 0,
     },
     comment: 'You can\'t throw a rock in javascript without hitting babel, but most devs don\'t bother peeking under the hood. I invested almost 6 months in 2018 learning the core of babel by following the development of their v7 refactor.',
-  },
-  react: {
-    name: 'React',
-    yearsOfExperience: new Date().getFullYear() - 2015,
-    strength: 1,
-    interest: 1,
-    link: new URL('https://reactjs.org'),
-    relevance: {
-      code: 9 / 10,
-      ux: 1,
-      systems: 0,
-    },
   },
   accessibility: {
     name: 'Accessibility',
@@ -463,7 +463,7 @@ const partialSkills = {
 }
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
-type ISkills = { [id in keyof typeof partialSkills]: ISkill }
+type ISkills = { [id in keyof typeof partialSkills]: Skill }
 type TPartialSkill = Omit<ISkill, 'id' | 'relevance'> & Partial<Pick<ISkill, 'id' | 'relevance'>>
 type TPartialSkills = { [id in keyof ISkills]: TPartialSkill }
 /* eslint-enable @typescript-eslint/no-unused-vars */
