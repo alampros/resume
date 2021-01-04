@@ -16,6 +16,7 @@ module.exports = {
     lastUpdated: git.date(),
   },
   plugins: [
+    'gatsby-theme-material-ui',
     'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-plugin-postcss',

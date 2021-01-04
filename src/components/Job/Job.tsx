@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 
 import DateRange from 'components/DateRange'
-import { InformationDensityContext } from 'contexts/InformationDensity'
+import { InformationDensityContext } from 'contexts/InformationDensityContext'
 import { IJobDescriptor } from 'data/Job'
 
 import Company from './Company'

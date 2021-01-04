@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Helmet } from 'react-helmet'
 
 import BadExperienceDetect from 'components/BadExperienceDetect'
 import Footer from 'components/Footer'
 import Header from 'components/Header'
 import WelcomeLogger from 'components/WelcomeLogger'
-import { IInformationDensityContext, InformationDensityContext } from 'contexts/InformationDensity'
+import { IInformationDensityContext } from 'contexts/InformationDensityContext'
 import ResumeMetadata from 'data/ResumeMetadata'
 
+import InformationDensityContextProvider from './InformationDensityContextProvider'
 import Toolbar from './Toolbar'
 
 import styles from './Layout.module.css'
@@ -17,7 +18,7 @@ type TProps = {
   title?: string
   description?: string
   helmetKids?: React.ReactNode
-  densityProps?: IInformationDensityContext
+  densityProps?: Pick<IInformationDensityContext, 'density'>
 }
 
 export const Layout: React.FC<TProps> = ({
@@ -27,9 +28,8 @@ export const Layout: React.FC<TProps> = ({
   helmetKids,
   densityProps = { density: 'normal' },
 }: TProps) => {
-  const [density, setDensity] = useState(densityProps.density)
   return (
-    <InformationDensityContext.Provider value={{ density }}>
+    <InformationDensityContextProvider initialDensity={densityProps.density}>
       <WelcomeLogger />
       <Helmet
         titleTemplate="Aaron Lampros | %s"
@@ -61,12 +61,12 @@ export const Layout: React.FC<TProps> = ({
         <div className={styles.container}>
           <BadExperienceDetect />
           <Header {...ResumeMetadata} />
-          <Toolbar density={density} onDensityChange={setDensity} />
+          <Toolbar />
           {children}
           <Footer />
         </div>
       </main>
-    </InformationDensityContext.Provider>
+    </InformationDensityContextProvider>
   )
 }
 
