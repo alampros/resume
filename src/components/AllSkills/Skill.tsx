@@ -3,7 +3,7 @@ import { GoLinkExternal } from 'react-icons/go'
 import { IoIosWarning } from 'react-icons/io'
 import cx from 'classnames'
 
-import { InformationDensityContext } from 'contexts/InformationDensity'
+import { InformationDensityContext } from 'contexts/InformationDensityContext'
 import { ISkill } from 'data/Skill'
 
 import ExperienceRating from './ExperienceRating'

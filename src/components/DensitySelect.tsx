@@ -1,30 +1,40 @@
-import React from 'react'
-import { SegmentedControl } from 'evergreen-ui'
+import React, { useContext } from 'react'
+import { Slider, SliderProps } from '@material-ui/core'
 
-import { InformationDensity } from 'contexts/InformationDensity'
+import { InformationDensity, InformationDensityContext } from 'contexts/InformationDensityContext'
 
-const initialState = {
-  options: [
-    { label: 'Sparse', value: 'sparse' },
-    { label: 'Normal', value: 'normal' },
-    { label: 'Dense', value: 'dense' },
-  ],
-}
-
-type TProps = {
+type TSliderMark = {
+  label: string
+  value: number
   density: InformationDensity
-  onDensityChange(_density: InformationDensity): void
 }
+const marks: Array<TSliderMark> = [
+  { label: 'Sparse', value: 10, density: 'sparse' },
+  { label: 'Normal', value: 20, density: 'normal' },
+  { label: 'Dense', value: 30, density: 'dense' },
+]
 
-export const DensitySelect: React.FC<TProps> = (props: TProps) => {
-  const { density, onDensityChange } = props
+export const DensitySelect: React.FC<SliderProps> = (props: SliderProps) => {
+  const { density, setDensity } = useContext(InformationDensityContext)
   return (
-    <SegmentedControl
-      name="density"
-      height={24}
-      options={initialState.options}
-      value={density}
-      onChange={onDensityChange}
+    <Slider
+      defaultValue={20}
+      onChangeCommitted={(_e, val) => {
+        const d = marks.find(m => m.value === val)
+        if(d) {
+          setDensity(d.density)
+        }
+      }}
+      value={marks.find(m => m.density === density)?.value || 10}
+      getAriaValueText={(val) => {
+        return marks.find(m => m.value === val)?.label || '?'
+      }}
+      step={10}
+      valueLabelDisplay="off"
+      marks={marks}
+      min={10}
+      max={30}
+      {...props}
     />
   )
 }

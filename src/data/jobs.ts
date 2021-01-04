@@ -12,17 +12,42 @@ const jobs: IJobConstructorParam[] = [
       start: new Date('2018-04-29T12:00:00.000Z'),
     },
     skills: [
-      { skill: skills.js, relevance: 1 },
-      { skill: skills.ts, relevance: 0.9 },
-      { skill: skills.webpack, relevance: 0.7 },
-      { skill: skills.babel, relevance: 0.3 },
-      { skill: skills.accessibility, relevance: 0.2 },
+      { skill: skills.ts, relevance: 1 },
+      { skill: skills.gatsby, relevance: 0.7 },
       { skill: skills.node, relevance: 0.4 },
-      { skill: skills.cs, relevance: 0.9 },
       { skill: skills.sql, relevance: 0.3 },
-      { skill: skills.dotnet, relevance: 0.6 },
+      { skill: skills.dotnet, relevance: 0.3 },
+      { skill: skills.docker, relevance: 0.8 },
+      { skill: skills.docker_swarm, relevance: 0.3 },
+      { skill: skills.react, relevance: 0.8 },
+      { skill: skills.vb, relevance: 0.05 },
+      { skill: skills.asp, relevance: 0.05 },
     ],
     projects: [
+      {
+        title: 'Slack Reporting Bot',
+        description: 'Built a Slack app as UI for internal users to generate PDF reports (rendered in React) and search customer datadase.',
+        skills: [skills.docker, skills.node, skills.ts, skills.linux],
+        skillsetRatings: {
+          design: 0.9,
+          development: 1,
+          communication: 8 / 10,
+          leadership: 2 / 3,
+          organization: 6 / 10,
+        },
+      },
+      {
+        title: 'EDI Export System',
+        description: 'Built an in-house data export system using modular plugin architecture to extract, transform, and deliver data to customers via SFTP, email, or S3.',
+        skills: [skills.docker, skills.node, skills.ts, skills.linux],
+        skillsetRatings: {
+          design: 1 / 6,
+          development: 1,
+          communication: 8 / 10,
+          leadership: 2 / 3,
+          organization: 4 / 10,
+        },
+      },
       {
         title: 'Continuous Integration',
         description: 'Instituted methodologies and foundation for CI/CD across 14 projects. Migrated organization from BitBucket Pipelines to GitHub Actions to utilize private package repositories and consolidate costs.',
@@ -50,7 +75,7 @@ const jobs: IJobConstructorParam[] = [
       {
         title: 'AssetLink PWA',
         description: 'Redesign and refactor a progressive web app using more modern javascript and user testing practices.',
-        skills: [skills.cs, skills.ts, skills.react, skills.dotnet, skills.sketch, skills.unit_testing, skills.usability_testing],
+        skills: [skills.dotnet, skills.ts, skills.react, skills.sketch, skills.unit_testing, skills.usability_testing],
         skillsetRatings: {
           design: 1,
           development: 1,

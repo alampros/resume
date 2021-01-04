@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Flipped, Flipper } from 'react-flip-toolkit'
 
-import { InformationDensityContext } from 'contexts/InformationDensity'
+import { InformationDensityContext } from 'contexts/InformationDensityContext'
 import { ISkill } from 'data/Skill'
 import SkillGroups from 'data/SkillGroups'
 

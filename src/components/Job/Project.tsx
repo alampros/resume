@@ -1,6 +1,6 @@
 import React, { useContext, useMemo } from 'react'
 
-import { InformationDensityContext } from 'contexts/InformationDensity'
+import { InformationDensityContext } from 'contexts/InformationDensityContext'
 import { IProject } from 'data/Project'
 
 import JobSkill from './JobSkill'

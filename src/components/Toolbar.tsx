@@ -1,31 +1,40 @@
-import React, { HTMLAttributes } from 'react'
+import React from 'react'
+import { Box, Grid, GridProps, Typography } from '@material-ui/core'
 import classNames from 'classnames'
-
-import { InformationDensity } from 'contexts/InformationDensity'
 
 import DensitySelect from './DensitySelect'
 import ToggleDarkMode from './ToggleDarkMode'
 
 import styles from './Toolbar.module.css'
 
-type TProps = {
-  density: InformationDensity
-  onDensityChange(_density: InformationDensity): void
-} & HTMLAttributes<HTMLDivElement>
+type TProps = GridProps
 
 export const Toolbar: React.FC<TProps> = (props: TProps) => {
-  const { className, density, onDensityChange, ...rest } = props
+  const { className, ...rest } = props
   return (
-    <div className={classNames(className, 'no-print', styles.root)} {...rest}>
-      <span className={styles.labeledGroup}>
-        <label htmlFor="info-density">Density:</label>
-        <DensitySelect density={density} onDensityChange={onDensityChange} />
-      </span>
-      <span className={styles.labeledGroup}>
-        <label htmlFor="toggle-dark-mode">Theme:</label>
-        <ToggleDarkMode id="toggle-dark-mode" />
-      </span>
-    </div>
+    <Box mb={4}>
+      <Grid
+      className={classNames(className, 'no-print', styles.root)}
+      container
+      spacing={2}
+      alignItems="flex-start"
+      justify="space-around"
+      {...rest}
+      >
+        <Grid item xs={4}>
+          <Typography id="label-density-select" gutterBottom align="center">
+            Information Density:
+          </Typography>
+          <DensitySelect aria-labelledby="label-density-select" />
+        </Grid>
+        <Grid item className={styles.labeledGroup} xs={3}>
+          <Typography id="label-theme-toggle" gutterBottom align="center">
+            Theme:
+          </Typography>
+          <ToggleDarkMode id="toggle-dark-mode" aria-labelledby="label-theme-toggle" />
+        </Grid>
+      </Grid>
+    </Box>
   )
 }
 

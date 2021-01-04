@@ -3,7 +3,7 @@ import Tippy from '@tippyjs/react'
 import cx from 'classnames'
 
 import TinyPie from 'components/TinyPie'
-import { InformationDensityContext } from 'contexts/InformationDensity'
+import { InformationDensityContext } from 'contexts/InformationDensityContext'
 import { IJobSkill } from 'data/Skill'
 
 import 'tippy.js/dist/tippy.css'

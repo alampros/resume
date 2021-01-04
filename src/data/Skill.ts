@@ -1,3 +1,8 @@
+export type TRelevance = {
+  ux: number
+  systems: number
+  code: number
+}
 export interface ISkill {
   id: string
   name: string
@@ -7,6 +12,8 @@ export interface ISkill {
   interest: number
   link?: URL
   readonly link2LD?: string
+  relevance: TRelevance
+  comment?: string
 }
 
 export interface IJobSkill {
@@ -24,11 +31,21 @@ export default class Skill implements ISkill {
     this.strength = c.strength
     this.interest = c.interest
     this.link = c.link
+    this.relevance = c.relevance
+    this.comment = c.comment
   }
 
   get link2LD(): string | undefined {
     if(!this.link) return
     return this.link.host.split('.').slice(-2).join('.')
+  }
+
+  get meanRelevance(): number {
+    const vals = Object.values(this.relevance)
+    return vals.reduce((acc, v) => {
+      acc += v
+      return acc
+    }, 0) / vals.length
   }
 
   id: string
@@ -38,4 +55,6 @@ export default class Skill implements ISkill {
   strength: number
   interest: number
   link?: URL
+  relevance: TRelevance
+  comment?: string
 }
