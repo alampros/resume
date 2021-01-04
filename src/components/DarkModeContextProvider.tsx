@@ -28,7 +28,7 @@ export const DarkModeContextProvider = ({ children }: TProps) => {
   )
   return (
     <DarkModeContext.Provider value={{
-      darkMode: enabledState,
+      darkMode: enabled,
       setDarkMode: setEnabledState,
     }}
     >
