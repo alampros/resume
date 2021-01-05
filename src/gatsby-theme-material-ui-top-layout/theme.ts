@@ -1,5 +1,5 @@
+import cyan from '@material-ui/core/colors/cyan'
 import green from '@material-ui/core/colors/green'
-import lightBlue from '@material-ui/core/colors/lightBlue'
 
 const theme = {
   typography: {
@@ -7,49 +7,11 @@ const theme = {
   },
   palette: {
     type: 'dark',
-    primary: lightBlue,
+    primary: {
+      ...cyan,
+      main: '#69b6e1',
+    },
     secondary: green,
-  },
-  props: {
-    MuiButton: {
-      size: 'small',
-    },
-    MuiFilledInput: {
-      margin: 'dense',
-    },
-    MuiFormControl: {
-      margin: 'dense',
-    },
-    MuiFormHelperText: {
-      margin: 'dense',
-    },
-    MuiIconButton: {
-      size: 'small',
-    },
-    MuiInputBase: {
-      margin: 'dense',
-    },
-    MuiInputLabel: {
-      margin: 'dense',
-    },
-    MuiListItem: {
-      dense: true,
-    },
-    MuiOutlinedInput: {
-      margin: 'dense',
-    },
-    MuiFab: {
-      size: 'small',
-    },
-    MuiTable: {
-      size: 'small',
-    },
-    MuiTextField: {
-      margin: 'dense',
-    },
-    MuiToolbar: {
-      variant: 'dense',
-    },
   },
 }
 
