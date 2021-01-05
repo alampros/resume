@@ -36,6 +36,7 @@
     "classnames": "^2.2.6",
     "eslint": "^7.17.0",
     "eslint-config-vectron": "^2.2.0",
+    "framer-motion": "^3.1.4",
     "gatsby": "^2.29.3",
     "gatsby-plugin-fullstory": "^2.7.0",
     "gatsby-plugin-gtag": "^1.0.13",

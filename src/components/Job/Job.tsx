@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 
 import DateRange from 'components/DateRange'
 import { InformationDensityContext } from 'contexts/InformationDensityContext'
@@ -46,14 +47,22 @@ export const Job: React.FC<TProps> = (props: TProps) => {
         </>
       )}
       <JobSkills skills={skills} />
-      {$projects && $projects.length > 0 && (
-        <>
-          <h4>Notable Projects:</h4>
-          <ul className={styles.projects}>
-            {$projects}
-          </ul>
-        </>
-      )}
+      <AnimatePresence>
+        {$projects && $projects.length > 0 && (
+          <motion.div
+            key={`projects-${company.name}-${title}`}
+            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, height: 0 }}
+          >
+            <h4>Notable Projects:</h4>
+            <ul className={styles.projects}>
+              {$projects}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </article>
   )
 }
