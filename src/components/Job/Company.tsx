@@ -31,8 +31,8 @@ export const Company: React.FC<TProps> = (props: TProps) => {
       {department && (
         <>
           <span
-              className={styles.department}
-              aria-label="Department"
+            className={styles.department}
+            aria-label="Department"
           >
             {department}
           </span>

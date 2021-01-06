@@ -58,7 +58,7 @@ export const Project: React.FC<TProps> = (props: TProps) => {
         {$skillSets}
         {$skills}
       </figure>
-      )
+    )
     : null
   const $wrappedTitleDescription = ($title && $description)
     ? (
@@ -66,13 +66,13 @@ export const Project: React.FC<TProps> = (props: TProps) => {
         {$title}
         {$description}
       </div>
-      )
+    )
     : (
       <>
         {$title}
         {$description}
       </>
-      )
+    )
   return (
     <li className={styles.project}>
       {($wrappedTitleDescription && $skillsFigure)
@@ -81,13 +81,13 @@ export const Project: React.FC<TProps> = (props: TProps) => {
             {$wrappedTitleDescription}
             {$skillsFigure}
           </div>
-          )
+        )
         : (
           <>
             {$wrappedTitleDescription}
             {$skillsFigure}
           </>
-          )}
+        )}
     </li>
   )
 }

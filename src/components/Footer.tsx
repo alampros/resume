@@ -30,13 +30,13 @@ export const Footer: React.FC = () => {
       <small className={styles.dim}>{branch}@{shortHash}</small>
       <small className={styles.dim}>Last updated: {lastUpdated.toLocaleDateString()}</small>
       <QRCode
-          bgColor="transparent"
-          fgColor="#000000"
-          level="Q"
-          style={{ width: 64 }}
-          value="https://alampros.com"
-          cellClassPrefix="qr"
-          className={clsx(styles.qr, 'no-screen')}
+        bgColor="transparent"
+        fgColor="#000000"
+        level="Q"
+        style={{ width: 64 }}
+        value="https://alampros.com"
+        cellClassPrefix="qr"
+        className={clsx(styles.qr, 'no-screen')}
       />
     </footer>
   )

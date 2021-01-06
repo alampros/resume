@@ -14,12 +14,12 @@ export const Toolbar: React.FC<TProps> = (props: TProps) => {
   return (
     <Box mb={4}>
       <Grid
-      className={clsx(className, 'no-print', styles.root)}
-      container
-      spacing={2}
-      alignItems="flex-start"
-      justify="space-around"
-      {...rest}
+        className={clsx(className, 'no-print', styles.root)}
+        container
+        spacing={2}
+        alignItems="flex-start"
+        justify="space-around"
+        {...rest}
       >
         <Grid item xs={4}>
           <Typography id="label-density-select" gutterBottom align="center">

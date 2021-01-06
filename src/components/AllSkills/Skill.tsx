@@ -55,16 +55,16 @@ export const Skill: React.FC<TProps> = (props: TProps) => {
 
   const $experienceRating = density !== 'sparse' && (
     <ExperienceRating
-        yearsOfExperience={yearsOfExperience}
-        name={name}
-        className={clsx(styles.rating, styles.experienceRating)}
+      yearsOfExperience={yearsOfExperience}
+      name={name}
+      className={clsx(styles.rating, styles.experienceRating)}
     />
   )
   const $strengthRating = density !== 'sparse' && (
     <StrengthRating
-        name={name}
-        strength={strength}
-        className={clsx(styles.rating, styles.strengthRating)}
+      name={name}
+      strength={strength}
+      className={clsx(styles.rating, styles.strengthRating)}
     />
   )
   return (
@@ -89,7 +89,7 @@ export const Skill: React.FC<TProps> = (props: TProps) => {
             {$experienceRating}
             {$strengthRating}
           </div>
-          )
+        )
         : null}
     </div>
   )
