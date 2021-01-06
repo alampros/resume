@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { GoLinkExternal } from 'react-icons/go'
 import { IoIosWarning } from 'react-icons/io'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 import { InformationDensityContext } from 'contexts/InformationDensityContext'
 import { ISkill } from 'data/Skill'
@@ -57,18 +57,18 @@ export const Skill: React.FC<TProps> = (props: TProps) => {
     <ExperienceRating
         yearsOfExperience={yearsOfExperience}
         name={name}
-        className={cx(styles.rating, styles.experienceRating)}
+        className={clsx(styles.rating, styles.experienceRating)}
     />
   )
   const $strengthRating = density !== 'sparse' && (
     <StrengthRating
         name={name}
         strength={strength}
-        className={cx(styles.rating, styles.strengthRating)}
+        className={clsx(styles.rating, styles.strengthRating)}
     />
   )
   return (
-    <div className={cx(styles.root, className)} {...passedProps}>
+    <div className={clsx(styles.root, className)} {...passedProps}>
       <div className={styles.nameLink}>
         <span>
           {name}

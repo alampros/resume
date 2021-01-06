@@ -1,5 +1,5 @@
 import React from 'react'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 import Address from 'components/Address'
 import { ICompany } from 'data/Company'
@@ -24,7 +24,7 @@ export const Company: React.FC<TProps> = (props: TProps) => {
     ...passedProps
   } = props
   return (
-    <div className={cx(className, styles.root)} {...passedProps}>
+    <div className={clsx(className, styles.root)} {...passedProps}>
       <span className={styles.at}>@</span>
       <div className={styles.name} aria-label="Company">{name}</div>
       <Sep />

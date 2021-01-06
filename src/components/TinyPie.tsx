@@ -1,5 +1,5 @@
 import React, { forwardRef, Ref, SVGAttributes } from 'react'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 import styles from './TinyPie.module.css'
 
@@ -19,7 +19,7 @@ const TinyPie: React.FC<TProps> = (props: TProps) => {
   return (
     <svg
         viewBox="0 0 36 36"
-        className={cx(styles.root, className)}
+        className={clsx(styles.root, className)}
         {...passedProps}
         ref={innerRef}
     >

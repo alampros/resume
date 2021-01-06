@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import cx from 'classnames'
+import clsx from 'clsx'
 import {
   LabelFormatter,
   PolarAngleAxis,
@@ -77,7 +77,7 @@ export const ProjectSkillsetsVis: React.FC<TProps> = (props: TProps) => {
     <ResponsiveContainer
         height={125}
         width="100%"
-        className={cx(className, styles.root)}
+        className={clsx(className, styles.root)}
     >
       <RadarChart
           cx="50%"

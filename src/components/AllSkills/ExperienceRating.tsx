@@ -1,6 +1,6 @@
 import React from 'react'
 import { IoIosTime } from 'react-icons/io'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 import { ISkill } from 'data/Skill'
 
@@ -21,7 +21,7 @@ export const ExperienceRating: React.FC<TProps> = ({ yearsOfExperience, name, cl
   const years = yearsOfExperience < 1 ? bits : Math.floor(yearsOfExperience) + bits
   return (
     <div
-      className={cx(className, styles.root)}
+      className={clsx(className, styles.root)}
       role="presentation"
       aria-label={`I have ${years} ${plural} experience with ${name}`}
       {...passedProps}
