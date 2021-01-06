@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { useTheme } from '@material-ui/core'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import DateRange from 'components/DateRange'
@@ -26,6 +27,7 @@ export const Job: React.FC<TProps> = (props: TProps) => {
   const {
     density,
   } = useContext(InformationDensityContext)
+  const theme = useTheme()
 
   const $projects = density === 'sparse'
     ? null
@@ -35,7 +37,7 @@ export const Job: React.FC<TProps> = (props: TProps) => {
 
   return (
     <article className={styles.root}>
-      <header>
+      <header style={{ paddingTop: theme.mixins.toolbar.minHeight }}>
         <h3 aria-label={title}>{title}</h3>
         <DateRange {...date} className={styles.dateRange} />
         <Company {...company} department={department} className={styles.company} />

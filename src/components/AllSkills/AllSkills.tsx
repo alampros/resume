@@ -6,6 +6,7 @@ import { ISkill } from 'data/Skill'
 
 import SkillsList from './SkillsList'
 
+import 'components/ToggleDarkMode.css'
 import styles from './AllSkills.module.css'
 
 type ISortKey = 'yearsOfExperience' | 'strength'
