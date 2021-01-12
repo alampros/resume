@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { IoIosSchool, IoIosTime } from 'react-icons/io'
 import Toggle from 'react-toggle'
 
+import { DateFilterContext } from 'contexts/DateFilterContext'
 import { ISkill } from 'data/Skill'
 
 import SkillsList from './SkillsList'
@@ -17,6 +18,7 @@ type TProps = {
 
 const AllSkills: React.FC<TProps> = (props: TProps) => {
   const [sortBy, setSortBy] = useState('strength')
+  const { from, to } = useContext(DateFilterContext)
   const {
     skills = [],
   } = props
@@ -24,6 +26,15 @@ const AllSkills: React.FC<TProps> = (props: TProps) => {
     return null
   }
   const sortedSkills = skills
+    .filter(s => {
+      if(s.firstUsed && s.firstUsed > to) {
+        return false
+      }
+      if(s.lastUsed && s.lastUsed < from) {
+        return false
+      }
+      return true
+    })
     .sort((a, b) => {
       if(a.name === b.name) return 0
       return a.name.localeCompare(b.name)

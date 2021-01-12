@@ -12,6 +12,7 @@ import WelcomeLogger from 'components/WelcomeLogger'
 import { IInformationDensityContext } from 'contexts/InformationDensityContext'
 import ResumeMetadata from 'data/ResumeMetadata'
 
+import { DateFilterContextProvider } from './DateFilterContextProvider'
 import InformationDensityContextProvider from './InformationDensityContextProvider'
 import { LeftNav } from './LeftNav'
 
@@ -93,77 +94,79 @@ export const Layout: React.FC<TProps> = ({
 
   return (
     <InformationDensityContextProvider initialDensity={densityProps.density}>
-      <WelcomeLogger />
-      <Helmet
-        titleTemplate="Aaron Lampros | %s"
-        defaultTitle="Resume"
-      >
-        <html lang="en" className={'density-' + densityProps.density} />
-        <meta charSet="utf-8" />
-        <title>{title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://alampros.com/index.html" />
-        <meta name="description" content={description} />
-        {/* OpenGraph stuff */}
-        <meta property="og:image" content="https://alampros.com/aaron-sm.jpg" />
-        <meta property="og:image:secure_url" content="https://alampros.com/aaron-sm.jpg" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="500" />
-        <meta property="og:image:height" content="500" />
-        <meta property="og:image:alt" content="Caricature of Aaron Lampros" />
-        {/* Schema.org for google stuff */}
-        <meta itemProp="name" content={title} />
-        <meta itemProp="description" content={description} />
-        <meta itemProp="image" content="https://alampros.com/aaron-sm.jpg" />
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:creator" content="@alampros" />
-        {helmetKids}
-      </Helmet>
-      <Container className={styles.container}>
-        <nav aria-label="filters" className="no-print">
-          <Hidden mdUp implementation="css">
-            <Drawer
-              variant="temporary"
-              open={mobileOpen}
-              onClose={handleDrawerToggle}
-              classes={{
-                paper: styles.drawerPaper,
-              }}
-              ModalProps={{
-                keepMounted: true, // Better open performance on mobile.
-              }}
+      <DateFilterContextProvider>
+        <WelcomeLogger />
+        <Helmet
+          titleTemplate="Aaron Lampros | %s"
+          defaultTitle="Resume"
+        >
+          <html lang="en" className={'density-' + densityProps.density} />
+          <meta charSet="utf-8" />
+          <title>{title}</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="canonical" href="https://alampros.com/index.html" />
+          <meta name="description" content={description} />
+          {/* OpenGraph stuff */}
+          <meta property="og:image" content="https://alampros.com/aaron-sm.jpg" />
+          <meta property="og:image:secure_url" content="https://alampros.com/aaron-sm.jpg" />
+          <meta property="og:image:type" content="image/jpeg" />
+          <meta property="og:image:width" content="500" />
+          <meta property="og:image:height" content="500" />
+          <meta property="og:image:alt" content="Caricature of Aaron Lampros" />
+          {/* Schema.org for google stuff */}
+          <meta itemProp="name" content={title} />
+          <meta itemProp="description" content={description} />
+          <meta itemProp="image" content="https://alampros.com/aaron-sm.jpg" />
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:creator" content="@alampros" />
+          {helmetKids}
+        </Helmet>
+        <Container className={styles.container}>
+          <nav aria-label="filters" className="no-print">
+            <Hidden mdUp implementation="css">
+              <Drawer
+                variant="temporary"
+                open={mobileOpen}
+                onClose={handleDrawerToggle}
+                classes={{
+                  paper: styles.drawerPaper,
+                }}
+                ModalProps={{
+                  keepMounted: true, // Better open performance on mobile.
+                }}
+              >
+                <LeftNav />
+              </Drawer>
+            </Hidden>
+            {/* @ts-ignore */}
+            <Hidden smDown implementation="css" className={styles.fixedNavContainer}>
+              <LeftNav className={styles.fixedNav} />
+            </Hidden>
+          </nav>
+          <main className={styles.main}>
+            <BadExperienceDetect />
+            <AppBar
+              position="fixed"
+              color="transparent"
+              className={clsx(styles.appBar, 'no-print')}
             >
-              <LeftNav />
-            </Drawer>
-          </Hidden>
-          {/* @ts-ignore */}
-          <Hidden smDown implementation="css" className={styles.fixedNavContainer}>
-            <LeftNav className={styles.fixedNav} />
-          </Hidden>
-        </nav>
-        <main className={styles.main}>
-          <BadExperienceDetect />
-          <AppBar
-            position="fixed"
-            color="transparent"
-            className={clsx(styles.appBar, 'no-print')}
-          >
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              className={styles.menuButton}
-            >
-              <MenuIcon />
-            </IconButton>
-          </AppBar>
-          <Header {...ResumeMetadata} />
-          {children}
-          <Footer />
-        </main>
-      </Container>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                className={styles.menuButton}
+              >
+                <MenuIcon />
+              </IconButton>
+            </AppBar>
+            <Header {...ResumeMetadata} />
+            {children}
+            <Footer />
+          </main>
+        </Container>
+      </DateFilterContextProvider>
     </InformationDensityContextProvider>
   )
 }

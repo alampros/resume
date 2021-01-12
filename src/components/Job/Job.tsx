@@ -1,42 +1,56 @@
 import React, { useContext } from 'react'
 import { useTheme } from '@material-ui/core'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, MotionProps } from 'framer-motion'
 
 import DateRange from 'components/DateRange'
+import { DateFilterContext } from 'contexts/DateFilterContext'
 import { InformationDensityContext } from 'contexts/InformationDensityContext'
 import { IJobDescriptor } from 'data/Job'
+import { filterDateRange } from 'data/utils'
 
 import Company from './Company'
+import { FilteredProjectsIndicator } from './FilteredProjectsIndicator'
 import JobSkills from './JobSkills'
 import Project from './Project'
 
 import styles from './Job.module.css'
 
-type TProps = IJobDescriptor
+type TProps = {
+  job: IJobDescriptor
+} & MotionProps
 
 export const Job: React.FC<TProps> = (props: TProps) => {
   const {
-    title,
-    company,
-    department,
-    description,
-    projects,
-    date,
-    skills,
+    job: {
+      title,
+      company,
+      department,
+      description,
+      projects,
+      date,
+      skills,
+    },
+    ...motionProps
   } = props
   const {
     density,
   } = useContext(InformationDensityContext)
+  const { from, to } = useContext(DateFilterContext)
   const theme = useTheme()
 
   const $projects = density === 'sparse'
     ? null
-    : projects.map(project => (
-      <Project key={project.description} project={project} />
-    ))
+    : projects
+      .filter(p => filterDateRange(p.date, { start: from, end: to }))
+      .map(project => (
+        <Project key={project.description} project={project} />
+      ))
+  const $filteredProjectsIndicator = $projects && $projects.length < projects.length && (
+    <FilteredProjectsIndicator numberFiltered={projects.length - $projects?.length} key="filtered-indicator" />
+  )
 
   return (
-    <article className={styles.root}>
+    <motion.article className={styles.root} {...motionProps}>
       <header style={{ paddingTop: theme.mixins.toolbar.minHeight }}>
         <h3 aria-label={title}>{title}</h3>
         <DateRange {...date} className={styles.dateRange} />
@@ -49,7 +63,7 @@ export const Job: React.FC<TProps> = (props: TProps) => {
         </>
       )}
       <JobSkills skills={skills} />
-      <AnimatePresence>
+      <AnimatePresence key="job-projects-density">
         {$projects && $projects.length > 0 && (
           <motion.div
             key={`projects-${company.name}-${title}`}
@@ -60,12 +74,15 @@ export const Job: React.FC<TProps> = (props: TProps) => {
           >
             <h4>Notable Projects:</h4>
             <ul className={styles.projects}>
-              {$projects}
+              <AnimatePresence key="job-projects">
+                {$projects}
+                {$filteredProjectsIndicator}
+              </AnimatePresence>
             </ul>
           </motion.div>
         )}
       </AnimatePresence>
-    </article>
+    </motion.article>
   )
 }
 

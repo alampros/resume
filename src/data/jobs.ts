@@ -9,7 +9,8 @@ const jobs: IJobConstructorParam[] = [
     department: 'Engineering',
     description: 'Design, plan, and build the next major version of the Laboratory Information Management System. Develop internal mobile lab sample tracking app. Improve and develop new features for the customer data access portal. Mentorship of development team.',
     date: {
-      start: new Date('2018-04-29T12:00:00.000Z'),
+      start: new Date('2018-04-30T12:00:00.000Z'),
+      end: new Date('2020-12-18T05:00:00.000Z'),
     },
     skills: [
       { skill: skills.ts, relevance: 1 },
@@ -28,6 +29,10 @@ const jobs: IJobConstructorParam[] = [
         title: 'Slack Reporting Bot',
         description: 'Built a Slack app as UI for internal users to generate PDF reports (rendered in React) and search customer datadase.',
         skills: [skills.docker, skills.node, skills.ts, skills.linux],
+        date: {
+          start: new Date('2019-11-01T05:00:00.000Z'),
+          end: new Date('2020-06-01T05:00:00.000Z'),
+        },
         skillsetRatings: {
           design: 0.9,
           development: 1,
@@ -47,6 +52,10 @@ const jobs: IJobConstructorParam[] = [
           leadership: 2 / 3,
           organization: 4 / 10,
         },
+        date: {
+          start: new Date('2018-08-01T05:00:00.000Z'),
+          end: new Date('2019-01-01T05:00:00.000Z'),
+        },
       },
       {
         title: 'Continuous Integration',
@@ -58,6 +67,10 @@ const jobs: IJobConstructorParam[] = [
           communication: 3 / 4,
           leadership: 1,
           organization: 1 / 4,
+        },
+        date: {
+          start: new Date('2020-09-01T05:00:00.000Z'),
+          end: new Date('2020-10-01T05:00:00.000Z'),
         },
       },
       {
@@ -71,6 +84,10 @@ const jobs: IJobConstructorParam[] = [
           leadership: 1 / 2,
           organization: 3 / 4,
         },
+        date: {
+          start: new Date('2020-02-01T05:00:00.000Z'),
+          end: new Date('2020-06-01T05:00:00.000Z'),
+        },
       },
       {
         title: 'AssetLink PWA',
@@ -82,6 +99,10 @@ const jobs: IJobConstructorParam[] = [
           communication: 0.2,
           leadership: 0.5,
           organization: 0.3,
+        },
+        date: {
+          start: new Date('2019-05-20T05:00:00.000Z'),
+          end: new Date('2020-02-01T05:00:00.000Z'),
         },
       },
     ],
