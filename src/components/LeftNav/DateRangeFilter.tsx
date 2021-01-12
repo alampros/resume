@@ -11,10 +11,10 @@ type TProps = {
 
 export const DateRangeFilter = (props: TProps) => {
   const { liveUpdate, ...sliderProps } = props
-  const min = defaultDateRange[0].getTime()
+  const { setDates, earliest } = useContext(DateFilterContext)
+  const min = earliest.getTime()
   const max = defaultDateRange[1].getTime()
-  const { setDates } = useContext(DateFilterContext)
-  const [tempRange, setTempRange] = useState([min, max])
+  const [tempRange, setTempRange] = useState([new Date(2015, 0).getTime(), max])
 
   const handleChange = (_event: React.ChangeEvent<{}>, v: number | number[]) => {
     if(!Array.isArray(v)) {

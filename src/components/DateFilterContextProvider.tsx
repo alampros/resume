@@ -5,7 +5,7 @@ import { DateFilterContext, defaultDateRange, jobDateRange } from 'contexts/Date
 type TProps = PropsWithChildren<{
 }>
 export const DateFilterContextProvider = ({ children }: TProps) => {
-  const [fromDate, setFromDate] = useState(defaultDateRange[0])
+  const [fromDate, setFromDate] = useState(jobDateRange[0])
   const [toDate, setToDate] = useState(defaultDateRange[1])
   const setDates = useCallback(([newFromDate, newToDate]: [Date, Date]) => {
     // guard against setting a filter that would yield no jobs

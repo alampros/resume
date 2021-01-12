@@ -17,9 +17,11 @@ const jobDates = jobs.reduce((acc, job) => {
 const earliest = jobDates[jobDates.length - 1]
 const latest = jobDates[0]
 const bufferMs = 1000 * 60 * 60 * 24 * 29
-const filterMin = new Date(earliest.getTime() - bufferMs)
+const filterMin = new Date(2012, 0)
 const filterMax = new Date(latest.getTime() + bufferMs)
+
 export const jobDateRange = [earliest, latest]
+
 export const defaultDateRange = [filterMin, filterMax]
 
 export interface IDateFilterContext {
