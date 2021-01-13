@@ -28,13 +28,6 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'stretch',
       justifyItems: 'stretch',
     },
-    menuButton: {
-      marginRight: theme.spacing(2),
-      alignSelf: 'flex-start',
-      [theme.breakpoints.up('md')]: {
-        display: 'none',
-      },
-    },
     main: {
       display: 'flex',
       flexDirection: 'column',
@@ -43,9 +36,6 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingRight: theme.spacing(3),
       flexGrow: 1,
       marginTop: theme.mixins.toolbar.minHeight,
-      [theme.breakpoints.up('md')]: {
-        // marginLeft: drawerWidth,
-      },
     },
     fixedNavContainer: {
       position: 'relative',
@@ -69,6 +59,9 @@ const useStyles = makeStyles((theme: Theme) =>
       left: 0,
       paddingLeft: '11px',
       paddingTop: '5px',
+      [theme.breakpoints.up('md')]: {
+        display: 'none',
+      },
     },
   })
 )
@@ -159,7 +152,6 @@ export const Layout: React.FC<TProps> = ({
                 aria-label="open drawer"
                 edge="start"
                 onClick={handleDrawerToggle}
-                className={styles.menuButton}
               >
                 <MenuIcon />
               </IconButton>
