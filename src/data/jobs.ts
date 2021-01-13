@@ -9,7 +9,7 @@ const jobs: IJobConstructorParam[] = [
     department: 'Engineering',
     description: 'Design, plan, and build the next major version of the Laboratory Information Management System. Develop internal mobile lab sample tracking app. Improve and develop new features for the customer data access portal. Mentorship of development team.',
     date: {
-      start: new Date('2018-04-30T12:00:00.000Z'),
+      start: new Date('2019-04-30T12:00:00.000Z'),
       end: new Date('2020-12-18T05:00:00.000Z'),
     },
     skills: [
@@ -403,4 +403,8 @@ const jobs: IJobConstructorParam[] = [
   }
 ]
 
-export default jobs.map(jobDescriptor => new Job(jobDescriptor))
+const sorted = jobs.map(jobDescriptor => new Job(jobDescriptor)).sort((a, b) => {
+  return b.date.start.getTime() - a.date.start.getTime()
+})
+
+export default sorted
