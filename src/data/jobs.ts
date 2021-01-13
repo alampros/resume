@@ -9,7 +9,8 @@ const jobs: IJobConstructorParam[] = [
     department: 'Engineering',
     description: 'Design, plan, and build the next major version of the Laboratory Information Management System. Develop internal mobile lab sample tracking app. Improve and develop new features for the customer data access portal. Mentorship of development team.',
     date: {
-      start: new Date('2018-04-29T12:00:00.000Z'),
+      start: new Date('2018-04-30T12:00:00.000Z'),
+      end: new Date('2020-12-18T05:00:00.000Z'),
     },
     skills: [
       { skill: skills.ts, relevance: 1 },
@@ -26,8 +27,12 @@ const jobs: IJobConstructorParam[] = [
     projects: [
       {
         title: 'Slack Reporting Bot',
-        description: 'Built a Slack app as UI for internal users to generate PDF reports (rendered in React) and search customer datadase.',
+        description: 'Built a Slack app as UI for internal users to generate PDF reports (rendered in React) and search customer database.',
         skills: [skills.docker, skills.node, skills.ts, skills.linux],
+        date: {
+          start: new Date('2019-11-01T05:00:00.000Z'),
+          end: new Date('2020-06-01T05:00:00.000Z'),
+        },
         skillsetRatings: {
           design: 0.9,
           development: 1,
@@ -47,6 +52,10 @@ const jobs: IJobConstructorParam[] = [
           leadership: 2 / 3,
           organization: 4 / 10,
         },
+        date: {
+          start: new Date('2018-08-01T05:00:00.000Z'),
+          end: new Date('2019-01-01T05:00:00.000Z'),
+        },
       },
       {
         title: 'Continuous Integration',
@@ -58,6 +67,10 @@ const jobs: IJobConstructorParam[] = [
           communication: 3 / 4,
           leadership: 1,
           organization: 1 / 4,
+        },
+        date: {
+          start: new Date('2020-09-01T05:00:00.000Z'),
+          end: new Date('2020-10-01T05:00:00.000Z'),
         },
       },
       {
@@ -71,6 +84,10 @@ const jobs: IJobConstructorParam[] = [
           leadership: 1 / 2,
           organization: 3 / 4,
         },
+        date: {
+          start: new Date('2020-02-01T05:00:00.000Z'),
+          end: new Date('2020-06-01T05:00:00.000Z'),
+        },
       },
       {
         title: 'AssetLink PWA',
@@ -82,6 +99,10 @@ const jobs: IJobConstructorParam[] = [
           communication: 0.2,
           leadership: 0.5,
           organization: 0.3,
+        },
+        date: {
+          start: new Date('2019-05-20T05:00:00.000Z'),
+          end: new Date('2020-02-01T05:00:00.000Z'),
         },
       },
     ],
@@ -281,7 +302,105 @@ const jobs: IJobConstructorParam[] = [
       { skill: skills.il, relevance: 0.75 },
       { skill: skills.cf, relevance: 0.1 },
     ],
+    projects: [
+      {
+        title: 'Inspection Tool Prototype (Service Sherpa)',
+        description: 'A prototype tool for dealership service technicians to use a tablet PC to perform multipoint vehicle inspections.',
+        skills: [skills.js, skills.node, skills.css],
+        date: {
+          start: new Date(2009, 8),
+          end: new Date(2010, 0),
+        },
+        skillsetRatings: {
+          design: 0.8,
+          development: 0.6,
+          communication: 0.2,
+          leadership: 0.1,
+          organization: 0,
+        },
+      },
+      {
+        title: 'Tire Ordering System Prototypes',
+        description: 'A proof-of-concept for an advanced, high-efficiency/low-entry interface to optimize time spent by power users',
+        skills: [skills.flex, skills.flash, skills.cf, skills.css],
+        date: {
+          start: new Date(2008, 2),
+          end: new Date(2008, 5),
+        },
+        skillsetRatings: {
+          design: 0.7,
+          development: 0.8,
+          communication: 0.3,
+          leadership: 0.1,
+          organization: 0,
+        },
+      },
+      {
+        title: 'B2B Sales Portal (v4)',
+        description: 'Implement design of new core B2B web platform in service-oriented architecture. Devise and coordinate development of iframe-based web component system to meet the goals of the proposed design.',
+        skills: [skills.js, skills.html, skills.cf, skills.css],
+        date: {
+          start: new Date(2007, 11),
+          end: new Date(2008, 7),
+        },
+        skillsetRatings: {
+          design: 0.25,
+          development: 0.9,
+          communication: 0.8,
+          leadership: 0.7,
+          organization: 0.3,
+        },
+      },
+    ],
   },
+  {
+    title: 'Flex Developer',
+    companyId: 'va',
+    department: 'Office of Information and Technology',
+    description: 'Develop tools to help VA staff and patients',
+    date: {
+      start: new Date('2005-06-01T12:00:00.000Z'),
+      end: new Date('2007-10-27T12:00:00.000Z'),
+    },
+    skills: [
+      { skill: skills.flex, relevance: 0.9 },
+      { skill: skills.js, relevance: 0.1 },
+    ],
+    projects: [
+      {
+        title: 'Print Queue Management Tool',
+        description: 'Created a web-based utility for requesting large orders of printed materials',
+        skills: [skills.flex, skills.cf, skills.css],
+        date: {
+          start: new Date(2005, 6),
+          end: new Date(2006, 11),
+        },
+        skillsetRatings: {
+          design: 0.5,
+          development: 0.5,
+          communication: 0.2,
+          leadership: 0,
+          organization: 0,
+        },
+      },
+    ],
+  },
+  {
+    title: 'Content Developer',
+    companyId: 'knowbase',
+    department: 'Content Development',
+    description: 'Create interactive learning modules for a variety of Fortune 500 customers.',
+    date: {
+      start: new Date('2004-06-01T12:00:00.000Z'),
+      end: new Date('2005-06-01T12:00:00.000Z'),
+    },
+    skills: [
+      { skill: skills.flash, relevance: 0.8 },
+      { skill: skills.ps, relevance: 0.666 },
+      { skill: skills.il, relevance: 0.5 },
+      { skill: skills.js, relevance: 0.1 },
+    ],
+  }
 ]
 
 export default jobs.map(jobDescriptor => new Job(jobDescriptor))

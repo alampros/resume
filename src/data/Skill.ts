@@ -8,6 +8,7 @@ export interface ISkill {
   name: string
   yearsOfExperience: number
   lastUsed?: Date // if not present, assume current
+  firstUsed?: Date
   strength: number
   interest: number
   link?: URL

@@ -1,4 +1,5 @@
 import React, { useContext, useMemo } from 'react'
+import { motion, MotionProps } from 'framer-motion'
 
 import { InformationDensityContext } from 'contexts/InformationDensityContext'
 import { IProject } from 'data/Project'
@@ -10,11 +11,12 @@ import styles from './Job.module.css'
 
 type TProps = {
   project: IProject
-}
+} & MotionProps
 
 export const Project: React.FC<TProps> = (props: TProps) => {
   const {
     project,
+    ...motionProps
   } = props
   const {
     density,
@@ -58,7 +60,7 @@ export const Project: React.FC<TProps> = (props: TProps) => {
         {$skillSets}
         {$skills}
       </figure>
-      )
+    )
     : null
   const $wrappedTitleDescription = ($title && $description)
     ? (
@@ -66,29 +68,36 @@ export const Project: React.FC<TProps> = (props: TProps) => {
         {$title}
         {$description}
       </div>
-      )
+    )
     : (
       <>
         {$title}
         {$description}
       </>
-      )
+    )
   return (
-    <li className={styles.project}>
+    <motion.li
+      className={styles.project}
+      transition={{ duration: 0.3 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, height: 0 }}
+      {...motionProps}
+    >
       {($wrappedTitleDescription && $skillsFigure)
         ? (
           <div className={styles.flexWrapper}>
             {$wrappedTitleDescription}
             {$skillsFigure}
           </div>
-          )
+        )
         : (
           <>
             {$wrappedTitleDescription}
             {$skillsFigure}
           </>
-          )}
-    </li>
+        )}
+    </motion.li>
   )
 }
 

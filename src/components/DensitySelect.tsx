@@ -10,7 +10,7 @@ type TSliderMark = {
 }
 const marks: Array<TSliderMark> = [
   { label: 'Sparse', value: 10, density: 'sparse' },
-  { label: 'Normal', value: 20, density: 'normal' },
+  { label: '', value: 20, density: 'normal' },
   { label: 'Dense', value: 30, density: 'dense' },
 ]
 
@@ -27,7 +27,7 @@ export const DensitySelect: React.FC<SliderProps> = (props: SliderProps) => {
       }}
       value={marks.find(m => m.density === density)?.value || 10}
       getAriaValueText={(val) => {
-        return marks.find(m => m.value === val)?.label || '?'
+        return marks.find(m => m.value === val)?.density || '?'
       }}
       step={10}
       valueLabelDisplay="off"

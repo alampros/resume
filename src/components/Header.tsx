@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { GoFilePdf, GoMarkGithub, GoPerson } from 'react-icons/go'
 import { MdEmail, MdMyLocation, MdPermPhoneMsg } from 'react-icons/md'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 import Address from 'components/Address'
 import Objective from 'components/Objective'
@@ -19,7 +19,7 @@ type TProps = IResumeMetadata
 const Actions = () => {
   return (
     <div
-      className={cx('no-print', styles.actions)}
+      className={clsx('no-print', styles.actions)}
       role="menubar"
     >
       <a href="/Aaron Lampros.vcf">

@@ -1,6 +1,6 @@
 import React from 'react'
 import { IoIosSchool } from 'react-icons/io'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 import { ISkill } from 'data/Skill'
 
@@ -21,7 +21,7 @@ export const StrengthRating: React.FC<TProps> = ({ strength, name, className, ..
   const title = `I arbitrarily rank my strength with ${name} at ${(strength * 10)} out of 10`
   return (
     <div
-      className={cx(className, styles.root, styles[cls])}
+      className={clsx(className, styles.root, styles[cls])}
       role="presentation"
       aria-label={title}
       {...passedProps}
@@ -36,7 +36,7 @@ export const StrengthRating: React.FC<TProps> = ({ strength, name, className, ..
       >
         {strength}
       </progress>
-      <span className={cx(styles.rating, 'no-screen')} aria-hidden>
+      <span className={clsx(styles.rating, 'no-screen')} aria-hidden>
         <strong>{strength * 100}</strong>%
       </span>
     </div>

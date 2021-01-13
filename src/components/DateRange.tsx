@@ -29,10 +29,10 @@ export const DateRange: React.FC<TProps> = (props: TProps) => {
   const $end = end
     ? (
       <Time date={end} />
-      )
+    )
     : (
       <time>Present</time>
-      )
+    )
   const labelStart = dateFormatter.format(start)
   const labelEnd = end ? dateFormatter.format(end) : 'present'
   return (

@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import cx from 'classnames'
+import clsx from 'clsx'
 import {
   LabelFormatter,
   PolarAngleAxis,
@@ -75,22 +75,22 @@ export const ProjectSkillsetsVis: React.FC<TProps> = (props: TProps) => {
   }
   return (
     <ResponsiveContainer
-        height={125}
-        width="100%"
-        className={cx(className, styles.root)}
+      height={125}
+      width="100%"
+      className={clsx(className, styles.root)}
     >
       <RadarChart
-          cx="50%"
-          cy="55%"
-          outerRadius={50}
-          data={data}
-          {...passedProps}
+        cx="50%"
+        cy="55%"
+        outerRadius={50}
+        data={data}
+        {...passedProps}
       >
         <PolarGrid />
         <PolarAngleAxis dataKey="label" />
         <Tooltip
-            formatter={ratingFormatter}
-            labelFormatter={labelFormatter as LabelFormatter}
+          formatter={ratingFormatter}
+          labelFormatter={labelFormatter as LabelFormatter}
         />
         <Radar dataKey="rating" className="project-polygon" fillOpacity={0.6} />
       </RadarChart>

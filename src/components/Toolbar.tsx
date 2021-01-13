@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Grid, GridProps, Typography } from '@material-ui/core'
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 import DensitySelect from './DensitySelect'
 import ToggleDarkMode from './ToggleDarkMode'
@@ -14,12 +14,12 @@ export const Toolbar: React.FC<TProps> = (props: TProps) => {
   return (
     <Box mb={4}>
       <Grid
-      className={classNames(className, 'no-print', styles.root)}
-      container
-      spacing={2}
-      alignItems="flex-start"
-      justify="space-around"
-      {...rest}
+        className={clsx(className, 'no-print', styles.root)}
+        container
+        spacing={2}
+        alignItems="flex-start"
+        justify="space-around"
+        {...rest}
       >
         <Grid item xs={4}>
           <Typography id="label-density-select" gutterBottom align="center">
