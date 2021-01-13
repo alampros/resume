@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { useTheme } from '@material-ui/core'
+import clsx from 'clsx'
 import { AnimatePresence, motion, MotionProps } from 'framer-motion'
 
 import DateRange from 'components/DateRange'
@@ -17,6 +18,7 @@ import styles from './Job.module.css'
 
 type TProps = {
   job: IJobDescriptor
+  className?: string
 } & MotionProps
 
 export const Job: React.FC<TProps> = (props: TProps) => {
@@ -30,6 +32,7 @@ export const Job: React.FC<TProps> = (props: TProps) => {
       date,
       skills,
     },
+    className,
     ...motionProps
   } = props
   const {
@@ -50,8 +53,8 @@ export const Job: React.FC<TProps> = (props: TProps) => {
   )
 
   return (
-    <motion.article className={styles.root} {...motionProps}>
-      <header style={{ paddingTop: theme.mixins.toolbar.minHeight }}>
+    <motion.article className={clsx(className, styles.root)} {...motionProps}>
+      <header style={{ top: theme.mixins.toolbar.minHeight }}>
         <h3 aria-label={title}>{title}</h3>
         <DateRange {...date} className={styles.dateRange} />
         <Company {...company} department={department} className={styles.company} />

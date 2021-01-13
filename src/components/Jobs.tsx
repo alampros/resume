@@ -6,6 +6,8 @@ import { DateFilterContext } from 'contexts/DateFilterContext'
 import JobType from 'data/Job'
 import { filterDateRange } from 'data/utils'
 
+import SectionHeader from './SectionHeader'
+
 type TProps = {
   jobs: JobType[]
 }
@@ -27,13 +29,11 @@ export const Jobs: React.FC<TProps> = (props: TProps) => {
       />
     ))
   return (
-    <section>
-      <h2>Professional Experience</h2>
-      <hr aria-hidden />
+    <SectionHeader title="Professional Experience">
       <AnimatePresence>
         {$jobs}
       </AnimatePresence>
-    </section>
+    </SectionHeader>
   )
 }
 

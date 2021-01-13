@@ -58,14 +58,17 @@ const useStyles = makeStyles((theme: Theme) =>
     fixedNav: {
       // height: '100%',
       position: 'sticky',
-      top: 400,
+      top: 300,
     },
     drawerPaper: {
       width: drawerWidth,
     },
     appBar: {
       boxShadow: 'none',
-      paddingLeft: theme.spacing(3),
+      width: '3em',
+      left: 0,
+      paddingLeft: '11px',
+      paddingTop: '5px',
     },
   })
 )

@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { IoIosSchool, IoIosTime } from 'react-icons/io'
 import Toggle from 'react-toggle'
 
+import SectionHeader from 'components/SectionHeader'
 import { DateFilterContext } from 'contexts/DateFilterContext'
 import { ISkill } from 'data/Skill'
 
@@ -53,30 +54,31 @@ const AllSkills: React.FC<TProps> = (props: TProps) => {
     marginTop: '-4px',
     marginLeft: '-2px',
   }
+  const $nav = (
+    <span className={styles.headerContent}>
+      <span>Skills</span>
+      <nav>
+        <label htmlFor="sort-toggle">Sort by</label>
+        <Toggle
+          id="sort-toggle"
+          className="no-print"
+          checked={sortBy === 'strength'}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            setSortBy(e.target.checked ? 'strength' : 'yearsOfExperience')
+          }}
+          aria-label="Sort by"
+          icons={{
+            checked: <IoIosTime style={{ ...iconStyles }} />,
+            unchecked: <IoIosSchool style={{ ...iconStyles }} />,
+          }}
+        />
+      </nav>
+    </span>
+  )
   return (
-    <section className={styles.root}>
-      <header>
-        <h2>Skills</h2>
-        <hr aria-hidden />
-        <nav>
-          <label htmlFor="sort-toggle">Sort by</label>
-          <Toggle
-            id="sort-toggle"
-            className="no-print"
-            checked={sortBy === 'strength'}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setSortBy(e.target.checked ? 'strength' : 'yearsOfExperience')
-            }}
-            aria-label="Sort by"
-            icons={{
-              checked: <IoIosTime style={{ ...iconStyles }} />,
-              unchecked: <IoIosSchool style={{ ...iconStyles }} />,
-            }}
-          />
-        </nav>
-      </header>
+    <SectionHeader title={$nav} className={styles.root}>
       <SkillsList skills={sortedSkills} />
-    </section>
+    </SectionHeader>
   )
 }
 

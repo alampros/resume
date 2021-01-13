@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { Flipped, Flipper } from 'react-flip-toolkit'
+import { useTheme } from '@material-ui/core'
 
 import { InformationDensityContext } from 'contexts/InformationDensityContext'
 import { ISkill } from 'data/Skill'
@@ -16,6 +17,7 @@ interface TProps {
 
 export const SkillsList: React.FC<TProps> = (props: TProps) => {
   const { density } = useContext(InformationDensityContext)
+  const theme = useTheme()
   const {
     skills,
   } = props
@@ -52,7 +54,7 @@ export const SkillsList: React.FC<TProps> = (props: TProps) => {
     if(skills.length === 0) return null
     return (
       <article key={title}>
-        <h3 className={styles.heading}>{title}</h3>
+        <h3 className={styles.heading} style={{ top: theme.mixins.toolbar.minHeight }}>{title}</h3>
         <Flipper
           flipKey={skills.map(skill => skill.id).join('')}
           spring="gentle"

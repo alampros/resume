@@ -8,13 +8,11 @@ import ToggleDarkMode from '../ToggleDarkMode'
 import { ControlGroup } from './ControlGroup'
 import { DateRangeFilter } from './DateRangeFilter'
 
-import styles from './LeftNav.module.css'
-
 export const LeftNav = (props: GridProps) => {
   const { className, ...rest } = props
   return (
     <Box
-      className={clsx(styles.root, className, 'no-print')}
+      className={clsx(className, 'no-print')}
       direction="column"
       alignItems="stretch"
       px={3}
