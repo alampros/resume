@@ -48,7 +48,7 @@ export const DateRangeFilter = (props: TProps) => {
         }
       })
       .filter((_v, i) => {
-        return (i - 1) % 2 === 0
+        return (i - 1) % 4 === 0
       })
   }, [max, min])
 
