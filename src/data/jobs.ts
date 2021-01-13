@@ -59,7 +59,7 @@ const jobs: IJobConstructorParam[] = [
       },
       {
         title: 'Continuous Integration',
-        description: 'Instituted methodologies and foundation for CI/CD across 14 projects. Migrated organization from BitBucket Pipelines to GitHub Actions to utilize private package repositories and consolidate costs.',
+        description: 'Instituted methodologies and foundation for CI/CD across 14 projects. Migrated organization from BitBucket Pipelines to GitHub Actions to utilize private package repositories, consolidate services, and reduce costs.',
         skills: [skills.docker, skills.git, skills.unit_testing],
         skillsetRatings: {
           design: 3 / 4,
@@ -75,7 +75,7 @@ const jobs: IJobConstructorParam[] = [
       },
       {
         title: 'Identity and Authorizations Management',
-        description: 'Architected and implemented a full-featured, self-service identity management solution using OAuth/OpenID to unify three separate antiquated user stores. Combined open-source and bespoke components with a full CI/CD pipeline, realtime routing, and network isolation.',
+        description: 'Designed and implemented a full-featured, self-service identity management solution using OAuth/OpenID to unify three separate antiquated user stores. Combined open-source and bespoke components with a full CI/CD pipeline, realtime routing, and network isolation.',
         skills: [skills.node, skills.docker, skills.react, skills.gatsby, skills.ts, skills.git],
         skillsetRatings: {
           design: 1,
@@ -184,7 +184,7 @@ const jobs: IJobConstructorParam[] = [
     title: 'Product Designer',
     companyId: 'dealertire',
     department: 'Product Management',
-    description: 'Orchestrated move to new position in Marketing Department to collocate all User Experience design roles. Lead product design initiatives for B2B properties and create efficiencies by sharing assets between all web properties (B2B, B2C, internal).',
+    description: 'Orchestrated move to new position in Marketing Department to colocate all User Experience design roles. Lead product design initiatives for B2B properties and create efficiencies by sharing assets between all web properties (B2B, B2C, internal).',
     projects: [
       {
         title: 'Multi-tenant Design System',
