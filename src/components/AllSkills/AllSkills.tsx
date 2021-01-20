@@ -4,6 +4,7 @@ import Toggle from 'react-toggle'
 
 import SectionHeader from 'components/SectionHeader'
 import { DateFilterContext } from 'contexts/DateFilterContext'
+import { SkillsRelevanceContext } from 'contexts/SkillsRelevanceContext'
 import { ISkill } from 'data/Skill'
 
 import SkillsList from './SkillsList'
@@ -20,6 +21,7 @@ type TProps = {
 const AllSkills: React.FC<TProps> = (props: TProps) => {
   const [sortBy, setSortBy] = useState('strength')
   const { from, to } = useContext(DateFilterContext)
+  const relevance = useContext(SkillsRelevanceContext)
   const {
     skills = [],
   } = props
@@ -35,6 +37,11 @@ const AllSkills: React.FC<TProps> = (props: TProps) => {
         return false
       }
       return true
+    })
+    .filter(s => {
+      return s.relevance.code <= relevance.code &&
+        s.relevance.systems <= relevance.systems &&
+        s.relevance.ux <= relevance.ux
     })
     .sort((a, b) => {
       if(a.name === b.name) return 0

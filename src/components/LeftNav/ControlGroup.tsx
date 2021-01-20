@@ -14,7 +14,7 @@ export const ControlGroup: React.FC<TProps> = (props: TProps) => {
   } = props
   return (
     <Box display="flex" flexDirection="column" my={4} {...rest}>
-      <Typography id="label-density-select" gutterBottom {...labelProps}>
+      <Typography gutterBottom {...labelProps}>
         {label}
       </Typography>
       <Box pl={2}>

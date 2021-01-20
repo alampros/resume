@@ -3,7 +3,7 @@ import { createMuiTheme, Theme } from '@material-ui/core'
 // @ts-ignore
 import ThemeTopLayout from 'gatsby-theme-material-ui-top-layout/src/components/top-layout' // eslint-disable-line
 
-import DarkModeContextProvider from 'components/DarkModeContextProvider'
+import DarkModeContextProvider from 'contexts/DarkModeContextProvider'
 import useDarkMode from 'hooks/useDarkMode'
 
 type TProps = PropsWithChildren<{
