@@ -30,7 +30,7 @@ export const LeftNav = (props: TProps) => {
       px={3}
       {...passedProps}
     >
-      <ControlGroup label="Theme:" labelProps={{ id: 'label-theme-toggle' }}>
+      <ControlGroup alignItems="center" mb={8}>
         <ToggleDarkMode id="toggle-dark-mode" aria-labelledby="label-theme-toggle" />
       </ControlGroup>
       {showInformationDensityFilter && (

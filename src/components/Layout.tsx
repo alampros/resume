@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     fixedNav: {
       position: 'sticky',
-      top: 400,
+      top: 200,
     },
     drawerPaper: {
       width: drawerWidth,

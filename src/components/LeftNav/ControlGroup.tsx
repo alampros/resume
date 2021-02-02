@@ -3,7 +3,7 @@ import { Box, BoxProps, Typography, TypographyProps } from '@material-ui/core'
 
 type TProps = {
   labelProps?: Partial<TypographyProps>
-  label: ReactNode,
+  label?: ReactNode,
 } & BoxProps
 export const ControlGroup: React.FC<TProps> = (props: TProps) => {
   const {
@@ -14,9 +14,11 @@ export const ControlGroup: React.FC<TProps> = (props: TProps) => {
   } = props
   return (
     <Box display="flex" flexDirection="column" my={4} {...rest}>
-      <Typography gutterBottom {...labelProps}>
-        {label}
-      </Typography>
+      {label && (
+        <Typography gutterBottom {...labelProps}>
+          {label}
+        </Typography>
+      )}
       <Box pl={2}>
         {children}
       </Box>
