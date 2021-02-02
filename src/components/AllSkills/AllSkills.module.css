@@ -1,41 +1,31 @@
+.headerContent {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  label {
+    padding-right: 1em;
+    font-size: var(--font-size-small);
+  }
+}
+
 .root {
   min-height: 75vh;
   margin-bottom: 2rem;
   page-break-inside: avoid;
 
   header {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    margin-bottom: 2rem;
-
-    @media screen and (min-width: 480px) {
-      flex-flow: row wrap;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      @media screen and (min-width: 480px) {
-        flex-direction: row;
- 
-        > label {
-          margin-right: 0.5rem;
-        }
-      }
-    }
-
-    h2 {
-      margin: 0;
-    }
-
-    label {
-      font-size: var(--font-size-small);
-    }
+    align-items: stretch;
   }
 }

@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useContext } from 'react'
 import Tippy from '@tippyjs/react'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 import TinyPie from 'components/TinyPie'
 import { InformationDensityContext } from 'contexts/InformationDensityContext'
@@ -24,7 +24,7 @@ export const JobSkill: FunctionComponent<TProps> = (props: TProps) => {
   if(density === 'sparse' || typeof relevance === 'undefined') {
     return (
       <span
-        className={cx(styles.root, styles.fig, className)}
+        className={clsx(styles.root, styles.fig, className)}
         aria-label={name}
       >
         {name}
@@ -40,7 +40,7 @@ export const JobSkill: FunctionComponent<TProps> = (props: TProps) => {
   )
   return (
     <span
-      className={cx(styles.root, className)}
+      className={clsx(styles.root, className)}
       aria-label={`${name} was approximately ${perc}% relevant to this job`}
     >
       <Tippy

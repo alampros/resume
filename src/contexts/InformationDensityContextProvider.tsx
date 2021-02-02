@@ -17,5 +17,3 @@ export const InformationDensityContextProvider = ({ initialDensity, children }: 
     </InformationDensityContext.Provider>
   )
 }
-
-export default InformationDensityContextProvider

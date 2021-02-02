@@ -5,6 +5,7 @@ const partialSkills = {
   react: {
     name: 'React',
     yearsOfExperience: new Date().getFullYear() - 2015,
+    firstUsed: new Date(2015, 2),
     strength: 1,
     interest: 1,
     link: new URL('https://reactjs.org'),
@@ -17,6 +18,7 @@ const partialSkills = {
   ts: {
     name: 'TypeScript',
     yearsOfExperience: new Date().getFullYear() - 2017,
+    firstUsed: new Date(2017, 0),
     strength: 1,
     interest: 1,
     link: new URL('https://www.typescriptlang.org'),
@@ -30,6 +32,7 @@ const partialSkills = {
   html: {
     name: 'Semantic HTML',
     yearsOfExperience: new Date().getFullYear() - 2001,
+    firstUsed: new Date(1997, 0),
     strength: 1,
     interest: 0.9,
     link: new URL('https://en.wikipedia.org/wiki/Semantic_HTML'),
@@ -43,8 +46,9 @@ const partialSkills = {
   design_systems: {
     name: 'Design Systems',
     yearsOfExperience: new Date().getFullYear() - 2017,
+    firstUsed: new Date(2017, 0),
     strength: 1,
-    interest: 1,
+    interest: 9 / 10,
     link: new URL('https://www.smashingmagazine.com/design-systems-book/'),
     relevance: {
       code: 8 / 10,
@@ -55,7 +59,8 @@ const partialSkills = {
   },
   js: {
     name: 'JavaScript',
-    yearsOfExperience: new Date().getFullYear() - 2002,
+    yearsOfExperience: new Date().getFullYear() - 1998,
+    firstUsed: new Date(1998, 0),
     strength: 1,
     interest: 0.6,
     link: new URL('https://en.wikipedia.org/wiki/JavaScript'),
@@ -69,8 +74,9 @@ const partialSkills = {
   node: {
     name: 'Node.js',
     yearsOfExperience: new Date().getFullYear() - 2012,
+    firstUsed: new Date(2012, 0),
     strength: 1,
-    interest: 1,
+    interest: 0.99,
     link: new URL('https://nodejs.org'),
     relevance: {
       code: 7 / 10,
@@ -81,7 +87,8 @@ const partialSkills = {
   },
   css: {
     name: 'CSS/LESS/SASS',
-    yearsOfExperience: new Date().getFullYear() - 2001,
+    yearsOfExperience: new Date().getFullYear() - 1998,
+    firstUsed: new Date(1998, 0),
     strength: 1,
     interest: 0.9,
     link: new URL('https://en.wikipedia.org/wiki/Cascading_Style_Sheets'),
@@ -94,6 +101,8 @@ const partialSkills = {
   hapi: {
     name: 'Hapi.js',
     yearsOfExperience: new Date().getFullYear() - 2015,
+    firstUsed: new Date(2015, 0),
+    lastUsed: new Date(2020, 8),
     strength: 7 / 10,
     interest: 7 / 10,
     link: new URL('https://hapijs.com/'),
@@ -107,6 +116,7 @@ const partialSkills = {
   webpack: {
     name: 'webpack',
     yearsOfExperience: new Date().getFullYear() - 2016.5,
+    firstUsed: new Date(2016, 6),
     strength: 8 / 10,
     interest: 8 / 10,
     link: new URL('https://webpack.js.org'),
@@ -120,6 +130,7 @@ const partialSkills = {
   babel: {
     name: 'Babel',
     yearsOfExperience: new Date().getFullYear() - 2018,
+    firstUsed: new Date(2017, 0),
     strength: 3 / 10,
     interest: 9 / 10,
     link: new URL('https://babeljs.io'),
@@ -133,6 +144,7 @@ const partialSkills = {
   accessibility: {
     name: 'Accessibility',
     yearsOfExperience: new Date().getFullYear() - 2016,
+    firstUsed: new Date(2016, 0),
     strength: 0.9,
     interest: 9 / 10,
     link: new URL('https://www.w3.org/WAI/standards-guidelines/wcag/'),
@@ -146,6 +158,7 @@ const partialSkills = {
   docker: {
     name: 'Docker',
     yearsOfExperience: new Date().getFullYear() - 2018.5,
+    firstUsed: new Date(2020, 11),
     strength: 8 / 10,
     interest: 8 / 10,
     link: new URL('https://www.docker.com/'),
@@ -158,6 +171,7 @@ const partialSkills = {
   docker_swarm: {
     name: 'Docker Swarm',
     yearsOfExperience: new Date().getFullYear() - 2019.5,
+    firstUsed: new Date(2020, 11),
     strength: 0.4,
     interest: 9 / 10,
     link: new URL('https://www.docker.com/'),
@@ -166,11 +180,27 @@ const partialSkills = {
       ux: 0,
       systems: 1,
     },
-    comment: 'Combine with Portainer, this is the perfect middleground between docker-compose and kubernetes',
+    comment: 'Combined with Portainer, this is the perfect middleground between docker-compose and kubernetes',
+  },
+  k8s: {
+    name: 'Kubernetes',
+    yearsOfExperience: new Date().getFullYear() - 2020.5,
+    firstUsed: new Date(2020, 8),
+    strength: 0.1,
+    interest: 9 / 10,
+    link: new URL('https://kubernetes.io/'),
+    relevance: {
+      code: 0.2,
+      ux: 0,
+      systems: 1,
+    },
+    comment: 'Any technology sufficiently advanced is indistinguishable from magic',
   },
   aws_ecs: {
     name: 'AWS ECS',
-    yearsOfExperience: 1.5,
+    yearsOfExperience: 1,
+    lastUsed: new Date(2019, 1),
+    firstUsed: new Date(2018, 1),
     strength: 2 / 10,
     interest: 3 / 10,
     link: new URL('https://aws.amazon.com/ecs/'),
@@ -183,9 +213,10 @@ const partialSkills = {
   aws_et: {
     name: 'AWS ElasticTranscoder',
     yearsOfExperience: 1,
+    lastUsed: new Date(2019, 1),
+    firstUsed: new Date(2018, 2),
     strength: 0.5,
     interest: 3 / 10,
-    lastUsed: new Date(2019, 1), // Probably not going to use this again in the near future
     link: new URL('https://aws.amazon.com/elastictranscoder/'),
     relevance: {
       code: 0,
@@ -197,6 +228,7 @@ const partialSkills = {
   dotnet: {
     name: 'dotnet (C#)',
     yearsOfExperience: new Date().getFullYear() - 2017,
+    firstUsed: new Date(2015, 0),
     strength: 0.5,
     interest: 4 / 10,
     link: new URL('https://dotnet.microsoft.com/'),
@@ -209,7 +241,8 @@ const partialSkills = {
   },
   go: {
     name: 'Go (lang)',
-    yearsOfExperience: new Date().getFullYear() - 2018.5,
+    yearsOfExperience: 1.5,
+    firstUsed: new Date(2017, 0),
     strength: 1 / 10,
     interest: 6 / 10,
     lastUsed: new Date(2018, 6),
@@ -227,6 +260,7 @@ const partialSkills = {
     strength: 0.5,
     interest: 4 / 10,
     lastUsed: new Date(2018, 9),
+    firstUsed: new Date(2017, 0),
     link: new URL('https://www.sketchapp.com/'),
     relevance: {
       code: 2 / 10,
@@ -251,6 +285,7 @@ const partialSkills = {
   unit_testing: {
     name: 'Unit Testing',
     yearsOfExperience: new Date().getFullYear() - 2012,
+    firstUsed: new Date(2012, 6),
     strength: 6 / 10,
     interest: 7 / 10,
     link: new URL('https://en.wikipedia.org/wiki/Unit_testing'),
@@ -264,6 +299,8 @@ const partialSkills = {
   gtm: {
     name: 'Google Tag Manager',
     yearsOfExperience: new Date().getFullYear() - 2015,
+    lastUsed: new Date(2019, 0),
+    firstUsed: new Date(2017, 1),
     strength: 1 / 4,
     interest: 2 / 10,
     link: new URL('https://marketingplatform.google.com/about/tag-manager/'),
@@ -276,6 +313,8 @@ const partialSkills = {
   ps: {
     name: 'Photoshop',
     yearsOfExperience: new Date().getFullYear() - 2001,
+    lastUsed: new Date(2019, 3),
+    firstUsed: new Date(2000, 0),
     strength: 5 / 10,
     interest: 1 / 10,
     link: new URL('https://adobe.com/photoshop'),
@@ -288,6 +327,8 @@ const partialSkills = {
   il: {
     name: 'Illustrator',
     yearsOfExperience: new Date().getFullYear() - 2003,
+    lastUsed: new Date(2020, 6),
+    firstUsed: new Date(2002, 0),
     strength: 6 / 10,
     interest: 3 / 10,
     link: new URL('https://adobe.com/illustrator'),
@@ -303,6 +344,7 @@ const partialSkills = {
     strength: 0.6,
     interest: 1 / 10,
     lastUsed: new Date(2016, 2),
+    firstUsed: new Date(2014, 10),
     link: new URL('http://www.oracle.com/us/solutions/business-analytics/business-intelligence/enterprise-edition/overview/index.html'),
   },
   metabase: {
@@ -311,6 +353,7 @@ const partialSkills = {
     strength: 0.8,
     interest: 8 / 10,
     lastUsed: new Date(2020, 11),
+    firstUsed: new Date(2020, 1),
     link: new URL('https://www.metabase.com/'),
     relevance: {
       code: 1 / 10,
@@ -325,12 +368,15 @@ const partialSkills = {
     strength: 0.1,
     interest: 0,
     lastUsed: new Date(2013, 8),
+    firstUsed: new Date(2007, 11),
     link: new URL('https://en.wikipedia.org/wiki/Adobe_ColdFusion'),
     comment: 'If I could physically punch software, ColdFusion would be first in line.',
   },
   gatsby: {
     name: 'Gatsby',
     yearsOfExperience: new Date().getFullYear() - 2017.25,
+    lastUsed: new Date(),
+    firstUsed: new Date(2017, 2),
     strength: 0.9,
     interest: 1,
     link: new URL('https://www.gatsbyjs.org/'),
@@ -344,6 +390,7 @@ const partialSkills = {
   git: {
     name: 'git',
     yearsOfExperience: new Date().getFullYear() - 2014.5,
+    firstUsed: new Date(2014, 5),
     strength: 0.9,
     interest: 0.7,
     link: new URL('https://git-scm.com/'),
@@ -359,6 +406,7 @@ const partialSkills = {
     strength: 0.1,
     interest: 0.1,
     lastUsed: new Date(2018, 9),
+    firstUsed: new Date(2005, 0),
     link: new URL('https://subversion.apache.org/'),
     comment: 'Look, we just didn\'t know any better, ok?',
   },
@@ -366,6 +414,7 @@ const partialSkills = {
     name: 'MSSQL',
     yearsOfExperience: 4,
     lastUsed: new Date(2020, 12),
+    firstUsed: new Date(2008, 0),
     strength: 0.4,
     interest: 0.6,
     link: new URL('https://www.microsoft.com/en-us/sql-server/'),
@@ -378,6 +427,8 @@ const partialSkills = {
   pgsql: {
     name: 'PostgreSQL',
     yearsOfExperience: 2,
+    lastUsed: new Date(2020, 12),
+    firstUsed: new Date(2017, 0),
     strength: 0.3,
     interest: 0.8,
     link: new URL('https://www.postgresql.org/'),
@@ -390,6 +441,7 @@ const partialSkills = {
   i18n: {
     name: 'I18n',
     yearsOfExperience: new Date().getFullYear() - 2014,
+    firstUsed: new Date(2015, 0),
     strength: 0.6,
     interest: 0.8,
     link: new URL('https://en.wikipedia.org/wiki/Internationalization_and_localization'),
@@ -403,6 +455,7 @@ const partialSkills = {
   flex: {
     name: 'Adobe Flex',
     yearsOfExperience: 2007.5 - 2004.5,
+    firstUsed: new Date(2004, 6),
     strength: 0.5,
     interest: 0,
     lastUsed: new Date(2007, 5),
@@ -412,6 +465,7 @@ const partialSkills = {
   flash: {
     name: 'Adobe Flash',
     yearsOfExperience: 2005 - 2000,
+    firstUsed: new Date(2000, 0),
     strength: 0.3,
     interest: 0,
     lastUsed: new Date(2005, 0),
@@ -421,6 +475,7 @@ const partialSkills = {
   linux: {
     name: 'Linux',
     yearsOfExperience: new Date().getFullYear() - 2007,
+    firstUsed: new Date(2007, 0),
     strength: 0.9,
     interest: 0.7,
     link: new URL('https://en.wikipedia.org/wiki/Linux'),
@@ -434,6 +489,7 @@ const partialSkills = {
   jira: {
     name: 'Jira',
     yearsOfExperience: new Date().getFullYear() - 2018,
+    firstUsed: new Date(2016, 0),
     strength: 0.7,
     interest: 0.5,
     link: new URL('https://www.atlassian.com/software/jira'),
@@ -450,6 +506,7 @@ const partialSkills = {
     strength: 0.0001,
     interest: 0,
     lastUsed: new Date(2020, 10),
+    firstUsed: new Date(2019, 4),
     link: new URL('https://www.merriam-webster.com/dictionary/dumpster%20fire'),
   },
   asp: {
@@ -458,6 +515,7 @@ const partialSkills = {
     strength: 0.0001,
     interest: 0,
     lastUsed: new Date(2020, 10),
+    firstUsed: new Date(2019, 4),
     link: new URL('https://www.merriam-webster.com/dictionary/dumpster%20fire'),
   },
 }

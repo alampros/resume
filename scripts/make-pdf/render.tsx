@@ -16,5 +16,5 @@ const allSkills = Object.values(skills)
   })
 
 export default (jobs: IJobDescriptor[], filePath: string = defaultPath) => {
-  ReactPDF.render(<Resume jobs={jobs} skills={allSkills} />, filePath)
+  ReactPDF.render(<Resume jobs={jobs.slice(0, 5)} skills={allSkills} />, filePath)
 }

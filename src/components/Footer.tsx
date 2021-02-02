@@ -2,7 +2,7 @@ import * as React from 'react'
 import { GoMarkGithub } from 'react-icons/go'
 import { MdPictureAsPdf } from 'react-icons/md'
 import { QRCode } from 'react-qr-svg'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 import useSiteMetadata from 'hooks/useSiteMetadata'
 
@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
         <GoMarkGithub />
         <span>View the source for this site</span>
       </a>
-      <a href="/resume-alampros.pdf" className={cx('no-print', styles.resumeLink)}>
+      <a href="/resume-alampros.pdf" className={clsx('no-print', styles.resumeLink)}>
         <MdPictureAsPdf />
         Download my resume (<abbr title="Portable Document Format">PDF</abbr>)
       </a>
@@ -30,13 +30,13 @@ export const Footer: React.FC = () => {
       <small className={styles.dim}>{branch}@{shortHash}</small>
       <small className={styles.dim}>Last updated: {lastUpdated.toLocaleDateString()}</small>
       <QRCode
-          bgColor="transparent"
-          fgColor="#000000"
-          level="Q"
-          style={{ width: 64 }}
-          value="https://alampros.com"
-          cellClassPrefix="qr"
-          className={cx(styles.qr, 'no-screen')}
+        bgColor="transparent"
+        fgColor="#000000"
+        level="Q"
+        style={{ width: 64 }}
+        value="https://alampros.com"
+        cellClassPrefix="qr"
+        className={clsx(styles.qr, 'no-screen')}
       />
     </footer>
   )

@@ -1,5 +1,5 @@
 import React, { forwardRef, Ref, SVGAttributes } from 'react'
-import cx from 'classnames'
+import clsx from 'clsx'
 
 import styles from './TinyPie.module.css'
 
@@ -18,15 +18,15 @@ const TinyPie: React.FC<TProps> = (props: TProps) => {
   const perc = (value * 100)
   return (
     <svg
-        viewBox="0 0 36 36"
-        className={cx(styles.root, className)}
-        {...passedProps}
-        ref={innerRef}
+      viewBox="0 0 36 36"
+      className={clsx(styles.root, className)}
+      {...passedProps}
+      ref={innerRef}
     >
       <path
-          className={styles.part}
-          strokeDasharray={`${perc / 1.8}, 100`}
-          d={`M18 10
+        className={styles.part}
+        strokeDasharray={`${perc / 1.8}, 100`}
+        d={`M18 10
             a 9 9 0 0 1 0 18
             a 9 9 0 0 1 0 -18`}
       />
