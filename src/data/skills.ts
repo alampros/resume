@@ -180,7 +180,21 @@ const partialSkills = {
       ux: 0,
       systems: 1,
     },
-    comment: 'Combine with Portainer, this is the perfect middleground between docker-compose and kubernetes',
+    comment: 'Combined with Portainer, this is the perfect middleground between docker-compose and kubernetes',
+  },
+  k8s: {
+    name: 'Kubernetes',
+    yearsOfExperience: new Date().getFullYear() - 2020.5,
+    firstUsed: new Date(2020, 8),
+    strength: 0.1,
+    interest: 9 / 10,
+    link: new URL('https://kubernetes.io/'),
+    relevance: {
+      code: 0.2,
+      ux: 0,
+      systems: 1,
+    },
+    comment: 'Any technology sufficiently advanced is indistinguishable from magic',
   },
   aws_ecs: {
     name: 'AWS ECS',

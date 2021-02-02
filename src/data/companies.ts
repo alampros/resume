@@ -2,6 +2,17 @@ import { ICompany } from './Company'
 
 export const companies: ICompany[] = [
   {
+    id: 'e2g',
+    name: 'The Equity Engineering Group, Inc.',
+    website: new URL('https://e2g.com'),
+    address: {
+      street: '20600 Chagrin Blvd.',
+      city: 'Shaker Heights',
+      state: 'OH',
+      ZIP: '44122',
+    },
+  },
+  {
     id: 'testoil',
     name: 'TestOil',
     website: new URL('https://testoil.com'),

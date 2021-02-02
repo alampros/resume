@@ -4,6 +4,22 @@ import Job, { IJobConstructorParam } from './Job'
 
 const jobs: IJobConstructorParam[] = [
   {
+    title: 'Senior Developer I',
+    companyId: 'e2g',
+    department: 'Applied Research & Development',
+    description: 'Looking forward to full-stack development of a large suite of proprietary engineering tools, including development of a unified Design System and component library.',
+    date: {
+      start: new Date('2021-02-16T12:00:00.000Z'),
+    },
+    skills: [
+      { skill: skills.ts, relevance: 0.5 },
+      { skill: skills.node, relevance: 0.5 },
+      { skill: skills.docker, relevance: 0.75 },
+      { skill: skills.react, relevance: 0.75 },
+      { skill: skills.k8s, relevance: 0.5 },
+    ],
+  },
+  {
     title: 'Senior Developer',
     companyId: 'testoil',
     department: 'Engineering',
