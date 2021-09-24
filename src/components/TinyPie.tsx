@@ -1,7 +1,7 @@
 import React, { forwardRef, Ref, SVGAttributes } from 'react'
 import clsx from 'clsx'
 
-import styles from './TinyPie.module.css'
+import * as styles from './TinyPie.module.css'
 
 export type TProps = {
   value: number

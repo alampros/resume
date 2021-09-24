@@ -13,7 +13,7 @@ import {
 
 import { IProject } from 'data/Project'
 
-import styles from './ProjectSkillsetsVis.module.css'
+import * as styles from './ProjectSkillsetsVis.module.css'
 
 type TProps = {
   project: IProject

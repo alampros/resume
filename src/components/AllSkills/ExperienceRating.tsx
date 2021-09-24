@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 import { ISkill } from 'data/Skill'
 
-import styles from './ExperienceRating.module.css'
+import * as styles from './ExperienceRating.module.css'
 
 type TProps = any & Pick<ISkill, 'yearsOfExperience' | 'name'>
 

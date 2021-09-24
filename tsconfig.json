@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "moduleResolution": "node",
     "target": "esnext",
-    "jsx": "react",
     "lib": ["dom", "es2015", "es2017"],
+    "module": "ESNext",
+    "jsx": "react",
     "types": ["node"],
     "allowJs": true,
     "strict": true,

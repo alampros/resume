@@ -5,7 +5,7 @@ import Address from 'components/Address'
 import { ICompany } from 'data/Company'
 import { IJobDescriptor } from 'data/Job'
 
-import styles from './Company.module.css'
+import * as styles from './Company.module.css'
 
 type JobParts = Pick<IJobDescriptor, 'department'>
 
@@ -31,7 +31,6 @@ export const Company: React.FC<TProps> = (props: TProps) => {
       {department && (
         <>
           <span
-            className={styles.department}
             aria-label="Department"
           >
             {department}
