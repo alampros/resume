@@ -7,7 +7,7 @@ import { IProject } from 'data/Project'
 import JobSkill from './JobSkill'
 import ProjectSkillsetsVis from './ProjectSkillsetsVis'
 
-import styles from './Job.module.css'
+import * as styles from './Job.module.css'
 
 type TProps = {
   project: IProject
@@ -51,7 +51,7 @@ export const Project: React.FC<TProps> = (props: TProps) => {
   }, [density, project])
   const desc = density === 'sparse' ? description : descriptionDetail || description
   const $description = desc && (
-    <div className={styles.description}>{desc}</div>
+    <div className={styles.desc}>{desc}</div>
   )
   const $skillsFigure = ($skills || $skillSets)
     ? (

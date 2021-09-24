@@ -14,7 +14,6 @@ export const SkillsRelevanceFilter = (_props: TProps) => {
     systems,
     setRelevance,
   } = useContext(SkillsRelevanceContext)
-  console.log(code, ux, systems)
   const getHandler = (category: TSkillsRelevanceCategory) => (val: number) => setRelevance(category, val)
   return (
     <>

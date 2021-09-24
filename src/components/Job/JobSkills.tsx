@@ -3,7 +3,7 @@ import React from 'react'
 import JobSkill from 'components/Job/JobSkill'
 import { IJobSkill } from 'data/Skill'
 
-import styles from './JobSkills.module.css'
+import * as styles from './JobSkills.module.css'
 
 type TProps = {
   skills: IJobSkill[]

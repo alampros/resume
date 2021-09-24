@@ -6,7 +6,7 @@ import clsx from 'clsx'
 
 import useSiteMetadata from 'hooks/useSiteMetadata'
 
-import styles from './Footer.module.css'
+import * as styles from './Footer.module.css'
 
 export const Footer: React.FC = () => {
   const {
@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
         style={{ width: 64 }}
         value="https://alampros.com"
         cellClassPrefix="qr"
-        className={clsx(styles.qr, 'no-screen')}
+        className={clsx('no-screen')}
       />
     </footer>
   )

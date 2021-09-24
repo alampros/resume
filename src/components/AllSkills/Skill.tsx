@@ -9,7 +9,7 @@ import { ISkill } from 'data/Skill'
 import ExperienceRating from './ExperienceRating'
 import StrengthRating from './StrengthRating'
 
-import styles from './Skill.module.css'
+import * as styles from './Skill.module.css'
 
 type TProps = {
   skill: ISkill
@@ -57,7 +57,7 @@ export const Skill: React.FC<TProps> = (props: TProps) => {
     <ExperienceRating
       yearsOfExperience={yearsOfExperience}
       name={name}
-      className={clsx(styles.rating, styles.experienceRating)}
+      className={clsx(styles.rating)}
     />
   )
   const $strengthRating = density !== 'sparse' && (

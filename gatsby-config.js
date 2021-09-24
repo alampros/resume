@@ -17,10 +17,15 @@ module.exports = {
   },
   plugins: [
     'gatsby-theme-material-ui',
-    'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-plugin-postcss',
       options: {
+        cssLoaderOptions: {
+          esModule: true,
+          modules: {
+            namedExport: true,
+          },
+        },
         postCssPlugins: [
           autoprefixer,
           postcssNested,
@@ -28,6 +33,8 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-dts-css-modules',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify',
     'gatsby-plugin-resolve-src',

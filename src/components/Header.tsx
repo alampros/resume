@@ -7,7 +7,7 @@ import Address from 'components/Address'
 import Objective from 'components/Objective'
 import { IResumeMetadata } from 'data/ResumeMetadata'
 
-import styles from './Header.module.css'
+import * as styles from './Header.module.css'
 
 declare global {
   interface Window {

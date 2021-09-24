@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
     lineHeight: 1.1,
     marginBottom: 4,
     fontFamily: 'RobotoSlab',
-    color: 'inherit',
     textDecoration: undefined,
+    color: '#333',
   },
 })
 

@@ -9,7 +9,7 @@ import SkillGroups from 'data/SkillGroups'
 import Empty from './Empty'
 import Skill from './Skill'
 
-import styles from './SkillsList.module.css'
+import * as styles from './SkillsList.module.css'
 
 interface TProps {
   skills: ISkill[]

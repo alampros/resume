@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 import { ISkill } from 'data/Skill'
 
-import styles from './StrengthRating.module.css'
+import * as styles from './StrengthRating.module.css'
 
 type TProps = Pick<ISkill, 'strength' | 'name'> & React.HTMLProps<HTMLDivElement>
 

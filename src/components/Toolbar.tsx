@@ -5,7 +5,7 @@ import clsx from 'clsx'
 import DensitySelect from './DensitySelect'
 import ToggleDarkMode from './ToggleDarkMode'
 
-import styles from './Toolbar.module.css'
+import * as styles from './Toolbar.module.css'
 
 type TProps = GridProps
 
