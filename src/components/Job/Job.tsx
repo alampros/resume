@@ -14,7 +14,7 @@ import { FilteredProjectsIndicator } from './FilteredProjectsIndicator'
 import JobSkills from './JobSkills'
 import Project from './Project'
 
-import styles from './Job.module.css'
+import * as styles from './Job.module.css'
 
 type TProps = {
   job: IJobDescriptor

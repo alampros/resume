@@ -12,7 +12,6 @@ export const SkillsRelevanceContextProvider = ({ children }: TProps) => {
   const [systems, setSystems] = useState(1)
   const setRelevance = useCallback((category: TSkillsRelevanceCategory, value: number): void => {
     const val = clampFloat(value)
-    console.log(`Setting ${category} relevance:`, val)
     switch(category) {
       case 'code':
         setCode(val)

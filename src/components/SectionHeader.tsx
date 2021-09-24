@@ -2,7 +2,7 @@ import React from 'react'
 import { useTheme } from '@material-ui/core'
 import clsx from 'clsx'
 
-import styles from './SectionHeader.module.css'
+import * as styles from './SectionHeader.module.css'
 
 type TProps = React.PropsWithChildren<{
   title: React.ReactNode

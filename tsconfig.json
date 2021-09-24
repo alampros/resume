@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
     "target": "esnext",
-    "jsx": "react",
     "lib": ["dom", "es2015", "es2017"],
+    "module": "commonjs",
+    "jsx": "react",
     "types": ["node"],
     "allowJs": true,
     "strict": true,

@@ -8,7 +8,7 @@ import { IJobSkill } from 'data/Skill'
 
 import 'tippy.js/dist/tippy.css'
 import 'tippy.js/themes/light-border.css'
-import styles from './JobSkill.module.css'
+import * as styles from './JobSkill.module.css'
 
 type TProps = IJobSkill & React.HTMLProps<HTMLElement>
 

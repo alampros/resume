@@ -1,23 +1,21 @@
 import React, { useMemo } from 'react'
 import clsx from 'clsx'
 import {
-  LabelFormatter,
   PolarAngleAxis,
   PolarGrid,
   Radar,
   RadarChart,
-  RadarChartProps,
   ResponsiveContainer,
   Tooltip,
 } from 'recharts'
 
 import { IProject } from 'data/Project'
 
-import styles from './ProjectSkillsetsVis.module.css'
+import * as styles from './ProjectSkillsetsVis.module.css'
 
 type TProps = {
   project: IProject
-} & RadarChartProps
+} & React.ComponentProps<typeof RadarChart>
 
 interface IStringMap { [key: string]: string }
 
@@ -90,7 +88,7 @@ export const ProjectSkillsetsVis: React.FC<TProps> = (props: TProps) => {
         <PolarAngleAxis dataKey="label" />
         <Tooltip
           formatter={ratingFormatter}
-          labelFormatter={labelFormatter as LabelFormatter}
+          labelFormatter={labelFormatter}
         />
         <Radar dataKey="rating" className="project-polygon" fillOpacity={0.6} />
       </RadarChart>
