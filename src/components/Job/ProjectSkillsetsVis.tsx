@@ -90,7 +90,7 @@ export const ProjectSkillsetsVis: React.FC<TProps> = (props: TProps) => {
           formatter={ratingFormatter}
           labelFormatter={labelFormatter}
         />
-        <Radar dataKey="rating" className="project-polygon" fillOpacity={0.6} />
+        <Radar dataKey="rating" className={styles.projectPolygon} fillOpacity={0.6} />
       </RadarChart>
     </ResponsiveContainer>
   )
