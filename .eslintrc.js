@@ -27,4 +27,5 @@ module.exports = {
       ],
     }],
   },
+  ignorePatterns: ['**/*.module.css.d.ts'],
 }

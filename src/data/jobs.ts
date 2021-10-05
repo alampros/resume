@@ -7,16 +7,51 @@ const jobs: IJobConstructorParam[] = [
     title: 'Senior Developer I',
     companyId: 'e2g',
     department: 'Applied Research & Development',
-    description: 'Looking forward to full-stack development of a large suite of proprietary engineering tools, including development of a unified Design System and component library.',
+    description: 'Full-stack development of a large suite of cloud-based proprietary engineering tools and rapid prototype development.',
     date: {
       start: new Date('2021-02-16T12:00:00.000Z'),
     },
     skills: [
       { skill: skills.ts, relevance: 0.5 },
-      { skill: skills.node, relevance: 0.5 },
-      { skill: skills.docker, relevance: 0.75 },
-      { skill: skills.react, relevance: 0.75 },
-      { skill: skills.k8s, relevance: 0.5 },
+      { skill: skills.node, relevance: 0.25 },
+      { skill: skills.docker, relevance: 0.25 },
+      { skill: skills.react, relevance: 0.5 },
+      { skill: skills.k8s, relevance: 0.85 },
+      { skill: skills.go, relevance: 0.5 },
+    ],
+    projects: [
+      {
+        title: 'Full Continuous Deployment of Microservice Architecture',
+        description: 'Took a very manual deployment process using disparate Kustomize scripts to a completely hands-off "GitOps" workflow. Utilizing GitHub Actions, ArgoCD and convention-over-configuration, this change reduced both time spent deploying and risk of human error.',
+        skills: [skills.k8s, skills.go, skills.node, skills.docker, skills.git],
+        date: {
+          start: new Date('2021-10-01T05:00:00.000Z'),
+          end: new Date('2021-07-01T05:00:00.000Z'),
+        },
+        skillsetRatings: {
+          design: 0.2,
+          development: 0.5,
+          communication: 5 / 10,
+          leadership: 9 / 10,
+          organization: 8 / 10,
+        },
+      },
+      {
+        title: 'Container-based Distributed Computing Workflow',
+        description: 'Designed and built a system for distributing computationally complex workloads across multiple on-demand cloud nodes.',
+        skills: [skills.k8s, skills.go, skills.ts, skills.react],
+        date: {
+          start: new Date('2021-03-01T05:00:00.000Z'),
+          end: new Date('2021-06-01T05:00:00.000Z'),
+        },
+        skillsetRatings: {
+          design: 0.9,
+          development: 1,
+          communication: 5 / 10,
+          leadership: 2 / 3,
+          organization: 2 / 10,
+        },
+      },
     ],
   },
   {

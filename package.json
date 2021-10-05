@@ -39,6 +39,7 @@
     "eslint-config-vectron": "^3.0.0",
     "framer-motion": "^4.1.17",
     "gatsby": "^3.14.0",
+    "gatsby-plugin-dts-css-modules": "^2.1.1",
     "gatsby-plugin-fullstory": "^3.14.0",
     "gatsby-plugin-gtag": "^1.0.13",
     "gatsby-plugin-manifest": "^3.14.0",
@@ -84,8 +85,5 @@
   },
   "_moduleDirectories": [
     "src"
-  ],
-  "dependencies": {
-    "gatsby-plugin-dts-css-modules": "^2.1.1"
-  }
+  ]
 }
