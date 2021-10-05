@@ -25,8 +25,8 @@ const jobs: IJobConstructorParam[] = [
         description: 'Took a very manual deployment process using disparate Kustomize scripts to a completely hands-off "GitOps" workflow. Utilizing GitHub Actions, ArgoCD and convention-over-configuration, this change reduced both time spent deploying and risk of human error.',
         skills: [skills.k8s, skills.go, skills.node, skills.docker, skills.git],
         date: {
-          start: new Date('2021-10-01T05:00:00.000Z'),
-          end: new Date('2021-07-01T05:00:00.000Z'),
+          start: new Date('2021-05-01T05:00:00.000Z'),
+          end: new Date('2021-09-26T05:00:00.000Z'),
         },
         skillsetRatings: {
           design: 0.2,
