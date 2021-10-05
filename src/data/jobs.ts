@@ -21,6 +21,22 @@ const jobs: IJobConstructorParam[] = [
     ],
     projects: [
       {
+        title: 'Full Continuous Deployment of Microservice Architecture',
+        description: 'Took a very manual deployment process using disparate Kustomize scripts to a completely hands-off "GitOps" workflow. Utilizing GitHub Actions, ArgoCD and convention-over-configuration, this change reduced both time spent deploying and risk of human error.',
+        skills: [skills.k8s, skills.go, skills.node, skills.docker, skills.git],
+        date: {
+          start: new Date('2021-10-01T05:00:00.000Z'),
+          end: new Date('2021-07-01T05:00:00.000Z'),
+        },
+        skillsetRatings: {
+          design: 0.2,
+          development: 0.5,
+          communication: 5 / 10,
+          leadership: 9 / 10,
+          organization: 8 / 10,
+        },
+      },
+      {
         title: 'Container-based Distributed Computing Workflow',
         description: 'Designed and built a system for distributing computationally complex workloads across multiple on-demand cloud nodes.',
         skills: [skills.k8s, skills.go, skills.ts, skills.react],
