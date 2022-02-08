@@ -4,12 +4,30 @@ import Job, { IJobConstructorParam } from './Job'
 
 const jobs: IJobConstructorParam[] = [
   {
+    title: 'Senior Developer II',
+    companyId: 'e2g',
+    department: 'Applied Research & Development',
+    description: 'Full-stack development of a large suite of cloud-based proprietary engineering tools and rapid prototype development.',
+    date: {
+      start: new Date('2022-02-06T12:00:00.000Z'),
+    },
+    skills: [
+      { skill: skills.ts, relevance: 0.7 },
+      { skill: skills.node, relevance: 0.35 },
+      { skill: skills.docker, relevance: 0.25 },
+      { skill: skills.react, relevance: 0.7 },
+      { skill: skills.k8s, relevance: 0.85 },
+      { skill: skills.go, relevance: 0.5 },
+    ],
+  },
+  {
     title: 'Senior Developer I',
     companyId: 'e2g',
     department: 'Applied Research & Development',
     description: 'Full-stack development of a large suite of cloud-based proprietary engineering tools and rapid prototype development.',
     date: {
       start: new Date('2021-02-16T12:00:00.000Z'),
+      end: new Date('2022-02-06T12:00:00.000Z'),
     },
     skills: [
       { skill: skills.ts, relevance: 0.5 },
