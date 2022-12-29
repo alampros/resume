@@ -4,6 +4,39 @@ import Job, { IJobConstructorParam } from './Job'
 
 const jobs: IJobConstructorParam[] = [
   {
+    title: 'Group Head of Cloud Software Development',
+    companyId: 'e2g',
+    department: 'Applied Research & Development',
+    description: 'Head a team of Full-stack developers building and maintaining a large suite of cloud-based proprietary engineering tools and rapid prototype development. Serve in a consultative capacity to other departments in order to foster a healthy cloud software environment and transition legacy products to the web.',
+    date: {
+      start: new Date('2022-12-15T12:00:00.000Z'),
+    },
+    skills: [
+      { skill: skills.ts, relevance: 0.3 },
+      { skill: skills.node, relevance: 0.35 },
+      { skill: skills.docker, relevance: 0.25 },
+      { skill: skills.react, relevance: 0.4 },
+      { skill: skills.k8s, relevance: 0.85 },
+      { skill: skills.go, relevance: 0.6 },
+      { skill: skills.cicd, relevance: 0.7 }
+    ],
+    projects: [
+      {
+        title: 'CAN2',
+        date: { start: new Date('2022-09-01T12:00:00.000Z') },
+        description: 'Develop a new microservices stack to support the CAN2 project to track spent nuclear fuel storage canister corrosion rates.',
+        skills: [skills.k8s, skills.ts],
+        skillsetRatings: {
+          design: 0.6,
+          development: 0.7,
+          communication: 3 / 10,
+          leadership: 7 / 10,
+          organization: 3 / 10,
+        },
+      }
+    ],
+  },
+  {
     title: 'Senior Developer II',
     companyId: 'e2g',
     department: 'Applied Research & Development',
@@ -18,6 +51,22 @@ const jobs: IJobConstructorParam[] = [
       { skill: skills.react, relevance: 0.7 },
       { skill: skills.k8s, relevance: 0.85 },
       { skill: skills.go, relevance: 0.5 },
+      { skill: skills.cicd, relevance: 0.5 }
+    ],
+    projects: [
+      {
+        title: 'Calculation Pipeline',
+        date: { start: new Date('2022-09-01T12:00:00.000Z'), end: new Date('2022-12-01T12:00:00.000Z') },
+        description: 'Design a system to allow a chain of python calculation microservices to execute in series within a kubernetes cluster while taking full advantage of autoscaling capabilties.',
+        skills: [skills.k8s, skills.go],
+        skillsetRatings: {
+          design: 0.6,
+          development: 0.5,
+          communication: 5 / 10,
+          leadership: 9 / 10,
+          organization: 8 / 10,
+        },
+      }
     ],
   },
   {
