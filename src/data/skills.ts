@@ -2,6 +2,19 @@ import Skill, { ISkill, TRelevance } from './Skill'
 
 // const partialSkills = <{[k: string]: TPartialSkill}>{
 const partialSkills = {
+  cicd: {
+    name: 'CI/CD',
+    yearsOfExperience: new Date().getFullYear() - 2020,
+    firstUsed: new Date(2018, 2),
+    strength: 1,
+    interest: 1,
+    link: new URL('https://en.wikipedia.org/wiki/CI/CD'),
+    relevance: {
+      code: 4 / 10,
+      ux: 0,
+      systems: 6 / 10,
+    },
+  },
   react: {
     name: 'React',
     yearsOfExperience: new Date().getFullYear() - 2015,
@@ -497,7 +510,7 @@ const partialSkills = {
       ux: 0,
       systems: 8 / 10,
     },
-    comment: 'Mostly RHEL or Ubuntu nowadays, but my first love was OpenSUSE.',
+    comment: 'Installed, converted and trained users at three separate companies now.',
   },
   vb: {
     name: 'VisualBasic',
