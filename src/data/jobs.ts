@@ -22,6 +22,32 @@ const jobs: IJobConstructorParam[] = [
     ],
     projects: [
       {
+        title: 'DamageSight',
+        date: { start: new Date('2024-03-01T12:00:00.000Z') },
+        description: 'Expand functionality of the EEC platform to include a new suite of tools for running proprietary engineering calculations periodically using native Kubernetes cron jobs. Also includes ability to refresh time-series data from an API proxy and evaluate the results against user-defined thresholds. This required development of separate Go binaries that run in individual containers for each type of cron job.',
+        skills: [skills.k8s, skills.go, skills.pgsql, skills.nestjs],
+        skillsetRatings: {
+          design: 0.3,
+          development: 0.9,
+          communication: 0.8,
+          leadership: 0.9,
+          organization: 0.7,
+        },
+      },
+      {
+        title: 'Cloud-agnostic Storage API',
+        date: { start: new Date('2024-05-01T12:00:00.000Z') },
+        description: 'Part of a migration of the EEC platform from GCP to Azure, we needed a uniform API for simple storage across both platforms. Critically, a uniform method of cryptographically signing URLs to offload bandwidth to the client allowed calculator authors to attach large datasets to results (regardless of the cloud provider).',
+        skills: [skills.k8s, skills.go],
+        skillsetRatings: {
+          design: 0,
+          development: 0.9,
+          communication: 1,
+          leadership: 0.5,
+          organization: 0.5,
+        },
+      },
+      {
         title: 'CAN2',
         date: { start: new Date('2022-09-01T12:00:00.000Z') },
         description: 'Develop a new microservices stack to support the CAN2 project to track spent nuclear fuel storage canister corrosion rates.',

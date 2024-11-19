@@ -58,9 +58,9 @@ const partialSkills = {
   },
   design_systems: {
     name: 'Design Systems',
-    yearsOfExperience: new Date().getFullYear() - 2017,
+    yearsOfExperience: 4,
     firstUsed: new Date(2017, 0),
-    strength: 1,
+    strength: 0.8,
     interest: 9 / 10,
     link: new URL('https://www.smashingmagazine.com/design-systems-book/'),
     relevance: {
@@ -102,8 +102,8 @@ const partialSkills = {
     name: 'CSS/LESS/SASS',
     yearsOfExperience: new Date().getFullYear() - 1998,
     firstUsed: new Date(1998, 0),
-    strength: 1,
-    interest: 0.9,
+    strength: 0.9,
+    interest: 0.8,
     link: new URL('https://en.wikipedia.org/wiki/Cascading_Style_Sheets'),
     relevance: {
       code: 5 / 10,
@@ -199,7 +199,7 @@ const partialSkills = {
     name: 'Kubernetes',
     yearsOfExperience: new Date().getFullYear() - 2020.5,
     firstUsed: new Date(2020, 8),
-    strength: 0.5,
+    strength: 0.9,
     interest: 9 / 10,
     link: new URL('https://kubernetes.io/'),
     relevance: {
@@ -208,6 +208,14 @@ const partialSkills = {
       systems: 1,
     },
     comment: 'Any technology sufficiently advanced is indistinguishable from magic',
+  },
+  kustomize: {
+    name: 'Kustomize',
+    yearsOfExperience: new Date().getFullYear() - 2022.5,
+    firstUsed: new Date(2022, 8),
+    strength: 0.8,
+    interest: 0.9,
+    link: new URL('https://kustomize.io/'),
   },
   aws_ecs: {
     name: 'AWS ECS',
@@ -254,13 +262,13 @@ const partialSkills = {
   },
   go: {
     name: 'Go (lang)',
-    yearsOfExperience: 1.25,
+    yearsOfExperience: 3,
     firstUsed: new Date(2017, 0),
-    strength: 6 / 10,
-    interest: 0.9,
+    strength: 8 / 10,
+    interest: 1,
     link: new URL('https://golang.org/'),
     relevance: {
-      code: 7 / 10,
+      code: 9 / 10,
       ux: 0,
       systems: 1,
     },
@@ -339,7 +347,7 @@ const partialSkills = {
   il: {
     name: 'Illustrator',
     yearsOfExperience: new Date().getFullYear() - 2003,
-    lastUsed: new Date(2020, 6),
+    lastUsed: new Date(2024, 1),
     firstUsed: new Date(2002, 0),
     strength: 6 / 10,
     interest: 3 / 10,
@@ -361,10 +369,10 @@ const partialSkills = {
   },
   metabase: {
     name: 'Metabase',
-    yearsOfExperience: 1,
+    yearsOfExperience: 2,
     strength: 0.8,
     interest: 8 / 10,
-    lastUsed: new Date(2020, 11),
+    lastUsed: new Date(2024, 11),
     firstUsed: new Date(2020, 1),
     link: new URL('https://www.metabase.com/'),
     relevance: {
@@ -439,7 +447,7 @@ const partialSkills = {
   pgsql: {
     name: 'PostgreSQL',
     yearsOfExperience: 2,
-    lastUsed: new Date(2020, 12),
+    lastUsed: new Date(2024, 12),
     firstUsed: new Date(2017, 0),
     strength: 0.3,
     interest: 0.8,
@@ -529,6 +537,14 @@ const partialSkills = {
     lastUsed: new Date(2020, 10),
     firstUsed: new Date(2019, 4),
     link: new URL('https://www.merriam-webster.com/dictionary/dumpster%20fire'),
+  },
+  nestjs: {
+    name: 'NestJS',
+    yearsOfExperience: 2,
+    strength: 0.8,
+    interest: 0.9,
+    firstUsed: new Date(2022, 8),
+    link: new URL('https://nestjs.com/'),
   },
 }
 
